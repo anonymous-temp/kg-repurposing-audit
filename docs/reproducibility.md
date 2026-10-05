@@ -14,3 +14,5 @@ The local permutation reference is based on a bipartite edge-swap principle. It 
 The four-policy experiment is semi-synthetic. Its annotation fractions are design parameters, not measured failure-type prevalence. A correctly supplied retain annotation can preserve information lost by blanket masking, but this result does not show that human failure labels will be accurate or that a schema improves clinical decisions.
 
 The ClinicalTrials.gov sample is explicitly non-random: the first 100 returned records by ascending first-posted date within each discontinued-status stratum, first posted in 2015-2025 and updated by the specified cutoff. Descriptive lexical counts do not estimate population prevalence or diagnostic accuracy of a failure taxonomy.
+
+The exact PrimeKG training source before whitespace-only formatting is preserved at commit `f835c95ecbbb116b507da9847cb1138310eb3172`. Its SHA-256 is recorded in `paper_results/primekg_protocol.json`. Formatting was checked for Python abstract-syntax-tree equivalence; scientific recipes were not changed.

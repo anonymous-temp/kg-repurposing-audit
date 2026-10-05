@@ -1,4 +1,5 @@
 """Candidate and metric contracts shared by the corrected analyses."""
+
 from collections import defaultdict
 import math
 import numpy as np
@@ -13,22 +14,27 @@ def fit_degree_reference(train_positive, train_negative, seed=1):
     from collections import Counter
     from sklearn.linear_model import LogisticRegression
     from sklearn.preprocessing import StandardScaler
+
     cdeg = Counter(c for c, d in train_positive)
     ddeg = Counter(d for c, d in train_positive)
+
     def features(pairs):
         return np.array([[np.log1p(cdeg[c]), np.log1p(ddeg[d])] for c, d in pairs])
+
     x = features(train_positive + train_negative)
     scaler = StandardScaler().fit(x)
-    classifier = LogisticRegression(solver="liblinear", class_weight="balanced", C=1.,
-                                    max_iter=1000, random_state=seed).fit(
-        scaler.transform(x), np.r_[np.ones(len(train_positive)), np.zeros(len(train_negative))])
+    classifier = LogisticRegression(
+        solver="liblinear", class_weight="balanced", C=1.0, max_iter=1000, random_state=seed
+    ).fit(scaler.transform(x), np.r_[np.ones(len(train_positive)), np.zeros(len(train_negative))])
     if not np.isfinite(classifier.coef_).all():
         raise ValueError("Non-finite degree baseline coefficients")
+
     def predict(pairs):
-        score = np.sum(scaler.transform(features(pairs))*classifier.coef_[0], axis=1)+classifier.intercept_[0]
+        score = np.sum(scaler.transform(features(pairs)) * classifier.coef_[0], axis=1) + classifier.intercept_[0]
         if not np.isfinite(score).all():
             raise ValueError("Non-finite degree baseline predictions")
         return score
+
     return predict, cdeg, ddeg
 
 
@@ -71,12 +77,12 @@ def ap_function(labels, scores):
         if tp[-1] <= 0 or total[-1] <= tp[-1]:
             return float("nan")
         precision = np.divide(tp, total, out=np.zeros_like(tp), where=total > 0)
-        return float(np.sum(np.diff(np.r_[0., tp]) * precision) / tp[-1])
+        return float(np.sum(np.diff(np.r_[0.0, tp]) * precision) / tp[-1])
+
     return compute
 
 
-def sample_candidates(positives, drugs, diseases, excluded, cdegree, ddegree,
-                      scheme, ratio=20, seed=1):
+def sample_candidates(positives, drugs, diseases, excluded, cdegree, ddegree, scheme, ratio=20, seed=1):
     """Draw evaluation pairs within the declared task universe.
 
     Uniform draws are uniform over eligible pairs. Matched draws preserve the
@@ -109,8 +115,7 @@ def sample_candidates(positives, drugs, diseases, excluded, cdegree, ddegree,
                     made += 1
         elif scheme == "matched":
             if key not in cache:
-                cache[key] = [(a, b) for a in cb[key[0]] for b in db[key[1]]
-                              if (a, b) not in excluded]
+                cache[key] = [(a, b) for a in cb[key[0]] for b in db[key[1]] if (a, b) not in excluded]
             pool = cache[key]
             if not pool:
                 raise ValueError(f"No unlabelled pair in degree stratum {key}")
