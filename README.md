@@ -92,6 +92,10 @@ These training commands can take hours on CPU, especially the R-GCN pipeline. Ru
 
 The manuscript distinguishes reused, reanalysed Hetionet predictions from new validation-selected PrimeKG fits. Running the entire Hetionet sequence above trains fresh models; it must not be described as proof that every historical checkpoint has been independently reproduced. See [docs/reproducibility.md](docs/reproducibility.md).
 
+## Regenerate plots from published summaries
+
+With the benchmark dependencies installed, run `python scripts/plot_aggregate_results.py --output outputs/reference_figures`. This reads the aggregate tables included in the repository and renders AP plots with seed-SD bars. It verifies the presentation of the reference numbers; reproducing those numbers requires the database-dependent pipelines. Aggregate cluster intervals and validation histories are also supplied under `paper_results/`.
+
 ## Use your own candidate scores
 
 ```bash

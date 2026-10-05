@@ -1,0 +1,992 @@
+{
+  "seed1_compound_disjoint/complex_training.json": {
+    "seed": 1,
+    "best_epoch": 16,
+    "stopped_epoch": 22,
+    "best_validation_AP": 0.17960895680417946,
+    "history": [
+      {
+        "epoch": 8,
+        "validation_AP": 0.14502862308360795
+      },
+      {
+        "epoch": 10,
+        "validation_AP": 0.1670089153957346
+      },
+      {
+        "epoch": 12,
+        "validation_AP": 0.16884649840887586
+      },
+      {
+        "epoch": 14,
+        "validation_AP": 0.17489157731728444
+      },
+      {
+        "epoch": 16,
+        "validation_AP": 0.17960895680417946
+      },
+      {
+        "epoch": 18,
+        "validation_AP": 0.16795664683291797
+      },
+      {
+        "epoch": 20,
+        "validation_AP": 0.1623425934761837
+      },
+      {
+        "epoch": 22,
+        "validation_AP": 0.15103565469104244
+      }
+    ],
+    "torch_version": "2.8.0"
+  },
+  "seed1_compound_disjoint/distmult_training.json": {
+    "seed": 1,
+    "best_epoch": 32,
+    "stopped_epoch": 38,
+    "best_validation_AP": 0.17648273173593534,
+    "history": [
+      {
+        "epoch": 8,
+        "validation_AP": 0.14163537427203599
+      },
+      {
+        "epoch": 10,
+        "validation_AP": 0.13823862949891144
+      },
+      {
+        "epoch": 12,
+        "validation_AP": 0.14733082360052732
+      },
+      {
+        "epoch": 14,
+        "validation_AP": 0.14243915817808275
+      },
+      {
+        "epoch": 16,
+        "validation_AP": 0.14408619349298002
+      },
+      {
+        "epoch": 18,
+        "validation_AP": 0.15220892260062682
+      },
+      {
+        "epoch": 20,
+        "validation_AP": 0.15270765759688654
+      },
+      {
+        "epoch": 22,
+        "validation_AP": 0.15306976905190559
+      },
+      {
+        "epoch": 24,
+        "validation_AP": 0.14810686471242374
+      },
+      {
+        "epoch": 26,
+        "validation_AP": 0.14946592492315797
+      },
+      {
+        "epoch": 28,
+        "validation_AP": 0.15782293456070973
+      },
+      {
+        "epoch": 30,
+        "validation_AP": 0.16256310483285427
+      },
+      {
+        "epoch": 32,
+        "validation_AP": 0.17648273173593534
+      },
+      {
+        "epoch": 34,
+        "validation_AP": 0.16202000217987023
+      },
+      {
+        "epoch": 36,
+        "validation_AP": 0.15905517702712604
+      },
+      {
+        "epoch": 38,
+        "validation_AP": 0.16502916015326938
+      }
+    ],
+    "torch_version": "2.8.0"
+  },
+  "seed1_compound_disjoint/rotate_training.json": {
+    "seed": 1,
+    "best_epoch": 28,
+    "stopped_epoch": 34,
+    "best_validation_AP": 0.23140327400289395,
+    "history": [
+      {
+        "epoch": 8,
+        "validation_AP": 0.18393081722732108
+      },
+      {
+        "epoch": 10,
+        "validation_AP": 0.18799632157253912
+      },
+      {
+        "epoch": 12,
+        "validation_AP": 0.19166651369611565
+      },
+      {
+        "epoch": 14,
+        "validation_AP": 0.1941696736761002
+      },
+      {
+        "epoch": 16,
+        "validation_AP": 0.1879942574287825
+      },
+      {
+        "epoch": 18,
+        "validation_AP": 0.19952447613803792
+      },
+      {
+        "epoch": 20,
+        "validation_AP": 0.2126656933403553
+      },
+      {
+        "epoch": 22,
+        "validation_AP": 0.20869473798821606
+      },
+      {
+        "epoch": 24,
+        "validation_AP": 0.21152649525546482
+      },
+      {
+        "epoch": 26,
+        "validation_AP": 0.22261244561687912
+      },
+      {
+        "epoch": 28,
+        "validation_AP": 0.23140327400289395
+      },
+      {
+        "epoch": 30,
+        "validation_AP": 0.22748919001384296
+      },
+      {
+        "epoch": 32,
+        "validation_AP": 0.2181811440425446
+      },
+      {
+        "epoch": 34,
+        "validation_AP": 0.2022867313401346
+      }
+    ],
+    "torch_version": "2.8.0"
+  },
+  "seed1_random/complex_training.json": {
+    "seed": 1,
+    "best_epoch": 24,
+    "stopped_epoch": 30,
+    "best_validation_AP": 0.6157250298012726,
+    "history": [
+      {
+        "epoch": 8,
+        "validation_AP": 0.43010658011538483
+      },
+      {
+        "epoch": 10,
+        "validation_AP": 0.4886001044639775
+      },
+      {
+        "epoch": 12,
+        "validation_AP": 0.5274354287233963
+      },
+      {
+        "epoch": 14,
+        "validation_AP": 0.5600445152850126
+      },
+      {
+        "epoch": 16,
+        "validation_AP": 0.5773713937623991
+      },
+      {
+        "epoch": 18,
+        "validation_AP": 0.5833588372384159
+      },
+      {
+        "epoch": 20,
+        "validation_AP": 0.5887382998715454
+      },
+      {
+        "epoch": 22,
+        "validation_AP": 0.5949460522949889
+      },
+      {
+        "epoch": 24,
+        "validation_AP": 0.6157250298012726
+      },
+      {
+        "epoch": 26,
+        "validation_AP": 0.6143556859407818
+      },
+      {
+        "epoch": 28,
+        "validation_AP": 0.6122611444296343
+      },
+      {
+        "epoch": 30,
+        "validation_AP": 0.6133657395715477
+      }
+    ],
+    "torch_version": "2.8.0"
+  },
+  "seed1_random/distmult_training.json": {
+    "seed": 1,
+    "best_epoch": 40,
+    "stopped_epoch": 40,
+    "best_validation_AP": 0.5608723789111185,
+    "history": [
+      {
+        "epoch": 8,
+        "validation_AP": 0.3500558309659508
+      },
+      {
+        "epoch": 10,
+        "validation_AP": 0.4160660577613832
+      },
+      {
+        "epoch": 12,
+        "validation_AP": 0.44232301077644215
+      },
+      {
+        "epoch": 14,
+        "validation_AP": 0.4707797796436375
+      },
+      {
+        "epoch": 16,
+        "validation_AP": 0.48333422932640085
+      },
+      {
+        "epoch": 18,
+        "validation_AP": 0.5084123945520315
+      },
+      {
+        "epoch": 20,
+        "validation_AP": 0.5200049901418962
+      },
+      {
+        "epoch": 22,
+        "validation_AP": 0.5217329173876012
+      },
+      {
+        "epoch": 24,
+        "validation_AP": 0.531377470928816
+      },
+      {
+        "epoch": 26,
+        "validation_AP": 0.52634781255537
+      },
+      {
+        "epoch": 28,
+        "validation_AP": 0.5273650427207843
+      },
+      {
+        "epoch": 30,
+        "validation_AP": 0.5388095683728489
+      },
+      {
+        "epoch": 32,
+        "validation_AP": 0.5449838043044799
+      },
+      {
+        "epoch": 34,
+        "validation_AP": 0.5527546442054821
+      },
+      {
+        "epoch": 36,
+        "validation_AP": 0.5532623481579956
+      },
+      {
+        "epoch": 38,
+        "validation_AP": 0.5582809380895325
+      },
+      {
+        "epoch": 40,
+        "validation_AP": 0.5608723789111185
+      }
+    ],
+    "torch_version": "2.8.0"
+  },
+  "seed1_random/rotate_training.json": {
+    "seed": 1,
+    "best_epoch": 22,
+    "stopped_epoch": 28,
+    "best_validation_AP": 0.7065790774929944,
+    "history": [
+      {
+        "epoch": 8,
+        "validation_AP": 0.6485822797004572
+      },
+      {
+        "epoch": 10,
+        "validation_AP": 0.6613732168227037
+      },
+      {
+        "epoch": 12,
+        "validation_AP": 0.6782770466125048
+      },
+      {
+        "epoch": 14,
+        "validation_AP": 0.6902840947025444
+      },
+      {
+        "epoch": 16,
+        "validation_AP": 0.6965830127661742
+      },
+      {
+        "epoch": 18,
+        "validation_AP": 0.6970897781188476
+      },
+      {
+        "epoch": 20,
+        "validation_AP": 0.6980559726163881
+      },
+      {
+        "epoch": 22,
+        "validation_AP": 0.7065790774929944
+      },
+      {
+        "epoch": 24,
+        "validation_AP": 0.6899480905820725
+      },
+      {
+        "epoch": 26,
+        "validation_AP": 0.7020596421861853
+      },
+      {
+        "epoch": 28,
+        "validation_AP": 0.704251648107049
+      }
+    ],
+    "torch_version": "2.8.0"
+  },
+  "seed2_compound_disjoint/complex_training.json": {
+    "seed": 2,
+    "best_epoch": 12,
+    "stopped_epoch": 18,
+    "best_validation_AP": 0.18982337093848256,
+    "history": [
+      {
+        "epoch": 8,
+        "validation_AP": 0.14749202751693663
+      },
+      {
+        "epoch": 10,
+        "validation_AP": 0.1759206073723225
+      },
+      {
+        "epoch": 12,
+        "validation_AP": 0.18982337093848256
+      },
+      {
+        "epoch": 14,
+        "validation_AP": 0.18493216783004165
+      },
+      {
+        "epoch": 16,
+        "validation_AP": 0.1620545590274191
+      },
+      {
+        "epoch": 18,
+        "validation_AP": 0.1685801456111758
+      }
+    ],
+    "torch_version": "2.8.0"
+  },
+  "seed2_compound_disjoint/distmult_training.json": {
+    "seed": 2,
+    "best_epoch": 22,
+    "stopped_epoch": 28,
+    "best_validation_AP": 0.1602908952577149,
+    "history": [
+      {
+        "epoch": 8,
+        "validation_AP": 0.10263467941209194
+      },
+      {
+        "epoch": 10,
+        "validation_AP": 0.12348577239397722
+      },
+      {
+        "epoch": 12,
+        "validation_AP": 0.12260609015258069
+      },
+      {
+        "epoch": 14,
+        "validation_AP": 0.12941779761001387
+      },
+      {
+        "epoch": 16,
+        "validation_AP": 0.1348742086353412
+      },
+      {
+        "epoch": 18,
+        "validation_AP": 0.13701441437086395
+      },
+      {
+        "epoch": 20,
+        "validation_AP": 0.14075146459401855
+      },
+      {
+        "epoch": 22,
+        "validation_AP": 0.1602908952577149
+      },
+      {
+        "epoch": 24,
+        "validation_AP": 0.13613565583970708
+      },
+      {
+        "epoch": 26,
+        "validation_AP": 0.14728521597434877
+      },
+      {
+        "epoch": 28,
+        "validation_AP": 0.15178595806593428
+      }
+    ],
+    "torch_version": "2.8.0"
+  },
+  "seed2_compound_disjoint/rotate_training.json": {
+    "seed": 2,
+    "best_epoch": 20,
+    "stopped_epoch": 26,
+    "best_validation_AP": 0.2588860567705157,
+    "history": [
+      {
+        "epoch": 8,
+        "validation_AP": 0.2012801162957219
+      },
+      {
+        "epoch": 10,
+        "validation_AP": 0.19901131655945278
+      },
+      {
+        "epoch": 12,
+        "validation_AP": 0.20738172477856642
+      },
+      {
+        "epoch": 14,
+        "validation_AP": 0.23013363055982475
+      },
+      {
+        "epoch": 16,
+        "validation_AP": 0.21397133293502826
+      },
+      {
+        "epoch": 18,
+        "validation_AP": 0.2212783482556958
+      },
+      {
+        "epoch": 20,
+        "validation_AP": 0.2588860567705157
+      },
+      {
+        "epoch": 22,
+        "validation_AP": 0.20692584027724065
+      },
+      {
+        "epoch": 24,
+        "validation_AP": 0.24966148356593656
+      },
+      {
+        "epoch": 26,
+        "validation_AP": 0.20981226174446613
+      }
+    ],
+    "torch_version": "2.8.0"
+  },
+  "seed2_random/complex_training.json": {
+    "seed": 2,
+    "best_epoch": 24,
+    "stopped_epoch": 30,
+    "best_validation_AP": 0.6071511749535576,
+    "history": [
+      {
+        "epoch": 8,
+        "validation_AP": 0.33438739420730673
+      },
+      {
+        "epoch": 10,
+        "validation_AP": 0.4187700077530237
+      },
+      {
+        "epoch": 12,
+        "validation_AP": 0.4676990044777126
+      },
+      {
+        "epoch": 14,
+        "validation_AP": 0.5136825271954072
+      },
+      {
+        "epoch": 16,
+        "validation_AP": 0.5482356562568254
+      },
+      {
+        "epoch": 18,
+        "validation_AP": 0.5772423379181654
+      },
+      {
+        "epoch": 20,
+        "validation_AP": 0.5941768942169663
+      },
+      {
+        "epoch": 22,
+        "validation_AP": 0.6017397689300109
+      },
+      {
+        "epoch": 24,
+        "validation_AP": 0.6071511749535576
+      },
+      {
+        "epoch": 26,
+        "validation_AP": 0.6058688628037366
+      },
+      {
+        "epoch": 28,
+        "validation_AP": 0.6038676358389392
+      },
+      {
+        "epoch": 30,
+        "validation_AP": 0.6045649558674855
+      }
+    ],
+    "torch_version": "2.8.0"
+  },
+  "seed2_random/distmult_training.json": {
+    "seed": 2,
+    "best_epoch": 28,
+    "stopped_epoch": 34,
+    "best_validation_AP": 0.46891478837329464,
+    "history": [
+      {
+        "epoch": 8,
+        "validation_AP": 0.29689274459326764
+      },
+      {
+        "epoch": 10,
+        "validation_AP": 0.3487035375446793
+      },
+      {
+        "epoch": 12,
+        "validation_AP": 0.3987758354150933
+      },
+      {
+        "epoch": 14,
+        "validation_AP": 0.41435110046133283
+      },
+      {
+        "epoch": 16,
+        "validation_AP": 0.42895919556282525
+      },
+      {
+        "epoch": 18,
+        "validation_AP": 0.44729115579198053
+      },
+      {
+        "epoch": 20,
+        "validation_AP": 0.46052090055043404
+      },
+      {
+        "epoch": 22,
+        "validation_AP": 0.45484776385373465
+      },
+      {
+        "epoch": 24,
+        "validation_AP": 0.46684258088911634
+      },
+      {
+        "epoch": 26,
+        "validation_AP": 0.4651456803920114
+      },
+      {
+        "epoch": 28,
+        "validation_AP": 0.46891478837329464
+      },
+      {
+        "epoch": 30,
+        "validation_AP": 0.4621207010995759
+      },
+      {
+        "epoch": 32,
+        "validation_AP": 0.4588181276526476
+      },
+      {
+        "epoch": 34,
+        "validation_AP": 0.4615406468290133
+      }
+    ],
+    "torch_version": "2.8.0"
+  },
+  "seed2_random/rotate_training.json": {
+    "seed": 2,
+    "best_epoch": 20,
+    "stopped_epoch": 26,
+    "best_validation_AP": 0.7437792994813813,
+    "history": [
+      {
+        "epoch": 8,
+        "validation_AP": 0.7076625662048998
+      },
+      {
+        "epoch": 10,
+        "validation_AP": 0.7226979959531505
+      },
+      {
+        "epoch": 12,
+        "validation_AP": 0.731436797307506
+      },
+      {
+        "epoch": 14,
+        "validation_AP": 0.7319025748912241
+      },
+      {
+        "epoch": 16,
+        "validation_AP": 0.7366415812661603
+      },
+      {
+        "epoch": 18,
+        "validation_AP": 0.7429164895357543
+      },
+      {
+        "epoch": 20,
+        "validation_AP": 0.7437792994813813
+      },
+      {
+        "epoch": 22,
+        "validation_AP": 0.7388651862663371
+      },
+      {
+        "epoch": 24,
+        "validation_AP": 0.7354510559378413
+      },
+      {
+        "epoch": 26,
+        "validation_AP": 0.7267942076498556
+      }
+    ],
+    "torch_version": "2.8.0"
+  },
+  "seed3_compound_disjoint/complex_training.json": {
+    "seed": 3,
+    "best_epoch": 14,
+    "stopped_epoch": 20,
+    "best_validation_AP": 0.19990296861503629,
+    "history": [
+      {
+        "epoch": 8,
+        "validation_AP": 0.16534026233238405
+      },
+      {
+        "epoch": 10,
+        "validation_AP": 0.18419768230159364
+      },
+      {
+        "epoch": 12,
+        "validation_AP": 0.18947903113103232
+      },
+      {
+        "epoch": 14,
+        "validation_AP": 0.19990296861503629
+      },
+      {
+        "epoch": 16,
+        "validation_AP": 0.1992937033353588
+      },
+      {
+        "epoch": 18,
+        "validation_AP": 0.1849224449740404
+      },
+      {
+        "epoch": 20,
+        "validation_AP": 0.19711314529923374
+      }
+    ],
+    "torch_version": "2.8.0"
+  },
+  "seed3_compound_disjoint/distmult_training.json": {
+    "seed": 3,
+    "best_epoch": 24,
+    "stopped_epoch": 30,
+    "best_validation_AP": 0.17649093027710275,
+    "history": [
+      {
+        "epoch": 8,
+        "validation_AP": 0.08676163680745771
+      },
+      {
+        "epoch": 10,
+        "validation_AP": 0.10294148629321143
+      },
+      {
+        "epoch": 12,
+        "validation_AP": 0.12579784498331328
+      },
+      {
+        "epoch": 14,
+        "validation_AP": 0.1362245195045365
+      },
+      {
+        "epoch": 16,
+        "validation_AP": 0.1560082278998837
+      },
+      {
+        "epoch": 18,
+        "validation_AP": 0.1598791283049542
+      },
+      {
+        "epoch": 20,
+        "validation_AP": 0.1673059205572209
+      },
+      {
+        "epoch": 22,
+        "validation_AP": 0.16854414835068685
+      },
+      {
+        "epoch": 24,
+        "validation_AP": 0.17649093027710275
+      },
+      {
+        "epoch": 26,
+        "validation_AP": 0.17398285522190698
+      },
+      {
+        "epoch": 28,
+        "validation_AP": 0.17388769912210744
+      },
+      {
+        "epoch": 30,
+        "validation_AP": 0.17617745314337704
+      }
+    ],
+    "torch_version": "2.8.0"
+  },
+  "seed3_compound_disjoint/rotate_training.json": {
+    "seed": 3,
+    "best_epoch": 18,
+    "stopped_epoch": 24,
+    "best_validation_AP": 0.2775889380810968,
+    "history": [
+      {
+        "epoch": 8,
+        "validation_AP": 0.22345794239139785
+      },
+      {
+        "epoch": 10,
+        "validation_AP": 0.21955738382737613
+      },
+      {
+        "epoch": 12,
+        "validation_AP": 0.24715807549106691
+      },
+      {
+        "epoch": 14,
+        "validation_AP": 0.2458398342387831
+      },
+      {
+        "epoch": 16,
+        "validation_AP": 0.24622113650428754
+      },
+      {
+        "epoch": 18,
+        "validation_AP": 0.2775889380810968
+      },
+      {
+        "epoch": 20,
+        "validation_AP": 0.25824174040689357
+      },
+      {
+        "epoch": 22,
+        "validation_AP": 0.2692167510801873
+      },
+      {
+        "epoch": 24,
+        "validation_AP": 0.2551624199806073
+      }
+    ],
+    "torch_version": "2.8.0"
+  },
+  "seed3_random/complex_training.json": {
+    "seed": 3,
+    "best_epoch": 20,
+    "stopped_epoch": 26,
+    "best_validation_AP": 0.5874377281007472,
+    "history": [
+      {
+        "epoch": 8,
+        "validation_AP": 0.42397536491035037
+      },
+      {
+        "epoch": 10,
+        "validation_AP": 0.48186050385859375
+      },
+      {
+        "epoch": 12,
+        "validation_AP": 0.5339561747205883
+      },
+      {
+        "epoch": 14,
+        "validation_AP": 0.5683930533802227
+      },
+      {
+        "epoch": 16,
+        "validation_AP": 0.5738916190578706
+      },
+      {
+        "epoch": 18,
+        "validation_AP": 0.5760767070271784
+      },
+      {
+        "epoch": 20,
+        "validation_AP": 0.5874377281007472
+      },
+      {
+        "epoch": 22,
+        "validation_AP": 0.580486766528416
+      },
+      {
+        "epoch": 24,
+        "validation_AP": 0.5869462829045105
+      },
+      {
+        "epoch": 26,
+        "validation_AP": 0.5868516082412375
+      }
+    ],
+    "torch_version": "2.8.0"
+  },
+  "seed3_random/distmult_training.json": {
+    "seed": 3,
+    "best_epoch": 40,
+    "stopped_epoch": 40,
+    "best_validation_AP": 0.5071047347072162,
+    "history": [
+      {
+        "epoch": 8,
+        "validation_AP": 0.21208354700060814
+      },
+      {
+        "epoch": 10,
+        "validation_AP": 0.2786171926857853
+      },
+      {
+        "epoch": 12,
+        "validation_AP": 0.32216467385015585
+      },
+      {
+        "epoch": 14,
+        "validation_AP": 0.3717035711165534
+      },
+      {
+        "epoch": 16,
+        "validation_AP": 0.39243381951110395
+      },
+      {
+        "epoch": 18,
+        "validation_AP": 0.4125958981555455
+      },
+      {
+        "epoch": 20,
+        "validation_AP": 0.43165432612788585
+      },
+      {
+        "epoch": 22,
+        "validation_AP": 0.4353508375191388
+      },
+      {
+        "epoch": 24,
+        "validation_AP": 0.4431685366268933
+      },
+      {
+        "epoch": 26,
+        "validation_AP": 0.45817895747103127
+      },
+      {
+        "epoch": 28,
+        "validation_AP": 0.46345451241291946
+      },
+      {
+        "epoch": 30,
+        "validation_AP": 0.47651582050255475
+      },
+      {
+        "epoch": 32,
+        "validation_AP": 0.48633036896960224
+      },
+      {
+        "epoch": 34,
+        "validation_AP": 0.48163888503750896
+      },
+      {
+        "epoch": 36,
+        "validation_AP": 0.4915595094136288
+      },
+      {
+        "epoch": 38,
+        "validation_AP": 0.4866840576073102
+      },
+      {
+        "epoch": 40,
+        "validation_AP": 0.5071047347072162
+      }
+    ],
+    "torch_version": "2.8.0"
+  },
+  "seed3_random/rotate_training.json": {
+    "seed": 3,
+    "best_epoch": 22,
+    "stopped_epoch": 28,
+    "best_validation_AP": 0.7365328347362537,
+    "history": [
+      {
+        "epoch": 8,
+        "validation_AP": 0.7100754739611204
+      },
+      {
+        "epoch": 10,
+        "validation_AP": 0.7166041688140573
+      },
+      {
+        "epoch": 12,
+        "validation_AP": 0.7255840576900257
+      },
+      {
+        "epoch": 14,
+        "validation_AP": 0.7275074694480653
+      },
+      {
+        "epoch": 16,
+        "validation_AP": 0.7362318704470547
+      },
+      {
+        "epoch": 18,
+        "validation_AP": 0.7288451022576573
+      },
+      {
+        "epoch": 20,
+        "validation_AP": 0.7320824485337748
+      },
+      {
+        "epoch": 22,
+        "validation_AP": 0.7365328347362537
+      },
+      {
+        "epoch": 24,
+        "validation_AP": 0.7324067969820592
+      },
+      {
+        "epoch": 26,
+        "validation_AP": 0.734621745475413
+      },
+      {
+        "epoch": 28,
+        "validation_AP": 0.7288189330139063
+      }
+    ],
+    "torch_version": "2.8.0"
+  }
+}
