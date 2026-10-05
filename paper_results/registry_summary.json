@@ -1,0 +1,39 @@
+{
+  "design": "First N records returned in ascending StudyFirstPostDate order within each discontinued-status stratum; interventional drug studies first posted during 2015-2025; last update at or before cutoff. Convenience sample, not a population-prevalence estimate.",
+  "cutoff": "2026-10-05",
+  "summary": {
+    "TERMINATED": {
+      "n": 100,
+      "reason_present": 89,
+      "results_posted": 51,
+      "efficacy_cue": 2,
+      "safety_cue": 10,
+      "operational_cue": 58,
+      "no_recognised_cue": 34,
+      "multiple_cues": 4,
+      "global_negative_edges_added": 0
+    },
+    "WITHDRAWN": {
+      "n": 100,
+      "reason_present": 79,
+      "results_posted": 0,
+      "efficacy_cue": 0,
+      "safety_cue": 1,
+      "operational_cue": 32,
+      "no_recognised_cue": 68,
+      "multiple_cues": 1,
+      "global_negative_edges_added": 0
+    },
+    "SUSPENDED": {
+      "n": 100,
+      "reason_present": 95,
+      "results_posted": 1,
+      "efficacy_cue": 0,
+      "safety_cue": 2,
+      "operational_cue": 53,
+      "no_recognised_cue": 46,
+      "multiple_cues": 1,
+      "global_negative_edges_added": 0
+    }
+  }
+}

@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: Please cite the exact software release and commit used, together with the relevant source-data publications.
+title: KG Repurposing Audit
+type: software
+version: 0.2.0
+date-released: '2026-10-05'
+license: MIT
+repository-code: https://github.com/anonymous-temp/kg-repurposing-audit
+authors:
+  - family-names: Li
+    given-names: Rongwei
+  - family-names: Li
+    given-names: Mengsitong
+  - family-names: Yang
+    given-names: Jie
+  - family-names: Pang
+    given-names: Tieliang
+  - family-names: Wang
+    given-names: Zeyuan
+    affiliation: Sentum Health; The University of Sydney

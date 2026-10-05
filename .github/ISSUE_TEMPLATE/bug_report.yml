@@ -1,0 +1,23 @@
+name: Bug report
+description: Report a reproducible software or evaluation problem using synthetic data
+body:
+  - type: markdown
+    attributes:
+      value: Do not include patient data, credentials, licensed database exports or private manuscript files.
+  - type: input
+    id: version
+    attributes:
+      label: Release and commit
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Synthetic reproduction
+      description: Include commands, expected behaviour and observed behaviour.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Python, package versions and operating system

@@ -1,0 +1,103 @@
+id: https://github.com/anonymous-temp/kg-repurposing-audit/schema
+name: kg_repurposing_evidence_handoff
+title: Scoped evidence handoff for knowledge graph drug repurposing
+license: MIT
+prefixes:
+  linkml: https://w3id.org/linkml/
+  biolink: https://w3id.org/biolink/vocab/
+  prov: http://www.w3.org/ns/prov#
+  audit: https://github.com/anonymous-temp/kg-repurposing-audit/schema/
+default_prefix: audit
+default_range: string
+imports:
+  - linkml:types
+classes:
+  TreatmentStrategy:
+    tree_root: true
+    description: A partial or complete treatment specification; completeness is assessed separately from structural validity.
+    attributes:
+      id: {identifier: true, required: true}
+      drug: {required: true}
+      indication: {required: true}
+      population: {}
+      comparator: {}
+      regimen: {}
+      endpoint: {}
+      required_exposure: {}
+      assessment_date: {range: date}
+      prediction: {range: CandidatePrediction, inlined: true}
+      evidence: {range: EvidenceAssertion, multivalued: true, inlined_as_list: true}
+      constraints: {range: ActionabilityConstraint, multivalued: true, inlined_as_list: true}
+      failures: {range: FailureAnnotation, multivalued: true, inlined_as_list: true}
+  CandidatePrediction:
+    description: Prediction provenance without a fabricated clinical interpretation.
+    attributes:
+      model: {required: true}
+      graph: {required: true}
+      task: {required: true}
+      candidate_sampler: {required: true}
+      seed: {range: integer, required: true}
+      score: {range: float, required: true}
+      rank: {range: integer}
+      rank_scope: {required: true}
+      candidate_count: {range: integer, required: true}
+      source_sha256: {required: true}
+      score_is_probability: {range: boolean, required: true}
+  EvidenceAssertion:
+    attributes:
+      id: {identifier: true, required: true}
+      source: {required: true}
+      source_date: {range: date}
+      proposition: {}
+      effect: {range: EffectEstimate, inlined: true}
+  EffectEstimate:
+    attributes:
+      measure: {required: true}
+      estimate: {range: float, required: true}
+      lower: {range: float, required: true}
+      upper: {range: float, required: true}
+  ActionabilityConstraint:
+    attributes:
+      domain: {range: Domain, required: true}
+      status: {range: ConstraintStatus, required: true}
+      evidence_ids: {multivalued: true}
+      rationale: {}
+  FailureAnnotation:
+    attributes:
+      domain: {required: true}
+      implication: {range: Implication, required: true}
+      source_date: {range: date}
+      evidence_ids: {multivalued: true}
+      registry_status: {}
+      scope: {range: EvidenceScope, inlined: true}
+  EvidenceScope:
+    attributes:
+      drug: {}
+      indication: {}
+      population: {}
+      regimen: {}
+      comparator: {}
+      endpoint: {}
+enums:
+  Domain:
+    permissible_values:
+      mechanism: {}
+      systemic_exposure: {}
+      tissue_exposure: {}
+      regimen: {}
+      population: {}
+      comparator_endpoint: {}
+      safety: {}
+      evidence_path: {}
+  ConstraintStatus:
+    permissible_values:
+      pass: {}
+      concern: {}
+      fail: {}
+      unknown: {}
+  Implication:
+    permissible_values:
+      negate: {}
+      qualify: {}
+      retain: {}
+      defer: {}

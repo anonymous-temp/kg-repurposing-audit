@@ -1,0 +1,17 @@
+{
+  "max_epochs": 40,
+  "dimension": 100,
+  "feature_edges": 854278,
+  "entities": 31662,
+  "positives": 9388,
+  "excluded_proxy_pairs": 33206,
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "sampling": "20 draws per positive, with replacement; both endpoints matched on training-degree bins",
+  "training": "Validation-AP checkpoint selection; minimum 8 epochs, evaluation every 2 epochs, patience 3. Ten percent edge validation for random task; ten percent compound-label validation for compound-disjoint task.",
+  "input_sha256": "0a5a010fcd88dcec572a573d98c26c1c244a11567092b6161d3ded611cfb5c69",
+  "training_code_sha256": "8d29967682f7b565d9294f4935bd4befc5a588585dfba77ad99cf572d89fe426"
+}

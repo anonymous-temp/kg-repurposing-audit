@@ -1,0 +1,8 @@
+{
+  "id": "synthetic:example",
+  "drug": "synthetic:drug",
+  "indication": "synthetic:disease",
+  "evidence": [],
+  "constraints": [],
+  "failures": []
+}

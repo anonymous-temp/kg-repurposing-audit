@@ -1,0 +1,486 @@
+{
+    "$defs": {
+        "ActionabilityConstraint": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "domain": {
+                    "$ref": "#/$defs/Domain"
+                },
+                "evidence_ids": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "rationale": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "status": {
+                    "$ref": "#/$defs/ConstraintStatus"
+                }
+            },
+            "required": [
+                "domain",
+                "status"
+            ],
+            "title": "ActionabilityConstraint",
+            "type": "object"
+        },
+        "CandidatePrediction": {
+            "additionalProperties": false,
+            "description": "Prediction provenance without a fabricated clinical interpretation.",
+            "properties": {
+                "candidate_count": {
+                    "type": "integer"
+                },
+                "candidate_sampler": {
+                    "type": "string"
+                },
+                "graph": {
+                    "type": "string"
+                },
+                "model": {
+                    "type": "string"
+                },
+                "rank": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "rank_scope": {
+                    "type": "string"
+                },
+                "score": {
+                    "type": "number"
+                },
+                "score_is_probability": {
+                    "type": "boolean"
+                },
+                "seed": {
+                    "type": "integer"
+                },
+                "source_sha256": {
+                    "type": "string"
+                },
+                "task": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "model",
+                "graph",
+                "task",
+                "candidate_sampler",
+                "seed",
+                "score",
+                "rank_scope",
+                "candidate_count",
+                "source_sha256",
+                "score_is_probability"
+            ],
+            "title": "CandidatePrediction",
+            "type": "object"
+        },
+        "ConstraintStatus": {
+            "description": "",
+            "enum": [
+                "pass",
+                "concern",
+                "fail",
+                "unknown"
+            ],
+            "title": "ConstraintStatus",
+            "type": "string"
+        },
+        "Domain": {
+            "description": "",
+            "enum": [
+                "mechanism",
+                "systemic_exposure",
+                "tissue_exposure",
+                "regimen",
+                "population",
+                "comparator_endpoint",
+                "safety",
+                "evidence_path"
+            ],
+            "title": "Domain",
+            "type": "string"
+        },
+        "EffectEstimate": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "estimate": {
+                    "type": "number"
+                },
+                "lower": {
+                    "type": "number"
+                },
+                "measure": {
+                    "type": "string"
+                },
+                "upper": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "measure",
+                "estimate",
+                "lower",
+                "upper"
+            ],
+            "title": "EffectEstimate",
+            "type": "object"
+        },
+        "EvidenceAssertion": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "effect": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/EffectEstimate"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "id": {
+                    "type": "string"
+                },
+                "proposition": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "source": {
+                    "type": "string"
+                },
+                "source_date": {
+                    "format": "date",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "required": [
+                "id",
+                "source"
+            ],
+            "title": "EvidenceAssertion",
+            "type": "object"
+        },
+        "EvidenceScope": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "comparator": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "drug": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "endpoint": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "indication": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "population": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "regimen": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "title": "EvidenceScope",
+            "type": "object"
+        },
+        "FailureAnnotation": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "domain": {
+                    "type": "string"
+                },
+                "evidence_ids": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "implication": {
+                    "$ref": "#/$defs/Implication"
+                },
+                "registry_status": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "scope": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/EvidenceScope"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "source_date": {
+                    "format": "date",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "required": [
+                "domain",
+                "implication"
+            ],
+            "title": "FailureAnnotation",
+            "type": "object"
+        },
+        "Implication": {
+            "description": "",
+            "enum": [
+                "negate",
+                "qualify",
+                "retain",
+                "defer"
+            ],
+            "title": "Implication",
+            "type": "string"
+        },
+        "TreatmentStrategy": {
+            "additionalProperties": false,
+            "description": "A partial or complete treatment specification; completeness is assessed separately from structural validity.",
+            "properties": {
+                "assessment_date": {
+                    "format": "date",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "comparator": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "constraints": {
+                    "items": {
+                        "$ref": "#/$defs/ActionabilityConstraint"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "drug": {
+                    "type": "string"
+                },
+                "endpoint": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "evidence": {
+                    "items": {
+                        "$ref": "#/$defs/EvidenceAssertion"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "failures": {
+                    "items": {
+                        "$ref": "#/$defs/FailureAnnotation"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "id": {
+                    "type": "string"
+                },
+                "indication": {
+                    "type": "string"
+                },
+                "population": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "prediction": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/CandidatePrediction"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ]
+                },
+                "regimen": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "required_exposure": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "required": [
+                "id",
+                "drug",
+                "indication"
+            ],
+            "title": "TreatmentStrategy",
+            "type": "object"
+        }
+    },
+    "$id": "https://github.com/anonymous-temp/kg-repurposing-audit/schema",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "additionalProperties": true,
+    "description": "A partial or complete treatment specification; completeness is assessed separately from structural validity.",
+    "metamodel_version": "1.7.0",
+    "properties": {
+        "assessment_date": {
+            "format": "date",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "comparator": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "constraints": {
+            "items": {
+                "$ref": "#/$defs/ActionabilityConstraint"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "drug": {
+            "type": "string"
+        },
+        "endpoint": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "evidence": {
+            "items": {
+                "$ref": "#/$defs/EvidenceAssertion"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "failures": {
+            "items": {
+                "$ref": "#/$defs/FailureAnnotation"
+            },
+            "type": [
+                "array",
+                "null"
+            ]
+        },
+        "id": {
+            "type": "string"
+        },
+        "indication": {
+            "type": "string"
+        },
+        "population": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "prediction": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/CandidatePrediction"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "regimen": {
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "required_exposure": {
+            "type": [
+                "string",
+                "null"
+            ]
+        }
+    },
+    "required": [
+        "id",
+        "drug",
+        "indication"
+    ],
+    "title": "kg_repurposing_evidence_handoff",
+    "type": "object",
+    "version": null
+}
+
