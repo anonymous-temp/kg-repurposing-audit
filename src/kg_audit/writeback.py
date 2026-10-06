@@ -1,168 +1,237 @@
-"""Four-policy semi-synthetic write-back stress test on a supplied split.
+"""Write-back policies, training labels, scorers and metrics for the failure write-back experiment.
 
-Selected recorded positive training edges receive hypothetical retain/defer
-annotations. These are not observed trial failures or expert annotations.
+Unit of analysis: a Hetionet (compound, disease) pair on the full 1,552 x 137 grid.
+Training is positive-unlabelled: recorded fitting indications are positives; every other
+pair is an unlabelled pair with weight 1 unless a write-back policy changes its weight.
 """
-
-import argparse
-import hashlib
-import json
-from pathlib import Path
-import time
+import gzip, os
 import numpy as np
 import pandas as pd
-from sklearn.metrics import average_precision_score, roc_auc_score
+import torch
+import torch.nn as nn
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import roc_auc_score
+
+HET = os.environ.get("HET", "work/data/hetionet")
+DATA = os.environ.get("DATA", "work/mapped")
+STOP = {"TERMINATED", "WITHDRAWN", "SUSPENDED"}
+SCIENTIFIC = {"Negative", "Safety_Sideeffects"}
+CUTOFF_WRITEBACK = os.environ.get("WB_CUTOFF", "2015-01-01")   # stopped trials starting before this date form the write-back set
+WB_PHASE13 = os.environ.get("WB_PHASE13", "0") == "1"           # sensitivity: exclude phase 4 trials from the write-back set
+CUTOFF_FUTURE = "2017-01-01"      # trials starting on/after this date are later evidence
+ACTIONS = ("ignore", "negate", "mask")
 
 
-def policy_edges(positive, negative, selected, retained, policy):
-    selected = set(selected)
-    retained = set(retained)
-    if not retained <= selected:
-        raise ValueError("Retained indices must be selected")
-    if policy == "no_writeback":
-        return list(positive), list(negative)
-    if policy == "flat_negative":
-        return [p for i, p in enumerate(positive) if i not in selected], list(negative) + [
-            positive[i] for i in sorted(selected)
-        ]
-    if policy == "uncertainty_mask":
-        return [p for i, p in enumerate(positive) if i not in selected], list(negative)
-    if policy == "typed":
-        return [p for i, p in enumerate(positive) if i not in selected or i in retained], list(negative)
-    raise ValueError("Unknown write-back policy")
+# ----------------------------------------------------------------------------- data
+def load_graph():
+    nodes = pd.read_csv(f"{HET}/hetionet-v1.0-nodes.tsv", sep="\t")
+    nodes["kind"] = nodes.kind.str.strip()
+    comps = sorted(nodes[nodes.kind == "Compound"].id.str.replace("Compound::", "", regex=False))
+    dises = sorted(nodes[nodes.kind == "Disease"].id.str.replace("Disease::", "", regex=False))
+    names = dict(zip(nodes.id.str.split("::").str[-1], nodes.name))
+    ctd, cpd = [], set()
+    with gzip.open(f"{HET}/hetionet-v1.0-edges.sif.gz", "rt") as fh:
+        fh.readline()
+        for line in fh:
+            s, m, t = line.rstrip("\n").split("\t")
+            if m == "CtD":
+                ctd.append((s[10:], t[9:]))
+            elif m == "CpD":
+                cpd.add((s[10:], t[9:]))
+    return comps, dises, names, ctd, cpd
 
 
-def run(splits_path, output, seeds=range(1, 11), epochs=200, threads=2):
-    import torch
-    from torch import nn
-
-    torch.set_num_threads(threads)
-    spec = json.loads(Path(splits_path).read_text())["random"]
-    positive = list(map(tuple, spec["train_pos"]))
-    testpos = list(map(tuple, spec["test_pos"]))
-    rng = np.random.default_rng(20261005)
-    eval_sets = {}
-    for name in ["neg_random", "neg_degmatch"]:
-        pool = list(map(tuple, spec[name]))
-        idx = rng.choice(len(pool), 20 * len(testpos), replace=False)
-        eval_sets[name] = testpos + [pool[i] for i in idx]
-    excluded = set().union(*map(set, eval_sets.values()))
-    negative = [tuple(p) for p in spec["train_neg"] if tuple(p) not in excluded]
-    allpairs = positive + negative + list(excluded)
-    c2i = {x: i for i, x in enumerate(sorted({c for c, d in allpairs}))}
-    d2i = {x: i for i, x in enumerate(sorted({d for c, d in allpairs}))}
-
-    def indexes(pairs):
-        return torch.tensor([[c2i[c], d2i[d]] for c, d in pairs], dtype=torch.long)
-
-    eval_index = {k: indexes(pairs) for k, pairs in eval_sets.items()}
-    labels = {k: np.r_[np.ones(len(testpos)), np.zeros(len(pairs) - len(testpos))] for k, pairs in eval_sets.items()}
-
-    class MF(nn.Module):
-        def __init__(self):
-            super().__init__()
-            self.u = nn.Embedding(len(c2i), 16)
-            self.v = nn.Embedding(len(d2i), 16)
-            self.bc = nn.Embedding(len(c2i), 1)
-            self.bd = nn.Embedding(len(d2i), 1)
-            self.intercept = nn.Parameter(torch.zeros(()))
-            nn.init.normal_(self.u.weight, 0, 0.1)
-            nn.init.normal_(self.v.weight, 0, 0.1)
-            nn.init.zeros_(self.bc.weight)
-            nn.init.zeros_(self.bd.weight)
-
-        def forward(self, ix):
-            c, d = ix[:, 0], ix[:, 1]
-            return (self.u(c) * self.v(d)).sum(1) + self.bc(c).squeeze(1) + self.bd(d).squeeze(1) + self.intercept
-
-    rows = []
-    out = Path(output)
-    out.mkdir(parents=True, exist_ok=True)
-    all_scores = {}
-    start = time.time()
-    fit_count = 0
-    for seed in seeds:
-        cache = {}
-        prng = np.random.default_rng(seed + 50000)
-        order = prng.permutation(len(positive))
-        for fraction in [0.0, 0.1, 0.25, 0.5]:
-            selected = order[: int(round(fraction * len(positive)))].tolist()
-            for retain_fraction in [0.0, 0.5, 1.0]:
-                retained = selected[: int(round(retain_fraction * len(selected)))]
-                for policy in ["no_writeback", "flat_negative", "uncertainty_mask", "typed"]:
-                    p, n = policy_edges(positive, negative, selected, retained, policy)
-                    key = hashlib.sha256(json.dumps([p, n], separators=(",", ":")).encode()).hexdigest()
-                    if key not in cache:
-                        torch.manual_seed(seed)
-                        model = MF()
-                        opt = torch.optim.Adam(model.parameters(), lr=0.02, weight_decay=1e-4)
-                        ix = indexes(p + n)
-                        y = torch.tensor([1.0] * len(p) + [0.0] * len(n))
-                        lossfn = nn.BCEWithLogitsLoss(pos_weight=torch.tensor(len(n) / len(p)))
-                        for _ in range(epochs):
-                            loss = lossfn(model(ix), y)
-                            opt.zero_grad()
-                            loss.backward()
-                            opt.step()
-                        with torch.no_grad():
-                            scores = {name: model(vals).numpy() for name, vals in eval_index.items()}
-                        cache[key] = scores
-                        fit_count += 1
-                    for sampler, scores in cache[key].items():
-                        row = {
-                            "seed": seed,
-                            "selected_fraction": fraction,
-                            "n_selected": len(selected),
-                            "retain_fraction": retain_fraction,
-                            "policy": policy,
-                            "sampler": sampler,
-                            "AP": float(average_precision_score(labels[sampler], scores)),
-                            "AUROC": float(roc_auc_score(labels[sampler], scores)),
-                            "fit_id": key,
-                            "n_train_positive": len(p),
-                        }
-                        rows.append(row)
-                        all_scores[f"s{seed}_f{fraction}_r{retain_fraction}_{policy}_{sampler}"] = scores
-        pd.DataFrame(rows).to_csv(out / "replicate_results.csv", index=False)
-        print(f"seed {seed} complete; unique fits={fit_count}; elapsed={time.time() - start:.1f}s", flush=True)
-    data = pd.DataFrame(rows)
-    summary = data.groupby(["selected_fraction", "retain_fraction", "policy", "sampler"], as_index=False).agg(
-        AP_mean=("AP", "mean"), AP_sd=("AP", "std"), AUROC_mean=("AUROC", "mean"), n_replicates=("seed", "nunique")
-    )
-    summary.to_csv(out / "summary.csv", index=False)
-    np.savez_compressed(out / "scores.npz", **all_scores)
-    for name, pairs in eval_sets.items():
-        frame = pd.DataFrame(pairs, columns=["compound", "disease"])
-        frame["label"] = labels[name]
-        frame.to_csv(out / f"{name}_candidates.tsv", sep="\t", index=False)
-    protocol = {
-        "input_sha256": hashlib.sha256(Path(splits_path).read_bytes()).hexdigest(),
-        "seeds": list(seeds),
-        "epochs": epochs,
-        "latent_dimension": 16,
-        "learning_rate": 0.02,
-        "weight_decay": 0.0001,
-        "sampler_seed": 20261005,
-        "unique_fits": fit_count,
-        "n_training_positive": len(positive),
-        "n_training_unlabelled": len(negative),
-        "n_test_positive": len(testpos),
-        "design": "Semi-synthetic annotations on recorded positive training edges, not observed failures. Typed retention is supplied correctly by construction; no real-world annotation reliability is estimated.",
+def load_evidence():
+    """Pair-level evidence from Open Targets clinical reports mapped to Hetionet."""
+    tp = pd.read_csv(f"{DATA}/trial_pairs.tsv", sep="\t", low_memory=False)
+    dm = pd.read_csv(f"{DATA}/disease_map.tsv", sep="\t")
+    gap = dict(zip(zip(dm.ot_disease, dm.disease), dm.depth_gap))
+    tp["gap"] = [gap.get((o, d), -1) for o, d in zip(tp.ot_disease, tp.disease)]
+    tp["pair"] = list(zip(tp.compound, tp.disease))
+    trials = tp[tp.origin == "CLINICAL_TRIAL"].copy()
+    trials["start"] = pd.to_datetime(trials.start_date, errors="coerce")
+    st = trials[trials.status.isin(STOP)].copy()
+    cats = st.stop_categories.fillna("")
+    st["scientific"] = cats.apply(lambda s: bool(set(s.split("|")) & SCIENTIFIC) if s else False)
+    wb = st[st.start < CUTOFF_WRITEBACK]
+    if WB_PHASE13:
+        wb = wb[~wb.phase.fillna("").str.contains("PHASE4")]
+    later = st[st.start >= CUTOFF_FUTURE]
+    approved = set(tp[(tp.stage == "APPROVAL") & (tp.origin != "CLINICAL_TRIAL")].pair)
+    ev = {
+        "wb_all": set(wb.pair),
+        "wb_scientific": set(wb[wb.scientific].pair),
+        "wb_scientific_scoped": set(wb[wb.scientific & (wb.gap == 0)].pair),
+        "later_scientific": set(later[later.scientific].pair),
+        "stopped_any_date": set(st.pair),
+        "approved": approved,
+        "trials": trials,
+        "stopped": st,
     }
-    (out / "protocol.json").write_text(json.dumps(protocol, indent=2))
-    return summary
+    ev["wb_other"] = ev["wb_all"] - ev["wb_scientific"]
+    return ev
 
 
-def main():
-    p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--splits", required=True)
-    p.add_argument("--output", required=True)
-    p.add_argument("--epochs", type=int, default=200)
-    p.add_argument("--seeds", type=int, nargs="+", default=list(range(1, 11)))
-    p.add_argument("--threads", type=int, default=2)
-    a = p.parse_args()
-    run(a.splits, a.output, a.seeds, a.epochs, a.threads)
+def policy_sets(ev, policy):
+    """Return {pair: action} for one policy name.
+
+    Grid policies are named 'sci=<action>,other=<action>'. 'typed_scoped' negates
+    scientific stops only when a stopped trial's condition maps to the Hetionet disease
+    itself (not to a narrower subtype); all other stopped pairs are masked.
+    """
+    out = {}
+    if policy == "typed_scoped":
+        for p in ev["wb_all"]:
+            out[p] = "negate" if p in ev["wb_scientific_scoped"] else "mask"
+        return out
+    sci_a, oth_a = [x.split("=")[1] for x in policy.split(",")]
+    for p in ev["wb_scientific"]:
+        out[p] = sci_a
+    for p in ev["wb_other"]:
+        out[p] = oth_a
+    return out
 
 
-if __name__ == "__main__":
-    main()
+NAMED = {
+    "no_writeback": "sci=ignore,other=ignore",
+    "flat_negative": "sci=negate,other=negate",
+    "mask_all": "sci=mask,other=mask",
+    "typed": "sci=negate,other=mask",
+    "typed_scoped": "typed_scoped",
+}
+GRID = [f"sci={a},other={b}" for a in ACTIONS for b in ACTIONS]
+
+
+def training_matrix(comps, dises, fit_pos, cpd, actions, w_neg=10.0, masked_rows=()):
+    """Labels and per-pair weights on the full grid.
+
+    Recorded fitting positives always remain positives (they take precedence over a
+    stopped trial). CpD (symptomatic) pairs are excluded. Rows of compounds whose labels
+    are held out (compound-disjoint task) carry no unlabelled weight, but a write-back
+    negative on such a compound is still applied because it is the only evidence there.
+    """
+    ci = {c: i for i, c in enumerate(comps)}; di = {d: j for j, d in enumerate(dises)}
+    Y = np.zeros((len(comps), len(dises)), np.float32)
+    Wt = np.ones_like(Y)
+    for c in masked_rows:
+        Wt[ci[c], :] = 0.0
+    for c, d in cpd:
+        Wt[ci[c], di[d]] = 0.0
+    for (c, d), a in actions.items():
+        if c not in ci or d not in di:
+            continue
+        if a == "negate":
+            Wt[ci[c], di[d]] = w_neg
+        elif a == "mask":
+            Wt[ci[c], di[d]] = 0.0
+    for c, d in fit_pos:
+        Y[ci[c], di[d]] = 1.0
+    pos = Y == 1
+    Wt[pos] = 1.0
+    neg_w = Wt[~pos].sum()
+    Wt[pos] = neg_w / max(pos.sum(), 1)       # balance the two classes
+    return Y, Wt
+
+
+# ----------------------------------------------------------------------------- models
+class Scorer(nn.Module):
+    """Score matrix = MF term + bilinear graph term + compound/disease biases."""
+
+    def __init__(self, nC, nD, mf_dim=0, emb_c=None, emb_d=None):
+        super().__init__()
+        self.bc = nn.Parameter(torch.zeros(nC)); self.bd = nn.Parameter(torch.zeros(nD)); self.b0 = nn.Parameter(torch.zeros(()))
+        self.mf_dim = mf_dim
+        if mf_dim:
+            self.U = nn.Parameter(torch.randn(nC, mf_dim) * 0.1); self.V = nn.Parameter(torch.randn(nD, mf_dim) * 0.1)
+        self.graph = emb_c is not None
+        if self.graph:
+            self.register_buffer("Ec", emb_c); self.register_buffer("Ed", emb_d)
+            self.M = nn.Parameter(torch.zeros(emb_c.shape[1], emb_d.shape[1]))
+
+    def forward(self):
+        s = self.bc[:, None] + self.bd[None, :] + self.b0
+        if self.mf_dim:
+            s = s + self.U @ self.V.T
+        if self.graph:
+            s = s + (self.Ec @ self.M) @ self.Ed.T
+        return s
+
+
+def fit_scorer(Y, Wt, mf_dim=0, emb=None, wd=1e-4, lr=0.02, epochs=(200,), seed=1, threads=1):
+    torch.manual_seed(seed)
+    torch.set_num_threads(threads)
+    nC, nD = Y.shape
+    ec, ed = (None, None) if emb is None else emb
+    model = Scorer(nC, nD, mf_dim, ec, ed)
+    opt = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=wd)
+    y = torch.tensor(Y); w = torch.tensor(Wt)
+    wsum = w.sum()
+    out = {}
+    for ep in range(1, max(epochs) + 1):
+        s = model()
+        loss = (nn.functional.binary_cross_entropy_with_logits(s, y, reduction="none") * w).sum() / wsum
+        opt.zero_grad(); loss.backward(); opt.step()
+        if ep in epochs:
+            with torch.no_grad():
+                out[ep] = model().numpy().copy()
+    return out
+
+
+def degree_reference(comps, dises, Y, Wt):
+    """Balanced logistic regression on log(1 + fitting degree) of each endpoint."""
+    cdeg = Y.sum(1); ddeg = Y.sum(0)
+    X = np.stack(np.broadcast_arrays(np.log1p(cdeg)[:, None], np.log1p(ddeg)[None, :]), -1).reshape(-1, 2)
+    mu, sd = X.mean(0), X.std(0) + 1e-9
+    Xs = (X - mu) / sd
+    y = Y.reshape(-1); w = Wt.reshape(-1)
+    keep = w > 0
+    clf = LogisticRegression(solver="liblinear", C=1.0, max_iter=1000).fit(Xs[keep], y[keep], sample_weight=w[keep])
+    return (Xs @ clf.coef_[0] + clf.intercept_[0]).reshape(Y.shape)
+
+
+def disease_degree(Y):
+    return np.broadcast_to(np.log1p(Y.sum(0))[None, :], Y.shape).copy()
+
+
+def load_embeddings(path, comps, dises):
+    st = torch.load(path)
+    idx = {e: i for i, e in enumerate(st["entities"])}
+    E = st["er"].float()
+    if "ei" in st:
+        E = torch.cat([E, st["ei"].float()], 1)
+    E = (E - E.mean(0)) / (E.std(0) + 1e-6)
+    ec = E[[idx["Compound::" + c] for c in comps]]
+    ed = E[[idx["Disease::" + d] for d in dises]]
+    return ec, ed
+
+
+# ----------------------------------------------------------------------------- metrics
+def weighted_ap(y, s, w=None):
+    """Non-interpolated AP with exact tie handling; optional row weights (bootstrap)."""
+    o = np.argsort(-s, kind="stable")
+    yy = y[o]; ss = s[o]
+    ww = np.ones(len(y)) if w is None else w[o]
+    ends = np.r_[np.flatnonzero(np.diff(ss)), len(ss) - 1]
+    tp = np.cumsum(ww * yy)[ends]; tot = np.cumsum(ww)[ends]
+    if tp[-1] <= 0:
+        return float("nan")
+    prec = tp / np.maximum(tot, 1e-12)
+    return float(np.sum(np.diff(np.r_[0.0, tp]) * prec) / tp[-1])
+
+
+def grid_metrics(pairs, labels, scores, comps_of_pairs=None):
+    y = np.asarray(labels, float); s = np.asarray(scores, float)
+    res = {"AP": weighted_ap(y, s), "AUROC": float(roc_auc_score(y, s)), "n": int(len(y)), "n_pos": int(y.sum())}
+    df = pd.DataFrame({"c": [p[0] for p in pairs], "d": [p[1] for p in pairs], "y": y, "s": s})
+    aps = [weighted_ap(g.y.values, g.s.values) for _, g in df.groupby("d") if g.y.sum() > 0 and g.y.sum() < len(g)]
+    res["macroAP_disease"] = float(np.mean(aps))
+    rr, h10 = [], []
+    for c, g in df.groupby("c"):
+        if g.y.sum() == 0:
+            continue
+        neg = g.s.values[g.y.values == 0]
+        for sp in g.s.values[g.y.values == 1]:
+            rank = 1 + int((neg > sp).sum()) + 0.5 * int((neg == sp).sum())   # filtered: other positives removed
+            rr.append(1.0 / rank); h10.append(rank <= 10)
+    res["MRR"] = float(np.mean(rr)); res["Hits@10"] = float(np.mean(h10))
+    return res

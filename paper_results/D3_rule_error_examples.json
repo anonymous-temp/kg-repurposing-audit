@@ -1,0 +1,68 @@
+{
+ "efficacy": {
+  "false_positive": [
+   "Closed due to futility with only 1 patient accrued",
+   "Enrollment was much slower than anticipated, leading to a decision to terminate the study\u00ca early for enrollment futility.",
+   "Futility analysis undertaken, determined that study was underpowered.",
+   "Futility in enrollment as of May 31, 2011",
+   "Insufficient financial support to continue; lack of efficacy",
+   "Lack of efficacy/Manufacturer stopping drug development",
+   "Recent similar studies have been completed and published showing no benefit to the\u00ca intervention.",
+   "Study was never opened to accrual. There is no clinical benefit to patients."
+  ],
+  "false_negative": [
+   "&quot;Tapering doses&quot; protocol arm was not effective for treatment retention outcome.",
+   "6 month vital status report not collected after 28 day follow up analysis indicated no difference between placebo &amp; tezosentan",
+   "A higher rate of late rejection was seen in the low tacrolimus arm.",
+   "A planned interim analysis was performed after approx. 240 subjects completed the trial. The study was stopped, as permitted by protocol, after the analysis.\"",
+   "A preliminary analysis of 11 patients confirmed the safety profile of NCX-1000 but did not demonstrate the efficacy required.",
+   "AG-1749 superior to Gefarnate in ulcer prevention",
+   "AML assessment of response in the Part B patients (9) find treatment failure in all instances.",
+   "Accrual and treatment with CG1940/CG8711 stopped due to IDMC recommendation."
+  ]
+ },
+ "safety": {
+  "false_positive": [
+   "13 of 15 patients recruited.Study patients responded with no safety signals. Recruitment\u00ca slow,timely end of study necessary to keep development timelines",
+   "A preliminary analysis of 11 patients confirmed the safety profile of NCX-1000 but did not demonstrate the efficacy required.",
+   "APPRISE closure prompted by SWOG S0205 not meeting primary endpoint-improving OS. APPRISE enrollment closure due to similar design;no unexpected safety data",
+   "Adverse Events",
+   "Amgen decision following interim review of efficacy and safety data from the AMG 337 program.",
+   "Animal Safety Data",
+   "As no safety warnings were detected,Interim analysis from the first 40 patients reccomends to stop the trial for futility\"",
+   "B2151007 was prematurely discontinued due to Pfizer's change in prioritization for the\u00ca portfolio and is not due to any safety concerns or regulatory interaction"
+  ],
+  "false_negative": [
+   "2 complications with midazolam",
+   "A cluster of deaths in the BCG-arm compared with controls",
+   "A re-evaluation of research risks to participants were greater than originally anticipated",
+   "Adverse findings from nonclinical carcinogenicity studies.",
+   "After interim analysis it was determined that the risks were too great in comparision to the\u00ca results",
+   "After reports of turbidity in urine in 4 of 8 volunteers in the 4th cohort, the study was halted temporarily.\"",
+   "All patients during the study period were subjected to peripheral blocks or were excluded from\u00ca the study due to exclusion criteria",
+   "An interim analysis revealed a significantly higher persistence/recurrence of complications of portal hypertension in the 8 mm-stent group."
+  ]
+ },
+ "operational": {
+  "false_positive": [
+   "A new alternative treatment for patients who have progressed after treatment with trastuzumab, has caused the decrease in the rhythm of recruitment.\"",
+   "A new study is being designed. No patients were enrolled.",
+   "APPRISE closure prompted by SWOG S0205 not meeting primary endpoint-improving OS. APPRISE enrollment closure due to similar design;no unexpected safety data",
+   "Accrual Goal Met",
+   "Accrual and treatment with CG1940/CG8711 stopped due to IDMC recommendation.",
+   "All enrollment, treatment, follow-up &amp; data analysis completed\"",
+   "All patients recruited",
+   "Another study enrolling the similar group of patient are ongoing"
+  ],
+  "false_negative": [
+   "10/2005 PI assigned duties as trauma physician in addition other duties",
+   "2011 Thailand flooding led to loss of GMP pharmacy, project delays, and further regulatory \u00ca challenges.",
+   "50% of eligible patients refused to enter the study",
+   "65 patients were included after 2 years instead of 140",
+   "A significant reduction in head injuries coupled with more frequent use of crainectomy reduced \u00ca the number of potential subjects.",
+   "AMAG not continuing with Combidex, the study drug\"",
+   "AOI Pharma is reassessing the development strategy for perifosine.",
+   "AOI Pharmaceuticals, Inc. decided to terminate the license agreement. No further clinical development by AOI Pharmaceuticals, Inc. will be pursued.\""
+  ]
+ }
+}

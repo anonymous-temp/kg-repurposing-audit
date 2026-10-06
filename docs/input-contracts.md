@@ -1,31 +1,17 @@
 # Input and output contracts
 
-## Hetionet
+## Pair table (`trial_pairs.tsv`, from `01_map_open_targets.py`)
 
-`hetionet-v1.0-nodes.tsv` has `id`, `name`, and `kind` columns. The gzipped edge SIF is tab-separated with a header and three columns in source, metaedge, target order. The target relation is `CtD`. Rename the upstream edge file to the documented local filename without editing its contents.
+One row per (clinical report, Hetionet compound, Hetionet disease): `report_id`, `compound` (DrugBank id), `disease` (DOID), `ot_disease` (condition term), `stage`, `origin`, `type`, `source`, `phase`, `status`, `year`, `stop_categories` ('|'-joined), `why_stopped`, `start_date`, `url`. `disease_map.tsv` gives the route (direct or ancestor) and the depth gap used for the scope match.
 
-`drugcentral_compound_annot.tsv` must include string columns `drugbank_id` and `smiles`. The `drugbank_id` is the unprefixed identifier used by the mapped Hetionet Compound node. Missing or invalid structures remain unmapped; they are not imputed from drug names. The scaffold grouping is a treatment-label partition and does not remove auxiliary node identities.
+## Partitions (`02_make_partitions.py`)
 
-Preparation writes the graph-specific `splits.json`. Its keys are `random`, `coldstart`, and `scaffold`; each contains `train_pos`, `train_neg`, `test_pos`, `neg_random`, and `neg_degmatch`, as arrays of compound/disease identifier pairs. The historical key `neg_degmatch` means **disease-frequency sampling**, not joint training-degree-bin matching.
+`{task}_p{seed}.json` with `fit_pos`, `val_pos`, `test_pos`, `eval_grid` and `val_grid` as lists of [compound, disease]. The evaluation grid is every pair of a held-out compound with a disease that has at least one recorded treatment, minus fitting/validation positives and CpD pairs. A grid pair that is not a held-out treatment is unlabelled, not a verified non-indication.
 
-The `scores_{model}_{split}_seed{seed}.tsv` files contain `group`, `compound`, `disease`, and uncalibrated `score`. The summary pipeline exports common candidate manifests and seed-specific fitting/validation records. It will fail on missing model files rather than fabricate a cell.
+## Candidate-level scores (`paper_results/scores/`)
 
-## PrimeKG
-
-`kg.csv` must contain `relation`, `x_type`, `x_id`, `y_type`, and `y_id`. The pipeline retains drug-protein, disease-protein and protein-protein features. Indication pairs are the labelled target. Contraindication and off-label pairs are excluded from the unlabelled candidate pools.
-
-Within each seed/task, the pipeline holds out task-consistent validation labels before constructing fitting-degree references. Uniform and joint-bin candidate sets share test positives. Joint bins are zero, one, two-to-three, four-to-seven, and successive powers of two. Sampling is with replacement, and the output records both draw counts and unique pairs. Empty support is an explicit error.
-
-Outputs contain fitting positives, separate baseline-fitting unlabelled pairs, validation pairs, test candidate rows, per-model scores, checkpoint state dictionaries, validation histories and a recipe fingerprint. Model scores are not calibrated clinical probabilities.
-
-## User-supplied comparisons
-
-A CSV or TSV has `compound`, `disease`, `label` (0 or 1), and numerical score columns. Supply one model and one reference column for each seed, in matching order. Candidate identities must refer to the same task and sampling design. Repeated identical pairs can encode sampling multiplicity; conflicting labels for the same pair are rejected.
-
-`label=0` means sampled unlabelled in the benchmark. It must not be relabelled as proven clinical inefficacy.
+Tab-separated, gzipped: `task`, `pseed`, `compound`, `disease`, `label`, then one column per policy and scorer (mean over initialisation seeds). Scores are uncalibrated and comparable only within a task, partition and scorer.
 
 ## Evidence records
 
-The LinkML and JSON Schema files describe the serialised structure. Semantic rules are in `kg_audit.evidence`: required evidence domains, valid references, date availability, conflicting observations and contextual scope. Structural validity and readiness for documentation review are separate checks. Unknowns can be omitted; absence never creates a pass.
-
-No trial registry status alone creates a negative drug-disease edge. Scoped counterevidence includes drug, indication, population, regimen, comparator, endpoint and source provenance. A changed comparator or regimen cannot silently supersede another treatment strategy.
+The LinkML and generated JSON Schema files describe the serialised structure; semantic rules are in `kg_audit.evidence` and `kg_audit.failures`. A failure annotation's implication must follow the write-back rule: retain for a recorded treatment, negate only for a same-concept efficacy or safety failure, qualify for a scientific failure in another concept, defer otherwise. A registry status alone never creates a negative label, and evidence dated after the review date is never used.

@@ -1,0 +1,124 @@
+{
+  "id": "example:baricitinib-covid19",
+  "drug": "DRUGBANK:DB11817",
+  "indication": "MONDO:0100096",
+  "population": "adults hospitalised with COVID-19",
+  "regimen": "baricitinib 4 mg orally once daily for up to 14 days or until discharge",
+  "comparator": "usual care",
+  "endpoint": "28-day all-cause mortality",
+  "required_exposure": "unknown",
+  "assessment_date": "2026-10-06",
+  "knowledge_level": "knowledge_assertion",
+  "agent_type": "manual_agent",
+  "evidence": [
+    {
+      "id": "doi:10.1016/S0140-6736(20)30304-4",
+      "source": "Richardson et al. Lancet 2020;395:e30-e31",
+      "source_date": "2020-02-04",
+      "predicate": "studied_to_treat",
+      "proposition": "Knowledge-graph-assisted hypothesis that baricitinib could reduce viral entry and inflammation in COVID-19"
+    },
+    {
+      "id": "doi:10.1056/NEJMoa2031994",
+      "source": "ACTT-2, Kalil et al. N Engl J Med 2021;384:795-807",
+      "source_date": "2020-12-11",
+      "predicate": "treats",
+      "research_phase": "clinical_trial_phase_3",
+      "proposition": "Baricitinib plus remdesivir versus remdesivir alone shortened time to recovery",
+      "effect": {
+        "measure": "rate ratio for recovery",
+        "estimate": 1.16,
+        "lower": 1.01,
+        "upper": 1.32
+      }
+    },
+    {
+      "id": "doi:10.1016/S2213-2600(21)00331-3",
+      "source": "COV-BARRIER, Marconi et al. Lancet Respir Med 2021;9:1407-1418",
+      "source_date": "2021-09-01",
+      "predicate": "treats",
+      "research_phase": "clinical_trial_phase_3",
+      "proposition": "Composite primary endpoint not met; 28-day mortality lower with baricitinib plus standard of care",
+      "effect": {
+        "measure": "hazard ratio for 28-day mortality",
+        "estimate": 0.57,
+        "lower": 0.41,
+        "upper": 0.78
+      }
+    },
+    {
+      "id": "doi:10.1016/S0140-6736(22)01109-6",
+      "source": "RECOVERY Collaborative Group. Lancet 2022;400:359-368",
+      "source_date": "2022-07-30",
+      "predicate": "treats",
+      "research_phase": "clinical_trial_phase_3",
+      "proposition": "Allocation to baricitinib reduced 28-day mortality versus usual care",
+      "effect": {
+        "measure": "age-adjusted rate ratio for 28-day mortality",
+        "estimate": 0.87,
+        "lower": 0.77,
+        "upper": 0.99
+      }
+    },
+    {
+      "id": "url:fda-olumiant-covid19-2022",
+      "source": "US FDA approval of OLUMIANT for certain hospitalised adults with COVID-19 (announced 11 May 2022)",
+      "source_date": "2022-05-11",
+      "predicate": "treats",
+      "clinical_approval_status": "fda_approved_for_condition"
+    }
+  ],
+  "constraints": [
+    {
+      "domain": "mechanism",
+      "status": "concern",
+      "evidence_ids": [
+        "doi:10.1016/S0140-6736(20)30304-4"
+      ]
+    },
+    {
+      "domain": "systemic_exposure",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "tissue_exposure",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "regimen",
+      "status": "pass",
+      "evidence_ids": [
+        "doi:10.1016/S0140-6736(22)01109-6"
+      ]
+    },
+    {
+      "domain": "population",
+      "status": "pass",
+      "evidence_ids": [
+        "doi:10.1016/S0140-6736(22)01109-6"
+      ]
+    },
+    {
+      "domain": "comparator_endpoint",
+      "status": "pass",
+      "evidence_ids": [
+        "doi:10.1016/S0140-6736(22)01109-6"
+      ]
+    },
+    {
+      "domain": "safety",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "evidence_path",
+      "status": "pass",
+      "evidence_ids": [
+        "url:fda-olumiant-covid19-2022"
+      ]
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,82 @@
+{
+  "baricitinib_covid19": {
+    "structural_errors": [],
+    "documentation_status": {
+      "status": "incomplete",
+      "reasons": [
+        "required_exposure",
+        "safety",
+        "systemic_exposure",
+        "tissue_exposure"
+      ],
+      "as_of": "2026-10-06"
+    },
+    "failure_actions": []
+  },
+  "pimozide_als": {
+    "structural_errors": [],
+    "documentation_status": {
+      "status": "incomplete",
+      "reasons": [
+        "comparator",
+        "comparator_endpoint",
+        "endpoint",
+        "evidence_path",
+        "mechanism",
+        "population",
+        "regimen",
+        "required_exposure",
+        "safety",
+        "systemic_exposure",
+        "tissue_exposure"
+      ],
+      "as_of": "2026-10-06"
+    },
+    "failure_actions": []
+  },
+  "evacetrapib_vascular": {
+    "structural_errors": [],
+    "documentation_status": {
+      "status": "scoped_counterevidence",
+      "reasons": [
+        "counterevidence retained with its regimen and population scope"
+      ],
+      "as_of": "2026-10-06",
+      "scope": {
+        "drug": "DRUGBANK:DB11655",
+        "indication": "high-risk vascular disease",
+        "population": "adults with high-risk vascular disease on standard therapy",
+        "regimen": "evacetrapib 130 mg orally once daily",
+        "comparator": "placebo",
+        "endpoint": "first major adverse cardiovascular event"
+      }
+    },
+    "failure_actions": [
+      "store_scoped_counterevidence"
+    ]
+  },
+  "plazomicin_cuti": {
+    "structural_errors": [],
+    "documentation_status": {
+      "status": "incomplete",
+      "reasons": [
+        "comparator_endpoint",
+        "mechanism",
+        "population",
+        "regimen",
+        "safety",
+        "systemic_exposure",
+        "tissue_exposure"
+      ],
+      "as_of": "2026-10-06"
+    },
+    "failure_actions": [
+      "defer"
+    ]
+  },
+  "evacetrapib_graph_level_trial": {
+    "failure_type": "efficacy",
+    "scope_match": "same_concept",
+    "implication": "negate"
+  }
+}

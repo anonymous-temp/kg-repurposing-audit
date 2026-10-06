@@ -1,0 +1,11 @@
+task	seed	fit	val	test	test_compounds	eval_grid	test_compounds_without_fit_label	test_pos_from_compounds_without_fit_label
+random	42	544	60	151	116	8676	59	64
+compound	42	509	84	162	77	5913	77	162
+random	1	544	60	151	111	8304	57	61
+compound	1	555	55	145	77	5920	77	145
+random	2	544	60	151	107	7996	52	58
+compound	2	533	63	159	77	5913	77	159
+random	3	544	60	151	121	9038	56	60
+compound	3	501	114	140	77	5918	77	140
+random	4	544	60	151	107	7991	46	49
+compound	4	564	48	143	77	5924	77	143

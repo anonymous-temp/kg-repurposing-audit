@@ -1,0 +1,74 @@
+{
+ "100": {
+  "records": 100,
+  "clinical_record_kind": {
+   "trialled_not_approved": 24,
+   "no_clinical_record": 58,
+   "approved_elsewhere": 18
+  },
+  "pair_implication": {
+   "no_stopped_trial": 80,
+   "defer": 17,
+   "negate": 1,
+   "qualify": 2
+  },
+  "failure_actions": {
+   "defer": 72,
+   "store_scoped_counterevidence": 1,
+   "store_context_qualification": 6
+  },
+  "documentation_status": {
+   "incomplete": 100
+  },
+  "biomedical_fields_inferred_from_scores": 0,
+  "schema_errors": 0
+ },
+ "500": {
+  "records": 500,
+  "clinical_record_kind": {
+   "trialled_not_approved": 117,
+   "no_clinical_record": 343,
+   "approved_elsewhere": 40
+  },
+  "pair_implication": {
+   "no_stopped_trial": 439,
+   "defer": 51,
+   "negate": 5,
+   "qualify": 5
+  },
+  "failure_actions": {
+   "defer": 494,
+   "store_scoped_counterevidence": 6,
+   "store_context_qualification": 45
+  },
+  "documentation_status": {
+   "incomplete": 500
+  },
+  "biomedical_fields_inferred_from_scores": 0,
+  "schema_errors": 0
+ },
+ "1000": {
+  "records": 1000,
+  "clinical_record_kind": {
+   "trialled_not_approved": 185,
+   "no_clinical_record": 759,
+   "approved_elsewhere": 56
+  },
+  "pair_implication": {
+   "no_stopped_trial": 903,
+   "defer": 80,
+   "negate": 7,
+   "qualify": 10
+  },
+  "failure_actions": {
+   "defer": 627,
+   "store_scoped_counterevidence": 8,
+   "store_context_qualification": 55
+  },
+  "documentation_status": {
+   "incomplete": 1000
+  },
+  "biomedical_fields_inferred_from_scores": 0,
+  "schema_errors": 0
+ }
+}

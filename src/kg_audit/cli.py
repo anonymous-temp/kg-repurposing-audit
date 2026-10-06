@@ -6,9 +6,8 @@ import json
 from pathlib import Path
 import numpy as np
 import pandas as pd
-from sklearn.metrics import average_precision_score
 from .comparison import paired_interval
-from .evidence import assess_strategy, DOMAINS
+from .evidence import assess_strategy
 
 
 def demo(output):

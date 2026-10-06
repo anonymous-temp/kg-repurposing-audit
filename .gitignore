@@ -28,3 +28,6 @@ checkpoints/
 *.log
 credentials*
 secrets*
+
+# released candidate-level scores (manuscript)
+!paper_results/scores/*.tsv.gz

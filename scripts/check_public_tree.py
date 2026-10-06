@@ -43,13 +43,17 @@ def main():
         if path.is_symlink():
             errors.append(f"{rel}: symlink")
             continue
-        if path.suffix.lower() in DENIED_SUFFIXES:
+        released_scores = rel.parts[:2] == ("paper_results", "scores") and path.name.endswith(".tsv.gz")
+        if path.suffix.lower() in DENIED_SUFFIXES and not released_scores:
             errors.append(f"{rel}: excluded binary/database type")
             continue
         if any(x.lower() in {"data", "datasets", "outputs", "checkpoints"} for x in rel.parts):
             errors.append(f"{rel}: data/output directory")
-        if path.stat().st_size > 2_000_000:
+        limit = 12_000_000 if rel.parts[0] == "paper_results" else 2_000_000   # released candidate-level scores
+        if path.stat().st_size > limit:
             errors.append(f"{rel}: unexpectedly large file")
+        if released_scores:
+            continue
         if path.name.startswith(".env"):
             errors.append(f"{rel}: environment file")
         text = path.read_text(errors="replace")
@@ -57,7 +61,7 @@ def main():
             if pattern.search(text):
                 errors.append(f"{rel}: {label}")
         # The only tabular tracked files are aggregate publication summaries.
-        if path.suffix in {".csv", ".tsv"} and rel.parts[0] != "paper_results":
+        if path.suffix in {".csv", ".tsv"} and rel.parts[0] != "paper_results" and rel.parts[:3] != ("legacy", "v0.2", "paper_results"):
             errors.append(f"{rel}: unexpected tabular data")
     if errors:
         print("\n".join(errors))

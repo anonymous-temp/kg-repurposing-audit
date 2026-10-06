@@ -1,6 +1,5 @@
 """Declared evidence-handling invariants, independent of clinical classification."""
 
-import copy
 import unittest
 from kg_audit.evidence import assess_strategy, validate_record, writeback_action, DOMAINS
 
@@ -21,6 +20,21 @@ def complete_record():
         ],
         "constraints": [{"domain": d, "status": "pass", "evidence_ids": ["synthetic:source1"]} for d in DOMAINS],
         "failures": [],
+    }
+
+
+def scoped_failure(record, day, refs):
+    return {
+        "event_type": "stopped_trial",
+        "trial_id": "NCT00000000",
+        "registry_status": "TERMINATED",
+        "stop_reason_categories": ["Negative"],
+        "failure_type": "efficacy",
+        "scope_match": "same_concept",
+        "implication": "negate",
+        "source_date": day,
+        "evidence_ids": refs,
+        "scope": {k: record[k] for k in ("drug", "indication", "population", "regimen", "endpoint", "comparator")},
     }
 
 
@@ -49,22 +63,7 @@ class EvidenceTests(unittest.TestCase):
 
     def test_future_failure_does_not_supersede_past_assessment(self):
         record = complete_record()
-        record["failures"] = [
-            {
-                "domain": "efficacy",
-                "implication": "negate",
-                "source_date": "2026-02-01",
-                "evidence_ids": ["synthetic:source2"],
-                "scope": {
-                    "drug": "synthetic:drug1",
-                    "indication": "synthetic:disease1",
-                    "population": "synthetic population",
-                    "endpoint": "synthetic endpoint",
-                    "regimen": "synthetic regimen",
-                    "comparator": "synthetic comparator",
-                },
-            }
-        ]
+        record["failures"] = [scoped_failure(record, "2026-02-01", ["synthetic:source2"])]
         record["evidence"].append(
             {"id": "synthetic:source2", "source": "https://example.org/future", "source_date": "2026-02-01"}
         )
@@ -105,48 +104,51 @@ class EvidenceTests(unittest.TestCase):
         record["constraints"].append({"domain": DOMAINS[0], "status": "fail", "evidence_ids": ["synthetic:source1"]})
         self.assertEqual(assess_strategy(record, "2026-01-01")["status"], "conflicting_records")
 
-    def test_unscoped_negative_is_not_written_as_global_negative(self):
-        self.assertEqual(writeback_action({"domain": "efficacy", "implication": "negate"}), "defer")
+    def test_negate_without_scientific_type_or_same_concept_is_not_counterevidence(self):
+        base = {"event_type": "stopped_trial", "trial_id": "NCT0", "registry_status": "TERMINATED",
+                "implication": "negate", "source_date": "2025-01-01", "evidence_ids": ["x"]}
+        self.assertEqual(writeback_action({**base, "failure_type": "efficacy", "scope_match": "same_concept"}),
+                         "store_scoped_counterevidence")
+        self.assertEqual(writeback_action({**base, "failure_type": "efficacy", "scope_match": "narrower_concept"}),
+                         "store_context_qualification")
+        self.assertEqual(writeback_action({**base, "failure_type": "operational", "scope_match": "same_concept"}),
+                         "store_context_qualification")
+        self.assertEqual(writeback_action({**base, "evidence_ids": [], "failure_type": "efficacy",
+                                           "scope_match": "same_concept"}), "defer")
 
     def test_registry_status_alone_cannot_make_negative(self):
         for status in ["TERMINATED", "WITHDRAWN", "SUSPENDED", "UNKNOWN", "COMPLETED"]:
             self.assertEqual(writeback_action({"registry_status": status}), "defer")
 
-    def test_non_efficacy_failure_does_not_negate(self):
-        for domain in ["commercial", "recruitment", "execution", "unknown"]:
-            self.assertEqual(writeback_action({"domain": domain, "implication": "negate"}), "defer")
+    def test_implication_must_follow_rule(self):
+        record = complete_record()
+        bad = scoped_failure(record, "2025-12-01", ["synthetic:source1"])
+        bad["failure_type"] = "operational"          # operational stop cannot be stated as 'negate'
+        record["failures"] = [bad]
+        self.assertTrue(any("write-back rule" in e for e in validate_record(record)))
 
-    def test_scoped_negative_preserves_scope(self):
-        f = {
-            "domain": "efficacy",
-            "implication": "negate",
-            "source_date": "2025-12-01",
-            "evidence_ids": ["synthetic:source1"],
-            "scope": {
-                "drug": "d",
-                "indication": "i",
-                "population": "p",
-                "regimen": "r",
-                "endpoint": "e",
-                "comparator": "c",
-            },
-        }
-        self.assertEqual(writeback_action(f), "store_scoped_counterevidence")
+    def test_recorded_indication_is_retained(self):
+        record = complete_record()
+        f = scoped_failure(record, "2025-12-01", ["synthetic:source1"])
+        f["recorded_indication"] = True
+        f["implication"] = "retain"
+        record["failures"] = [f]
+        self.assertEqual(validate_record(record), [])
+        self.assertEqual(writeback_action(f), "retain_existing_evidence")
+
+    def test_scope_comparison_ignores_case_and_spacing(self):
+        record = complete_record()
+        f = scoped_failure(record, "2025-12-01", ["synthetic:source1"])
+        f["scope"]["population"] = "  SYNTHETIC   Population "
+        record["failures"] = [f]
+        self.assertEqual(assess_strategy(record, "2026-01-01")["status"], "scoped_counterevidence")
 
     def test_different_regimen_or_comparator_does_not_supersede(self):
         for field in ("regimen", "comparator"):
             record = complete_record()
-            scope = {k: record[k] for k in ("drug", "indication", "population", "regimen", "endpoint", "comparator")}
-            scope[field] = "a different context"
-            record["failures"] = [
-                {
-                    "domain": "efficacy",
-                    "implication": "negate",
-                    "source_date": "2025-12-01",
-                    "evidence_ids": ["synthetic:source1"],
-                    "scope": scope,
-                }
-            ]
+            f = scoped_failure(record, "2025-12-01", ["synthetic:source1"])
+            f["scope"][field] = "a different context"
+            record["failures"] = [f]
             self.assertEqual(assess_strategy(record, "2026-01-01")["status"], "ready_for_evidence_review")
 
 

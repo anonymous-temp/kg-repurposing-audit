@@ -2,7 +2,6 @@ import unittest
 import numpy as np
 from sklearn.metrics import average_precision_score
 from kg_audit.comparison import paired_interval
-from kg_audit.writeback import policy_edges
 
 
 class ComparisonTests(unittest.TestCase):
@@ -23,19 +22,3 @@ class ComparisonTests(unittest.TestCase):
     def test_non_binary_labels_rejected(self):
         with self.assertRaises(ValueError):
             paired_interval([2, 0], [0.8, 0.1], [0.8, 0.1], ["a", "b"], ["x", "y"], n_bootstrap=100)
-
-    def test_writeback_endpoints_and_mask_arm(self):
-        pos = [("a", "x"), ("b", "y"), ("c", "z")]
-        neg = [("a", "y")]
-        self.assertEqual(
-            policy_edges(pos, neg, [0, 1], [], "typed"), policy_edges(pos, neg, [0, 1], [], "uncertainty_mask")
-        )
-        self.assertEqual(
-            policy_edges(pos, neg, [0, 1], [0, 1], "typed"), policy_edges(pos, neg, [0, 1], [], "no_writeback")
-        )
-        p, n = policy_edges(pos, neg, [0, 1], [0], "typed")
-        self.assertEqual(p, [pos[0], pos[2]])
-        self.assertEqual(n, neg)
-        p, n = policy_edges(pos, neg, [0, 1], [], "flat_negative")
-        self.assertEqual(p, [pos[2]])
-        self.assertEqual(n, neg + pos[:2])

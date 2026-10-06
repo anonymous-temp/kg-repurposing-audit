@@ -1,129 +1,72 @@
-# KG Repurposing Audit
+# KG Repurposing Audit — failure write-back (v0.3.0)
 
-Paired evaluation of drug-repurposing knowledge graphs and scoped, dated evidence records for downstream review.
+Code, schema and results for **Stopped clinical trials as negative labels for knowledge-graph drug repurposing: an evaluation of write-back policies**.
 
-The repository accompanies **Auditing knowledge-graph drug repurposing: task-matched evaluation and failure-typed evidence handoff**. It provides an executable research workflow, a database-free demonstration, unit tests, and data-access instructions. The code does not prescribe treatments or turn trial termination into an efficacy-negative label.
+The repository asks how terminated, withdrawn or suspended clinical trials should change the training labels of a drug-repurposing knowledge graph. It maps Open Targets 26.09 clinical reports onto Hetionet v1.0, types every stopped trial by stop reason and scope, compares five write-back policies with four scorers on full candidate grids, and provides a LinkML evidence-handoff schema (Biolink 4.4.5 mappings) that records failure type, scope match and write-back implication.
 
-## What is included
+## Contents
 
-- Task-specific evaluation with identical candidate rows for each model/reference comparison.
-- Degree references calculated from the fitting graph, paired cluster intervals, and explicit candidate-rank domains.
-- Hetionet and PrimeKG training/reanalysis pipelines. PrimeKG checkpoints are selected using task-consistent validation labels, not the test set.
-- A four-policy, **semi-synthetic** write-back stress test, including a separate uncertainty-masking arm.
-- A dated evidence-handoff implementation that preserves regimen, population, comparator and endpoint scope and does not fill missing evidence with a pass.
-- A public ClinicalTrials.gov metadata audit with frozen local responses and request fingerprints.
-- LinkML and generated JSON Schema specifications, synthetic examples, tests, and CI.
+| Path | What it is |
+|---|---|
+| `src/kg_audit/failures.py` | stop-reason categories → failure type; scope match; write-back rule (retain / negate / qualify / defer) |
+| `src/kg_audit/writeback.py` | policies, per-pair training labels and weights, scorers (degree, disease degree, MF, graph head, hybrid), metrics |
+| `src/kg_audit/evidence.py` | record validation and dated documentation checker |
+| `src/kg_audit/bridge.py` | exports ranked candidates with Open Targets evidence attached |
+| `schemas/handoff.linkml.yaml` | LinkML schema v0.3.0; `handoff.schema.json` is generated from it with LinkML 1.11.1 |
+| `examples/` | baricitinib, pimozide, evacetrapib and plazomicin encoded as records, with checker output |
+| `pipelines/` | numbered scripts that download the inputs and rebuild every result, table and figure |
+| `paper_results/` | aggregate results and candidate-level scores used in the manuscript |
+| `scripts/audit_v02/` | scripts that reconstruct and audit the v0.2.0 evaluation (Supplementary S8) |
+| `legacy/v0.2/` | the v0.2.0 benchmark and semi-synthetic code, kept for traceability; not used by v0.3.0 |
 
-## Quick start without a database
-
-Python 3.11 or 3.12 is recommended. The core package supports Python 3.9 and later; the recorded manuscript runtime is documented separately.
+## Quick start
 
 ```bash
-git clone https://github.com/anonymous-temp/kg-repurposing-audit.git
-cd kg-repurposing-audit
-python -m venv .venv
-source .venv/bin/activate
+python -m venv .venv && source .venv/bin/activate
 python -m pip install -e '.[test]'
-kg-audit demo --output outputs/demo
-python -m pytest
-```
-
-On Windows, activate with `.venv\Scripts\activate`. The demonstration creates explicitly synthetic scores and an incomplete evidence record. It does not reproduce the paper's real-data numbers. CI tests this database-free workflow.
-
-## Data access and licences
-
-**Databases are not bundled.** Keep your data in a separate work directory. Users are responsible for obtaining the source data and meeting each provider's access and licence conditions. Public availability is not a blanket redistribution licence.
-
-| Resource | Access | Use here |
-| --- | --- | --- |
-| [Hetionet v1.0](https://github.com/hetio/hetionet) | Obtain upstream nodes and edges; retain source/licence information | Static treatment-link benchmark |
-| [PrimeKG](https://www.nature.com/articles/s41597-023-01960-3) | Obtain the specified `kg.csv` release from the resource's official distribution | Indication benchmark |
-| [DrugCentral](https://drugcentral.org/download) | Obtain and map structure annotations under the provider's terms | Hetionet scaffold annotation |
-| [ClinicalTrials.gov API](https://clinicaltrials.gov/data-api/api) | Public API, queried explicitly by the user | Descriptive registry metadata audit |
-| [MIMIC-IV 3.1](https://physionet.org/content/mimiciv/3.1/) | Credentialing, training and the applicable data-use agreement | Historical observational illustration only; not needed for primary benchmark or software tests |
-
-No MIMIC records, patient-level derived data, clinical-model weights, credentials, private manuscript files, or database snapshots are included. The manuscript's MIMIC illustration is not a validated causal efficacy finding. There is no public patient-data reproduction shortcut in this repository.
-
-Credentialed users can run the optional descriptive workflow in [docs/observational-illustration.md](docs/observational-illustration.md). It corrects order assignment at the landmark and preserves uncertainty in date-only death records; it does not make the dataset sufficient for causal identification.
-
-Input preparation and exact file contracts are in [docs/data-access.md](docs/data-access.md) and [docs/input-contracts.md](docs/input-contracts.md).
-
-## Reproduce the database-dependent experiments
-
-Install the optional numerical dependencies:
-
-```bash
+python -m pytest            # write-back tests are skipped without torch
 python -m pip install -e '.[benchmark]'
+python -m pytest            # full suite
 ```
 
-Create a caller-owned work directory with this layout:
+## Reproduce the manuscript
 
-```text
-work/
-  data/
-    hetionet/
-      hetionet-v1.0-nodes.tsv
-      hetionet-edges.sif.gz
-      drugcentral_compound_annot.tsv
-    primekg/
-      kg.csv
-  outputs/                       # generated locally, ignored by Git
-```
-
-Then run from the cloned repository:
+All inputs are public; nothing patient-level is used.
 
 ```bash
-python scripts/run_pipeline.py hetionet-prepare --workdir /path/to/work
-python scripts/run_pipeline.py hetionet-kge --workdir /path/to/work --seeds 1 2 3 --max-epochs 20
-python scripts/run_pipeline.py hetionet-rgcn --workdir /path/to/work --seeds 1 2 3 --max-epochs 30
-python scripts/run_pipeline.py hetionet-summary --workdir /path/to/work
-
-python scripts/run_pipeline.py primekg-train --workdir /path/to/work --seeds 1 2 3 --max-epochs 40
-python scripts/run_pipeline.py primekg-summary --workdir /path/to/work
-
-kg-audit-writeback --splits /path/to/work/outputs/hetionet/raw/splits.json \
-  --output /path/to/work/outputs/writeback --seeds 1 2 3 4 5 6 7 8 9 10
-
-kg-audit-registry --cutoff 2026-10-05 --per-status 100 \
-  --output /path/to/work/outputs/registry
+IN=$PWD/work/data; W=$PWD/work
+pipelines/00_download_data.sh $IN                          # Hetionet v1.0, Open Targets 26.09, expert stop reasons
+python pipelines/01_map_open_targets.py $IN/ot $IN/hetionet $W/mapped
+python pipelines/02_make_partitions.py $IN/hetionet $W/partitions
+MODE=pretrain MODEL=distmult NEG=typed SEED=1 HET=$IN/hetionet OUT=$W/kge python pipelines/03_train_kge.py
+export HET=$IN/hetionet DATA=$W/mapped PART=$W/partitions EMB=$W/kge OUT=$W/results
+python pipelines/04_writeback_experiment.py select
+python pipelines/04_writeback_experiment.py e1 random
+python pipelines/04_writeback_experiment.py e1 compound
+python pipelines/04_writeback_experiment.py e2
+for x in random compound e2; do python pipelines/04_writeback_experiment.py boot $x; done
+OTDIR=$IN/ot GOLD=$IN/gold/data.json python pipelines/05_descriptive.py
+python pipelines/07_handoff_export.py
+python pipelines/08_make_figures.py $W/results $W/figures
+python pipelines/09_make_tables.py $W/results $W/tables
 ```
 
-These training commands can take hours on CPU, especially the R-GCN pipeline. Runtime depends on hardware and stopping behaviour. The launcher sets deterministic seed controls. Bitwise identity across hardware/library versions is not guaranteed. A completed cache is not an independent retraining. Use a new work directory when changing inputs or recipes.
+The end-to-end embedding ablation (Supplementary S7) uses `MODE=e2e PARTITION=$W/partitions/random_p42.json NEG=typed|uniform` with `03_train_kge.py`, summarised by `06_e2e_summary.py`. Every step skips work whose output already exists. On a 4-core CPU the embedding pretraining took about 30 minutes and the write-back experiment about 3 hours.
 
-The manuscript distinguishes reused, reanalysed Hetionet predictions from new validation-selected PrimeKG fits. Running the entire Hetionet sequence above trains fresh models; it must not be described as proof that every historical checkpoint has been independently reproduced. See [docs/reproducibility.md](docs/reproducibility.md).
+## Data and licences
 
-## Regenerate plots from published summaries
+| Resource | Licence | Use |
+|---|---|---|
+| [Hetionet v1.0](https://github.com/hetio/hetionet) | CC0 | graph and recorded treatments |
+| [Open Targets Platform 26.09](https://platform.opentargets.org/downloads) | CC0 | clinical reports, stop-reason categories, drug and disease cross-references |
+| [Expert-labelled stop reasons](https://huggingface.co/datasets/opentargets/clinical_trial_reason_to_stop) | Apache-2.0 | evaluation of lexical rules |
 
-With the benchmark dependencies installed, run `python scripts/plot_aggregate_results.py --output outputs/reference_figures`. This reads the aggregate tables included in the repository and renders AP plots with seed-SD bars. It verifies the presentation of the reference numbers; reproducing those numbers requires the database-dependent pipelines. Aggregate cluster intervals and validation histories are also supplied under `paper_results/`.
+Input checksums of the files used for the manuscript are listed in `paper_results/input_sha256.txt`.
 
-## Use your own candidate scores
+## What the code does not do
 
-```bash
-kg-audit compare --scores candidates.tsv \
-  --model rotate_s1 rotate_s2 rotate_s3 \
-  --reference degree_s1 degree_s2 degree_s3 \
-  --clusters disease --bootstrap 5000 --output outputs/comparison.json
+A score never fills a clinical field, and a registry status alone never creates a negative label. The write-back rule negates a drug–disease label only for an efficacy or safety stop whose trial condition is the same concept as the graph disease; such identifier-level scope matching is necessary but not sufficient, and the records are meant for expert review, not for treatment decisions.
 
-kg-audit evidence --record examples/incomplete_strategy.json \
-  --as-of 2026-01-01 --output outputs/evidence_review.json
-```
+## Licence and citation
 
-`compare` requires aligned `compound`, `disease`, `label`, and score columns. It reports the observed mean seed-specific AP difference and an exploratory paired cluster interval. `evidence` assesses documentation as of a date; even a complete record is ready only for evidence review, not for prescribing or deployment.
-
-## Scientific interpretation
-
-Task splits, candidate sampling and leakage are different concepts. Degree derived from the fitting graph is not automatically an illegitimate feature. Unlabelled pairs are not confirmed treatment failures. Matching bins does not match exact degree values. A sampled AP improvement does not establish a biological mechanism or prospective therapeutic benefit.
-
-The registry audit is a convenience sample of interventional drug trials, not a representative estimate of trial-failure causes and not an external prediction benchmark. Its reason-text cues are lexical descriptors, not expert adjudications. The write-back experiment supplies hypothetical retain/defer annotations to recorded training positives; its benefit is conditional on that information being correct.
-
-## Development and citation
-
-```bash
-python -m pytest --cov=kg_audit --cov-report=term-missing
-python -m ruff check src tests scripts pipelines
-python scripts/check_public_tree.py
-```
-
-Use [CITATION.cff](CITATION.cff) to cite the software, including the exact release and commit used. Method references and third-party acknowledgements are in [docs/references.md](docs/references.md). This software is MIT-licensed; source databases retain their own terms.
-
-Funding: 2025 Hebei Provincial Major Science and Technology Support Plan, Innovative Application Scenario Project (252Q0103D).
+MIT licence. Please cite the article and the archived release (see `CITATION.cff`).

@@ -1,0 +1,15 @@
+category	trials	pairs	recorded_or_approved	share
+Insufficient_Enrollment	1991	1340	416	0.31
+Business_Administrative	1367	960	340	0.354
+<none>	774	696	293	0.421
+Negative	486	434	171	0.394
+Logistics_Resources	308	362	141	0.39
+Study_Design	305	356	158	0.444
+Invalid_Reason	259	322	153	0.475
+Safety_Sideeffects	229	255	118	0.463
+Another_Study	205	229	106	0.463
+Study_Staff_Moved	184	245	116	0.473
+Regulatory	103	121	63	0.521
+Uncategorised	100	153	82	0.536
+Covid19	70	94	34	0.362
+No_Context	52	45	31	0.689

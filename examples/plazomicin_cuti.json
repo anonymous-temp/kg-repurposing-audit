@@ -1,0 +1,97 @@
+{
+  "id": "example:plazomicin-cuti",
+  "drug": "DRUGBANK:DB12615",
+  "indication": "MONDO:0100338",
+  "population": "adults with complicated urinary tract infection including pyelonephritis",
+  "regimen": "plazomicin 15 mg/kg intravenously once daily",
+  "comparator": "meropenem",
+  "endpoint": "composite cure at day 5 and test-of-cure visit",
+  "required_exposure": "therapeutic drug monitoring recommended in renal impairment",
+  "assessment_date": "2026-10-06",
+  "knowledge_level": "knowledge_assertion",
+  "agent_type": "manual_agent",
+  "evidence": [
+    {
+      "id": "doi:10.1056/nejmoa1801467",
+      "source": "EPIC, Wagenlehner et al. N Engl J Med 2019;380:729-740",
+      "source_date": "2019-02-21",
+      "predicate": "treats",
+      "research_phase": "clinical_trial_phase_3"
+    },
+    {
+      "id": "url:fda-zemdri-2018",
+      "source": "US FDA approval of ZEMDRI (plazomicin), 25 June 2018",
+      "source_date": "2018-06-25",
+      "predicate": "treats",
+      "clinical_approval_status": "fda_approved_for_condition"
+    },
+    {
+      "id": "url:sec-achaogen-8k-2019",
+      "source": "Achaogen Inc. Form 8-K (Chapter 11 petition, 15 April 2019)",
+      "source_date": "2019-04-15",
+      "proposition": "Sponsor insolvency"
+    }
+  ],
+  "constraints": [
+    {
+      "domain": "mechanism",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "systemic_exposure",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "tissue_exposure",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "regimen",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "population",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "comparator_endpoint",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "safety",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "evidence_path",
+      "status": "pass",
+      "evidence_ids": [
+        "url:fda-zemdri-2018"
+      ]
+    }
+  ],
+  "failures": [
+    {
+      "event_type": "corporate_event",
+      "stop_reason_categories": [
+        "Business_Administrative"
+      ],
+      "failure_type": "operational",
+      "scope_match": "same_concept",
+      "recorded_indication": false,
+      "implication": "defer",
+      "source_date": "2019-04-15",
+      "evidence_ids": [
+        "url:sec-achaogen-8k-2019"
+      ],
+      "category_source": "manual",
+      "stop_reason_text": "Sponsor filed for Chapter 11 protection"
+    }
+  ]
+}

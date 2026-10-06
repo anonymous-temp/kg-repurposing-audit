@@ -1,0 +1,54 @@
+{
+ "tag": "random_distmult_typed_s2_e20",
+ "split": "random",
+ "model": "distmult",
+ "neg": "typed",
+ "seed": 2,
+ "max_epochs": 20,
+ "best_epoch": 8,
+ "stopped_epoch": 14,
+ "best_val_MRR": 0.26268393657027206,
+ "history": [
+  {
+   "epoch": 8,
+   "val_MRR": 0.26268393657027206
+  },
+  {
+   "epoch": 10,
+   "val_MRR": 0.2374553596918615
+  },
+  {
+   "epoch": 12,
+   "val_MRR": 0.20471995352881198
+  },
+  {
+   "epoch": 14,
+   "val_MRR": 0.19251436771208422
+  }
+ ],
+ "train_seconds": 1603.5979161262512,
+ "ctd_forward_corruptions": 32640,
+ "ctd_forward_corruptions_that_are_diseases": 32640,
+ "test_rank": {
+  "MRR": 0.23677062525953255,
+  "Hits@1": 0.152317880794702,
+  "Hits@3": 0.23841059602649006,
+  "Hits@10": 0.423841059602649
+ },
+ "cells": {
+  "neg_random": {
+   "model_AP": 0.20737147081938984,
+   "model_AUROC": 0.7483312135432656,
+   "degree_AP": 0.2084235836639304,
+   "degree_AUROC": 0.8283562124468224,
+   "disease_only_AP": 0.23615046808477788
+  },
+  "neg_degmatch": {
+   "model_AP": 0.11219098784322135,
+   "model_AUROC": 0.6054405508530327,
+   "degree_AP": 0.09780801465081126,
+   "degree_AUROC": 0.6714080522784089,
+   "disease_only_AP": 0.0934621229678988
+  }
+ }
+}

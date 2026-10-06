@@ -33,14 +33,29 @@
             "title": "ActionabilityConstraint",
             "type": "object"
         },
+        "AgentType": {
+            "description": "Values of biolink AgentTypeEnum.",
+            "enum": [
+                "manual_agent",
+                "automated_agent",
+                "data_analysis_pipeline",
+                "computational_model",
+                "text_mining_agent",
+                "manual_validation_of_automated_agent",
+                "not_provided"
+            ],
+            "title": "AgentType",
+            "type": "string"
+        },
         "CandidatePrediction": {
             "additionalProperties": false,
-            "description": "Prediction provenance without a fabricated clinical interpretation.",
+            "description": "Provenance of a model score. Its knowledge level is always 'prediction' and its agent type 'computational_model'; a score is not evidence of efficacy.",
             "properties": {
                 "candidate_count": {
                     "type": "integer"
                 },
-                "candidate_sampler": {
+                "candidate_universe": {
+                    "description": "The set of pairs the rank was computed over",
                     "type": "string"
                 },
                 "graph": {
@@ -72,13 +87,17 @@
                 },
                 "task": {
                     "type": "string"
+                },
+                "write_back_policy": {
+                    "$ref": "#/$defs/WriteBackPolicy"
                 }
             },
             "required": [
                 "model",
                 "graph",
                 "task",
-                "candidate_sampler",
+                "candidate_universe",
+                "write_back_policy",
                 "seed",
                 "score",
                 "rank_scope",
@@ -89,6 +108,19 @@
             "title": "CandidatePrediction",
             "type": "object"
         },
+        "ClinicalApprovalStatus": {
+            "description": "Values of biolink ClinicalApprovalStatusEnum.",
+            "enum": [
+                "approved_for_condition",
+                "fda_approved_for_condition",
+                "not_approved_for_condition",
+                "post_approval_withdrawal",
+                "off_label_use",
+                "not_provided"
+            ],
+            "title": "ClinicalApprovalStatus",
+            "type": "string"
+        },
         "ConstraintStatus": {
             "description": "",
             "enum": [
@@ -98,6 +130,17 @@
                 "unknown"
             ],
             "title": "ConstraintStatus",
+            "type": "string"
+        },
+        "DiscontinuationEvent": {
+            "description": "",
+            "enum": [
+                "stopped_trial",
+                "development_discontinuation",
+                "market_withdrawal",
+                "corporate_event"
+            ],
+            "title": "DiscontinuationEvent",
             "type": "string"
         },
         "Domain": {
@@ -143,8 +186,11 @@
         },
         "EvidenceAssertion": {
             "additionalProperties": false,
-            "description": "",
+            "description": "A dated statement from an identified source about the drug-disease pair.",
             "properties": {
+                "clinical_approval_status": {
+                    "$ref": "#/$defs/ClinicalApprovalStatus"
+                },
                 "effect": {
                     "anyOf": [
                         {
@@ -158,11 +204,23 @@
                 "id": {
                     "type": "string"
                 },
+                "negated": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "predicate": {
+                    "$ref": "#/$defs/EvidencePredicate"
+                },
                 "proposition": {
                     "type": [
                         "string",
                         "null"
                     ]
+                },
+                "research_phase": {
+                    "$ref": "#/$defs/ResearchPhase"
                 },
                 "source": {
                     "type": "string"
@@ -181,6 +239,17 @@
             ],
             "title": "EvidenceAssertion",
             "type": "object"
+        },
+        "EvidencePredicate": {
+            "description": "",
+            "enum": [
+                "treats",
+                "in_clinical_trials_for",
+                "studied_to_treat",
+                "contraindicated_in"
+            ],
+            "title": "EvidencePredicate",
+            "type": "string"
         },
         "EvidenceScope": {
             "additionalProperties": false,
@@ -228,10 +297,17 @@
         },
         "FailureAnnotation": {
             "additionalProperties": false,
-            "description": "",
+            "description": "A discontinuation event (usually a stopped trial) and what it may change. The failure type is derived from the stop-reason categories; the implication follows the write-back rule in kg_audit.failures.implication.",
             "properties": {
-                "domain": {
-                    "type": "string"
+                "category_source": {
+                    "description": "Classifier or curator that assigned the categories, with version",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "event_type": {
+                    "$ref": "#/$defs/DiscontinuationEvent"
                 },
                 "evidence_ids": {
                     "items": {
@@ -242,14 +318,21 @@
                         "null"
                     ]
                 },
+                "failure_type": {
+                    "$ref": "#/$defs/FailureType"
+                },
                 "implication": {
                     "$ref": "#/$defs/Implication"
                 },
-                "registry_status": {
+                "recorded_indication": {
+                    "description": "True when the pair is already a recorded indication in the graph",
                     "type": [
-                        "string",
+                        "boolean",
                         "null"
                     ]
+                },
+                "registry_status": {
+                    "$ref": "#/$defs/TrialStatus"
                 },
                 "scope": {
                     "anyOf": [
@@ -261,7 +344,49 @@
                         }
                     ]
                 },
+                "scope_match": {
+                    "$ref": "#/$defs/ScopeMatch"
+                },
                 "source_date": {
+                    "format": "date",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "stop_reason_categories": {
+                    "items": {
+                        "$ref": "#/$defs/StopReasonCategory"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "stop_reason_text": {
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "trial_condition": {
+                    "description": "Condition CURIE as registered or as mapped by the source",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "trial_id": {
+                    "description": "Registry identifier, e.g. NCT01234567; required when event_type is stopped_trial",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "trial_phase": {
+                    "$ref": "#/$defs/ResearchPhase"
+                },
+                "trial_start_date": {
                     "format": "date",
                     "type": [
                         "string",
@@ -270,11 +395,27 @@
                 }
             },
             "required": [
-                "domain",
+                "event_type",
+                "failure_type",
+                "scope_match",
                 "implication"
             ],
             "title": "FailureAnnotation",
             "type": "object"
+        },
+        "FailureType": {
+            "description": "",
+            "enum": [
+                "efficacy",
+                "safety",
+                "operational",
+                "design",
+                "uninformative",
+                "success",
+                "not_reported"
+            ],
+            "title": "FailureType",
+            "type": "string"
         },
         "Implication": {
             "description": "",
@@ -287,10 +428,77 @@
             "title": "Implication",
             "type": "string"
         },
+        "KnowledgeLevel": {
+            "description": "Values of biolink KnowledgeLevelEnum.",
+            "enum": [
+                "knowledge_assertion",
+                "logical_entailment",
+                "prediction",
+                "statistical_association",
+                "observation",
+                "not_provided"
+            ],
+            "title": "KnowledgeLevel",
+            "type": "string"
+        },
+        "ResearchPhase": {
+            "description": "Values of biolink ResearchPhaseEnum.",
+            "enum": [
+                "pre_clinical_research_phase",
+                "clinical_trial_phase_1",
+                "clinical_trial_phase_1_to_2",
+                "clinical_trial_phase_2",
+                "clinical_trial_phase_2_to_3",
+                "clinical_trial_phase_3",
+                "clinical_trial_phase_4",
+                "not_provided"
+            ],
+            "title": "ResearchPhase",
+            "type": "string"
+        },
+        "ScopeMatch": {
+            "description": "",
+            "enum": [
+                "same_concept",
+                "narrower_concept",
+                "broader_concept",
+                "unmapped"
+            ],
+            "title": "ScopeMatch",
+            "type": "string"
+        },
+        "StopReasonCategory": {
+            "description": "Razuvayevskaya et al. 2024 (17 classes) plus the Open Targets 'Uncategorised' label.",
+            "enum": [
+                "Another_Study",
+                "Business_Administrative",
+                "Covid19",
+                "Endpoint_Met",
+                "Ethical_Reason",
+                "Insufficient_Data",
+                "Insufficient_Enrollment",
+                "Interim_Analysis",
+                "Invalid_Reason",
+                "Logistics_Resources",
+                "Negative",
+                "No_Context",
+                "Regulatory",
+                "Safety_Sideeffects",
+                "Study_Design",
+                "Study_Staff_Moved",
+                "Success",
+                "Uncategorised"
+            ],
+            "title": "StopReasonCategory",
+            "type": "string"
+        },
         "TreatmentStrategy": {
             "additionalProperties": false,
-            "description": "A partial or complete treatment specification; completeness is assessed separately from structural validity.",
+            "description": "A drug-indication hypothesis under review, qualified by population, regimen, comparator and endpoint. Completeness is assessed separately from structural validity.",
             "properties": {
+                "agent_type": {
+                    "$ref": "#/$defs/AgentType"
+                },
                 "assessment_date": {
                     "format": "date",
                     "type": [
@@ -314,6 +522,7 @@
                     ]
                 },
                 "drug": {
+                    "description": "CURIE of the drug (e.g. DRUGBANK:DB01097)",
                     "type": "string"
                 },
                 "endpoint": {
@@ -344,7 +553,11 @@
                     "type": "string"
                 },
                 "indication": {
+                    "description": "CURIE of the disease",
                     "type": "string"
+                },
+                "knowledge_level": {
+                    "$ref": "#/$defs/KnowledgeLevel"
                 },
                 "population": {
                     "type": [
@@ -382,14 +595,39 @@
             ],
             "title": "TreatmentStrategy",
             "type": "object"
+        },
+        "TrialStatus": {
+            "description": "Subset of biolink ClinicalTrialStatusEnum used for stopped trials.",
+            "enum": [
+                "TERMINATED",
+                "WITHDRAWN",
+                "SUSPENDED"
+            ],
+            "title": "TrialStatus",
+            "type": "string"
+        },
+        "WriteBackPolicy": {
+            "description": "",
+            "enum": [
+                "no_writeback",
+                "flat_negative",
+                "mask_all",
+                "typed",
+                "typed_scoped"
+            ],
+            "title": "WriteBackPolicy",
+            "type": "string"
         }
     },
     "$id": "https://github.com/anonymous-temp/kg-repurposing-audit/schema",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "additionalProperties": true,
-    "description": "A partial or complete treatment specification; completeness is assessed separately from structural validity.",
-    "metamodel_version": "1.7.0",
+    "description": "A drug-indication hypothesis under review, qualified by population, regimen, comparator and endpoint. Completeness is assessed separately from structural validity.",
+    "metamodel_version": "1.11.0",
     "properties": {
+        "agent_type": {
+            "$ref": "#/$defs/AgentType"
+        },
         "assessment_date": {
             "format": "date",
             "type": [
@@ -413,6 +651,7 @@
             ]
         },
         "drug": {
+            "description": "CURIE of the drug (e.g. DRUGBANK:DB01097)",
             "type": "string"
         },
         "endpoint": {
@@ -443,7 +682,11 @@
             "type": "string"
         },
         "indication": {
+            "description": "CURIE of the disease",
             "type": "string"
+        },
+        "knowledge_level": {
+            "$ref": "#/$defs/KnowledgeLevel"
         },
         "population": {
             "type": [
@@ -481,6 +724,5 @@
     ],
     "title": "kg_repurposing_evidence_handoff",
     "type": "object",
-    "version": null
+    "version": "0.3.0"
 }
-

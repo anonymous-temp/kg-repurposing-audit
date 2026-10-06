@@ -1,0 +1,25 @@
+level	group	phases	stopped_trials	pairs	pairs_recorded_or_approved	share
+Hetionet	efficacy	all phases	510	470	193	0.4106382978723404
+Hetionet	efficacy	phase 1-3 only	486	434	171	0.39400921658986177
+Hetionet	safety	all phases	242	275	129	0.4690909090909091
+Hetionet	safety	phase 1-3 only	229	255	118	0.4627450980392157
+Hetionet	operational	all phases	4540	2351	624	0.2654189706507869
+Hetionet	operational	phase 1-3 only	4034	2125	556	0.2616470588235294
+Hetionet	design	all phases	337	391	180	0.46035805626598464
+Hetionet	design	phase 1-3 only	305	356	158	0.4438202247191011
+Hetionet	uninformative	all phases	423	476	227	0.47689075630252103
+Hetionet	uninformative	phase 1-3 only	379	433	205	0.47344110854503463
+Hetionet	no reason given	all phases	868	774	336	0.43410852713178294
+Hetionet	no reason given	phase 1-3 only	774	696	293	0.4209770114942529
+Open Targets	efficacy	all phases	2386	3736	627	0.16782655246252676
+Open Targets	efficacy	phase 1-3 only	2246	3533	564	0.15963770166996885
+Open Targets	safety	all phases	873	1713	349	0.2037361354349095
+Open Targets	safety	phase 1-3 only	808	1551	299	0.19277885235332043
+Open Targets	operational	all phases	19455	20540	2394	0.11655306718597858
+Open Targets	operational	phase 1-3 only	16866	18604	2081	0.11185766501827564
+Open Targets	design	all phases	1610	2902	589	0.20296347346657478
+Open Targets	design	phase 1-3 only	1405	2566	504	0.19641465315666407
+Open Targets	uninformative	all phases	1846	3005	634	0.21098169717138104
+Open Targets	uninformative	phase 1-3 only	1614	2704	557	0.20599112426035504
+Open Targets	no reason given	all phases	3478	5124	945	0.18442622950819673
+Open Targets	no reason given	phase 1-3 only	3115	4668	829	0.17759211653813195

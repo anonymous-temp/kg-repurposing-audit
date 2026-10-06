@@ -1,0 +1,58 @@
+{
+ "tag": "random_distmult_uniform_s2_e20",
+ "split": "random",
+ "model": "distmult",
+ "neg": "uniform",
+ "seed": 2,
+ "max_epochs": 20,
+ "best_epoch": 10,
+ "stopped_epoch": 16,
+ "best_val_MRR": 0.21485501451362707,
+ "history": [
+  {
+   "epoch": 8,
+   "val_MRR": 0.20703686767859755
+  },
+  {
+   "epoch": 10,
+   "val_MRR": 0.21485501451362707
+  },
+  {
+   "epoch": 12,
+   "val_MRR": 0.21200972818197653
+  },
+  {
+   "epoch": 14,
+   "val_MRR": 0.20093574676073497
+  },
+  {
+   "epoch": 16,
+   "val_MRR": 0.12331697162671665
+  }
+ ],
+ "train_seconds": 1782.3912317752838,
+ "ctd_forward_corruptions": 36992,
+ "ctd_forward_corruptions_that_are_diseases": 122,
+ "test_rank": {
+  "MRR": 0.16083152285258712,
+  "Hits@1": 0.09271523178807947,
+  "Hits@3": 0.13245033112582782,
+  "Hits@10": 0.31125827814569534
+ },
+ "cells": {
+  "neg_random": {
+   "model_AP": 0.14149314417249903,
+   "model_AUROC": 0.7464036665058549,
+   "degree_AP": 0.2084235836639304,
+   "degree_AUROC": 0.8283562124468224,
+   "disease_only_AP": 0.23615046808477788
+  },
+  "neg_degmatch": {
+   "model_AP": 0.07945160565041855,
+   "model_AUROC": 0.6079535985263805,
+   "degree_AP": 0.09780801465081126,
+   "degree_AUROC": 0.6714080522784089,
+   "disease_only_AP": 0.0934621229678988
+  }
+ }
+}

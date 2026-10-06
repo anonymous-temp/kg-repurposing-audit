@@ -1,0 +1,357 @@
+{
+ "D1": {
+  "recorded_indications": 755,
+  "with_any_trial": 587,
+  "with_any_stopped_trial": 417,
+  "with_stopped_trial_before_2015": 376,
+  "with_scientific_stop_before_2015": 119,
+  "with_efficacy_stop_any_date": 123,
+  "with_safety_stop_any_date": 91,
+  "with_operational_stop_any_date": 378,
+  "with_design_stop_any_date": 117,
+  "with_uninformative_stop_any_date": 147,
+  "with_no_reason_given_stop_any_date": 214
+ },
+ "D2": [
+  {
+   "level": "Hetionet",
+   "group": "efficacy",
+   "phases": "all phases",
+   "stopped_trials": 510,
+   "pairs": 470,
+   "pairs_recorded_or_approved": 193,
+   "share": 0.4106382978723404
+  },
+  {
+   "level": "Hetionet",
+   "group": "efficacy",
+   "phases": "phase 1-3 only",
+   "stopped_trials": 486,
+   "pairs": 434,
+   "pairs_recorded_or_approved": 171,
+   "share": 0.39400921658986177
+  },
+  {
+   "level": "Hetionet",
+   "group": "safety",
+   "phases": "all phases",
+   "stopped_trials": 242,
+   "pairs": 275,
+   "pairs_recorded_or_approved": 129,
+   "share": 0.4690909090909091
+  },
+  {
+   "level": "Hetionet",
+   "group": "safety",
+   "phases": "phase 1-3 only",
+   "stopped_trials": 229,
+   "pairs": 255,
+   "pairs_recorded_or_approved": 118,
+   "share": 0.4627450980392157
+  },
+  {
+   "level": "Hetionet",
+   "group": "operational",
+   "phases": "all phases",
+   "stopped_trials": 4540,
+   "pairs": 2351,
+   "pairs_recorded_or_approved": 624,
+   "share": 0.2654189706507869
+  },
+  {
+   "level": "Hetionet",
+   "group": "operational",
+   "phases": "phase 1-3 only",
+   "stopped_trials": 4034,
+   "pairs": 2125,
+   "pairs_recorded_or_approved": 556,
+   "share": 0.2616470588235294
+  },
+  {
+   "level": "Hetionet",
+   "group": "design",
+   "phases": "all phases",
+   "stopped_trials": 337,
+   "pairs": 391,
+   "pairs_recorded_or_approved": 180,
+   "share": 0.46035805626598464
+  },
+  {
+   "level": "Hetionet",
+   "group": "design",
+   "phases": "phase 1-3 only",
+   "stopped_trials": 305,
+   "pairs": 356,
+   "pairs_recorded_or_approved": 158,
+   "share": 0.4438202247191011
+  },
+  {
+   "level": "Hetionet",
+   "group": "uninformative",
+   "phases": "all phases",
+   "stopped_trials": 423,
+   "pairs": 476,
+   "pairs_recorded_or_approved": 227,
+   "share": 0.47689075630252103
+  },
+  {
+   "level": "Hetionet",
+   "group": "uninformative",
+   "phases": "phase 1-3 only",
+   "stopped_trials": 379,
+   "pairs": 433,
+   "pairs_recorded_or_approved": 205,
+   "share": 0.47344110854503463
+  },
+  {
+   "level": "Hetionet",
+   "group": "no reason given",
+   "phases": "all phases",
+   "stopped_trials": 868,
+   "pairs": 774,
+   "pairs_recorded_or_approved": 336,
+   "share": 0.43410852713178294
+  },
+  {
+   "level": "Hetionet",
+   "group": "no reason given",
+   "phases": "phase 1-3 only",
+   "stopped_trials": 774,
+   "pairs": 696,
+   "pairs_recorded_or_approved": 293,
+   "share": 0.4209770114942529
+  },
+  {
+   "level": "Open Targets",
+   "group": "efficacy",
+   "phases": "all phases",
+   "stopped_trials": 2386,
+   "pairs": 3736,
+   "pairs_recorded_or_approved": 627,
+   "share": 0.16782655246252676
+  },
+  {
+   "level": "Open Targets",
+   "group": "efficacy",
+   "phases": "phase 1-3 only",
+   "stopped_trials": 2246,
+   "pairs": 3533,
+   "pairs_recorded_or_approved": 564,
+   "share": 0.15963770166996885
+  },
+  {
+   "level": "Open Targets",
+   "group": "safety",
+   "phases": "all phases",
+   "stopped_trials": 873,
+   "pairs": 1713,
+   "pairs_recorded_or_approved": 349,
+   "share": 0.2037361354349095
+  },
+  {
+   "level": "Open Targets",
+   "group": "safety",
+   "phases": "phase 1-3 only",
+   "stopped_trials": 808,
+   "pairs": 1551,
+   "pairs_recorded_or_approved": 299,
+   "share": 0.19277885235332043
+  },
+  {
+   "level": "Open Targets",
+   "group": "operational",
+   "phases": "all phases",
+   "stopped_trials": 19455,
+   "pairs": 20540,
+   "pairs_recorded_or_approved": 2394,
+   "share": 0.11655306718597858
+  },
+  {
+   "level": "Open Targets",
+   "group": "operational",
+   "phases": "phase 1-3 only",
+   "stopped_trials": 16866,
+   "pairs": 18604,
+   "pairs_recorded_or_approved": 2081,
+   "share": 0.11185766501827564
+  },
+  {
+   "level": "Open Targets",
+   "group": "design",
+   "phases": "all phases",
+   "stopped_trials": 1610,
+   "pairs": 2902,
+   "pairs_recorded_or_approved": 589,
+   "share": 0.20296347346657478
+  },
+  {
+   "level": "Open Targets",
+   "group": "design",
+   "phases": "phase 1-3 only",
+   "stopped_trials": 1405,
+   "pairs": 2566,
+   "pairs_recorded_or_approved": 504,
+   "share": 0.19641465315666407
+  },
+  {
+   "level": "Open Targets",
+   "group": "uninformative",
+   "phases": "all phases",
+   "stopped_trials": 1846,
+   "pairs": 3005,
+   "pairs_recorded_or_approved": 634,
+   "share": 0.21098169717138104
+  },
+  {
+   "level": "Open Targets",
+   "group": "uninformative",
+   "phases": "phase 1-3 only",
+   "stopped_trials": 1614,
+   "pairs": 2704,
+   "pairs_recorded_or_approved": 557,
+   "share": 0.20599112426035504
+  },
+  {
+   "level": "Open Targets",
+   "group": "no reason given",
+   "phases": "all phases",
+   "stopped_trials": 3478,
+   "pairs": 5124,
+   "pairs_recorded_or_approved": 945,
+   "share": 0.18442622950819673
+  },
+  {
+   "level": "Open Targets",
+   "group": "no reason given",
+   "phases": "phase 1-3 only",
+   "stopped_trials": 3115,
+   "pairs": 4668,
+   "pairs_recorded_or_approved": 829,
+   "share": 0.17759211653813195
+  }
+ ],
+ "D3": {
+  "n_texts": 3747,
+  "efficacy": {
+   "gold_positive": 368,
+   "rule_positive": 100,
+   "TP": 89,
+   "FP": 11,
+   "FN": 279,
+   "precision": 0.89,
+   "recall": 0.2418478260869565,
+   "F1": 0.3803418803418804
+  },
+  "safety": {
+   "gold_positive": 211,
+   "rule_positive": 277,
+   "TP": 125,
+   "FP": 152,
+   "FN": 86,
+   "precision": 0.45126353790613716,
+   "recall": 0.5924170616113744,
+   "F1": 0.5122950819672131
+  },
+  "operational": {
+   "gold_positive": 2373,
+   "rule_positive": 1791,
+   "TP": 1604,
+   "FP": 187,
+   "FN": 769,
+   "precision": 0.8955890563930765,
+   "recall": 0.6759376316898441,
+   "F1": 0.7704130643611912
+  },
+  "safety_false_positives_with_negation": 89,
+  "safety_false_positives": 152
+ },
+ "D4": {
+  "n_reports_with_reason": 5810,
+  "efficacy": {
+   "rule_positive": 194,
+   "classifier_positive": 510,
+   "both": 177,
+   "kappa": 0.47756630938556555
+  },
+  "safety": {
+   "rule_positive": 384,
+   "classifier_positive": 242,
+   "both": 180,
+   "kappa": 0.5521968565173196
+  },
+  "operational": {
+   "rule_positive": 3344,
+   "classifier_positive": 4242,
+   "both": 3121,
+   "kappa": 0.5027662726904787
+  }
+ },
+ "D5": {
+  "scientific": {
+   "trials": 482,
+   "share_trials_listing_2plus_mapped_drugs": 0.38589211618257263,
+   "median_trials_per_pair": 22.0,
+   "pairs": 459,
+   "pairs_recorded_indication": 119
+  },
+  "other": {
+   "trials": 3501,
+   "share_trials_listing_2plus_mapped_drugs": 0.38674664381605256,
+   "median_trials_per_pair": 7.0,
+   "pairs": 1878,
+   "pairs_recorded_indication": 370
+  },
+  "scientific_stops_on_recorded_indications": {
+   "pairs": 119,
+   "pairs_whose_trials_all_list_2plus_drugs": 54,
+   "pairs_same_concept": 69
+  }
+ },
+ "D6": {
+  "wb_all": {
+   "unlabelled_pairs": 1553,
+   "approved": 155,
+   "rate": 0.09980682549903412,
+   "rest_pairs": 209926,
+   "rest_approved": 342,
+   "rest_rate": 0.0016291455084172517,
+   "ratio": 61.26329722137496
+  },
+  "wb_scientific": {
+   "unlabelled_pairs": 313,
+   "approved": 40,
+   "rate": 0.12779552715654952,
+   "rest_pairs": 211166,
+   "rest_approved": 457,
+   "rest_rate": 0.0021641741568244888,
+   "ratio": 59.050482029627865
+  },
+  "wb_scientific_same_concept": {
+   "unlabelled_pairs": 160,
+   "approved": 12,
+   "rate": 0.075,
+   "rest_pairs": 211319,
+   "rest_approved": 485,
+   "rest_rate": 0.0022951083433103508,
+   "ratio": 32.678195876288655
+  },
+  "wb_other": {
+   "unlabelled_pairs": 1240,
+   "approved": 115,
+   "rate": 0.09274193548387097,
+   "rest_pairs": 210239,
+   "rest_approved": 382,
+   "rest_rate": 0.0018169797230770694,
+   "ratio": 51.041810927208246
+  },
+  "stopped_any_date": {
+   "unlabelled_pairs": 2402,
+   "approved": 192,
+   "rate": 0.07993338884263114,
+   "rest_pairs": 209077,
+   "rest_approved": 305,
+   "rest_rate": 0.0014587926936009221,
+   "ratio": 54.79420701328128
+  }
+ }
+}

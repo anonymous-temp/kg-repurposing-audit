@@ -5,12 +5,10 @@ from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
-from urllib.parse import urlparse, parse_qs
 import pandas as pd
 import jsonschema
 from kg_audit import cli
-from kg_audit.bridge import export_records
-from kg_audit.registry import fetch_sample, reason_cues
+from kg_audit.bridge import attach_clinical_evidence, export_ranked, prediction_record
 
 
 class IOTests(unittest.TestCase):
@@ -52,58 +50,35 @@ class IOTests(unittest.TestCase):
                 cli.main()
             self.assertEqual(json.loads(output.read_text())["status"], "incomplete")
 
-    def test_bridge_has_per_disease_rank_domain_and_no_inferred_regimen(self):
+    def test_bridge_attaches_typed_trial_evidence_without_inferring_clinical_fields(self):
+        prov = {"model": "synthetic", "graph": "synthetic", "task": "all", "candidate_universe": "grid",
+                "write_back_policy": "no_writeback", "seed": 1, "rank_scope": "global", "source_sha256": "0" * 64}
+        reports = [
+            {"report_id": "nct00000001", "origin": "CLINICAL_TRIAL", "stage": "PHASE_3", "source": "ClinicalTrials.gov",
+             "phase": "PHASE3", "status": "TERMINATED", "stop_categories": "Negative", "why_stopped": "Futility",
+             "start_date": "2012-01-01", "url": "https://clinicaltrials.gov/study/NCT00000001", "gap": 0},
+            {"report_id": "nct00000002", "origin": "CLINICAL_TRIAL", "stage": "PHASE_2", "source": "ClinicalTrials.gov",
+             "phase": "PHASE2", "status": "WITHDRAWN", "stop_categories": "Business_Administrative", "why_stopped": "Funding",
+             "start_date": "2013-01-01", "url": "https://clinicaltrials.gov/study/NCT00000002", "gap": 0},
+            {"report_id": "label1", "origin": "DRUG_LABEL", "stage": "APPROVAL", "source": "DailyMed", "phase": None,
+             "status": None, "stop_categories": None, "why_stopped": None, "start_date": None, "url": None, "gap": 0},
+        ]
+        rec = prediction_record("DB00001", "DOID:1", 0.5, 3, 10, prov, "2026-01-01")
+        impl = attach_clinical_evidence(rec, reports)
+        self.assertEqual(impl, "negate")
+        self.assertEqual([f["implication"] for f in rec["failures"]], ["negate", "defer"])
+        self.assertTrue(any(e.get("clinical_approval_status") for e in rec["evidence"]))
+        self.assertTrue(all(k not in rec for k in ("regimen", "population", "comparator", "endpoint")))
+        rec2 = prediction_record("DB00001", "DOID:1", 0.5, 3, 10, prov, "2026-01-01")
+        self.assertEqual(attach_clinical_evidence(rec2, reports, recorded_indication=True), "retain")
+        narrower = [dict(reports[0], gap=2)]
+        rec3 = prediction_record("DB00001", "DOID:1", 0.5, 3, 10, prov, "2026-01-01")
+        self.assertEqual(attach_clinical_evidence(rec3, narrower), "qualify")
+        schema = json.loads((Path(__file__).resolve().parents[1] / "schemas/handoff.schema.json").read_text())
+        for r in (rec, rec2, rec3):
+            jsonschema.validate(r, schema)
         with tempfile.TemporaryDirectory() as tmp:
-            path = Path(tmp) / "scores.tsv"
-            pd.DataFrame({"compound": ["a", "b", "a"], "disease": ["x", "x", "y"], "s": [0.2, 0.9, 0.3]}).to_csv(
-                path, sep="\t", index=False
-            )
-            out = Path(tmp) / "records.jsonl"
-            report = export_records(path, "s", out, "synthetic", "random", "uniform", 1, "2026-01-01")
-            rows = [json.loads(x) for x in out.read_text().splitlines()]
-            self.assertEqual([r["prediction"]["rank"] for r in rows], [2, 1, 1])
-            self.assertEqual([r["prediction"]["candidate_count"] for r in rows], [2, 2, 1])
-            self.assertTrue(all("regimen" not in r for r in rows))
-            self.assertEqual(report["biomedical_fields_inferred"], 0)
-            schema = json.loads((Path(__file__).resolve().parents[1] / "schemas/handoff.schema.json").read_text())
-            for row in rows:
-                jsonschema.validate(row, schema)
-
-    def test_registry_snapshot_is_bounded_cached_and_not_a_negative_label(self):
-        def response(request, timeout=60):
-            status = parse_qs(urlparse(request.full_url).query)["filter.overallStatus"][0]
-            payload = {
-                "totalCount": 1,
-                "studies": [
-                    {
-                        "protocolSection": {
-                            "identificationModule": {"nctId": "SYNTHETIC_" + status},
-                            "statusModule": {
-                                "overallStatus": status,
-                                "whyStopped": "Funding ended",
-                                "lastUpdatePostDateStruct": {"date": "2025-01-01"},
-                            },
-                            "armsInterventionsModule": {"interventions": [{"type": "DRUG", "name": "synthetic drug"}]},
-                        }
-                    }
-                ],
-            }
-            return io.BytesIO(json.dumps(payload).encode())
-
-        with (
-            tempfile.TemporaryDirectory() as tmp,
-            patch("urllib.request.urlopen", side_effect=response) as call,
-            patch("time.sleep"),
-        ):
-            data = fetch_sample(tmp, "2026-01-01", 1)
-            self.assertEqual(call.call_count, 3)
-            self.assertTrue(all(x["global_negative_edges_added"] == 0 for x in data["summary"].values()))
-            fetch_sample(tmp, "2026-01-01", 1)
-            self.assertEqual(call.call_count, 3)
-            with self.assertRaises(ValueError):
-                fetch_sample(tmp, "2026-01-02", 1)
-
-    def test_reason_cues_are_nonexclusive(self):
-        self.assertEqual(reason_cues("Safety and recruitment concerns"), ["operational", "safety"])
-        self.assertEqual(reason_cues("Insufficient efficacy"), ["efficacy"])
-        self.assertEqual(reason_cues(""), [])
+            summary = export_ranked([("DB00001", "DOID:1", 0.5, 1)], {("DB00001", "DOID:1"): reports}, set(),
+                                    Path(tmp) / "r.jsonl", {**prov, "universe_size": 10}, "2026-01-01")
+            self.assertEqual(summary["pair_implication"], {"negate": 1})
+            self.assertEqual(summary["biomedical_fields_inferred_from_scores"], 0)

@@ -1,0 +1,10 @@
+{
+ "grid_n": 211479,
+ "external_positives": 497,
+ "later_failures": 47,
+ "strata": {
+  "in_wb_scientific": 40,
+  "in_wb_other": 115,
+  "not_in_wb": 342
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "random": {
+  "neg_random": {
+   "n_neg": 3020,
+   "zero_treatment_degree_disease_share": 0.4370860927152318,
+   "cpd_in_candidates": 7,
+   "cpd_in_pool": 11,
+   "tv_distance_disease_identity": 0.6314569536423842,
+   "degree_AP": 0.21278984760473021,
+   "degree_AUROC": 0.8310260514889697,
+   "disease_only_AP": 0.23596105661429992,
+   "disease_only_AUROC": 0.8422390099849423
+  },
+  "neg_degmatch": {
+   "n_neg": 3020,
+   "zero_treatment_degree_disease_share": 0.0,
+   "cpd_in_candidates": 6,
+   "cpd_in_pool": 14,
+   "tv_distance_disease_identity": 0.24834437086092714,
+   "degree_AP": 0.10098231497330845,
+   "degree_AUROC": 0.6744141338830169,
+   "disease_only_AP": 0.09333177900387685,
+   "disease_only_AUROC": 0.6213506717541629
+  }
+ },
+ "coldstart": {
+  "neg_random": {
+   "n_neg": 3240,
+   "zero_treatment_degree_disease_share": 0.44135802469135804,
+   "cpd_in_candidates": 10,
+   "cpd_in_pool": 21,
+   "tv_distance_disease_identity": 0.6077160493827161,
+   "degree_AP": 0.20207191895860632,
+   "degree_AUROC": 0.8421998043997357,
+   "disease_only_AP": 0.20207191895860632,
+   "disease_only_AUROC": 0.8421998043997357
+  },
+  "neg_degmatch": {
+   "n_neg": 3240,
+   "zero_treatment_degree_disease_share": 0.0,
+   "cpd_in_candidates": 12,
+   "cpd_in_pool": 16,
+   "tv_distance_disease_identity": 0.31419753086419755,
+   "degree_AP": 0.10042030178832147,
+   "degree_AUROC": 0.6680203094040543,
+   "disease_only_AP": 0.10042030178832147,
+   "disease_only_AUROC": 0.6680203094040543
+  }
+ }
+}

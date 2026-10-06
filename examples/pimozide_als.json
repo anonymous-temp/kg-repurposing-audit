@@ -1,0 +1,65 @@
+{
+  "id": "example:pimozide-als",
+  "drug": "DRUGBANK:DB01100",
+  "indication": "MONDO:0004976",
+  "population": "unknown",
+  "regimen": "unknown",
+  "comparator": "unknown",
+  "endpoint": "unknown",
+  "required_exposure": "unknown",
+  "assessment_date": "2026-10-06",
+  "knowledge_level": "not_provided",
+  "agent_type": "manual_agent",
+  "evidence": [
+    {
+      "id": "NCT03272503",
+      "source": "ClinicalTrials.gov NCT03272503 (status UNKNOWN, last update 2020-05-28, no posted results)",
+      "source_date": "2020-05-28",
+      "predicate": "in_clinical_trials_for",
+      "research_phase": "clinical_trial_phase_2"
+    }
+  ],
+  "constraints": [
+    {
+      "domain": "mechanism",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "systemic_exposure",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "tissue_exposure",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "regimen",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "population",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "comparator_endpoint",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "safety",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "evidence_path",
+      "status": "unknown",
+      "evidence_ids": []
+    }
+  ],
+  "failures": []
+}

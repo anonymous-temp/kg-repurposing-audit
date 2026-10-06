@@ -1,11 +1,16 @@
 """Conservative documentation rules, not clinical eligibility decisions.
 
-No trial registry status or workflow failure creates a global negative indication.
+A registry status alone never creates a negative indication. A stopped trial can support
+scoped counterevidence only when its failure type is scientific (efficacy or safety) and its
+condition is the same concept as the reviewed indication (kg_audit.failures.implication).
 Dates constrain the information available at a requested review time.
 """
 
 from datetime import date
 import math
+import re
+
+from .failures import FAILURE_TYPES, IMPLICATIONS, SCOPE_MATCHES, implication as rule_implication
 
 DOMAINS = (
     "mechanism",
@@ -32,6 +37,14 @@ def known(value):
 
 def iso_date(value):
     return date.fromisoformat(value) if isinstance(value, str) and value else None
+
+
+def normalise(value):
+    """Case- and whitespace-insensitive comparison key for scope fields."""
+    return re.sub(r"\s+", " ", str(value).strip()).casefold() if value is not None else None
+
+
+EVENT_TYPES = {"stopped_trial", "development_discontinuation", "market_withdrawal", "corporate_event"}
 
 
 def validate_record(record):
@@ -84,6 +97,8 @@ def validate_record(record):
                     errors.append("unknown constraint domain")
                 if item.get("status") not in STATUSES:
                     errors.append("invalid constraint status")
+            else:
+                errors.extend(_failure_errors(item))
             if item.get("source_date"):
                 try:
                     iso_date(item["source_date"])
@@ -92,25 +107,49 @@ def validate_record(record):
     return errors
 
 
+def _failure_errors(item):
+    """A failure annotation must state its type and scope, and its implication must follow the rule."""
+    errs = []
+    if item.get("event_type") not in EVENT_TYPES:
+        errs.append("unknown failure event_type")
+    if item.get("event_type") == "stopped_trial" and not (known(item.get("trial_id")) and item.get("registry_status")):
+        errs.append("stopped trial needs trial_id and registry_status")
+    ftype, scope, impl = item.get("failure_type"), item.get("scope_match"), item.get("implication")
+    if ftype not in FAILURE_TYPES:
+        errs.append("unknown failure_type")
+    if scope not in SCOPE_MATCHES:
+        errs.append("unknown scope_match")
+    if impl not in IMPLICATIONS:
+        errs.append("unknown implication")
+    if not errs:
+        expected = rule_implication(ftype, scope, recorded_indication=bool(item.get("recorded_indication")))
+        if impl != expected:
+            errs.append(f"implication '{impl}' does not follow the write-back rule (expected '{expected}')")
+    return errs
+
+
 def writeback_action(failure):
-    """Return a non-destructive evidence action; a flat negative is never inferred."""
-    implication = failure.get("implication", "defer")
-    if implication == "retain":
-        return "retain_existing_evidence" if failure.get("evidence_ids") else "defer"
-    if implication == "qualify":
-        return "store_context_qualification" if failure.get("scope") and failure.get("evidence_ids") else "defer"
-    if implication == "negate":
-        scope = failure.get("scope") or {}
-        scoped = all(
-            known(scope.get(k)) for k in ("drug", "indication", "population", "regimen", "comparator", "endpoint")
-        )
+    """Return the evidence action for one failure annotation.
+
+    Only a same-concept efficacy or safety failure with a dated source becomes scoped
+    counterevidence; scientific failures in another concept are stored as qualifications;
+    operational, design, uninformative and unreported reasons are deferred.
+    """
+    impl = failure.get("implication", "defer")
+    refs = failure.get("evidence_ids")
+    if impl == "retain":
+        return "retain_existing_evidence" if refs else "defer"
+    if impl == "qualify":
+        return "store_context_qualification" if refs else "defer"
+    if impl == "negate":
         if (
-            failure.get("domain") == "efficacy"
-            and scoped
-            and failure.get("evidence_ids")
+            failure.get("failure_type") in ("efficacy", "safety")
+            and failure.get("scope_match") == "same_concept"
+            and refs
             and failure.get("source_date")
         ):
             return "store_scoped_counterevidence"
+        return "store_context_qualification" if refs else "defer"
     return "defer"
 
 
@@ -155,9 +194,9 @@ def assess_strategy(record, as_of):
         if day is not None and day <= cutoff and available(failure.get("evidence_ids", [])):
             action = writeback_action(failure)
             if action == "store_scoped_counterevidence":
-                scope = failure["scope"]
+                scope = failure.get("scope") or {}
                 if all(
-                    scope.get(k) == record.get(k)
+                    known(scope.get(k)) and normalise(scope.get(k)) == normalise(record.get(k))
                     for k in ("drug", "indication", "population", "regimen", "comparator", "endpoint")
                 ):
                     return {

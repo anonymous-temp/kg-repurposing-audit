@@ -1,11 +1,20 @@
 id: https://github.com/anonymous-temp/kg-repurposing-audit/schema
 name: kg_repurposing_evidence_handoff
-title: Scoped evidence handoff for knowledge graph drug repurposing
+title: Scoped evidence and failure write-back records for knowledge-graph drug repurposing
+version: 0.3.0
 license: MIT
+description: >-
+  Records that carry a drug-disease candidate from a ranking model to evidence review, and
+  carry clinical-trial outcomes back to graph labels. Classes and slots are mapped to Biolink
+  Model 4.4.5 and PROV-O where an equivalent exists. Biolink represents trial status
+  (clinical_trial_overall_status) and negation but has no slot for why a trial stopped; the
+  stop-reason categories, failure types, scope match and write-back implication are local
+  extensions.
 prefixes:
   linkml: https://w3id.org/linkml/
   biolink: https://w3id.org/biolink/vocab/
   prov: http://www.w3.org/ns/prov#
+  dcterms: http://purl.org/dc/terms/
   audit: https://github.com/anonymous-temp/kg-repurposing-audit/schema/
 default_prefix: audit
 default_range: string
@@ -14,40 +23,55 @@ imports:
 classes:
   TreatmentStrategy:
     tree_root: true
-    description: A partial or complete treatment specification; completeness is assessed separately from structural validity.
+    class_uri: biolink:ChemicalOrDrugOrTreatmentToDiseaseOrPhenotypicFeatureAssociation
+    description: >-
+      A drug-indication hypothesis under review, qualified by population, regimen, comparator
+      and endpoint. Completeness is assessed separately from structural validity.
     attributes:
       id: {identifier: true, required: true}
-      drug: {required: true}
-      indication: {required: true}
-      population: {}
+      drug: {required: true, slot_uri: biolink:subject, description: CURIE of the drug (e.g. DRUGBANK:DB01097)}
+      indication: {required: true, slot_uri: biolink:object, description: CURIE of the disease}
+      population: {slot_uri: biolink:population_context_qualifier}
       comparator: {}
       regimen: {}
       endpoint: {}
       required_exposure: {}
-      assessment_date: {range: date}
+      assessment_date: {range: date, slot_uri: dcterms:date}
+      knowledge_level: {range: KnowledgeLevel, slot_uri: biolink:knowledge_level}
+      agent_type: {range: AgentType, slot_uri: biolink:agent_type}
       prediction: {range: CandidatePrediction, inlined: true}
-      evidence: {range: EvidenceAssertion, multivalued: true, inlined_as_list: true}
+      evidence: {range: EvidenceAssertion, multivalued: true, inlined_as_list: true, slot_uri: biolink:has_evidence}
       constraints: {range: ActionabilityConstraint, multivalued: true, inlined_as_list: true}
       failures: {range: FailureAnnotation, multivalued: true, inlined_as_list: true}
   CandidatePrediction:
-    description: Prediction provenance without a fabricated clinical interpretation.
+    class_uri: prov:Entity
+    description: >-
+      Provenance of a model score. Its knowledge level is always 'prediction' and its agent
+      type 'computational_model'; a score is not evidence of efficacy.
     attributes:
       model: {required: true}
       graph: {required: true}
       task: {required: true}
-      candidate_sampler: {required: true}
+      candidate_universe: {required: true, description: The set of pairs the rank was computed over}
+      write_back_policy: {required: true, range: WriteBackPolicy}
       seed: {range: integer, required: true}
       score: {range: float, required: true}
       rank: {range: integer}
       rank_scope: {required: true}
       candidate_count: {range: integer, required: true}
-      source_sha256: {required: true}
+      source_sha256: {required: true, slot_uri: prov:wasDerivedFrom}
       score_is_probability: {range: boolean, required: true}
   EvidenceAssertion:
+    class_uri: biolink:Association
+    description: A dated statement from an identified source about the drug-disease pair.
     attributes:
       id: {identifier: true, required: true}
-      source: {required: true}
-      source_date: {range: date}
+      source: {required: true, slot_uri: biolink:primary_knowledge_source}
+      source_date: {range: date, slot_uri: prov:generatedAtTime}
+      predicate: {range: EvidencePredicate}
+      negated: {range: boolean, slot_uri: biolink:negated}
+      clinical_approval_status: {range: ClinicalApprovalStatus, slot_uri: biolink:clinical_approval_status}
+      research_phase: {range: ResearchPhase, slot_uri: biolink:max_research_phase}
       proposition: {}
       effect: {range: EffectEstimate, inlined: true}
   EffectEstimate:
@@ -63,12 +87,27 @@ classes:
       evidence_ids: {multivalued: true}
       rationale: {}
   FailureAnnotation:
+    class_uri: biolink:ClinicalTrial
+    description: >-
+      A discontinuation event (usually a stopped trial) and what it may change. The failure
+      type is derived from the stop-reason categories; the implication follows the
+      write-back rule in kg_audit.failures.implication.
     attributes:
-      domain: {required: true}
+      event_type: {range: DiscontinuationEvent, required: true}
+      trial_id: {description: "Registry identifier, e.g. NCT01234567; required when event_type is stopped_trial"}
+      registry_status: {range: TrialStatus, slot_uri: biolink:clinical_trial_overall_status}
+      trial_phase: {range: ResearchPhase, slot_uri: biolink:clinical_trial_phase}
+      trial_start_date: {range: date, slot_uri: biolink:clinical_trial_start_date}
+      stop_reason_text: {}
+      stop_reason_categories: {range: StopReasonCategory, multivalued: true}
+      category_source: {description: "Classifier or curator that assigned the categories, with version"}
+      failure_type: {range: FailureType, required: true}
+      trial_condition: {description: Condition CURIE as registered or as mapped by the source}
+      scope_match: {range: ScopeMatch, required: true}
+      recorded_indication: {range: boolean, description: True when the pair is already a recorded indication in the graph}
       implication: {range: Implication, required: true}
-      source_date: {range: date}
+      source_date: {range: date, slot_uri: prov:generatedAtTime}
       evidence_ids: {multivalued: true}
-      registry_status: {}
       scope: {range: EvidenceScope, inlined: true}
   EvidenceScope:
     attributes:
@@ -97,7 +136,107 @@ enums:
       unknown: {}
   Implication:
     permissible_values:
-      negate: {}
-      qualify: {}
-      retain: {}
-      defer: {}
+      negate: {description: Same-concept efficacy or safety failure; the pair may be written back as a negative label}
+      qualify: {description: Scientific failure in a narrower or broader concept; stored as context-limited counterevidence}
+      retain: {description: The pair is a recorded indication; the stopped trial does not remove it}
+      defer: {description: "Operational, design, uninformative or unreported reason; no label change"}
+  FailureType:
+    permissible_values:
+      efficacy: {description: Lack of efficacy or futility}
+      safety: {description: Safety concerns or adverse effects}
+      operational: {description: "Business, enrolment, logistics, staffing, regulatory, ethics, another study or COVID-19"}
+      design: {description: Study design changes or interim-analysis decisions}
+      uninformative: {description: "Reason given but not interpretable, without context or unclassified"}
+      success: {description: Stopped early because the endpoint was met}
+      not_reported: {description: No reason given}
+  StopReasonCategory:
+    description: Razuvayevskaya et al. 2024 (17 classes) plus the Open Targets 'Uncategorised' label.
+    permissible_values:
+      Another_Study: {}
+      Business_Administrative: {}
+      Covid19: {}
+      Endpoint_Met: {}
+      Ethical_Reason: {}
+      Insufficient_Data: {}
+      Insufficient_Enrollment: {}
+      Interim_Analysis: {}
+      Invalid_Reason: {}
+      Logistics_Resources: {}
+      Negative: {}
+      No_Context: {}
+      Regulatory: {}
+      Safety_Sideeffects: {}
+      Study_Design: {}
+      Study_Staff_Moved: {}
+      Success: {}
+      Uncategorised: {}
+  DiscontinuationEvent:
+    permissible_values:
+      stopped_trial: {description: "Registry status terminated, withdrawn or suspended"}
+      development_discontinuation: {description: Sponsor-reported end of a development programme}
+      market_withdrawal: {description: Withdrawal of a marketed product}
+      corporate_event: {description: Company event such as insolvency or divestment}
+  ScopeMatch:
+    permissible_values:
+      same_concept: {description: The trial condition is the graph disease itself}
+      narrower_concept: {description: The trial condition is a subtype of the graph disease}
+      broader_concept: {description: The trial condition is a supertype of the graph disease}
+      unmapped: {}
+  TrialStatus:
+    description: Subset of biolink ClinicalTrialStatusEnum used for stopped trials.
+    permissible_values:
+      TERMINATED: {}
+      WITHDRAWN: {}
+      SUSPENDED: {}
+  ResearchPhase:
+    description: Values of biolink ResearchPhaseEnum.
+    permissible_values:
+      pre_clinical_research_phase: {}
+      clinical_trial_phase_1: {}
+      clinical_trial_phase_1_to_2: {}
+      clinical_trial_phase_2: {}
+      clinical_trial_phase_2_to_3: {}
+      clinical_trial_phase_3: {}
+      clinical_trial_phase_4: {}
+      not_provided: {}
+  ClinicalApprovalStatus:
+    description: Values of biolink ClinicalApprovalStatusEnum.
+    permissible_values:
+      approved_for_condition: {}
+      fda_approved_for_condition: {}
+      not_approved_for_condition: {}
+      post_approval_withdrawal: {}
+      off_label_use: {}
+      not_provided: {}
+  EvidencePredicate:
+    permissible_values:
+      treats: {meaning: biolink:treats}
+      in_clinical_trials_for: {meaning: biolink:in_clinical_trials_for}
+      studied_to_treat: {meaning: biolink:studied_to_treat}
+      contraindicated_in: {meaning: biolink:contraindicated_in}
+  KnowledgeLevel:
+    description: Values of biolink KnowledgeLevelEnum.
+    permissible_values:
+      knowledge_assertion: {}
+      logical_entailment: {}
+      prediction: {}
+      statistical_association: {}
+      observation: {}
+      not_provided: {}
+  AgentType:
+    description: Values of biolink AgentTypeEnum.
+    permissible_values:
+      manual_agent: {}
+      automated_agent: {}
+      data_analysis_pipeline: {}
+      computational_model: {}
+      text_mining_agent: {}
+      manual_validation_of_automated_agent: {}
+      not_provided: {}
+  WriteBackPolicy:
+    permissible_values:
+      no_writeback: {}
+      flat_negative: {}
+      mask_all: {}
+      typed: {}
+      typed_scoped: {}

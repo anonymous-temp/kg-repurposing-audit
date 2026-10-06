@@ -1,0 +1,129 @@
+{
+  "id": "example:evacetrapib-high-risk-vascular-disease",
+  "drug": "DRUGBANK:DB11655",
+  "indication": "high-risk vascular disease",
+  "population": "adults with high-risk vascular disease on standard therapy",
+  "regimen": "evacetrapib 130 mg orally once daily",
+  "comparator": "placebo",
+  "endpoint": "first major adverse cardiovascular event",
+  "required_exposure": "plasma exposure reported in trial",
+  "assessment_date": "2026-10-06",
+  "knowledge_level": "knowledge_assertion",
+  "agent_type": "manual_agent",
+  "evidence": [
+    {
+      "id": "NCT01687998",
+      "source": "ClinicalTrials.gov NCT01687998 (TERMINATED: 'Study termination due to insufficient efficacy.')",
+      "source_date": "2016-07-31",
+      "predicate": "in_clinical_trials_for",
+      "research_phase": "clinical_trial_phase_3"
+    },
+    {
+      "id": "doi:10.1056/nejmoa1609581",
+      "source": "ACCELERATE, Lincoff et al. N Engl J Med 2017;376:1933-1942",
+      "source_date": "2017-05-18",
+      "predicate": "treats",
+      "negated": true,
+      "research_phase": "clinical_trial_phase_3",
+      "effect": {
+        "measure": "hazard ratio for primary composite endpoint",
+        "estimate": 1.01,
+        "lower": 0.93,
+        "upper": 1.08
+      }
+    },
+    {
+      "id": "doi:10.1056/NEJMoa1706444",
+      "source": "REVEAL (anacetrapib), N Engl J Med 2017;377:1217-1227",
+      "source_date": "2017-09-28",
+      "predicate": "treats",
+      "proposition": "A different CETP inhibitor reduced major coronary events; not evidence about evacetrapib",
+      "effect": {
+        "measure": "rate ratio for major coronary events",
+        "estimate": 0.91,
+        "lower": 0.85,
+        "upper": 0.97
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "domain": "mechanism",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "systemic_exposure",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "tissue_exposure",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "regimen",
+      "status": "pass",
+      "evidence_ids": [
+        "doi:10.1056/nejmoa1609581"
+      ]
+    },
+    {
+      "domain": "population",
+      "status": "pass",
+      "evidence_ids": [
+        "doi:10.1056/nejmoa1609581"
+      ]
+    },
+    {
+      "domain": "comparator_endpoint",
+      "status": "fail",
+      "evidence_ids": [
+        "doi:10.1056/nejmoa1609581"
+      ]
+    },
+    {
+      "domain": "safety",
+      "status": "unknown",
+      "evidence_ids": []
+    },
+    {
+      "domain": "evidence_path",
+      "status": "unknown",
+      "evidence_ids": []
+    }
+  ],
+  "failures": [
+    {
+      "event_type": "stopped_trial",
+      "stop_reason_categories": [
+        "Negative"
+      ],
+      "failure_type": "efficacy",
+      "scope_match": "same_concept",
+      "recorded_indication": false,
+      "implication": "negate",
+      "trial_id": "NCT01687998",
+      "registry_status": "TERMINATED",
+      "trial_phase": "clinical_trial_phase_3",
+      "trial_start_date": "2012-10-31",
+      "stop_reason_text": "Study termination due to insufficient efficacy.",
+      "category_source": "Open Targets Platform 26.09 stop-reason classifier",
+      "trial_condition": "high-risk vascular disease",
+      "source_date": "2017-05-18",
+      "evidence_ids": [
+        "NCT01687998",
+        "doi:10.1056/nejmoa1609581"
+      ],
+      "scope": {
+        "drug": "DRUGBANK:DB11655",
+        "indication": "high-risk vascular disease",
+        "population": "adults with high-risk vascular disease on standard therapy",
+        "regimen": "evacetrapib 130 mg orally once daily",
+        "comparator": "placebo",
+        "endpoint": "first major adverse cardiovascular event"
+      }
+    }
+  ]
+}
