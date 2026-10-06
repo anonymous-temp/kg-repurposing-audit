@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.0 (2026-10-06)
+
+- Drug roles in stopped trials from ClinicalTrials.gov API v2 arm groups (`kg_audit.roles`; pipelines 01b, 01c): investigational agent, comparator, background therapy, mixed, head-to-head, single-arm combination, described only.
+- Two role-restricted write-back policies (`typed_role`, `typed_role_scoped`); negative-set size and purity per policy; enrichment of approved indications among stopped pairs by stop type and role.
+- Tested-versus-approved analysis: AUROC between later-approved, later-failed, newly tested and untested pairs for each scorer (pipeline 16).
+- PrimeKG v2 replication (pipelines 10-15): Open Targets mapping to MONDO diseases, partitions, DistMult embeddings without drug-disease edges, seven policies, exact inline disease-cluster bootstrap (`kg_audit.fastboot`).
+- New figures (tested versus approved; policy effects in both graphs) and tables; tests for role rules, role policies and the inline bootstrap.
+
 ## 0.3.0 (2026-10-06)
 
 - New question and analysis: write-back of real stopped-trial evidence (Open Targets 26.09) into Hetionet training labels, with five policies, four scorers and three outcome sets (held-out treatments, approved indications absent from the graph, later scientific failures).

@@ -132,7 +132,14 @@ POLICIES = L.GRID + ["typed_scoped"]
 WSENS = [("flat_negative", 3.0), ("flat_negative", 30.0), ("typed", 3.0), ("typed", 30.0)]
 
 
+ROLE_SET = ["no_writeback", "flat_negative", "mask_all", "typed", "typed_scoped", "typed_role", "typed_role_scoped"]
+
+
 def policy_list():
+    if os.environ.get("POLICY_SET") == "role":                  # attribution test: role-restricted negation
+        return [(L.NAMED[n], 10.0) for n in ROLE_SET]
+    if os.environ.get("POLICY_SET") == "role_only":             # only the two role policies (merged with the main run for the bootstrap)
+        return [(L.NAMED[n], 10.0) for n in ["typed_role", "typed_role_scoped"]]
     if os.environ.get("MAIN_ONLY") == "1":                     # sensitivity analyses: five main policies, weight 10
         return [(L.NAMED[n], 10.0) for n in ["no_writeback", "flat_negative", "mask_all", "typed", "typed_scoped"]]
     out = [(pol, 10.0) for pol in POLICIES]
@@ -230,6 +237,8 @@ if STAGE == "e2":
 
 # ----------------------------------------------------------------------------- boot
 MAIN = ["no_writeback", "flat_negative", "mask_all", "typed", "typed_scoped"]
+if os.environ.get("POLICY_SET") == "role":
+    MAIN = ["no_writeback", "flat_negative", "mask_all", "typed", "typed_scoped", "typed_role", "typed_role_scoped"]
 
 
 def sorted_ap_factory(y, s):
@@ -298,6 +307,7 @@ if STAGE == "boot":
             acc[(pol, model)].append((f(wd[dcodes]), macro))
         return {k: tuple(np.mean(v, axis=0)) for k, v in acc.items()}
 
+    import collections
     obs = stat(np.ones(len(dises)))
     present = np.unique(np.concatenate([u[6] for u in units]))     # diseases that occur in the evaluation grid
     draws = []
@@ -310,6 +320,10 @@ if STAGE == "boot":
     for pol in MAIN[1:]:
         for model in ["degree", "mf", "graph", "hybrid"]:
             contrasts.append((f"{pol} - no_writeback [{model}]", (pol, model), ("no_writeback", model)))
+    if "typed_role" in MAIN:
+        for a, b in [("typed_role", "typed"), ("typed_role", "mask_all"), ("typed_role_scoped", "typed_scoped"), ("typed_role_scoped", "mask_all")]:
+            for model in ["degree", "mf", "graph", "hybrid"]:
+                contrasts.append((f"{a} - {b} [{model}]", (a, model), (b, model)))
     for a, b in [("graph", "mf"), ("hybrid", "mf"), ("mf", "degree"), ("graph", "degree"), ("hybrid", "degree"), ("degree", "disease_degree")]:
         contrasts.append((f"{a} - {b} [no_writeback]", ("no_writeback", a), ("no_writeback", b)))
     out = {"B": B, "cluster": "disease", "observed": {f"{k[0]}|{k[1]}": {"pooledAP": v[0], "macroAP": v[1]} for k, v in obs.items()},

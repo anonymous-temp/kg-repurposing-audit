@@ -1,0 +1,89 @@
+{
+ "trial_compound_roles_all_stopped": {
+  "investigational": 3750,
+  "single_arm_combination": 2553,
+  "backbone": 2177,
+  "no_arm_data": 666,
+  "comparator": 438,
+  "head_to_head": 376,
+  "unmatched": 351,
+  "described_only": 332,
+  "mixed": 143
+ },
+ "scientific_stop_trial_compound_roles_wb": {
+  "investigational": 272,
+  "single_arm_combination": 210,
+  "backbone": 168,
+  "no_arm_data": 50,
+  "comparator": 43,
+  "described_only": 30,
+  "head_to_head": 29,
+  "unmatched": 20,
+  "mixed": 6
+ },
+ "wb_scientific": {
+  "any investigational": {
+   "pairs": 234,
+   "recorded_or_approved": 85,
+   "pct": 36.3,
+   "recorded": 58
+  },
+  "comparator/backbone only": {
+   "pairs": 63,
+   "recorded_or_approved": 30,
+   "pct": 47.6,
+   "recorded": 16
+  },
+  "other roles only (single-arm combination, head-to-head, unresolved)": {
+   "pairs": 162,
+   "recorded_or_approved": 64,
+   "pct": 39.5,
+   "recorded": 45
+  }
+ },
+ "wb_other": {
+  "any investigational": {
+   "pairs": 889,
+   "recorded_or_approved": 258,
+   "pct": 29.0,
+   "recorded": 153
+  },
+  "comparator/backbone only": {
+   "pairs": 192,
+   "recorded_or_approved": 48,
+   "pct": 25.0,
+   "recorded": 27
+  },
+  "other roles only (single-arm combination, head-to-head, unresolved)": {
+   "pairs": 485,
+   "recorded_or_approved": 114,
+   "pct": 23.5,
+   "recorded": 77
+  }
+ },
+ "wb_scientific_scoped": {
+  "any investigational": {
+   "pairs": 120,
+   "recorded_or_approved": 40,
+   "pct": 33.3,
+   "recorded": 31
+  },
+  "comparator/backbone only": {
+   "pairs": 44,
+   "recorded_or_approved": 24,
+   "pct": 54.5,
+   "recorded": 14
+  },
+  "other roles only (single-arm combination, head-to-head, unresolved)": {
+   "pairs": 88,
+   "recorded_or_approved": 34,
+   "pct": 38.6,
+   "recorded": 24
+  }
+ },
+ "n_pairs_inv": 234,
+ "n_pairs_inv_scoped": 120,
+ "recorded_with_sci_stop": 119,
+ "recorded_with_inv_sci_stop": 58,
+ "recorded_with_inv_scoped_sci_stop": 31
+}

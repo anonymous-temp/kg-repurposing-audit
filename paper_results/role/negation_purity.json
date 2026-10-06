@@ -1,0 +1,66 @@
+{
+ "hetionet": {
+  "flat_negative": {
+   "negated_pairs": 2025,
+   "recorded": 376,
+   "recorded_or_approved": 599,
+   "pct": 29.6
+  },
+  "typed": {
+   "negated_pairs": 459,
+   "recorded": 119,
+   "recorded_or_approved": 179,
+   "pct": 39.0
+  },
+  "typed_scoped": {
+   "negated_pairs": 252,
+   "recorded": 69,
+   "recorded_or_approved": 98,
+   "pct": 38.9
+  },
+  "typed_role": {
+   "negated_pairs": 234,
+   "recorded": 58,
+   "recorded_or_approved": 85,
+   "pct": 36.3
+  },
+  "typed_role_scoped": {
+   "negated_pairs": 120,
+   "recorded": 31,
+   "recorded_or_approved": 40,
+   "pct": 33.3
+  }
+ },
+ "primekg": {
+  "flat_negative": {
+   "negated_pairs": 5547,
+   "recorded": 771,
+   "recorded_or_approved": 1218,
+   "pct": 22.0
+  },
+  "typed": {
+   "negated_pairs": 1010,
+   "recorded": 195,
+   "recorded_or_approved": 286,
+   "pct": 28.3
+  },
+  "typed_scoped": {
+   "negated_pairs": 845,
+   "recorded": 181,
+   "recorded_or_approved": 252,
+   "pct": 29.8
+  },
+  "typed_role": {
+   "negated_pairs": 503,
+   "recorded": 62,
+   "recorded_or_approved": 114,
+   "pct": 22.7
+  },
+  "typed_role_scoped": {
+   "negated_pairs": 408,
+   "recorded": 59,
+   "recorded_or_approved": 101,
+   "pct": 24.8
+  }
+ }
+}

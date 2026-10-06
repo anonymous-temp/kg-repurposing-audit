@@ -1,0 +1,7 @@
+level	group	phases	pairs	pairs_recorded_or_approved	share
+PrimeKG	efficacy	phase 1-3 only	1082	306	0.2828096118299446
+PrimeKG	safety	phase 1-3 only	589	176	0.298811544991511
+PrimeKG	operational	phase 1-3 only	6162	1238	0.2009087958455047
+PrimeKG	design	phase 1-3 only	938	274	0.2921108742004264
+PrimeKG	uninformative	phase 1-3 only	950	328	0.3452631578947368
+PrimeKG	no reason given	phase 1-3 only	1729	510	0.2949681897050318

@@ -1,0 +1,159 @@
+{
+ "D1": {
+  "recorded_indications": 9388,
+  "with_any_trial": 2136,
+  "with_any_stopped_trial": 1060,
+  "with_stopped_trial_before_2015": 771,
+  "with_scientific_stop_before_2015": 195,
+  "stopped_trials": 11468,
+  "pairs_with_stopped_trial": 9116,
+  "wb_trials": 6317,
+  "wb_pairs": 5547,
+  "wb_scientific": 1010,
+  "wb_scientific_scoped": 845,
+  "wb_other": 4537,
+  "wb_scientific_inv": 503,
+  "wb_scientific_inv_scoped": 408,
+  "approved_pairs": 4472,
+  "approved_and_indication": 1694,
+  "with_efficacy_stop_any_date": 209,
+  "with_safety_stop_any_date": 132,
+  "with_operational_stop_any_date": 899,
+  "with_design_stop_any_date": 201,
+  "with_uninformative_stop_any_date": 256,
+  "with_no_reason_given_stop_any_date": 369
+ },
+ "D2": [
+  {
+   "level": "PrimeKG",
+   "group": "efficacy",
+   "phases": "phase 1-3 only",
+   "pairs": 1082,
+   "pairs_recorded_or_approved": 306,
+   "share": 0.2828096118299446
+  },
+  {
+   "level": "PrimeKG",
+   "group": "safety",
+   "phases": "phase 1-3 only",
+   "pairs": 589,
+   "pairs_recorded_or_approved": 176,
+   "share": 0.298811544991511
+  },
+  {
+   "level": "PrimeKG",
+   "group": "operational",
+   "phases": "phase 1-3 only",
+   "pairs": 6162,
+   "pairs_recorded_or_approved": 1238,
+   "share": 0.2009087958455047
+  },
+  {
+   "level": "PrimeKG",
+   "group": "design",
+   "phases": "phase 1-3 only",
+   "pairs": 938,
+   "pairs_recorded_or_approved": 274,
+   "share": 0.2921108742004264
+  },
+  {
+   "level": "PrimeKG",
+   "group": "uninformative",
+   "phases": "phase 1-3 only",
+   "pairs": 950,
+   "pairs_recorded_or_approved": 328,
+   "share": 0.3452631578947368
+  },
+  {
+   "level": "PrimeKG",
+   "group": "no reason given",
+   "phases": "phase 1-3 only",
+   "pairs": 1729,
+   "pairs_recorded_or_approved": 510,
+   "share": 0.2949681897050318
+  }
+ ],
+ "background": {
+  "grid_pairs": 2454763,
+  "recorded_or_approved": 11178,
+  "rate": 0.004553596416436129
+ },
+ "enrichment": {
+  "unlabelled_pairs": 2443582,
+  "external_approved": 1735,
+  "stopped_unlabelled": 3319,
+  "stopped_ext": 319,
+  "rate_stopped": 0.09611328713467912,
+  "rate_other": 0.0005802653238605839,
+  "fold": 165.63679265758012,
+  "wb_scientific": {
+   "pairs": 600,
+   "ext": 69,
+   "rate": 0.115,
+   "fold": 198.18520127118643
+  },
+  "wb_scientific_scoped": {
+   "pairs": 480,
+   "ext": 52,
+   "rate": 0.10833333333333334,
+   "fold": 186.6962040960452
+  },
+  "wb_scientific_inv": {
+   "pairs": 318,
+   "ext": 40,
+   "rate": 0.12578616352201258,
+   "fold": 216.77353160643852
+  },
+  "wb_scientific_inv_scoped": {
+   "pairs": 246,
+   "ext": 31,
+   "rate": 0.12601626016260162,
+   "fold": 217.17006855449907
+  }
+ },
+ "roles_scientific": {
+  "any investigational": {
+   "pairs": 503,
+   "recorded_or_approved": 114,
+   "pct": 22.7
+  },
+  "comparator/backbone only": {
+   "pairs": 188,
+   "recorded_or_approved": 66,
+   "pct": 35.1
+  },
+  "other": {
+   "pairs": 319,
+   "recorded_or_approved": 106,
+   "pct": 33.2
+  }
+ },
+ "roles_scientific_scoped": {
+  "any investigational": {
+   "pairs": 408,
+   "recorded_or_approved": 101,
+   "pct": 24.8
+  },
+  "comparator/backbone only": {
+   "pairs": 157,
+   "recorded_or_approved": 58,
+   "pct": 36.9
+  },
+  "other": {
+   "pairs": 280,
+   "recorded_or_approved": 93,
+   "pct": 33.2
+  }
+ },
+ "trial_compound_roles": {
+  "investigational": 7469,
+  "backbone": 3538,
+  "single_arm_combination": 3390,
+  "no_arm_data": 873,
+  "comparator": 719,
+  "unmatched": 692,
+  "head_to_head": 676,
+  "described_only": 595,
+  "mixed": 222
+ }
+}

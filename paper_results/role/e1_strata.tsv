@@ -1,0 +1,113 @@
+task	model	stratum	policy	n	MRR	median_rank	hits10
+compound	graph	no stop	flat_negative	74.4	0.3793941713685829	5.0	0.6209677419354839
+compound	graph	no stop	mask_all	74.4	0.4453967121395243	3.5	0.6612903225806451
+compound	graph	no stop	no_writeback	74.4	0.44745779275252456	4.0	0.6612903225806451
+compound	graph	no stop	typed	74.4	0.42785591678560386	4.0	0.6451612903225806
+compound	graph	no stop	typed_role	74.4	0.43891477575426474	3.5	0.6505376344086021
+compound	graph	no stop	typed_role_scoped	74.4	0.4417959570282103	4.0	0.6693548387096774
+compound	graph	no stop	typed_scoped	74.4	0.44206675162199266	4.0	0.6639784946236559
+compound	graph	other stop	flat_negative	51.2	0.2850013835153067	8.0	0.59765625
+compound	graph	other stop	mask_all	51.2	0.5074808908989683	3.0	0.71484375
+compound	graph	other stop	no_writeback	51.2	0.5047661439513192	3.0	0.69921875
+compound	graph	other stop	typed	51.2	0.4647804048219387	3.0	0.69140625
+compound	graph	other stop	typed_role	51.2	0.4873359135104867	3.0	0.6953125
+compound	graph	other stop	typed_role_scoped	51.2	0.4903022874674051	3.0	0.71484375
+compound	graph	other stop	typed_scoped	51.2	0.48591268808704496	3.0	0.69921875
+compound	graph	scientific stop, investigational	flat_negative	13.8	0.29178417300192655	8.0	0.5652173913043478
+compound	graph	scientific stop, investigational	mask_all	13.8	0.510974571022155	2.0	0.7391304347826086
+compound	graph	scientific stop, investigational	no_writeback	13.8	0.5035794114923268	2.0	0.7246376811594203
+compound	graph	scientific stop, investigational	typed	13.8	0.26084044118391597	7.0	0.5942028985507246
+compound	graph	scientific stop, investigational	typed_role	13.8	0.21196485531335926	8.0	0.5797101449275363
+compound	graph	scientific stop, investigational	typed_role_scoped	13.8	0.36368643361199504	5.0	0.6956521739130435
+compound	graph	scientific stop, investigational	typed_scoped	13.8	0.36077778230681856	5.0	0.6521739130434783
+compound	graph	scientific stop, other role	flat_negative	10.4	0.2692407538387129	7.5	0.5576923076923077
+compound	graph	scientific stop, other role	mask_all	10.4	0.5416137554672951	2.0	0.8076923076923077
+compound	graph	scientific stop, other role	no_writeback	10.4	0.5389852517209838	2.0	0.7884615384615384
+compound	graph	scientific stop, other role	typed	10.4	0.17897597458269246	8.5	0.5192307692307693
+compound	graph	scientific stop, other role	typed_role	10.4	0.46690847408027925	3.0	0.75
+compound	graph	scientific stop, other role	typed_role_scoped	10.4	0.5120757576122096	2.0	0.7884615384615384
+compound	graph	scientific stop, other role	typed_scoped	10.4	0.3782729013341561	5.5	0.6346153846153846
+compound	mf	no stop	flat_negative	74.4	0.1368340328769362	20.0	0.29838709677419356
+compound	mf	no stop	mask_all	74.4	0.15048275724094282	17.0	0.34767025089605735
+compound	mf	no stop	no_writeback	74.4	0.15161404725970418	17.0	0.3521505376344086
+compound	mf	no stop	typed	74.4	0.1468161387840479	18.0	0.34139784946236557
+compound	mf	no stop	typed_role	74.4	0.148167112613319	18.0	0.34229390681003585
+compound	mf	no stop	typed_role_scoped	74.4	0.15166007738366175	18.0	0.3387096774193548
+compound	mf	no stop	typed_scoped	74.4	0.15308785712103534	18.0	0.34050179211469533
+compound	mf	other stop	flat_negative	51.2	0.019593431796202765	66.0	0.0026041666666666665
+compound	mf	other stop	mask_all	51.2	0.17810904919130824	11.0	0.4622395833333333
+compound	mf	other stop	no_writeback	51.2	0.17730839312660804	12.0	0.4739583333333333
+compound	mf	other stop	typed	51.2	0.15720873850636377	14.0	0.42578125
+compound	mf	other stop	typed_role	51.2	0.1607250915946522	13.0	0.4388020833333333
+compound	mf	other stop	typed_role_scoped	51.2	0.1609077635803451	13.0	0.43359375
+compound	mf	other stop	typed_scoped	51.2	0.1616738057524332	13.0	0.4231770833333333
+compound	mf	scientific stop, investigational	flat_negative	13.8	0.02479556183105306	58.0	0.01932367149758454
+compound	mf	scientific stop, investigational	mask_all	13.8	0.29474325985017913	10.0	0.5410628019323671
+compound	mf	scientific stop, investigational	no_writeback	13.8	0.29006347097747454	11.0	0.4927536231884058
+compound	mf	scientific stop, investigational	typed	13.8	0.01753593588470623	62.0	0.0
+compound	mf	scientific stop, investigational	typed_role	13.8	0.016356268691433955	65.0	0.0
+compound	mf	scientific stop, investigational	typed_role_scoped	13.8	0.11898336607573512	58.0	0.1497584541062802
+compound	mf	scientific stop, investigational	typed_scoped	13.8	0.08905177137605873	58.0	0.15942028985507245
+compound	mf	scientific stop, other role	flat_negative	10.4	0.020701058344559348	60.0	0.0
+compound	mf	scientific stop, other role	mask_all	10.4	0.2632565480374145	10.5	0.5
+compound	mf	scientific stop, other role	no_writeback	10.4	0.25958696804147496	11.0	0.48717948717948717
+compound	mf	scientific stop, other role	typed	10.4	0.016709086080944027	65.0	0.0
+compound	mf	scientific stop, other role	typed_role	10.4	0.2239218782150394	17.0	0.4551282051282051
+compound	mf	scientific stop, other role	typed_role_scoped	10.4	0.2527509533907145	12.0	0.4807692307692308
+compound	mf	scientific stop, other role	typed_scoped	10.4	0.17709196785537626	55.0	0.1987179487179487
+random	graph	no stop	flat_negative	78.0	0.3901407679407035	6.0	0.6102564102564103
+random	graph	no stop	mask_all	78.0	0.3725313825974683	6.0	0.6307692307692307
+random	graph	no stop	no_writeback	78.0	0.3847195031650143	5.0	0.6076923076923076
+random	graph	no stop	typed	78.0	0.3769117666272867	6.0	0.6102564102564103
+random	graph	no stop	typed_role	78.0	0.3710730647448144	6.0	0.6076923076923076
+random	graph	no stop	typed_role_scoped	78.0	0.37487834396169273	6.0	0.617948717948718
+random	graph	no stop	typed_scoped	78.0	0.37994238028795524	5.5	0.6102564102564103
+random	graph	other stop	flat_negative	49.4	0.32657391670292224	6.0	0.6437246963562753
+random	graph	other stop	mask_all	49.4	0.5532968812987638	2.0	0.7408906882591093
+random	graph	other stop	no_writeback	49.4	0.48890544700228683	2.0	0.7044534412955465
+random	graph	other stop	typed	49.4	0.5571543612632385	2.0	0.728744939271255
+random	graph	other stop	typed_role	49.4	0.5468361586861995	2.0	0.7327935222672065
+random	graph	other stop	typed_role_scoped	49.4	0.5454284969980224	2.0	0.7368421052631579
+random	graph	other stop	typed_scoped	49.4	0.5448234317610099	2.0	0.7206477732793523
+random	graph	scientific stop, investigational	flat_negative	10.4	0.2705823001429073	6.0	0.6923076923076923
+random	graph	scientific stop, investigational	mask_all	10.4	0.5633683044009131	2.0	0.8461538461538461
+random	graph	scientific stop, investigational	no_writeback	10.4	0.4559971162912339	3.0	0.7884615384615384
+random	graph	scientific stop, investigational	typed	10.4	0.27731876253388554	7.0	0.7115384615384616
+random	graph	scientific stop, investigational	typed_role	10.4	0.2703644013993204	7.0	0.6538461538461539
+random	graph	scientific stop, investigational	typed_role_scoped	10.4	0.4077015781114971	4.0	0.7692307692307693
+random	graph	scientific stop, investigational	typed_scoped	10.4	0.38701606585199055	5.0	0.7307692307692307
+random	graph	scientific stop, other role	flat_negative	13.2	0.2810430814821248	8.5	0.5909090909090909
+random	graph	scientific stop, other role	mask_all	13.2	0.5785454344645105	2.0	0.8181818181818182
+random	graph	scientific stop, other role	no_writeback	13.2	0.4219077512559445	3.5	0.7272727272727273
+random	graph	scientific stop, other role	typed	13.2	0.2513653357871789	8.0	0.5909090909090909
+random	graph	scientific stop, other role	typed_role	13.2	0.571464911862536	2.0	0.803030303030303
+random	graph	scientific stop, other role	typed_role_scoped	13.2	0.5720728427878162	2.0	0.8333333333333334
+random	graph	scientific stop, other role	typed_scoped	13.2	0.32392533849535127	5.0	0.696969696969697
+random	mf	no stop	flat_negative	78.0	0.36081717826896814	6.0	0.6632478632478632
+random	mf	no stop	mask_all	78.0	0.36076632994068836	6.0	0.6555555555555556
+random	mf	no stop	no_writeback	78.0	0.36786550434111615	6.0	0.6606837606837607
+random	mf	no stop	typed	78.0	0.35820932106487996	6.0	0.6846153846153846
+random	mf	no stop	typed_role	78.0	0.3669808946437205	6.0	0.6649572649572649
+random	mf	no stop	typed_role_scoped	78.0	0.36236191279240093	6.0	0.6538461538461539
+random	mf	no stop	typed_scoped	78.0	0.3543074631528422	6.0	0.6692307692307692
+random	mf	other stop	flat_negative	49.4	0.1824162632327582	10.0	0.5182186234817814
+random	mf	other stop	mask_all	49.4	0.45626561548240596	3.0	0.7530364372469636
+random	mf	other stop	no_writeback	49.4	0.41027232702962135	4.0	0.7219973009446694
+random	mf	other stop	typed	49.4	0.4515317578295249	3.0	0.7341430499325237
+random	mf	other stop	typed_role	49.4	0.4531681155836023	3.0	0.7341430499325237
+random	mf	other stop	typed_role_scoped	49.4	0.45791913766478587	3.0	0.7408906882591093
+random	mf	other stop	typed_scoped	49.4	0.44719629101336394	3.0	0.7300944669365722
+random	mf	scientific stop, investigational	flat_negative	10.4	0.153722203297411	12.0	0.40384615384615385
+random	mf	scientific stop, investigational	mask_all	10.4	0.44064735365628577	3.0	0.7115384615384616
+random	mf	scientific stop, investigational	no_writeback	10.4	0.4059042878765362	4.0	0.6730769230769231
+random	mf	scientific stop, investigational	typed	10.4	0.14271136295165257	11.0	0.46153846153846156
+random	mf	scientific stop, investigational	typed_role	10.4	0.13819886663267716	11.5	0.4423076923076923
+random	mf	scientific stop, investigational	typed_role_scoped	10.4	0.3012989986583337	8.0	0.5576923076923077
+random	mf	scientific stop, investigational	typed_scoped	10.4	0.26827956110257617	9.0	0.5384615384615384
+random	mf	scientific stop, other role	flat_negative	13.2	0.24448156176691466	10.0	0.51010101010101
+random	mf	scientific stop, other role	mask_all	13.2	0.4537721420236751	3.0	0.803030303030303
+random	mf	scientific stop, other role	no_writeback	13.2	0.40231799616007946	4.5	0.7626262626262627
+random	mf	scientific stop, other role	typed	13.2	0.22718015880897968	10.5	0.5
+random	mf	scientific stop, other role	typed_role	13.2	0.4538580023155679	3.0	0.7777777777777778
+random	mf	scientific stop, other role	typed_role_scoped	13.2	0.46566573932862276	3.0	0.7575757575757576
+random	mf	scientific stop, other role	typed_scoped	13.2	0.3285691580176594	7.5	0.5454545454545454

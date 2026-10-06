@@ -1,0 +1,35 @@
+{
+ "grid": 211479,
+ "ext": 497,
+ "rate_other": 0.0016291455084172517,
+ "wb_all": {
+  "pairs": 1553,
+  "ext": 155,
+  "rate": 0.09980682549903412,
+  "fold": 61.26329722137496
+ },
+ "wb_scientific": {
+  "pairs": 313,
+  "ext": 40,
+  "rate": 0.12779552715654952,
+  "fold": 78.44328606393513
+ },
+ "wb_scientific_scoped": {
+  "pairs": 160,
+  "ext": 12,
+  "rate": 0.075,
+  "fold": 46.03640350877193
+ },
+ "wb_scientific_inv": {
+  "pairs": 164,
+  "ext": 20,
+  "rate": 0.12195121951219512,
+  "fold": 74.8559406646698
+ },
+ "wb_scientific_inv_scoped": {
+  "pairs": 80,
+  "ext": 4,
+  "rate": 0.05,
+  "fold": 30.690935672514623
+ }
+}

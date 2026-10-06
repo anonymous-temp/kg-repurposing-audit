@@ -1,0 +1,51 @@
+sample	nct	compound_name	role_v1	role_v2	judgement_v2	note
+01	nct01445938	Lumefantrine	comparator	comparator	agree	
+02	nct00593645	Cytarabine	single_arm_combination	single_arm_combination	agree	
+03	nct01776008	Goserelin	single_arm_combination	single_arm_combination	agree	
+04	nct00323362	Imatinib	single_arm_combination	single_arm_combination	agree	
+05	nct00864513	Pemetrexed	investigational	investigational	agree	
+06	nct01122927	Aripiprazole	investigational	investigational	agree	
+07	nct00346645	Bortezomib	investigational	investigational	agree	
+08	nct01578343	Vorinostat	investigational	investigational	agree	single-arm regimen entered as one intervention; vorinostat is the add-on under test
+09	nct00140140	Paclitaxel	backbone	backbone	agree	
+10	nct00389519	Ramipril	investigational	investigational	agree	
+11	nct01537861	Lenalidomide	single_arm_combination	single_arm_combination	agree	
+12	nct01687478	Olanzapine	investigational	investigational	agree	
+13	nct01904253	Trifluridine	unmatched	unmatched	disagree	intervention named TAS-102 (trifluridine/tipiracil); drug unmatched
+14	nct00526890	Paclitaxel	single_arm_combination	single_arm_combination	agree	
+15	nct01262274	Anastrozole	backbone	backbone	agree	
+16	nct02119663	Ruxolitinib	investigational	investigational	agree	
+17	nct02292706	Ribavirin	head_to_head	head_to_head	agree	
+18	nct02190838	Melatonin	investigational	investigational	agree	
+19	nct00862134	Docetaxel	backbone	backbone	agree	
+20	nct02720926	Capecitabine	single_arm_combination	single_arm_combination	agree	
+21	nct01010854	Valproic Acid	investigational	described_only	disagree	"intervention ""VPA FEC100"": valproic acid named only by abbreviation; described only"
+22	nct00726986	Sorafenib	single_arm_combination	single_arm_combination	agree	
+23	nct00351195	Etoposide	no_arm_data	no_arm_data	agree	
+24	nct01200212	Paclitaxel	backbone	described_only	disagree	"arms name ""Taxane""; paclitaxel described only (true role: background therapy)"
+25	nct00396812	Methotrexate	investigational	described_only	agree (after correction)	methotrexate only in the description of the rituximab intervention
+26	nct00390923	Nicotine	investigational	backbone	agree (after correction)	nicotine replacement in both arms (placebo + NRT): background therapy
+27	nct01537861	Carfilzomib	single_arm_combination	single_arm_combination	agree	
+28	nct00558636	Sorafenib	investigational	investigational	agree	
+29	nct00491738	Sunitinib	backbone	backbone	agree	
+30	nct00912444	Docetaxel	backbone	backbone	agree	
+31	nct00251095	Paclitaxel	backbone	backbone	agree	
+32	nct00262652	Pyruvic acid	investigational	investigational	agree	
+33	nct00273338	Docetaxel	no_arm_data	no_arm_data	agree	
+34	nct01849640	Primaquine	backbone	backbone	agree	
+35	nct00787852	Dasatinib	backbone	backbone	agree	
+36	nct00087776	Dacarbazine	comparator	comparator	agree	
+37	nct00669695	Atorvastatin	comparator	comparator	disagree	registry labels atorvastatin arms of a factorial trial as placebo comparators
+38	nct00290771	Imatinib	backbone	backbone	agree	
+39	nct00953576	Ketoconazole	backbone	backbone	agree	
+40	nct00452387	Mitoxantrone	no_arm_data	no_arm_data	agree	
+41	nct00209612	Irinotecan	single_arm_combination	single_arm_combination	agree	
+42	nct00820612	Indomethacin	investigational	investigational	agree	
+43	nct00088907	Gefitinib	investigational	investigational	agree	
+44	nct01842594	Sirolimus	investigational	investigational	agree	single-arm combination entered as one intervention; both drugs under test
+45	nct01826448	Vemurafenib	backbone	backbone	agree	
+46	nct00005047	Methotrexate	investigational	investigational	agree	
+47	nct00538681	Pemetrexed	backbone	backbone	agree	
+48	nct02119663	Capecitabine	backbone	backbone	agree	
+49	nct01374217	Dexamethasone	single_arm_combination	single_arm_combination	agree	
+50	nct01400672	Imiquimod	single_arm_combination	single_arm_combination	agree	

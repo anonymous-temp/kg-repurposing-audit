@@ -69,6 +69,13 @@ def load_evidence():
         "stopped": st,
     }
     ev["wb_other"] = ev["wb_all"] - ev["wb_scientific"]
+    rf = f"{DATA}/trial_roles.tsv"           # role of the compound in each stopped trial (ClinicalTrials.gov arm groups)
+    if os.path.exists(rf):
+        roles = pd.read_csv(rf, sep="\t")
+        wr = wb.merge(roles, on=["report_id", "compound"], how="left")
+        inv = wr[wr.scientific & (wr.role == "investigational")]
+        ev["wb_scientific_inv"] = set(inv.pair)
+        ev["wb_scientific_inv_scoped"] = set(inv[inv.gap == 0].pair)
     return ev
 
 
@@ -77,12 +84,16 @@ def policy_sets(ev, policy):
 
     Grid policies are named 'sci=<action>,other=<action>'. 'typed_scoped' negates
     scientific stops only when a stopped trial's condition maps to the Hetionet disease
-    itself (not to a narrower subtype); all other stopped pairs are masked.
+    itself (not to a narrower subtype); all other stopped pairs are masked. 'typed_role'
+    negates only scientific stops in which the compound was the investigational agent
+    (ClinicalTrials.gov arm groups), and 'typed_role_scoped' adds the scope condition.
     """
     out = {}
-    if policy == "typed_scoped":
+    only = {"typed_scoped": "wb_scientific_scoped", "typed_role": "wb_scientific_inv",
+            "typed_role_scoped": "wb_scientific_inv_scoped"}
+    if policy in only:          # negate the named subset of scientific stops; mask every other stopped pair
         for p in ev["wb_all"]:
-            out[p] = "negate" if p in ev["wb_scientific_scoped"] else "mask"
+            out[p] = "negate" if p in ev[only[policy]] else "mask"
         return out
     sci_a, oth_a = [x.split("=")[1] for x in policy.split(",")]
     for p in ev["wb_scientific"]:
@@ -98,6 +109,8 @@ NAMED = {
     "mask_all": "sci=mask,other=mask",
     "typed": "sci=negate,other=mask",
     "typed_scoped": "typed_scoped",
+    "typed_role": "typed_role",                 # scientific stops of the investigational drug only
+    "typed_role_scoped": "typed_role_scoped",   # ... and only when the trial condition is the disease concept itself
 }
 GRID = [f"sci={a},other={b}" for a in ACTIONS for b in ACTIONS]
 

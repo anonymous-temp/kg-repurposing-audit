@@ -1,0 +1,1 @@
+{"note": "run configured for 15 epochs was stopped by the operating system after epoch 13 (memory pressure from other jobs on the host); the checkpoints after 5 and 10 epochs are complete and identical to a 10-epoch run with the same seed; the analysis uses them", "epochs_used": [5, 10]}
