@@ -10,8 +10,9 @@ import matplotlib.pyplot as plt
 RES = sys.argv[1] if len(sys.argv) > 1 else "work/results"
 OUT = sys.argv[2] if len(sys.argv) > 2 else "work/figures"
 os.makedirs(OUT, exist_ok=True)
-plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 7, "pdf.fonttype": 42, "axes.linewidth": 0.6,
-                     "xtick.major.width": 0.6, "ytick.major.width": 0.6})
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import figstyle as FS
+FS.setup()
 INK, MUTED, GRID = "#0b0b0b", "#52514e", "#e6e5e1"
 COL = {"graph": "#2a78d6", "hybrid": "#eb6834", "mf": "#1baf7a"}            # palette slots 1-3 (validated all-pairs)
 MK = {"graph": "o", "hybrid": "s", "mf": "D"}

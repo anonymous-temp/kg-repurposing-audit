@@ -6,14 +6,17 @@ import pandas as pd
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import figstyle as FS
 
 RES = sys.argv[1] if len(sys.argv) > 1 else "work/results"
 PKG = sys.argv[2] if len(sys.argv) > 2 else "work/results_primekg"
 ROLE = sys.argv[3] if len(sys.argv) > 3 else "work/results_role"
 OUT = sys.argv[4] if len(sys.argv) > 4 else "work/figures"
-plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 7, "pdf.fonttype": 42, "axes.linewidth": 0.6})
+FS.setup()
 INK, MUTED, GRID = "#0b0b0b", "#52514e", "#e6e5e1"
-C1, C2 = "#2a78d6", "#eb6834"                       # categorical slots 1-2 (validated)
+C1, C2 = "#2a78d6", "#eb6834"
+INK = "#000000"                       # categorical slots 1-2 (validated)
 order = ["efficacy", "safety", "design", "operational", "uninformative", "no reason given"]
 labels = {"efficacy": "Efficacy (Negative)", "safety": "Safety or side effects", "design": "Study design",
           "operational": "Operational", "uninformative": "Uninformative", "no reason given": "No reason given"}
@@ -23,21 +26,19 @@ rh = json.load(open(f"{ROLE}/role_descriptive.json"))["wb_scientific"]; rp = jso
 
 
 def style(ax, title, xmax, xlabel):
-    ax.set_xlim(0, xmax); ax.set_xlabel(xlabel, color=MUTED)
-    ax.set_title(title, loc="left", fontsize=7.5, fontweight="bold")
-    ax.grid(axis="x", color=GRID, lw=0.6); ax.set_axisbelow(True)
-    for sp in ["top", "right"]:
-        ax.spines[sp].set_visible(False)
-    ax.tick_params(length=0, colors=INK)
+    ax.set_xlim(0, xmax); ax.set_xlabel(xlabel)
+    letter, _, rest = title.partition("  ")
+    FS.panel(ax, letter.upper(), title=rest)
+    ax.tick_params(axis="y", length=0)
 
 
 fig, axes = plt.subplots(2, 2, figsize=(7.2, 4.4))
-X = "Stopped pairs that are recorded or approved indications (%)"
+X = "Recorded or approved indications (%)"
 for ax, (sub, title, xmax) in zip(axes.flat[:3], [(d[d.level == "Hetionet"], "a  Hetionet pairs", 62),
                                                    (p, "b  PrimeKG pairs", 62),
                                                    (d[d.level == "Open Targets"], "c  All Open Targets pairs (approval only)", 32)]):
     sub = sub.set_index("group").loc[order]; y = list(range(len(order)))[::-1]
-    ax.barh(y, sub.share.values * 100, height=0.55, color=C1, edgecolor="none")
+    ax.barh(y, sub.share.values * 100, height=0.6, color=C2 if "PrimeKG" in title else (MUTED if "Open Targets" in title else C1), edgecolor="none")
     for yi, (_, r) in zip(y, sub.iterrows()):
         ax.text(r.share * 100 + 0.8, yi, f"{r.share * 100:.0f}%  ({int(r.pairs_recorded_or_approved):,}/{int(r.pairs):,})", va="center", ha="left", fontsize=6.2, color=INK)
     ax.set_yticks(y); ax.set_yticklabels([labels[g] for g in order]); style(ax, title, xmax, X if ax is axes.flat[2] else "")
