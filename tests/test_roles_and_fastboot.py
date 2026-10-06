@@ -36,6 +36,32 @@ class RoleRuleTests(unittest.TestCase):
                                    {"type": "DRUG", "name": "Placebo + Paclitaxel + Carboplatin", "armGroupLabels": ["P"]}]}
         self.assertEqual(self.role("pac", study), "backbone")
 
+    def test_remaining_role_branches(self):
+        R = self.R
+        pat = R.name_patterns(["Sorafenib"])
+        role = lambda s: R.role_of(pat, s)[0]
+        self.assertEqual(role({"interventions": [{"type": "DRUG", "name": "Imatinib"}]}), "unmatched")
+        self.assertEqual(role({"interventions": [{"type": "DRUG", "name": "sorafenib"}]}), "investigational")              # no arms, one drug
+        self.assertEqual(role({"interventions": [{"type": "DRUG", "name": "sorafenib"}, {"type": "DRUG", "name": "erlotinib"}]}), "no_arm_data")
+        self.assertEqual(role({"armGroups": [{"label": "A", "type": "EXPERIMENTAL"}],
+                               "interventions": [{"type": "DRUG", "name": "sorafenib", "armGroupLabels": ["A"]},
+                                                 {"type": "DRUG", "name": "erlotinib", "armGroupLabels": ["A"]}]}), "single_arm_combination")
+        self.assertEqual(role({"armGroups": [{"label": "A", "type": "ACTIVE_COMPARATOR"}, {"label": "B", "type": "ACTIVE_COMPARATOR"}],
+                               "interventions": [{"type": "DRUG", "name": "sorafenib", "armGroupLabels": ["A"]},
+                                                 {"type": "DRUG", "name": "sunitinib", "armGroupLabels": ["B"]}]}), "head_to_head")
+        self.assertEqual(role({"armGroups": [{"label": "E", "type": "EXPERIMENTAL"}, {"label": "C1", "type": "ACTIVE_COMPARATOR"},
+                                             {"label": "C2", "type": "PLACEBO_COMPARATOR"}],
+                               "interventions": [{"type": "DRUG", "name": "sorafenib", "armGroupLabels": ["E", "C1"]}]}), "mixed")
+        # intervention without arm labels: arms found through their intervention names
+        self.assertEqual(role({"armGroups": [{"label": "E", "type": "EXPERIMENTAL", "interventionNames": ["Drug: sorafenib"]},
+                                             {"label": "P", "type": "PLACEBO_COMPARATOR", "interventionNames": ["Drug: placebo"]}],
+                               "interventions": [{"type": "DRUG", "name": "sorafenib"}]}), "investigational")
+        self.assertEqual(role({"armGroups": [{"label": "E", "type": "EXPERIMENTAL"}, {"label": "P", "type": "PLACEBO_COMPARATOR"}],
+                               "interventions": [{"type": "DRUG", "name": "sorafenib"}]}), "unmatched")
+        self.assertFalse(R.usable({"name": "Placebo for sorafenib"}))
+        self.assertTrue(R.usable({"name": "Placebo + sorafenib"}))
+        self.assertEqual(R.name_patterns(["Na", "sodium", "12345", "Docetaxel"]), [" docetaxel "])
+
     def test_described_only_is_not_investigational(self):
         study = {"armGroups": [{"label": "1", "type": "EXPERIMENTAL"}],
                  "interventions": [{"type": "DRUG", "name": "Rituximab", "description": "given with stable methotrexate",
@@ -68,6 +94,22 @@ class FastBootTests(unittest.TestCase):
             fast = F.pooled_ap_draws(y, s, d, W)
             slow = [weighted_ap(y, s, W[b][d]) for b in range(4)]
             np.testing.assert_allclose(fast, slow, rtol=1e-6)
+
+    def test_per_disease_draws(self):
+        from kg_audit import fastboot as F
+        from kg_audit.writeback import weighted_ap
+        rng = np.random.default_rng(3)
+        n, nd = 3000, 12
+        d = rng.integers(nd, size=n); y = (rng.random(n) < 0.08).astype(float); s = rng.random(n) + 0.4 * y
+        vals = F.per_disease_ap(y, s, d, nd, weighted_ap)
+        for j in range(nd):
+            m = d == j
+            if 0 < y[m].sum() < m.sum():
+                self.assertAlmostEqual(vals[j], weighted_ap(y[m], s[m]))
+        W = np.ones((2, nd)); W[1, 0] = 3.0
+        ok = ~np.isnan(vals)
+        np.testing.assert_allclose(F.macro_draws(vals, W)[0], vals[ok].mean())
+        np.testing.assert_allclose(F.macro_draws(vals, W)[1], (vals[ok] * W[1, ok]).sum() / W[1, ok].sum())
 
 
 if __name__ == "__main__":
