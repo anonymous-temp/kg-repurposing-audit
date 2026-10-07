@@ -1,0 +1,23 @@
+{
+ "graph": {
+  "le2_median_pct": 49.534942003697765,
+  "le2_n": 75,
+  "ge10_median_pct": 77.49398285408952,
+  "ge10_n": 133,
+  "approved_median_pct": 76.3943464835752
+ },
+ "mf": {
+  "le2_median_pct": 63.816501874890655,
+  "le2_n": 75,
+  "ge10_median_pct": 95.57000931534573,
+  "ge10_n": 133,
+  "approved_median_pct": 87.79689709143697
+ },
+ "degree": {
+  "le2_median_pct": 77.87298029591591,
+  "le2_n": 75,
+  "ge10_median_pct": 91.32561625504188,
+  "ge10_n": 133,
+  "approved_median_pct": 78.99886040694348
+ }
+}

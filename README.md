@@ -1,8 +1,8 @@
-# KG Repurposing Audit: failure write-back (v0.4.0)
+# KG Repurposing Audit: failure write-back (v0.5.0)
 
 Code, schema and results for **Stopped clinical trials mark tested hypotheses: implications for negative labels in knowledge-graph drug repurposing**.
 
-The repository asks what a terminated, withdrawn or suspended clinical trial tells a drug-repurposing knowledge graph, and how such trials should change its training labels. It maps Open Targets 26.09 clinical reports onto Hetionet v1.0 and PrimeKG v2, types every stopped trial by stop reason, scope and the role of each drug in the trial arms (ClinicalTrials.gov API v2), compares seven write-back policies with several scorers on full candidate grids, asks whether scorers rank later-tested pairs as high as later-approved pairs, and provides a LinkML evidence-handoff schema (Biolink 4.4.5 mappings) that records failure type, scope match and write-back implication.
+The repository asks what a terminated, withdrawn or suspended clinical trial tells a drug-repurposing knowledge graph, and how such trials should change its training labels. It maps Open Targets 26.09 clinical reports onto Hetionet v1.0 and PrimeKG v2, types every stopped trial by stop reason, scope and the role of each drug in the trial arms (ClinicalTrials.gov API v2), tests whether the overlap between stopped pairs and indications reflects testing intensity (logistic models, a degree-preserving permutation null and a review of 80 indications with failed trials), compares write-back policies, placebo negatives and a testing-intensity rule with several scorers on full candidate grids, asks whether scorers rank later-tested pairs as high as later-approved pairs, and provides a LinkML evidence-handoff schema (Biolink 4.4.5 mappings) that records failure type, scope match and write-back implication.
 
 ## Contents
 
@@ -11,13 +11,14 @@ The repository asks what a terminated, withdrawn or suspended clinical trial tel
 | `src/kg_audit/failures.py` | stop-reason categories → failure type; scope match; write-back rule (retain / negate / qualify / defer) |
 | `src/kg_audit/writeback.py` | policies (including role-restricted negation), per-pair training labels and weights, scorers (degree, disease degree, MF, graph head, hybrid), metrics |
 | `src/kg_audit/roles.py` | role of a drug in a trial (investigational, comparator, background therapy, ...) from ClinicalTrials.gov arm groups |
+| `src/kg_audit/placebo.py` | degree-matched (double-edge swap) and uniform placebo negative sets |
 | `src/kg_audit/fastboot.py` | exact disease-cluster bootstrap of pooled and per-disease AP without stored score vectors (used for PrimeKG) |
 | `src/kg_audit/evidence.py` | record validation and dated documentation checker |
 | `src/kg_audit/bridge.py` | exports ranked candidates with Open Targets evidence attached |
 | `schemas/handoff.linkml.yaml` | LinkML schema v0.3.0; `handoff.schema.json` is generated from it with LinkML 1.11.1 |
 | `examples/` | baricitinib, pimozide, evacetrapib and plazomicin encoded as records, with checker output |
 | `pipelines/` | numbered scripts that download the inputs and rebuild every result, table and figure |
-| `paper_results/` | aggregate results and candidate-level scores used in the manuscript; v0.4.0 adds `role/` (drug roles, role-restricted policies, the 50-assignment check), `primekg/` and `partitions_primekg/` (replication), `testedness/` and `scores/role_policies_*` (written by `pipelines/04d_export_release_files.py`) |
+| `paper_results/` | aggregate results and candidate-level scores used in the manuscript; v0.4.0 adds `role/` (drug roles, role-restricted policies, the 50-assignment check), `primekg/` and `partitions_primekg/` (replication), `testedness/` and `scores/role_policies_*` (written by `pipelines/04d_export_release_files.py`); v0.5.0 adds `selection/` (testing-intensity models, permutation null, registry-history scorers), `case_review/` (80 dossiers and codes), `extra_hetionet/` and `extra_primekg/` (placebo negatives and testing-intensity policies) and `tables_v5/` |
 | `scripts/audit_v02/` | scripts that reconstruct and audit the v0.2.0 evaluation (Supplementary S8) |
 | `legacy/v0.2/` | the v0.2.0 benchmark and semi-synthetic code, kept for traceability; not used by v0.3.0 |
 
@@ -62,6 +63,19 @@ OUT=work/results_role_only POLICY_SET=role_only python pipelines/04_writeback_ex
 python pipelines/04c_merge_role_runs.py                    # merge with the main run; then boot with OUT=work/results_role POLICY_SET=role
 python pipelines/05b_role_descriptive.py; python pipelines/05c_enrichment_hetionet.py; python pipelines/05d_negation_purity.py
 python pipelines/16_tested_vs_approved.py hetionet
+```
+
+Tests of the selection explanation, placebo negatives and the testing-intensity rule (v0.5.0):
+
+```bash
+python pipelines/19_selection_analyses.py hetionet          # OUT=work/results_selection; likewise with DATA=work/mapped_primekg ... primekg
+python pipelines/17_placebo_intensity_hetionet.py e1 random  # likewise e1 compound, e2, then boot random|compound|e2 (BASE=work/results_role)
+python pipelines/18_placebo_intensity_primekg.py e1 random   # likewise e1 compound, e2, contrasts (BASE=work/results_primekg)
+python pipelines/20_case_review_dossiers.py hetionet && python pipelines/20_case_review_dossiers.py primekg
+python pipelines/20_case_review_dossiers.py fetch && python pipelines/20_case_review_dossiers.py dossier   # codes: paper_results/case_review/case_taxonomy.tsv
+python pipelines/21_ranks_and_reference_scorers.py hetionet  # likewise primekg
+python pipelines/09c_make_tables_v5.py; python pipelines/09d_make_supp_selection.py; python pipelines/09e_make_supp_S22.py
+python pipelines/08_make_figures.py                         # Figures 1-7 and S1-S3
 ```
 
 PrimeKG replication:

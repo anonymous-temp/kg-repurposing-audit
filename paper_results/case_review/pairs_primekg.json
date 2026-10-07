@@ -1,0 +1,850 @@
+[
+ {
+  "graph": "primekg",
+  "compound": "DB00177",
+  "drug": "Valsartan",
+  "disease_id": "5009",
+  "disease": "congestive heart failure",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 2,
+  "trials": [
+   {
+    "nct": "NCT01035255",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "Early termination was approved due to compelling efficacy of LCZ696 in patients with HF & reduced EF after final pre-specified interim analysis 28-Mar-2014.",
+    "ot_condition": "MONDO_0005009",
+    "start": "2009-12-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00178",
+  "drug": "Ramipril",
+  "disease_id": "5044",
+  "disease": "hypertensive disorder",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 28,
+  "trials": [
+   {
+    "nct": "NCT00389519",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "A planned interim analysis was performed after approx. 240 subjects completed the trial. The study was stopped, as permitted by protocol, after the analysis.",
+    "ot_condition": "MONDO_0005044",
+    "start": "2006-10-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00184",
+  "drug": "Nicotine",
+  "disease_id": "8575",
+  "disease": "nicotine dependence",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 149,
+  "trials": [
+   {
+    "nct": "NCT00046813",
+    "phase": "PHASE4",
+    "stop_categories": "Negative",
+    "why_stopped": "Interim data analysis showed no effect between treatment groups",
+    "ot_condition": "MONDO_0008575",
+    "start": "2001-08-31"
+   },
+   {
+    "nct": "NCT00115687",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "Efficacy rates did not show large enough differences between treatments",
+    "ot_condition": "MONDO_0008575",
+    "start": "2002-06-30"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00205",
+  "drug": "Pyrimethamine",
+  "disease_id": "5136",
+  "disease": "malaria",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 74,
+  "trials": [
+   {
+    "nct": "NCT00453856",
+    "phase": "PHASE4",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "The study was terminated because of Early Treatment Failure in child.The justification for this decision are concerns about safety of children.",
+    "ot_condition": "MONDO_0005136",
+    "start": "2007-03-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00264",
+  "drug": "Metoprolol",
+  "disease_id": "5044",
+  "disease": "hypertensive disorder",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 41,
+  "trials": [
+   {
+    "nct": "NCT00491387",
+    "phase": "PHASE4",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "Adverse events reported with beta-blockers as primary therapy.",
+    "ot_condition": "MONDO_0005044",
+    "start": "2007-08-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00281",
+  "drug": "Lidocaine",
+  "disease_id": "5178_6629_5416_6630_6631_6632",
+  "disease": "osteoarthritis",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 10,
+  "trials": [
+   {
+    "nct": "NCT00904605",
+    "phase": "PHASE4",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "Safety concerns with the COX-2 specific inhibitor class of drug.",
+    "ot_condition": "MONDO_0005416",
+    "start": "2004-06-30"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00305",
+  "drug": "Mitomycin",
+  "disease_id": "6047",
+  "disease": "pancreatic adenocarcinoma",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 4,
+  "trials": [
+   {
+    "nct": "NCT00386399",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "All consented subjects tested negative for the BRCA2 mutation, therefore, did not meet criteria to start the study, resulting in withdrawal by PI",
+    "ot_condition": "MONDO_0006047",
+    "start": "2006-10-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00317",
+  "drug": "Gefitinib",
+  "disease_id": "5233",
+  "disease": "non-small cell lung carcinoma (disease)",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 118,
+  "trials": [
+   {
+    "nct": "NCT00104728",
+    "phase": NaN,
+    "stop_categories": "Negative",
+    "why_stopped": "Early Stopping Rule: Would not meet interim analysis goal to proceed with enrollment",
+    "ot_condition": "MONDO_0005233",
+    "start": "2004-10-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00334",
+  "drug": "Olanzapine",
+  "disease_id": "2009_12050_12100",
+  "disease": "major depressive disorder",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 11,
+  "trials": [
+   {
+    "nct": "NCT01687478",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "Interim assessment: Lack of efficacy",
+    "ot_condition": "MONDO_0002009",
+    "start": "2012-09-30"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00334",
+  "drug": "Olanzapine",
+  "disease_id": "8187_2050_5618_5451_5371_100081_5383_1942_1098_3265_11924_12384",
+  "disease": "anxiety disorder",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 11,
+  "trials": [
+   {
+    "nct": "NCT01687478",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "Interim assessment: Lack of efficacy",
+    "ot_condition": "MONDO_0002050",
+    "start": "2012-09-30"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00374",
+  "drug": "Treprostinil",
+  "disease_id": "15924",
+  "disease": "pulmonary arterial hypertension",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 27,
+  "trials": [
+   {
+    "nct": "NCT00494533",
+    "phase": "PHASE4",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "Safety issues related to outpatient intravenous infusion in India",
+    "ot_condition": "MONDO_0015924",
+    "start": "2005-03-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00398",
+  "drug": "Sorafenib",
+  "disease_id": "2691",
+  "disease": "liver cancer",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 16,
+  "trials": [
+   {
+    "nct": "NCT01334710",
+    "phase": "PHASE2",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "safety issue observed on another hepatocellular study using OSI906",
+    "ot_condition": "MONDO_0002691",
+    "start": "2011-03-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00398",
+  "drug": "Sorafenib",
+  "disease_id": "7256_18902_16216_3243",
+  "disease": "hepatocellular carcinoma",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 147,
+  "trials": [
+   {
+    "nct": "NCT00971126",
+    "phase": "PHASE1/PHASE2",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "Two patients in the first dose level be counted as reaching DLT. DSMB recommend terminated early this trial.",
+    "ot_condition": "MONDO_0007256",
+    "start": "2009-07-31"
+   },
+   {
+    "nct": "NCT01334710",
+    "phase": "PHASE2",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "safety issue observed on another hepatocellular study using OSI906",
+    "ot_condition": "MONDO_0007256",
+    "start": "2011-03-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00448",
+  "drug": "Lansoprazole",
+  "disease_id": "5412",
+  "disease": "duodenal ulcer (disease)",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 8,
+  "trials": [
+   {
+    "nct": "NCT00762359",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "AG-1749 superior to Gefarnate in ulcer prevention",
+    "ot_condition": "MONDO_0005412",
+    "start": "2007-05-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00472",
+  "drug": "Fluoxetine",
+  "disease_id": "2009_12050_12100",
+  "disease": "major depressive disorder",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 53,
+  "trials": [
+   {
+    "nct": "NCT01119430",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "interim analysis suggested no differences with whole sample",
+    "ot_condition": "MONDO_0002009",
+    "start": "2004-05-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00503",
+  "drug": "Ritonavir",
+  "disease_id": "5109",
+  "disease": "HIV infectious disease",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 271,
+  "trials": [
+   {
+    "nct": "NCT00090779",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "The DSMB concluded that the findings regarding the primary analysis would persist and that no additional study goals would be achieved by continuing the study.",
+    "ot_condition": "MONDO_0005109",
+    "start": "2005-01-31"
+   },
+   {
+    "nct": "NCT00420355",
+    "phase": "PHASE4",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "Unexpected adverse event",
+    "ot_condition": "MONDO_0005109",
+    "start": "2007-04-30"
+   },
+   {
+    "nct": "NCT00531986",
+    "phase": "PHASE4",
+    "stop_categories": "Negative",
+    "why_stopped": "Unexpectedely high rates of treatment-failure",
+    "ot_condition": "MONDO_0005109",
+    "start": "2007-01-31"
+   },
+   {
+    "nct": "NCT01602822",
+    "phase": "PHASE4",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "Grade 3 elevation in liver function tests",
+    "ot_condition": "MONDO_0005109",
+    "start": "2012-02-29"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00530",
+  "drug": "Erlotinib",
+  "disease_id": "5233",
+  "disease": "non-small cell lung carcinoma (disease)",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 319,
+  "trials": [
+   {
+    "nct": "NCT00281021",
+    "phase": "PHASE2",
+    "stop_categories": "Insufficient_Enrollment|Negative",
+    "why_stopped": "Interim analysis revealed that only 1 patient had a partial response.",
+    "ot_condition": "MONDO_0005233",
+    "start": "2006-02-28"
+   },
+   {
+    "nct": "NCT00283634",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "insufficient efficacy",
+    "ot_condition": "MONDO_0005233",
+    "start": "2005-08-31"
+   },
+   {
+    "nct": "NCT00554775",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "IDMC made a recommendation to stop the trial as the target for continuing to the 2nd phase was not met.",
+    "ot_condition": "MONDO_0005233",
+    "start": "2008-01-31"
+   },
+   {
+    "nct": "NCT01115803",
+    "phase": "PHASE1",
+    "stop_categories": "Negative",
+    "why_stopped": "Primary objective has been met; safety and pharmacokinetics have been characterized.",
+    "ot_condition": "MONDO_0005233",
+    "start": "2010-03-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00531",
+  "drug": "Cyclophosphamide",
+  "disease_id": "9693",
+  "disease": "plasma cell myeloma",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 142,
+  "trials": [
+   {
+    "nct": "NCT01881789",
+    "phase": "PHASE1/PHASE2",
+    "stop_categories": "Safety_Sideeffects|Study_Design",
+    "why_stopped": "A program evaluation identified that the safety profile and pharmacokinetic (PK) characteristics of the formulation used in all oprozomib studies required further optimization and thus enrollment in OPZ003 was halted during dose-escalation.",
+    "ot_condition": "MONDO_0009693",
+    "start": "2013-10-28"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00571",
+  "drug": "Propranolol",
+  "disease_id": "6500_3096_2323",
+  "disease": "hemangioma",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 11,
+  "trials": [
+   {
+    "nct": "NCT00967226",
+    "phase": "PHASE2",
+    "stop_categories": "Negative|Safety_Sideeffects",
+    "why_stopped": "Serious adverse events with prednisolone, primarily temporary growth retardation, <5th percentile.",
+    "ot_condition": "MONDO_0006500",
+    "start": "2009-07-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00588",
+  "drug": "Fluticasone propionate",
+  "disease_id": "4979",
+  "disease": "asthma",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 144,
+  "trials": [
+   {
+    "nct": "NCT00456313",
+    "phase": "PHASE4",
+    "stop_categories": "Negative",
+    "why_stopped": "lack of data",
+    "ot_condition": "MONDO_0004979",
+    "start": "2007-12-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00627",
+  "drug": "Niacin",
+  "disease_id": "5068",
+  "disease": "myocardial infarction (disease)",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 3,
+  "trials": [
+   {
+    "nct": "NCT00120289",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "AIM-HIGH was stopped on the recommendation of the DSMB because of lack of efficacy of niacin in preventing primary outcome events.",
+    "ot_condition": "MONDO_0005068",
+    "start": "2005-09-30"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00635",
+  "drug": "Prednisone",
+  "disease_id": "607",
+  "disease": "primary cutaneous T-cell non-Hodgkin lymphoma",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 2,
+  "trials": [
+   {
+    "nct": "NCT00161239",
+    "phase": NaN,
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "toxicity",
+    "ot_condition": "MONDO_0000607",
+    "start": "2005-02-28"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00684",
+  "drug": "Tobramycin",
+  "disease_id": "9061",
+  "disease": "cystic fibrosis",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 33,
+  "trials": [
+   {
+    "nct": "NCT00125346",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "per Data Monitoring Committee recommendation",
+    "ot_condition": "MONDO_0009061",
+    "start": "2005-09-30"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00783",
+  "drug": "Estradiol",
+  "disease_id": "7254",
+  "disease": "breast cancer",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 10,
+  "trials": [
+   {
+    "nct": "NCT01083641",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "did not meet efficacy goals after interim analysis",
+    "ot_condition": "MONDO_0007254",
+    "start": "2010-01-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00937",
+  "drug": "Diethylpropion",
+  "disease_id": "11122",
+  "disease": "obesity disorder",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 1,
+  "trials": [
+   {
+    "nct": "NCT00115063",
+    "phase": "PHASE4",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "ethical issues of continuing control group without treatment",
+    "ot_condition": "MONDO_0011122",
+    "start": "2005-07-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00945",
+  "drug": "Acetylsalicylic acid",
+  "disease_id": "5264",
+  "disease": "transient ischemic attack (disease)",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 9,
+  "trials": [
+   {
+    "nct": "NCT01661322",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "Trial reached a definitive answer ahead of full recruitment.",
+    "ot_condition": "MONDO_0005264",
+    "start": "2009-04-30"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB00959",
+  "drug": "Methylprednisolone",
+  "disease_id": "15760_18908_15759",
+  "disease": "non-Hodgkin lymphoma",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 18,
+  "trials": [
+   {
+    "nct": "NCT00367497",
+    "phase": "PHASE2",
+    "stop_categories": "Insufficient_Enrollment|Negative",
+    "why_stopped": "The stopping rule was applied because of low response rates.",
+    "ot_condition": "MONDO_0018908",
+    "start": "2005-08-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB01132",
+  "drug": "Pioglitazone",
+  "disease_id": "5148",
+  "disease": "type 2 diabetes mellitus",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 154,
+  "trials": [
+   {
+    "nct": "NCT00521820",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "Higher incidence of hospitalization for congestive heart failure in pioglitazone-treated subjects compared to glyburide treated subjects.",
+    "ot_condition": "MONDO_0005148",
+    "start": "2000-06-30"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB01175",
+  "drug": "Escitalopram",
+  "disease_id": "2009_12050_12100",
+  "disease": "major depressive disorder",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 143,
+  "trials": [
+   {
+    "nct": "NCT00387348",
+    "phase": "PHASE3",
+    "stop_categories": "Negative|Safety_Sideeffects",
+    "why_stopped": "DSMB stopped study because placebo arm had more adverse events",
+    "ot_condition": "MONDO_0002009",
+    "start": "2006-03-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB01234",
+  "drug": "Dexamethasone",
+  "disease_id": "18876_6430",
+  "disease": "mantle cell lymphoma",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 23,
+  "trials": [
+   {
+    "nct": "NCT01578343",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "we collected data of a total of 19 patients for an interim analysis. but there are less than 7 responses out of the initial 19 patients.",
+    "ot_condition": "MONDO_0018876",
+    "start": "2012-06-30"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB01248",
+  "drug": "Docetaxel",
+  "disease_id": "5233",
+  "disease": "non-small cell lung carcinoma (disease)",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 308,
+  "trials": [
+   {
+    "nct": "NCT00801801",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "Sponsors withdrew funding; preliminary efficacy data was not encouraging.",
+    "ot_condition": "MONDO_0005233",
+    "start": "2008-01-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB01248",
+  "drug": "Docetaxel",
+  "disease_id": "7254",
+  "disease": "breast cancer",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 350,
+  "trials": [
+   {
+    "nct": "NCT00104624",
+    "phase": "PHASE2",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "Toxicity issues",
+    "ot_condition": "MONDO_0007254",
+    "start": "2005-05-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB01255",
+  "drug": "Lisdexamfetamine",
+  "disease_id": "7743",
+  "disease": "attention deficit-hyperactivity disorder",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 40,
+  "trials": [
+   {
+    "nct": "NCT01017263",
+    "phase": "PHASE4",
+    "stop_categories": "Negative",
+    "why_stopped": "Due very high screen fail rate, pre study feasibility not consistent with screened population.",
+    "ot_condition": "MONDO_0007743",
+    "start": "2009-12-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB01259",
+  "drug": "Lapatinib",
+  "disease_id": "7254",
+  "disease": "breast cancer",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 159,
+  "trials": [
+   {
+    "nct": "NCT01199367",
+    "phase": "PHASE1",
+    "stop_categories": "Negative",
+    "why_stopped": "The results of the dose escalation phase did not identify a well-tolerated dose that would permit further study in Phase 2.",
+    "ot_condition": "MONDO_0007254",
+    "start": "2010-12-31"
+   },
+   {
+    "nct": "NCT02131506",
+    "phase": "PHASE1",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "Safety reasons",
+    "ot_condition": "MONDO_0007254",
+    "start": "2009-12-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB01590",
+  "drug": "Everolimus",
+  "disease_id": "7254",
+  "disease": "breast cancer",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 71,
+  "trials": [
+   {
+    "nct": "NCT00674414",
+    "phase": "PHASE2",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "IDMC decision due to accrual issue (82 pts accrued / 120 expected)",
+    "ot_condition": "MONDO_0007254",
+    "start": "2008-04-30"
+   },
+   {
+    "nct": "NCT02236572",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "Phase 2 of recruitment was contingent on 5 of 15 patients responding, which did not occur.",
+    "ot_condition": "MONDO_0007254",
+    "start": "2014-11-29"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB05109",
+  "drug": "Trabectedin",
+  "disease_id": "18078",
+  "disease": "soft tissue sarcoma",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 11,
+  "trials": [
+   {
+    "nct": "NCT01104298",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "Interim analysis did not show good results for main objective",
+    "ot_condition": "MONDO_0018078",
+    "start": "2009-11-30"
+   },
+   {
+    "nct": "NCT01189253",
+    "phase": "PHASE2/PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "Results of step1: none of the experimental arms fulfills expectations and the study will not continue as a phase III.",
+    "ot_condition": "MONDO_0018078",
+    "start": "2011-05-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB06209",
+  "drug": "Prasugrel",
+  "disease_id": "5068",
+  "disease": "myocardial infarction (disease)",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 29,
+  "trials": [
+   {
+    "nct": "NCT00910299",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "Due to the low rate of primary endpoint events experienced in the study to date",
+    "ot_condition": "MONDO_0005068",
+    "start": "2009-07-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB06441",
+  "drug": "Cangrelor",
+  "disease_id": "5542",
+  "disease": "acute coronary syndrome",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 2,
+  "trials": [
+   {
+    "nct": "NCT00305162",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "Insufficient evidence of the clinical effectiveness of cangrelor",
+    "ot_condition": "MONDO_0005542",
+    "start": "2006-04-30"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB06699",
+  "drug": "Degarelix",
+  "disease_id": "8315",
+  "disease": "prostate cancer",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 54,
+  "trials": [
+   {
+    "nct": "NCT01545882",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "Negative study; Principal Investigator chose to prematurely terminate the study.",
+    "ot_condition": "MONDO_0008315",
+    "start": "2011-05-31"
+   }
+  ]
+ },
+ {
+  "graph": "primekg",
+  "compound": "DB08864",
+  "drug": "Rilpivirine",
+  "disease_id": "5109",
+  "disease": "HIV infectious disease",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 19,
+  "trials": [
+   {
+    "nct": "NCT01049932",
+    "phase": "PHASE1/PHASE2",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "Trial closed due to additional safety information.",
+    "ot_condition": "MONDO_0005109",
+    "start": "2010-03-31"
+   }
+  ]
+ }
+]

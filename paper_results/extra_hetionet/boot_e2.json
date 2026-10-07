@@ -1,0 +1,2040 @@
+{
+ "B": 1000,
+ "cluster": "disease",
+ "observed": {
+  "no_writeback|degree": {
+   "pooledAP": 0.006019694265520729,
+   "macroAP": 0.019628404843273467
+  },
+  "flat_negative|degree": {
+   "pooledAP": 0.006188886099447877,
+   "macroAP": 0.019628404843273467
+  },
+  "mask_all|degree": {
+   "pooledAP": 0.006003494778784426,
+   "macroAP": 0.019628404843273467
+  },
+  "typed|degree": {
+   "pooledAP": 0.00603816255717491,
+   "macroAP": 0.019628404843273467
+  },
+  "typed_scoped|degree": {
+   "pooledAP": 0.006016809277218594,
+   "macroAP": 0.019628404843273467
+  },
+  "typed_role|degree": {
+   "pooledAP": 0.0060028385978633005,
+   "macroAP": 0.019628404843273467
+  },
+  "typed_role_scoped|degree": {
+   "pooledAP": 0.006001388446465794,
+   "macroAP": 0.019628404843273467
+  },
+  "typed_lowint1|degree": {
+   "pooledAP": 0.00600134829355306,
+   "macroAP": 0.019628404843273467
+  },
+  "typed_lowint2|degree": {
+   "pooledAP": 0.006013172933975723,
+   "macroAP": 0.019628404843273467
+  },
+  "typed_lowint4|degree": {
+   "pooledAP": 0.006013106390743267,
+   "macroAP": 0.019628404843273467
+  },
+  "placebo_degree__flat_negative|degree": {
+   "pooledAP": 0.006164044318679856,
+   "macroAP": 0.019628404843273467
+  },
+  "placebo_uniform__flat_negative|degree": {
+   "pooledAP": 0.006013446165944672,
+   "macroAP": 0.019628404843273467
+  },
+  "placebo_degree__typed|degree": {
+   "pooledAP": 0.006038744881202089,
+   "macroAP": 0.019628404843273467
+  },
+  "placebo_uniform__typed|degree": {
+   "pooledAP": 0.006004039398290045,
+   "macroAP": 0.019628404843273467
+  },
+  "placebo_degree__typed_scoped|degree": {
+   "pooledAP": 0.006019798804908019,
+   "macroAP": 0.019628404843273467
+  },
+  "placebo_uniform__typed_scoped|degree": {
+   "pooledAP": 0.00600962453520201,
+   "macroAP": 0.019628404843273467
+  },
+  "placebo_degree__typed_role|degree": {
+   "pooledAP": 0.006009383902906019,
+   "macroAP": 0.019628404843273467
+  },
+  "placebo_uniform__typed_role|degree": {
+   "pooledAP": 0.006004039398290046,
+   "macroAP": 0.019628404843273467
+  },
+  "placebo_degree__typed_role_scoped|degree": {
+   "pooledAP": 0.006004039398290046,
+   "macroAP": 0.019628404843273467
+  },
+  "placebo_uniform__typed_role_scoped|degree": {
+   "pooledAP": 0.00600312937005187,
+   "macroAP": 0.019628404843273467
+  },
+  "placebo_degree__typed_lowint2|degree": {
+   "pooledAP": 0.006012522407840257,
+   "macroAP": 0.019628404843273467
+  },
+  "placebo_uniform__typed_lowint2|degree": {
+   "pooledAP": 0.006000982884820504,
+   "macroAP": 0.019628404843273467
+  },
+  "no_writeback|mf": {
+   "pooledAP": 0.013735589084422831,
+   "macroAP": 0.036269858167152585
+  },
+  "flat_negative|mf": {
+   "pooledAP": 0.009874821040394154,
+   "macroAP": 0.030609866725037377
+  },
+  "mask_all|mf": {
+   "pooledAP": 0.014564194801670587,
+   "macroAP": 0.0404924291037544
+  },
+  "typed|mf": {
+   "pooledAP": 0.01413396711558427,
+   "macroAP": 0.03795297913589893
+  },
+  "typed_scoped|mf": {
+   "pooledAP": 0.014524837053500855,
+   "macroAP": 0.04075325317831055
+  },
+  "typed_role|mf": {
+   "pooledAP": 0.01401734103362659,
+   "macroAP": 0.03860340841107423
+  },
+  "typed_role_scoped|mf": {
+   "pooledAP": 0.014494581496090389,
+   "macroAP": 0.04117632509889448
+  },
+  "typed_lowint1|mf": {
+   "pooledAP": 0.01459566800760694,
+   "macroAP": 0.04003169212828744
+  },
+  "typed_lowint2|mf": {
+   "pooledAP": 0.014695822768915526,
+   "macroAP": 0.04008034546995665
+  },
+  "typed_lowint4|mf": {
+   "pooledAP": 0.01459217081071334,
+   "macroAP": 0.04017402307162894
+  },
+  "placebo_degree__flat_negative|mf": {
+   "pooledAP": 0.01444975382392677,
+   "macroAP": 0.03786457917870028
+  },
+  "placebo_uniform__flat_negative|mf": {
+   "pooledAP": 0.01432000153228385,
+   "macroAP": 0.03976924914739466
+  },
+  "placebo_degree__typed|mf": {
+   "pooledAP": 0.014755063146969519,
+   "macroAP": 0.03991008040483869
+  },
+  "placebo_uniform__typed|mf": {
+   "pooledAP": 0.014562780966812272,
+   "macroAP": 0.03874236373301955
+  },
+  "placebo_degree__typed_scoped|mf": {
+   "pooledAP": 0.014588849354558222,
+   "macroAP": 0.04079451052257143
+  },
+  "placebo_uniform__typed_scoped|mf": {
+   "pooledAP": 0.014468715915665403,
+   "macroAP": 0.039986793779450684
+  },
+  "placebo_degree__typed_role|mf": {
+   "pooledAP": 0.014480917770674798,
+   "macroAP": 0.0396517099059553
+  },
+  "placebo_uniform__typed_role|mf": {
+   "pooledAP": 0.014505021290870836,
+   "macroAP": 0.0402912827866308
+  },
+  "placebo_degree__typed_role_scoped|mf": {
+   "pooledAP": 0.014516466299763173,
+   "macroAP": 0.04020445495292878
+  },
+  "placebo_uniform__typed_role_scoped|mf": {
+   "pooledAP": 0.014482028318801993,
+   "macroAP": 0.04039432728085721
+  },
+  "placebo_degree__typed_lowint2|mf": {
+   "pooledAP": 0.014568507469971846,
+   "macroAP": 0.040614113772453046
+  },
+  "placebo_uniform__typed_lowint2|mf": {
+   "pooledAP": 0.014589330855835608,
+   "macroAP": 0.041161419016141336
+  },
+  "no_writeback|graph": {
+   "pooledAP": 0.024784538279049247,
+   "macroAP": 0.04880832020922415
+  },
+  "flat_negative|graph": {
+   "pooledAP": 0.014667885396859846,
+   "macroAP": 0.037158692759276135
+  },
+  "mask_all|graph": {
+   "pooledAP": 0.031197732556299748,
+   "macroAP": 0.056446830253754327
+  },
+  "typed|graph": {
+   "pooledAP": 0.026948574468397508,
+   "macroAP": 0.04872486450850842
+  },
+  "typed_scoped|graph": {
+   "pooledAP": 0.030132430504075002,
+   "macroAP": 0.0510526509711069
+  },
+  "typed_role|graph": {
+   "pooledAP": 0.029736350291569652,
+   "macroAP": 0.05528047809590215
+  },
+  "typed_role_scoped|graph": {
+   "pooledAP": 0.03182644725911665,
+   "macroAP": 0.05704429985000411
+  },
+  "typed_lowint1|graph": {
+   "pooledAP": 0.031068968467009496,
+   "macroAP": 0.05651673214859415
+  },
+  "typed_lowint2|graph": {
+   "pooledAP": 0.03098317853551512,
+   "macroAP": 0.05613002888230476
+  },
+  "typed_lowint4|graph": {
+   "pooledAP": 0.03109873356432376,
+   "macroAP": 0.055633434386307426
+  },
+  "placebo_degree__flat_negative|graph": {
+   "pooledAP": 0.030527532662743984,
+   "macroAP": 0.055238942631698325
+  },
+  "placebo_uniform__flat_negative|graph": {
+   "pooledAP": 0.030708269154835387,
+   "macroAP": 0.05589740433581047
+  },
+  "placebo_degree__typed|graph": {
+   "pooledAP": 0.030607974143602633,
+   "macroAP": 0.05557271339857301
+  },
+  "placebo_uniform__typed|graph": {
+   "pooledAP": 0.03137063273817101,
+   "macroAP": 0.05578890277071635
+  },
+  "placebo_degree__typed_scoped|graph": {
+   "pooledAP": 0.030985945029908295,
+   "macroAP": 0.05575070443773487
+  },
+  "placebo_uniform__typed_scoped|graph": {
+   "pooledAP": 0.031135421588632303,
+   "macroAP": 0.05657092384769817
+  },
+  "placebo_degree__typed_role|graph": {
+   "pooledAP": 0.031279476219701355,
+   "macroAP": 0.05635889935926289
+  },
+  "placebo_uniform__typed_role|graph": {
+   "pooledAP": 0.0311373542671389,
+   "macroAP": 0.056021181142665584
+  },
+  "placebo_degree__typed_role_scoped|graph": {
+   "pooledAP": 0.031010577518338304,
+   "macroAP": 0.056260124927120896
+  },
+  "placebo_uniform__typed_role_scoped|graph": {
+   "pooledAP": 0.03109426785485664,
+   "macroAP": 0.05718355095289448
+  },
+  "placebo_degree__typed_lowint2|graph": {
+   "pooledAP": 0.03134512576663665,
+   "macroAP": 0.0564699859097274
+  },
+  "placebo_uniform__typed_lowint2|graph": {
+   "pooledAP": 0.031142025455606986,
+   "macroAP": 0.0564111988602623
+  },
+  "no_writeback|hybrid": {
+   "pooledAP": 0.02527962350990556,
+   "macroAP": 0.04611524484815338
+  },
+  "flat_negative|hybrid": {
+   "pooledAP": 0.014065900062420839,
+   "macroAP": 0.033165219272008
+  },
+  "mask_all|hybrid": {
+   "pooledAP": 0.030485598670362764,
+   "macroAP": 0.057336577010958456
+  },
+  "typed|hybrid": {
+   "pooledAP": 0.025336874439258538,
+   "macroAP": 0.04960690825712332
+  },
+  "typed_scoped|hybrid": {
+   "pooledAP": 0.029551204740557103,
+   "macroAP": 0.052238736057492165
+  },
+  "typed_role|hybrid": {
+   "pooledAP": 0.028546596861591292,
+   "macroAP": 0.05578464523167139
+  },
+  "typed_role_scoped|hybrid": {
+   "pooledAP": 0.03152569821544659,
+   "macroAP": 0.058200727563112
+  },
+  "typed_lowint1|hybrid": {
+   "pooledAP": 0.03024306265816816,
+   "macroAP": 0.057262430686656894
+  },
+  "typed_lowint2|hybrid": {
+   "pooledAP": 0.030139695143070022,
+   "macroAP": 0.05721076333278815
+  },
+  "typed_lowint4|hybrid": {
+   "pooledAP": 0.030364278416009676,
+   "macroAP": 0.05652331690223924
+  }
+ },
+ "contrasts": {
+  "no_writeback - mask_all [degree]": {
+   "pooledAP": {
+    "diff": 1.61994867363029e-05,
+    "lo": -1.847403309964905e-05,
+    "hi": 5.089016316657641e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "flat_negative - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": 0.00016919183392714865,
+    "lo": -4.481939505548756e-05,
+    "hi": 0.00045728744435554304
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "flat_negative - mask_all [degree]": {
+   "pooledAP": {
+    "diff": 0.00018539132066345155,
+    "lo": -5.5847006498080146e-05,
+    "hi": 0.0004955427906371633
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "mask_all - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": -1.61994867363029e-05,
+    "lo": -5.089016316657642e-05,
+    "hi": 1.847403309964904e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "typed - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": 1.846829165418149e-05,
+    "lo": -7.549787108401644e-06,
+    "hi": 5.135926303918625e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "typed - mask_all [degree]": {
+   "pooledAP": {
+    "diff": 3.466777839048439e-05,
+    "lo": -1.4648131606736374e-05,
+    "hi": 9.089813379530648e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "typed_scoped - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": -2.8849883021344475e-06,
+    "lo": -1.4495681800235933e-05,
+    "hi": 1.8897105534568853e-06
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "typed_scoped - mask_all [degree]": {
+   "pooledAP": {
+    "diff": 1.3314498434168452e-05,
+    "lo": -2.3750860276980953e-05,
+    "hi": 4.808675335571266e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "typed_role - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": -1.6855667657428124e-05,
+    "lo": -5.450398861399843e-05,
+    "hi": 1.1481061922880151e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "typed_role - mask_all [degree]": {
+   "pooledAP": {
+    "diff": -6.56180921125224e-07,
+    "lo": -2.8339332922271014e-05,
+    "hi": 5.725068343517998e-06
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "typed_role_scoped - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": -1.8305819054934697e-05,
+    "lo": -5.313280738836975e-05,
+    "hi": 1.0509531370706735e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "typed_role_scoped - mask_all [degree]": {
+   "pooledAP": {
+    "diff": -2.106332318631797e-06,
+    "lo": -2.1360255171477415e-05,
+    "hi": 8.673617379884035e-19
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "typed_lowint1 - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": -1.834597196766815e-05,
+    "lo": -5.4397058234091026e-05,
+    "hi": 1.1027518912669866e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "typed_lowint1 - mask_all [degree]": {
+   "pooledAP": {
+    "diff": -2.14648523136525e-06,
+    "lo": -2.4795904798638965e-05,
+    "hi": 1.734723475976807e-18
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "typed_lowint2 - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": -6.521331545005643e-06,
+    "lo": -3.328071393194634e-05,
+    "hi": 1.607117258917508e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "typed_lowint2 - mask_all [degree]": {
+   "pooledAP": {
+    "diff": 9.678155191297257e-06,
+    "lo": -1.424237617921719e-05,
+    "hi": 3.268791089623019e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "typed_lowint4 - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": -6.587874777462012e-06,
+    "lo": -3.3489597393685603e-05,
+    "hi": 1.5545001435579873e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "typed_lowint4 - mask_all [degree]": {
+   "pooledAP": {
+    "diff": 9.611611958840888e-06,
+    "lo": -1.330947123619761e-05,
+    "hi": 3.2298616992436784e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_degree__flat_negative - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": 0.00014435005315912783,
+    "lo": -3.751778218556835e-05,
+    "hi": 0.0003820783969687116
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_degree__flat_negative - mask_all [degree]": {
+   "pooledAP": {
+    "diff": 0.00016054953989543073,
+    "lo": -4.5866696207881064e-05,
+    "hi": 0.0004186588015798751
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_uniform__flat_negative - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": -6.248099576056966e-06,
+    "lo": -3.1868391155699885e-05,
+    "hi": 1.594089598718121e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_uniform__flat_negative - mask_all [degree]": {
+   "pooledAP": {
+    "diff": 9.951387160245934e-06,
+    "lo": -1.3932202711700644e-05,
+    "hi": 3.3294623397236146e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_degree__typed - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": 1.905061568136055e-05,
+    "lo": -6.185141492669318e-06,
+    "hi": 5.228646584543969e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_degree__typed - mask_all [degree]": {
+   "pooledAP": {
+    "diff": 3.525010241766345e-05,
+    "lo": -1.3274221708695425e-05,
+    "hi": 9.124523478106857e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_uniform__typed - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": -1.565486723068346e-05,
+    "lo": -4.979927802717162e-05,
+    "hi": 2.9673254050030665e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_uniform__typed - mask_all [degree]": {
+   "pooledAP": {
+    "diff": 5.446195056194383e-07,
+    "lo": -1.6542516667374713e-06,
+    "hi": 1.4799271565266929e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_degree__typed_scoped - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": 1.0453938729081125e-07,
+    "lo": -4.273873939119568e-06,
+    "hi": 2.8669615162366182e-06
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_degree__typed_scoped - mask_all [degree]": {
+   "pooledAP": {
+    "diff": 1.630402612359371e-05,
+    "lo": -1.8559151879427027e-05,
+    "hi": 5.024658861933766e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_uniform__typed_scoped - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": -1.0069730318718398e-05,
+    "lo": -3.9720198248308685e-05,
+    "hi": 1.3611639532884196e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_uniform__typed_scoped - mask_all [degree]": {
+   "pooledAP": {
+    "diff": 6.129756417584502e-06,
+    "lo": -2.87799182566467e-05,
+    "hi": 2.5273565896796674e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_degree__typed_role - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": -1.0310362614709447e-05,
+    "lo": -4.073029750512741e-05,
+    "hi": 1.3604942037715584e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_degree__typed_role - mask_all [degree]": {
+   "pooledAP": {
+    "diff": 5.889124121593453e-06,
+    "lo": -2.907340849218937e-05,
+    "hi": 2.511156502593859e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_uniform__typed_role - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": -1.5654867230682594e-05,
+    "lo": -4.979927802717167e-05,
+    "hi": 2.9673254050030665e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_uniform__typed_role - mask_all [degree]": {
+   "pooledAP": {
+    "diff": 5.446195056203057e-07,
+    "lo": -1.654251666737493e-06,
+    "hi": 1.4799271565266907e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_degree__typed_role_scoped - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": -1.5654867230682594e-05,
+    "lo": -4.9799278027169974e-05,
+    "hi": 2.9673254050030665e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_degree__typed_role_scoped - mask_all [degree]": {
+   "pooledAP": {
+    "diff": 5.446195056203057e-07,
+    "lo": -1.6542516667374713e-06,
+    "hi": 1.4799271565266907e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_uniform__typed_role_scoped - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": -1.6564895468858948e-05,
+    "lo": -5.125094405059997e-05,
+    "hi": 1.751096873730373e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_uniform__typed_role_scoped - mask_all [degree]": {
+   "pooledAP": {
+    "diff": -3.6540873255604817e-07,
+    "lo": -2.0015743924436122e-06,
+    "hi": 1.734723475976807e-18
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_degree__typed_lowint2 - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": -7.171857680471176e-06,
+    "lo": -3.375513446701802e-05,
+    "hi": 1.5308560732476388e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_degree__typed_lowint2 - mask_all [degree]": {
+   "pooledAP": {
+    "diff": 9.027629055831723e-06,
+    "lo": -1.4381716172583265e-05,
+    "hi": 3.195077501335445e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_uniform__typed_lowint2 - no_writeback [degree]": {
+   "pooledAP": {
+    "diff": -1.8711380700224198e-05,
+    "lo": -5.4720183315224855e-05,
+    "hi": 1.0245002265190115e-05
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "placebo_uniform__typed_lowint2 - mask_all [degree]": {
+   "pooledAP": {
+    "diff": -2.511893963921298e-06,
+    "lo": -2.5178819274939345e-05,
+    "hi": 8.673617379884035e-19
+   },
+   "macroAP": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0
+   }
+  },
+  "no_writeback - mask_all [mf]": {
+   "pooledAP": {
+    "diff": -0.0008286057172477556,
+    "lo": -0.0025669752888855726,
+    "hi": 0.000804672990237501
+   },
+   "macroAP": {
+    "diff": -0.004222570936601812,
+    "lo": -0.006869557933560964,
+    "hi": -0.0014390051992253412
+   }
+  },
+  "flat_negative - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": -0.003860768044028677,
+    "lo": -0.008447403171287124,
+    "hi": -0.0010123000516695931
+   },
+   "macroAP": {
+    "diff": -0.005659991442115209,
+    "lo": -0.012167926495257135,
+    "hi": -0.0008955995207772133
+   }
+  },
+  "flat_negative - mask_all [mf]": {
+   "pooledAP": {
+    "diff": -0.004689373761276433,
+    "lo": -0.010181646272779794,
+    "hi": -0.0009989244619067626
+   },
+   "macroAP": {
+    "diff": -0.00988256237871702,
+    "lo": -0.016407542144851215,
+    "hi": -0.004351858688238643
+   }
+  },
+  "mask_all - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.0008286057172477556,
+    "lo": -0.0008046729902375024,
+    "hi": 0.0025669752888855726
+   },
+   "macroAP": {
+    "diff": 0.004222570936601812,
+    "lo": 0.001439005199225341,
+    "hi": 0.006869557933560963
+   }
+  },
+  "typed - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.00039837803116143933,
+    "lo": -0.0009120869455535014,
+    "hi": 0.002876011819677278
+   },
+   "macroAP": {
+    "diff": 0.0016831209687463433,
+    "lo": -0.0019338700649910417,
+    "hi": 0.005406246135024624
+   }
+  },
+  "typed - mask_all [mf]": {
+   "pooledAP": {
+    "diff": -0.00043022768608631627,
+    "lo": -0.002256114406124282,
+    "hi": 0.0022959384926856527
+   },
+   "macroAP": {
+    "diff": -0.0025394499678554686,
+    "lo": -0.005232549482961319,
+    "hi": 0.00036637530416077643
+   }
+  },
+  "typed_scoped - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.0007892479690780243,
+    "lo": -0.0006364188997274251,
+    "hi": 0.0029275841091071625
+   },
+   "macroAP": {
+    "diff": 0.004483395011157965,
+    "lo": 0.0010628776928707164,
+    "hi": 0.00805477265453756
+   }
+  },
+  "typed_scoped - mask_all [mf]": {
+   "pooledAP": {
+    "diff": -3.935774816973131e-05,
+    "lo": -0.0008231194984339445,
+    "hi": 0.0010219080648484877
+   },
+   "macroAP": {
+    "diff": 0.0002608240745561527,
+    "lo": -0.0016008283870381692,
+    "hi": 0.0026888171041517077
+   }
+  },
+  "typed_role - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.0002817519492037592,
+    "lo": -0.0009885987194924182,
+    "hi": 0.0019976209564258065
+   },
+   "macroAP": {
+    "diff": 0.0023335502439216435,
+    "lo": -0.0008020185454345788,
+    "hi": 0.005178834075805948
+   }
+  },
+  "typed_role - mask_all [mf]": {
+   "pooledAP": {
+    "diff": -0.0005468537680439964,
+    "lo": -0.0018993160896761893,
+    "hi": 0.0006759113903594847
+   },
+   "macroAP": {
+    "diff": -0.0018890206926801684,
+    "lo": -0.003865573756464378,
+    "hi": 0.00019995109325508348
+   }
+  },
+  "typed_role_scoped - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.0007589924116675577,
+    "lo": -0.0008748503782690486,
+    "hi": 0.0026392746048044566
+   },
+   "macroAP": {
+    "diff": 0.004906466931741897,
+    "lo": 0.0013136519748936854,
+    "hi": 0.008448682755325482
+   }
+  },
+  "typed_role_scoped - mask_all [mf]": {
+   "pooledAP": {
+    "diff": -6.961330558019792e-05,
+    "lo": -0.000616903848115566,
+    "hi": 0.0004949313206547893
+   },
+   "macroAP": {
+    "diff": 0.0006838959951400853,
+    "lo": -0.0008082343384648444,
+    "hi": 0.002871723563979156
+   }
+  },
+  "typed_lowint1 - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.0008600789231841093,
+    "lo": -0.0004034345428160739,
+    "hi": 0.0026143454715167914
+   },
+   "macroAP": {
+    "diff": 0.0037618339611348514,
+    "lo": 0.0010984783104459898,
+    "hi": 0.00644503976773226
+   }
+  },
+  "typed_lowint1 - mask_all [mf]": {
+   "pooledAP": {
+    "diff": 3.147320593635365e-05,
+    "lo": -0.00018491178244154881,
+    "hi": 0.0006527792536902352
+   },
+   "macroAP": {
+    "diff": -0.00046073697546696046,
+    "lo": -0.0014096325640858983,
+    "hi": 0.0002183269252922734
+   }
+  },
+  "typed_lowint2 - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.0009602336844926947,
+    "lo": -0.0002784142758421952,
+    "hi": 0.002766868686888254
+   },
+   "macroAP": {
+    "diff": 0.003810487302804068,
+    "lo": 0.0011103649120460368,
+    "hi": 0.00637853609299636
+   }
+  },
+  "typed_lowint2 - mask_all [mf]": {
+   "pooledAP": {
+    "diff": 0.00013162796724493914,
+    "lo": -0.00014276473740535916,
+    "hi": 0.0008023661075189068
+   },
+   "macroAP": {
+    "diff": -0.00041208363379774404,
+    "lo": -0.0013343822470355954,
+    "hi": 0.0002916146216807007
+   }
+  },
+  "typed_lowint4 - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.000856581726290509,
+    "lo": -0.0005395129349268104,
+    "hi": 0.0027337937203252534
+   },
+   "macroAP": {
+    "diff": 0.0039041649044763566,
+    "lo": 0.0012521787879482711,
+    "hi": 0.006610091165795878
+   }
+  },
+  "typed_lowint4 - mask_all [mf]": {
+   "pooledAP": {
+    "diff": 2.7976009042753394e-05,
+    "lo": -0.00063597823487391,
+    "hi": 0.000810620741641471
+   },
+   "macroAP": {
+    "diff": -0.0003184060321254553,
+    "lo": -0.001285948671677324,
+    "hi": 0.000726755018737787
+   }
+  },
+  "placebo_degree__flat_negative - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.0007141647395039388,
+    "lo": -0.0005487231290718056,
+    "hi": 0.003015395498560755
+   },
+   "macroAP": {
+    "diff": 0.0015947210115476937,
+    "lo": -0.0016785036930963646,
+    "hi": 0.005418425074295623
+   }
+  },
+  "placebo_degree__flat_negative - mask_all [mf]": {
+   "pooledAP": {
+    "diff": -0.00011444097774381684,
+    "lo": -0.0013569446097258333,
+    "hi": 0.00191138479102711
+   },
+   "macroAP": {
+    "diff": -0.002627849925054118,
+    "lo": -0.005465058176822344,
+    "hi": 0.00014316457976737754
+   }
+  },
+  "placebo_uniform__flat_negative - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.0005844124478610185,
+    "lo": -0.001339632439860382,
+    "hi": 0.0023516670250287646
+   },
+   "macroAP": {
+    "diff": 0.003499390980242073,
+    "lo": 0.0012326496633804326,
+    "hi": 0.005794082350064748
+   }
+  },
+  "placebo_uniform__flat_negative - mask_all [mf]": {
+   "pooledAP": {
+    "diff": -0.00024419326938673706,
+    "lo": -0.0015591018732889089,
+    "hi": 0.00023823037890670603
+   },
+   "macroAP": {
+    "diff": -0.0007231799563597388,
+    "lo": -0.0023322851705858487,
+    "hi": 0.0006030377141133882
+   }
+  },
+  "placebo_degree__typed - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.0010194740625466877,
+    "lo": -0.000248826891822483,
+    "hi": 0.003258952454290139
+   },
+   "macroAP": {
+    "diff": 0.0036402222376861054,
+    "lo": -8.729884824673879e-05,
+    "hi": 0.007849662299904601
+   }
+  },
+  "placebo_degree__typed - mask_all [mf]": {
+   "pooledAP": {
+    "diff": 0.0001908683452989321,
+    "lo": -0.0005355965238036733,
+    "hi": 0.0015011142476806369
+   },
+   "macroAP": {
+    "diff": -0.0005823486989157065,
+    "lo": -0.003940162701771603,
+    "hi": 0.0023910589107699544
+   }
+  },
+  "placebo_uniform__typed - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.0008271918823894407,
+    "lo": -0.0008221800492109473,
+    "hi": 0.002799258806346479
+   },
+   "macroAP": {
+    "diff": 0.0024725055658669642,
+    "lo": -0.0009093063534239023,
+    "hi": 0.0053017915411715955
+   }
+  },
+  "placebo_uniform__typed - mask_all [mf]": {
+   "pooledAP": {
+    "diff": -1.4138348583148802e-06,
+    "lo": -0.0002621596874143656,
+    "hi": 0.0004477188777409949
+   },
+   "macroAP": {
+    "diff": -0.0017500653707348476,
+    "lo": -0.0032611323454227624,
+    "hi": -0.0005317390827104606
+   }
+  },
+  "placebo_degree__typed_scoped - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.0008532602701353913,
+    "lo": -0.0003975376664219326,
+    "hi": 0.0027704068290814563
+   },
+   "macroAP": {
+    "diff": 0.004524652355418844,
+    "lo": 0.000787720610226678,
+    "hi": 0.00848284474865673
+   }
+  },
+  "placebo_degree__typed_scoped - mask_all [mf]": {
+   "pooledAP": {
+    "diff": 2.465455288763567e-05,
+    "lo": -0.00026559771089472325,
+    "hi": 0.0008265372085464602
+   },
+   "macroAP": {
+    "diff": 0.0003020814188170323,
+    "lo": -0.0013093140379730544,
+    "hi": 0.0024163103909698386
+   }
+  },
+  "placebo_uniform__typed_scoped - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.0007331268312425719,
+    "lo": -0.0010057080101235614,
+    "hi": 0.0025253981556165495
+   },
+   "macroAP": {
+    "diff": 0.0037169356122980987,
+    "lo": 0.000960198112335962,
+    "hi": 0.0063775980567313
+   }
+  },
+  "placebo_uniform__typed_scoped - mask_all [mf]": {
+   "pooledAP": {
+    "diff": -9.547888600518369e-05,
+    "lo": -0.00036061928334370035,
+    "hi": 2.374622762937079e-05
+   },
+   "macroAP": {
+    "diff": -0.0005056353243037132,
+    "lo": -0.0015992842737928992,
+    "hi": 0.000264998707176358
+   }
+  },
+  "placebo_degree__typed_role - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.0007453286862519667,
+    "lo": -0.0006137925107423311,
+    "hi": 0.0024374231798637833
+   },
+   "macroAP": {
+    "diff": 0.0033818517388027117,
+    "lo": 0.00037074223385068255,
+    "hi": 0.006173480898520685
+   }
+  },
+  "placebo_degree__typed_role - mask_all [mf]": {
+   "pooledAP": {
+    "diff": -8.327703099578893e-05,
+    "lo": -0.0005996619077881026,
+    "hi": 0.00062557024253363
+   },
+   "macroAP": {
+    "diff": -0.0008407191977991002,
+    "lo": -0.0021234773070389675,
+    "hi": 0.00020454402993004564
+   }
+  },
+  "placebo_uniform__typed_role - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.000769432206448005,
+    "lo": -0.0008832922018855887,
+    "hi": 0.0025260008356663764
+   },
+   "macroAP": {
+    "diff": 0.004021424619478214,
+    "lo": 0.0012620963640230449,
+    "hi": 0.0066102326610050785
+   }
+  },
+  "placebo_uniform__typed_role - mask_all [mf]": {
+   "pooledAP": {
+    "diff": -5.9173510799750625e-05,
+    "lo": -0.00018939191910471136,
+    "hi": 3.596669890742064e-05
+   },
+   "macroAP": {
+    "diff": -0.00020114631712359748,
+    "lo": -0.00042081201984856003,
+    "hi": 1.5906713786146152e-05
+   }
+  },
+  "placebo_degree__typed_role_scoped - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.000780877215340342,
+    "lo": -0.0005361515303228607,
+    "hi": 0.0025547213346057847
+   },
+   "macroAP": {
+    "diff": 0.003934596785776193,
+    "lo": 0.001117407482354197,
+    "hi": 0.006644600948258566
+   }
+  },
+  "placebo_degree__typed_role_scoped - mask_all [mf]": {
+   "pooledAP": {
+    "diff": -4.7728501907413554e-05,
+    "lo": -0.00031715330847123643,
+    "hi": 0.0005340948851368732
+   },
+   "macroAP": {
+    "diff": -0.0002879741508256192,
+    "lo": -0.0007057463393796461,
+    "hi": 8.56191988993202e-05
+   }
+  },
+  "placebo_uniform__typed_role_scoped - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.0007464392343791617,
+    "lo": -0.0009147781912388939,
+    "hi": 0.0023749535436873937
+   },
+   "macroAP": {
+    "diff": 0.004124469113704628,
+    "lo": 0.0013776502231790289,
+    "hi": 0.006840150308076029
+   }
+  },
+  "placebo_uniform__typed_role_scoped - mask_all [mf]": {
+   "pooledAP": {
+    "diff": -8.21664828685939e-05,
+    "lo": -0.00033958887401320343,
+    "hi": 5.0571520777304134e-05
+   },
+   "macroAP": {
+    "diff": -9.810182289718417e-05,
+    "lo": -0.0005491235558091872,
+    "hi": 0.00020609090210416738
+   }
+  },
+  "placebo_degree__typed_lowint2 - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.0008329183855490148,
+    "lo": -0.0007892271898673649,
+    "hi": 0.002555435433541646
+   },
+   "macroAP": {
+    "diff": 0.004344255605300461,
+    "lo": 0.0016472318108809855,
+    "hi": 0.006901802931285719
+   }
+  },
+  "placebo_degree__typed_lowint2 - mask_all [mf]": {
+   "pooledAP": {
+    "diff": 4.31266830125919e-06,
+    "lo": -0.00011648219502972617,
+    "hi": 0.00014754434528501677
+   },
+   "macroAP": {
+    "diff": 0.00012168466869864891,
+    "lo": -0.0004431004078761274,
+    "hi": 0.001072743727856105
+   }
+  },
+  "placebo_uniform__typed_lowint2 - no_writeback [mf]": {
+   "pooledAP": {
+    "diff": 0.0008537417714127773,
+    "lo": -0.0007703791810356544,
+    "hi": 0.0026806948715270805
+   },
+   "macroAP": {
+    "diff": 0.0048915608489887505,
+    "lo": 0.0014660043060104938,
+    "hi": 0.008380816800426799
+   }
+  },
+  "placebo_uniform__typed_lowint2 - mask_all [mf]": {
+   "pooledAP": {
+    "diff": 2.5136054165021682e-05,
+    "lo": -5.51010764931698e-05,
+    "hi": 0.00027829546963017504
+   },
+   "macroAP": {
+    "diff": 0.0006689899123869386,
+    "lo": -0.00022111902487205345,
+    "hi": 0.002299722243720868
+   }
+  },
+  "no_writeback - mask_all [graph]": {
+   "pooledAP": {
+    "diff": -0.006413194277250501,
+    "lo": -0.016461704063079355,
+    "hi": 0.0027159068461086126
+   },
+   "macroAP": {
+    "diff": -0.007638510044530179,
+    "lo": -0.021637068616923952,
+    "hi": 0.007967456334571053
+   }
+  },
+  "flat_negative - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": -0.010116652882189402,
+    "lo": -0.018868923061173878,
+    "hi": -0.0026639703099535458
+   },
+   "macroAP": {
+    "diff": -0.011649627449948012,
+    "lo": -0.029311708899962062,
+    "hi": 0.001020056533630056
+   }
+  },
+  "flat_negative - mask_all [graph]": {
+   "pooledAP": {
+    "diff": -0.016529847159439903,
+    "lo": -0.031422779196219185,
+    "hi": -0.003793065154977785
+   },
+   "macroAP": {
+    "diff": -0.01928813749447819,
+    "lo": -0.04321440703269257,
+    "hi": 0.003140606127990295
+   }
+  },
+  "mask_all - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.006413194277250501,
+    "lo": -0.002715906846108613,
+    "hi": 0.01646170406307935
+   },
+   "macroAP": {
+    "diff": 0.007638510044530179,
+    "lo": -0.007967456334571053,
+    "hi": 0.021637068616923952
+   }
+  },
+  "typed - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.0021640361893482604,
+    "lo": -0.004948456211662935,
+    "hi": 0.010365474571825994
+   },
+   "macroAP": {
+    "diff": -8.345570071572467e-05,
+    "lo": -0.021883712706970437,
+    "hi": 0.01740957629407827
+   }
+  },
+  "typed - mask_all [graph]": {
+   "pooledAP": {
+    "diff": -0.0042491580879022404,
+    "lo": -0.015998100450270093,
+    "hi": 0.004012997147556041
+   },
+   "macroAP": {
+    "diff": -0.007721965745245904,
+    "lo": -0.023630304545109535,
+    "hi": 0.001193532729001203
+   }
+  },
+  "typed_scoped - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.005347892225025755,
+    "lo": -0.0029975937192046206,
+    "hi": 0.014384430574992144
+   },
+   "macroAP": {
+    "diff": 0.002244330761882754,
+    "lo": -0.020519551326933023,
+    "hi": 0.019191242718591708
+   }
+  },
+  "typed_scoped - mask_all [graph]": {
+   "pooledAP": {
+    "diff": -0.001065302052224746,
+    "lo": -0.006645659963276999,
+    "hi": 0.0016292911906859975
+   },
+   "macroAP": {
+    "diff": -0.005394179282647425,
+    "lo": -0.021360249972110893,
+    "hi": 0.0026585048775674227
+   }
+  },
+  "typed_role - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.004951812012520405,
+    "lo": -0.0017398527271960855,
+    "hi": 0.013761940252895483
+   },
+   "macroAP": {
+    "diff": 0.006472157886678001,
+    "lo": -0.007717566420132237,
+    "hi": 0.019838104441061787
+   }
+  },
+  "typed_role - mask_all [graph]": {
+   "pooledAP": {
+    "diff": -0.0014613822647300961,
+    "lo": -0.00886428330287023,
+    "hi": 0.00423347060542346
+   },
+   "macroAP": {
+    "diff": -0.0011663521578521782,
+    "lo": -0.0043143786420746216,
+    "hi": 0.0012759501327444746
+   }
+  },
+  "typed_role_scoped - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.007041908980067405,
+    "lo": -0.0021874380678666215,
+    "hi": 0.017003668145646245
+   },
+   "macroAP": {
+    "diff": 0.008235979640779961,
+    "lo": -0.006149607015535686,
+    "hi": 0.021605130794035907
+   }
+  },
+  "typed_role_scoped - mask_all [graph]": {
+   "pooledAP": {
+    "diff": 0.0006287147028169043,
+    "lo": -0.00013168964098426766,
+    "hi": 0.001384567492641708
+   },
+   "macroAP": {
+    "diff": 0.000597469596249782,
+    "lo": -0.00022980638220855657,
+    "hi": 0.001998351002345344
+   }
+  },
+  "typed_lowint1 - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.006284430187960249,
+    "lo": -0.0027915700520752497,
+    "hi": 0.016310191920597596
+   },
+   "macroAP": {
+    "diff": 0.007708411939370004,
+    "lo": -0.007822490502544754,
+    "hi": 0.0217381220576848
+   }
+  },
+  "typed_lowint1 - mask_all [graph]": {
+   "pooledAP": {
+    "diff": -0.00012876408929025224,
+    "lo": -0.0005340465476190209,
+    "hi": 0.00014082993203371578
+   },
+   "macroAP": {
+    "diff": 6.990189483982445e-05,
+    "lo": -0.0001794357038062924,
+    "hi": 0.0004375603239951126
+   }
+  },
+  "typed_lowint2 - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.006198640256465871,
+    "lo": -0.0029303809302394356,
+    "hi": 0.016182118949990183
+   },
+   "macroAP": {
+    "diff": 0.007321708673080615,
+    "lo": -0.008066963280160041,
+    "hi": 0.021390919378322045
+   }
+  },
+  "typed_lowint2 - mask_all [graph]": {
+   "pooledAP": {
+    "diff": -0.0002145540207846297,
+    "lo": -0.0006346398391179728,
+    "hi": 0.00013365481684374955
+   },
+   "macroAP": {
+    "diff": -0.00031680137144956405,
+    "lo": -0.001026291021393868,
+    "hi": 0.00023635911814159203
+   }
+  },
+  "typed_lowint4 - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.006314195285274514,
+    "lo": -0.0024077941666385667,
+    "hi": 0.01631101308634419
+   },
+   "macroAP": {
+    "diff": 0.006825114177083279,
+    "lo": -0.008810586897245282,
+    "hi": 0.0207119191233356
+   }
+  },
+  "typed_lowint4 - mask_all [graph]": {
+   "pooledAP": {
+    "diff": -9.899899197598691e-05,
+    "lo": -0.0009953720394102901,
+    "hi": 0.0009455404084344675
+   },
+   "macroAP": {
+    "diff": -0.0008133958674469005,
+    "lo": -0.0022834657543212154,
+    "hi": 0.00022641851193547707
+   }
+  },
+  "placebo_degree__flat_negative - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.005742994383694737,
+    "lo": -0.002819997982004935,
+    "hi": 0.015155638906476438
+   },
+   "macroAP": {
+    "diff": 0.006430622422474178,
+    "lo": -0.009731034032166073,
+    "hi": 0.020401787974591228
+   }
+  },
+  "placebo_degree__flat_negative - mask_all [graph]": {
+   "pooledAP": {
+    "diff": -0.0006701998935557639,
+    "lo": -0.0018690425872459158,
+    "hi": 0.0002960101164721879
+   },
+   "macroAP": {
+    "diff": -0.0012078876220560017,
+    "lo": -0.002503120287186535,
+    "hi": -0.0001344965407992616
+   }
+  },
+  "placebo_uniform__flat_negative - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.00592373087578614,
+    "lo": -0.003006665294029195,
+    "hi": 0.016295373506108813
+   },
+   "macroAP": {
+    "diff": 0.00708908412658632,
+    "lo": -0.008461620740651026,
+    "hi": 0.021073934106377118
+   }
+  },
+  "placebo_uniform__flat_negative - mask_all [graph]": {
+   "pooledAP": {
+    "diff": -0.0004894634014643608,
+    "lo": -0.0011231865216920914,
+    "hi": 0.00010855838309856918
+   },
+   "macroAP": {
+    "diff": -0.000549425917943859,
+    "lo": -0.0015081381534842889,
+    "hi": 0.0002703986818559977
+   }
+  },
+  "placebo_degree__typed - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.0058234358645533855,
+    "lo": -0.0025637101861778404,
+    "hi": 0.014868960106603777
+   },
+   "macroAP": {
+    "diff": 0.0067643931893488635,
+    "lo": -0.008413874717065667,
+    "hi": 0.02062974204887644
+   }
+  },
+  "placebo_degree__typed - mask_all [graph]": {
+   "pooledAP": {
+    "diff": -0.0005897584126971153,
+    "lo": -0.0024899039913279615,
+    "hi": 0.0005309108176863962
+   },
+   "macroAP": {
+    "diff": -0.0008741168551813158,
+    "lo": -0.0018115841787594979,
+    "hi": -0.0001246234279309925
+   }
+  },
+  "placebo_uniform__typed - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.006586094459121766,
+    "lo": -0.002680115874897329,
+    "hi": 0.016729902761366905
+   },
+   "macroAP": {
+    "diff": 0.006980582561492206,
+    "lo": -0.009101635875341133,
+    "hi": 0.021275276732721716
+   }
+  },
+  "placebo_uniform__typed - mask_all [graph]": {
+   "pooledAP": {
+    "diff": 0.0001729001818712647,
+    "lo": -0.00042684455464454,
+    "hi": 0.0006483498426162728
+   },
+   "macroAP": {
+    "diff": -0.0006579274830379733,
+    "lo": -0.0018156371825749128,
+    "hi": 0.0002145177838387635
+   }
+  },
+  "placebo_degree__typed_scoped - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.006201406750859048,
+    "lo": -0.0027616350690985335,
+    "hi": 0.01604935167196505
+   },
+   "macroAP": {
+    "diff": 0.00694238422851072,
+    "lo": -0.008464769338660515,
+    "hi": 0.02094762271569263
+   }
+  },
+  "placebo_degree__typed_scoped - mask_all [graph]": {
+   "pooledAP": {
+    "diff": -0.00021178752639145274,
+    "lo": -0.0005085234496732237,
+    "hi": 2.881905058463144e-05
+   },
+   "macroAP": {
+    "diff": -0.0006961258160194592,
+    "lo": -0.0016287544141630214,
+    "hi": -7.605386483509667e-05
+   }
+  },
+  "placebo_uniform__typed_scoped - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.006350883309583055,
+    "lo": -0.0028439415879914715,
+    "hi": 0.01635463672686461
+   },
+   "macroAP": {
+    "diff": 0.0077626036384740235,
+    "lo": -0.007976424196470072,
+    "hi": 0.02173949516438059
+   }
+  },
+  "placebo_uniform__typed_scoped - mask_all [graph]": {
+   "pooledAP": {
+    "diff": -6.231096766744562e-05,
+    "lo": -0.00036832436118695334,
+    "hi": 0.00019783631059737766
+   },
+   "macroAP": {
+    "diff": 0.00012409359394384423,
+    "lo": -6.977365797049983e-05,
+    "hi": 0.00043648045797489986
+   }
+  },
+  "placebo_degree__typed_role - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.0064949379406521075,
+    "lo": -0.002692200423152954,
+    "hi": 0.016443417569086214
+   },
+   "macroAP": {
+    "diff": 0.00755057915003874,
+    "lo": -0.007753869480894925,
+    "hi": 0.021672577022041617
+   }
+  },
+  "placebo_degree__typed_role - mask_all [graph]": {
+   "pooledAP": {
+    "diff": 8.174366340160666e-05,
+    "lo": -0.000647017262340629,
+    "hi": 0.0005733662229317298
+   },
+   "macroAP": {
+    "diff": -8.79308944914392e-05,
+    "lo": -0.0008173927350868561,
+    "hi": 0.0006294006883417912
+   }
+  },
+  "placebo_uniform__typed_role - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.006352815988089653,
+    "lo": -0.002759529399815445,
+    "hi": 0.016438974711576442
+   },
+   "macroAP": {
+    "diff": 0.007212860933441437,
+    "lo": -0.009119765950191365,
+    "hi": 0.021409407205188632
+   }
+  },
+  "placebo_uniform__typed_role - mask_all [graph]": {
+   "pooledAP": {
+    "diff": -6.0378289160847864e-05,
+    "lo": -0.0002596164291608854,
+    "hi": 6.976244633843061e-05
+   },
+   "macroAP": {
+    "diff": -0.00042564911108874254,
+    "lo": -0.0012629808340996625,
+    "hi": 0.00010090723811370588
+   }
+  },
+  "placebo_degree__typed_role_scoped - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.0062260392392890565,
+    "lo": -0.002838038263215429,
+    "hi": 0.016191869579288008
+   },
+   "macroAP": {
+    "diff": 0.007451804717896748,
+    "lo": -0.007996311335898393,
+    "hi": 0.02140450928134098
+   }
+  },
+  "placebo_degree__typed_role_scoped - mask_all [graph]": {
+   "pooledAP": {
+    "diff": -0.00018715503796144436,
+    "lo": -0.0004825515440041816,
+    "hi": 5.193740041030212e-06
+   },
+   "macroAP": {
+    "diff": -0.00018670532663343092,
+    "lo": -0.00040365024599156444,
+    "hi": -7.463802994645701e-07
+   }
+  },
+  "placebo_uniform__typed_role_scoped - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.006309729575807391,
+    "lo": -0.002746834050604975,
+    "hi": 0.01635670401495796
+   },
+   "macroAP": {
+    "diff": 0.008375230743670331,
+    "lo": -0.007051148359731425,
+    "hi": 0.02251272833716953
+   }
+  },
+  "placebo_uniform__typed_role_scoped - mask_all [graph]": {
+   "pooledAP": {
+    "diff": -0.00010346470144310949,
+    "lo": -0.0003123974296958914,
+    "hi": 4.097699864381608e-05
+   },
+   "macroAP": {
+    "diff": 0.0007367206991401518,
+    "lo": -0.00017389928721566646,
+    "hi": 0.0025677421745567623
+   }
+  },
+  "placebo_degree__typed_lowint2 - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.006560587487587404,
+    "lo": -0.002560128917722992,
+    "hi": 0.016660354238188606
+   },
+   "macroAP": {
+    "diff": 0.007661665700503251,
+    "lo": -0.007870173453765353,
+    "hi": 0.021637288582026935
+   }
+  },
+  "placebo_degree__typed_lowint2 - mask_all [graph]": {
+   "pooledAP": {
+    "diff": 0.00014739321033690328,
+    "lo": -0.00021202733128339226,
+    "hi": 0.000548271707045717
+   },
+   "macroAP": {
+    "diff": 2.31556559730714e-05,
+    "lo": -0.0007876115499408384,
+    "hi": 0.0007029832442946224
+   }
+  },
+  "placebo_uniform__typed_lowint2 - no_writeback [graph]": {
+   "pooledAP": {
+    "diff": 0.006357487176557739,
+    "lo": -0.002744329217513295,
+    "hi": 0.016366059831006217
+   },
+   "macroAP": {
+    "diff": 0.007602878651038154,
+    "lo": -0.008000145824046193,
+    "hi": 0.02165390235556381
+   }
+  },
+  "placebo_uniform__typed_lowint2 - mask_all [graph]": {
+   "pooledAP": {
+    "diff": -5.5707100692761746e-05,
+    "lo": -0.00023457885097331546,
+    "hi": 3.726886931739812e-05
+   },
+   "macroAP": {
+    "diff": -3.563139349202493e-05,
+    "lo": -0.00013489809620789213,
+    "hi": 3.591304593720844e-05
+   }
+  },
+  "no_writeback - mask_all [hybrid]": {
+   "pooledAP": {
+    "diff": -0.005205975160457205,
+    "lo": -0.015082058719487763,
+    "hi": 0.002305901397229355
+   },
+   "macroAP": {
+    "diff": -0.011221332162805076,
+    "lo": -0.024118165273886067,
+    "hi": -0.0012728263632684087
+   }
+  },
+  "flat_negative - no_writeback [hybrid]": {
+   "pooledAP": {
+    "diff": -0.011213723447484721,
+    "lo": -0.020357544455760008,
+    "hi": -0.002085090770600032
+   },
+   "macroAP": {
+    "diff": -0.012950025576145378,
+    "lo": -0.030860530121678605,
+    "hi": -0.0011401372387940414
+   }
+  },
+  "flat_negative - mask_all [hybrid]": {
+   "pooledAP": {
+    "diff": -0.016419698607941926,
+    "lo": -0.031748010559245185,
+    "hi": -0.0031766607432191602
+   },
+   "macroAP": {
+    "diff": -0.024171357738950454,
+    "lo": -0.04765423098125632,
+    "hi": -0.005040108894657501
+   }
+  },
+  "mask_all - no_writeback [hybrid]": {
+   "pooledAP": {
+    "diff": 0.005205975160457205,
+    "lo": -0.002305901397229356,
+    "hi": 0.015082058719487762
+   },
+   "macroAP": {
+    "diff": 0.011221332162805076,
+    "lo": 0.0012728263632684079,
+    "hi": 0.024118165273886067
+   }
+  },
+  "typed - no_writeback [hybrid]": {
+   "pooledAP": {
+    "diff": 5.7250929352978264e-05,
+    "lo": -0.00633010521940236,
+    "hi": 0.007581223583709933
+   },
+   "macroAP": {
+    "diff": 0.0034916634089699403,
+    "lo": -0.015846223351192276,
+    "hi": 0.019392964322108387
+   }
+  },
+  "typed - mask_all [hybrid]": {
+   "pooledAP": {
+    "diff": -0.005148724231104226,
+    "lo": -0.01728526321438041,
+    "hi": 0.0028509003280734134
+   },
+   "macroAP": {
+    "diff": -0.007729668753835135,
+    "lo": -0.023682521358696664,
+    "hi": 0.001705073645467804
+   }
+  },
+  "typed_scoped - no_writeback [hybrid]": {
+   "pooledAP": {
+    "diff": 0.004271581230651543,
+    "lo": -0.003182678620267631,
+    "hi": 0.013458511617112605
+   },
+   "macroAP": {
+    "diff": 0.006123491209338784,
+    "lo": -0.013646586349388099,
+    "hi": 0.023060826087412507
+   }
+  },
+  "typed_scoped - mask_all [hybrid]": {
+   "pooledAP": {
+    "diff": -0.0009343939298056617,
+    "lo": -0.006243863705072157,
+    "hi": 0.0016015747178922957
+   },
+   "macroAP": {
+    "diff": -0.005097840953466291,
+    "lo": -0.021320672604252532,
+    "hi": 0.0029783249518285167
+   }
+  },
+  "typed_role - no_writeback [hybrid]": {
+   "pooledAP": {
+    "diff": 0.003266973351685732,
+    "lo": -0.0017712482918188332,
+    "hi": 0.010912510937691317
+   },
+   "macroAP": {
+    "diff": 0.00966940038351801,
+    "lo": 0.00081853582401756,
+    "hi": 0.021832998199055473
+   }
+  },
+  "typed_role - mask_all [hybrid]": {
+   "pooledAP": {
+    "diff": -0.0019390018087714726,
+    "lo": -0.009389283323801907,
+    "hi": 0.003842786323412398
+   },
+   "macroAP": {
+    "diff": -0.0015519317792870649,
+    "lo": -0.00560802298545339,
+    "hi": 0.00198127050068911
+   }
+  },
+  "typed_role_scoped - no_writeback [hybrid]": {
+   "pooledAP": {
+    "diff": 0.006246074705541029,
+    "lo": -0.0016141682333990887,
+    "hi": 0.016324813178072897
+   },
+   "macroAP": {
+    "diff": 0.012085482714958622,
+    "lo": 0.0021072852637640306,
+    "hi": 0.024730842712196773
+   }
+  },
+  "typed_role_scoped - mask_all [hybrid]": {
+   "pooledAP": {
+    "diff": 0.0010400995450838245,
+    "lo": -1.758912830540038e-05,
+    "hi": 0.0020512061533825825
+   },
+   "macroAP": {
+    "diff": 0.0008641505521535461,
+    "lo": 2.3738891714171502e-05,
+    "hi": 0.001991895365208227
+   }
+  },
+  "typed_lowint1 - no_writeback [hybrid]": {
+   "pooledAP": {
+    "diff": 0.0049634391482626,
+    "lo": -0.0025320800868913235,
+    "hi": 0.014805105679773884
+   },
+   "macroAP": {
+    "diff": 0.011147185838503514,
+    "lo": 0.0013672210404177942,
+    "hi": 0.023955355822066655
+   }
+  },
+  "typed_lowint1 - mask_all [hybrid]": {
+   "pooledAP": {
+    "diff": -0.0002425360121946045,
+    "lo": -0.000766739127447572,
+    "hi": 2.4702819340946186e-05
+   },
+   "macroAP": {
+    "diff": -7.414632430156193e-05,
+    "lo": -0.00029871494408199373,
+    "hi": 0.00018964524977524796
+   }
+  },
+  "typed_lowint2 - no_writeback [hybrid]": {
+   "pooledAP": {
+    "diff": 0.004860071633164462,
+    "lo": -0.0027278437292816006,
+    "hi": 0.014688460211517745
+   },
+   "macroAP": {
+    "diff": 0.011095518484634768,
+    "lo": 0.001304575333415647,
+    "hi": 0.0238720506638901
+   }
+  },
+  "typed_lowint2 - mask_all [hybrid]": {
+   "pooledAP": {
+    "diff": -0.0003459035272927423,
+    "lo": -0.0009122240371217376,
+    "hi": -2.0790416154893236e-05
+   },
+   "macroAP": {
+    "diff": -0.00012581367817030703,
+    "lo": -0.00035015633806919114,
+    "hi": 0.00013349162889117138
+   }
+  },
+  "typed_lowint4 - no_writeback [hybrid]": {
+   "pooledAP": {
+    "diff": 0.005084654906104116,
+    "lo": -0.00235415662163113,
+    "hi": 0.01463515177168372
+   },
+   "macroAP": {
+    "diff": 0.010408072054085858,
+    "lo": 0.0008098250991503239,
+    "hi": 0.022570058898984943
+   }
+  },
+  "typed_lowint4 - mask_all [hybrid]": {
+   "pooledAP": {
+    "diff": -0.00012132025435308835,
+    "lo": -0.0007221622554371104,
+    "hi": 0.0011121310802016502
+   },
+   "macroAP": {
+    "diff": -0.0008132601087192173,
+    "lo": -0.002727141061664653,
+    "hi": 0.0002465541473200268
+   }
+  }
+ }
+}

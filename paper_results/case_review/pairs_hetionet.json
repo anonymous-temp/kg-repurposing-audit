@@ -1,0 +1,802 @@
+[
+ {
+  "graph": "hetionet",
+  "compound": "DB00178",
+  "drug": "Ramipril",
+  "disease_id": "DOID:10763",
+  "disease": "hypertension",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 32,
+  "trials": [
+   {
+    "nct": "NCT00389519",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "A planned interim analysis was performed after approx. 240 subjects completed the trial. The study was stopped, as permitted by protocol, after the analysis.",
+    "ot_condition": "MONDO_0005044",
+    "start": "2006-10-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00184",
+  "drug": "Nicotine",
+  "disease_id": "DOID:0050742",
+  "disease": "nicotine dependence",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 149,
+  "trials": [
+   {
+    "nct": "NCT00046813",
+    "phase": "PHASE4",
+    "stop_categories": "Negative",
+    "why_stopped": "Interim data analysis showed no effect between treatment groups",
+    "ot_condition": "MONDO_0008575",
+    "start": "2001-08-31"
+   },
+   {
+    "nct": "NCT00115687",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "Efficacy rates did not show large enough differences between treatments",
+    "ot_condition": "MONDO_0008575",
+    "start": "2002-06-30"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00205",
+  "drug": "Pyrimethamine",
+  "disease_id": "DOID:12365",
+  "disease": "malaria",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 87,
+  "trials": [
+   {
+    "nct": "NCT00453856",
+    "phase": "PHASE4",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "The study was terminated because of Early Treatment Failure in child.The justification for this decision are concerns about safety of children.",
+    "ot_condition": "MONDO_0005136",
+    "start": "2007-03-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00250",
+  "drug": "Dapsone",
+  "disease_id": "DOID:12365",
+  "disease": "malaria",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 14,
+  "trials": [
+   {
+    "nct": "NCT00361114",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "SP arms were stopped due to high levels of treatment failure.CD not available.",
+    "ot_condition": "MONDO_0005136",
+    "start": "2006-07-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00264",
+  "drug": "Metoprolol",
+  "disease_id": "DOID:10763",
+  "disease": "hypertension",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 48,
+  "trials": [
+   {
+    "nct": "NCT00491387",
+    "phase": "PHASE4",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "Adverse events reported with beta-blockers as primary therapy.",
+    "ot_condition": "MONDO_0005044",
+    "start": "2007-08-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00331",
+  "drug": "Metformin",
+  "disease_id": "DOID:11612",
+  "disease": "polycystic ovary syndrome",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 84,
+  "trials": [
+   {
+    "nct": "NCT01208740",
+    "phase": "PHASE4",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "Concerns about safety at the first interim analysis",
+    "ot_condition": "MONDO_0008487",
+    "start": "2009-01-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00331",
+  "drug": "Metformin",
+  "disease_id": "DOID:14221",
+  "disease": "metabolic syndrome X",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 14,
+  "trials": [
+   {
+    "nct": "NCT01996696",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "Results of interim analysis indicate no statistically significant difference in the primary objective between the two arms at baseline and 12 months of follow-up.",
+    "ot_condition": "EFO_0000195",
+    "start": "2014-09-30"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00334",
+  "drug": "Olanzapine",
+  "disease_id": "DOID:1595",
+  "disease": "endogenous depression",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 11,
+  "trials": [
+   {
+    "nct": "NCT01687478",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "Interim assessment: Lack of efficacy",
+    "ot_condition": "MONDO_0002009",
+    "start": "2012-09-30"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00441",
+  "drug": "Gemcitabine",
+  "disease_id": "DOID:1612",
+  "disease": "breast cancer",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 107,
+  "trials": [
+   {
+    "nct": "NCT00462865",
+    "phase": "PHASE2",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "DSMB determined toxicity of regimen more than originally thought. Slow accrual.",
+    "ot_condition": "MONDO_0007254",
+    "start": "2007-11-30"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00445",
+  "drug": "Epirubicin",
+  "disease_id": "DOID:10534",
+  "disease": "stomach cancer",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 31,
+  "trials": [
+   {
+    "nct": "NCT02076594",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "The interim analysis performed on 09 November 2018, showed the failure to achieve the primary objective of effectiveness of the experimental treatment.",
+    "ot_condition": "MONDO_0001056",
+    "start": "2013-01-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00472",
+  "drug": "Fluoxetine",
+  "disease_id": "DOID:1595",
+  "disease": "endogenous depression",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 53,
+  "trials": [
+   {
+    "nct": "NCT01119430",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "interim analysis suggested no differences with whole sample",
+    "ot_condition": "MONDO_0002009",
+    "start": "2004-05-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00531",
+  "drug": "Cyclophosphamide",
+  "disease_id": "DOID:1612",
+  "disease": "breast cancer",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 400,
+  "trials": [
+   {
+    "nct": "NCT01329627",
+    "phase": "PHASE2",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "Toxicity",
+    "ot_condition": "MONDO_0007254",
+    "start": "2010-08-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00563",
+  "drug": "Methotrexate",
+  "disease_id": "DOID:11054",
+  "disease": "urinary bladder cancer",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 8,
+  "trials": [
+   {
+    "nct": "NCT00005047",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "Accrual was halted on the basis of the Data and Safety Monitoring Board review of a futility analysis.",
+    "ot_condition": "MONDO_0001187",
+    "start": "1997-08-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00563",
+  "drug": "Methotrexate",
+  "disease_id": "DOID:7148",
+  "disease": "rheumatoid arthritis",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 186,
+  "trials": [
+   {
+    "nct": "NCT00485589",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "Based on analysis of results and consideration of available treatments, the overall benefit to risk profile of ocrelizumab was not favorable in RA.",
+    "ot_condition": "MONDO_0008383",
+    "start": "2007-06-11"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00588",
+  "drug": "Fluticasone Propionate",
+  "disease_id": "DOID:2841",
+  "disease": "asthma",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 144,
+  "trials": [
+   {
+    "nct": "NCT00456313",
+    "phase": "PHASE4",
+    "stop_categories": "Negative",
+    "why_stopped": "lack of data",
+    "ot_condition": "MONDO_0004979",
+    "start": "2007-12-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00627",
+  "drug": "Niacin",
+  "disease_id": "DOID:3393",
+  "disease": "coronary artery disease",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 16,
+  "trials": [
+   {
+    "nct": "NCT01414166",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "In HPS2-THRIVE, MK-0524A did not meet the primary efficacy objective and there was a significant increase in incidence of some types of non-fatal SAEs",
+    "ot_condition": "MONDO_0005010",
+    "start": "2011-09-30"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00674",
+  "drug": "Galantamine",
+  "disease_id": "DOID:10652",
+  "disease": "Alzheimer's disease",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 32,
+  "trials": [
+   {
+    "nct": "NCT00679627",
+    "phase": "PHASE3",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "Due to a pre-specified imbalance of deaths between treatment groups, the DSMB recommended early termination of the trial",
+    "ot_condition": "MONDO_0004975",
+    "start": "2008-06-30"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00783",
+  "drug": "Estradiol",
+  "disease_id": "DOID:10283",
+  "disease": "prostate cancer",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 5,
+  "trials": [
+   {
+    "nct": "NCT00176644",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "Treatment ineffective",
+    "ot_condition": "MONDO_0008315",
+    "start": "2005-05-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00783",
+  "drug": "Estradiol",
+  "disease_id": "DOID:1612",
+  "disease": "breast cancer",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 10,
+  "trials": [
+   {
+    "nct": "NCT01083641",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "did not meet efficacy goals after interim analysis",
+    "ot_condition": "MONDO_0007254",
+    "start": "2010-01-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00937",
+  "drug": "Diethylpropion",
+  "disease_id": "DOID:9970",
+  "disease": "obesity",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 1,
+  "trials": [
+   {
+    "nct": "NCT00115063",
+    "phase": "PHASE4",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "ethical issues of continuing control group without treatment",
+    "ot_condition": "MONDO_0011122",
+    "start": "2005-07-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00938",
+  "drug": "Salmeterol",
+  "disease_id": "DOID:2841",
+  "disease": "asthma",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 115,
+  "trials": [
+   {
+    "nct": "NCT00456313",
+    "phase": "PHASE4",
+    "stop_categories": "Negative",
+    "why_stopped": "lack of data",
+    "ot_condition": "MONDO_0004979",
+    "start": "2007-12-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00990",
+  "drug": "Exemestane",
+  "disease_id": "DOID:1612",
+  "disease": "breast cancer",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 127,
+  "trials": [
+   {
+    "nct": "NCT01303679",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "Not reveal any significant difference between the 2 treatment arms",
+    "ot_condition": "MONDO_0007254",
+    "start": "2010-06-30"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00997",
+  "drug": "Doxorubicin",
+  "disease_id": "DOID:11054",
+  "disease": "urinary bladder cancer",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 12,
+  "trials": [
+   {
+    "nct": "NCT00005047",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "Accrual was halted on the basis of the Data and Safety Monitoring Board review of a futility analysis.",
+    "ot_condition": "MONDO_0001187",
+    "start": "1997-08-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB00997",
+  "drug": "Doxorubicin",
+  "disease_id": "DOID:1612",
+  "disease": "breast cancer",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 281,
+  "trials": [
+   {
+    "nct": "NCT01329627",
+    "phase": "PHASE2",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "Toxicity",
+    "ot_condition": "MONDO_0007254",
+    "start": "2010-08-31"
+   },
+   {
+    "nct": "NCT02131506",
+    "phase": "PHASE1",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "Safety reasons",
+    "ot_condition": "MONDO_0007254",
+    "start": "2009-12-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB01006",
+  "drug": "Letrozole",
+  "disease_id": "DOID:1612",
+  "disease": "breast cancer",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 176,
+  "trials": [
+   {
+    "nct": "NCT01199367",
+    "phase": "PHASE1",
+    "stop_categories": "Negative",
+    "why_stopped": "The results of the dose escalation phase did not identify a well-tolerated dose that would permit further study in Phase 2.",
+    "ot_condition": "MONDO_0007254",
+    "start": "2010-12-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB01012",
+  "drug": "Cinacalcet",
+  "disease_id": "DOID:784",
+  "disease": "chronic kidney failure",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 13,
+  "trials": [
+   {
+    "nct": "NCT01277510",
+    "phase": "PHASE3",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "Study was put on clinical hold on 30 Jan 2013 following a subject fatality. Study was never restarted and was closed.",
+    "ot_condition": "MONDO_0005300",
+    "start": "2011-06-28"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB01083",
+  "drug": "Orlistat",
+  "disease_id": "DOID:9970",
+  "disease": "obesity",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 23,
+  "trials": [
+   {
+    "nct": "NCT00115063",
+    "phase": "PHASE4",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "ethical issues of continuing control group without treatment",
+    "ot_condition": "MONDO_0011122",
+    "start": "2005-07-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB01101",
+  "drug": "Capecitabine",
+  "disease_id": "DOID:1612",
+  "disease": "breast cancer",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 239,
+  "trials": [
+   {
+    "nct": "NCT00462865",
+    "phase": "PHASE2",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "DSMB determined toxicity of regimen more than originally thought. Slow accrual.",
+    "ot_condition": "MONDO_0007254",
+    "start": "2007-11-30"
+   },
+   {
+    "nct": "NCT01200212",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "A planed interim analysis shows no benefits, but higher adverse event rates for the experimental arm.",
+    "ot_condition": "MONDO_0007254",
+    "start": "2009-07-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB01105",
+  "drug": "Sibutramine",
+  "disease_id": "DOID:9970",
+  "disease": "obesity",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 19,
+  "trials": [
+   {
+    "nct": "NCT00115063",
+    "phase": "PHASE4",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "ethical issues of continuing control group without treatment",
+    "ot_condition": "MONDO_0011122",
+    "start": "2005-07-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB01132",
+  "drug": "Pioglitazone",
+  "disease_id": "DOID:9352",
+  "disease": "type 2 diabetes mellitus",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 154,
+  "trials": [
+   {
+    "nct": "NCT00521820",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "Higher incidence of hospitalization for congestive heart failure in pioglitazone-treated subjects compared to glyburide treated subjects.",
+    "ot_condition": "MONDO_0005148",
+    "start": "2000-06-30"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB01175",
+  "drug": "Escitalopram",
+  "disease_id": "DOID:1595",
+  "disease": "endogenous depression",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 143,
+  "trials": [
+   {
+    "nct": "NCT00387348",
+    "phase": "PHASE3",
+    "stop_categories": "Negative|Safety_Sideeffects",
+    "why_stopped": "DSMB stopped study because placebo arm had more adverse events",
+    "ot_condition": "MONDO_0002009",
+    "start": "2006-03-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB01229",
+  "drug": "Paclitaxel",
+  "disease_id": "DOID:1612",
+  "disease": "breast cancer",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 469,
+  "trials": [
+   {
+    "nct": "NCT01329627",
+    "phase": "PHASE2",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "Toxicity",
+    "ot_condition": "MONDO_0007254",
+    "start": "2010-08-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB01238",
+  "drug": "Aripiprazole",
+  "disease_id": "DOID:5419",
+  "disease": "schizophrenia",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 117,
+  "trials": [
+   {
+    "nct": "NCT01122927",
+    "phase": "PHASE3",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "The trial was terminated early as the objective of the Aripiprazole Pediatric Investigational Plan was met and provided 2 years of safety data.",
+    "ot_condition": "MONDO_0005090",
+    "start": "2010-07-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB01248",
+  "drug": "Docetaxel",
+  "disease_id": "DOID:10283",
+  "disease": "prostate cancer",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 223,
+  "trials": [
+   {
+    "nct": "NCT00494338",
+    "phase": "PHASE2",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "due to celecoxib safety issues",
+    "ot_condition": "MONDO_0008315",
+    "start": "2004-11-30"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB01248",
+  "drug": "Docetaxel",
+  "disease_id": "DOID:10534",
+  "disease": "stomach cancer",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 105,
+  "trials": [
+   {
+    "nct": "NCT02076594",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "The interim analysis performed on 09 November 2018, showed the failure to achieve the primary objective of effectiveness of the experimental treatment.",
+    "ot_condition": "MONDO_0001056",
+    "start": "2013-01-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB01248",
+  "drug": "Docetaxel",
+  "disease_id": "DOID:1612",
+  "disease": "breast cancer",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 367,
+  "trials": [
+   {
+    "nct": "NCT00104624",
+    "phase": "PHASE2",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "Toxicity issues",
+    "ot_condition": "MONDO_0007254",
+    "start": "2005-05-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB01259",
+  "drug": "Lapatinib",
+  "disease_id": "DOID:1612",
+  "disease": "breast cancer",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 164,
+  "trials": [
+   {
+    "nct": "NCT01199367",
+    "phase": "PHASE1",
+    "stop_categories": "Negative",
+    "why_stopped": "The results of the dose escalation phase did not identify a well-tolerated dose that would permit further study in Phase 2.",
+    "ot_condition": "MONDO_0007254",
+    "start": "2010-12-31"
+   },
+   {
+    "nct": "NCT02131506",
+    "phase": "PHASE1",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "Safety reasons",
+    "ot_condition": "MONDO_0007254",
+    "start": "2009-12-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB01590",
+  "drug": "Everolimus",
+  "disease_id": "DOID:1612",
+  "disease": "breast cancer",
+  "label": "approval evidence only",
+  "n_trials_before_2015": 73,
+  "trials": [
+   {
+    "nct": "NCT00674414",
+    "phase": "PHASE2",
+    "stop_categories": "Safety_Sideeffects",
+    "why_stopped": "IDMC decision due to accrual issue (82 pts accrued / 120 expected)",
+    "ot_condition": "MONDO_0007254",
+    "start": "2008-04-30"
+   },
+   {
+    "nct": "NCT02236572",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "Phase 2 of recruitment was contingent on 5 of 15 patients responding, which did not occur.",
+    "ot_condition": "MONDO_0007254",
+    "start": "2014-11-29"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB06699",
+  "drug": "Degarelix",
+  "disease_id": "DOID:10283",
+  "disease": "prostate cancer",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 55,
+  "trials": [
+   {
+    "nct": "NCT01545882",
+    "phase": "PHASE2",
+    "stop_categories": "Negative",
+    "why_stopped": "Negative study; Principal Investigator chose to prematurely terminate the study.",
+    "ot_condition": "MONDO_0008315",
+    "start": "2011-05-31"
+   }
+  ]
+ },
+ {
+  "graph": "hetionet",
+  "compound": "DB08868",
+  "drug": "Fingolimod",
+  "disease_id": "DOID:2377",
+  "disease": "multiple sclerosis",
+  "label": "recorded treatment",
+  "n_trials_before_2015": 43,
+  "trials": [
+   {
+    "nct": "NCT00731692",
+    "phase": "PHASE3",
+    "stop_categories": "Negative",
+    "why_stopped": "The extension study was terminated early after the results of the core study showed the study did not meet primary endpoint; confirmed disability progression",
+    "ot_condition": "EFO_0803536",
+    "start": "2008-07-28"
+   }
+  ]
+ }
+]

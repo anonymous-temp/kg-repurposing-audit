@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.5.0 (2026-10-07)
+
+- Tests of the selection explanation (pipeline 19): logistic models of being an indication among tested pairs with and without adjustment for testing intensity (disease-cluster bootstrap), share of indications by number of trials, phase and disease area, degree-preserving permutation null for the enrichment of approved indications among stopped pairs, scorers built only from registry history, per-disease heterogeneity.
+- Placebo negatives and a testing-intensity write-back policy (pipelines 17 and 18; `kg_audit.placebo`): degree-matched and uniform placebo sets of the same size as each policy's negated set; negation restricted to pairs with at most 1, 2 or 4 registered trials.
+- Case review (pipeline 20): dossiers of 80 indications with the cleanest failure records from the ClinicalTrials.gov API v2, codebook and codes.
+- Supporting numbers (pipeline 21), Tables 4-5 and Additional file sections S20-S22 (pipelines 09c-09e), seven main figures (pipeline 08 and `pipelines/figures/`).
+- Tests for the placebo sets.
+
 ## 0.4.0 (2026-10-06)
 
 - Drug roles in stopped trials from ClinicalTrials.gov API v2 arm groups (`kg_audit.roles`; pipelines 01b, 01c): investigational agent, comparator, background therapy, mixed, head-to-head, single-arm combination, described only.
