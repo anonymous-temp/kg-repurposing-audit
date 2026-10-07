@@ -1,4 +1,4 @@
-# KG Repurposing Audit: failure write-back (v0.5.0)
+# KG Repurposing Audit: failure write-back (v0.5.1)
 
 Code, schema and results for **Stopped clinical trials mark tested hypotheses: implications for negative labels in knowledge-graph drug repurposing**.
 
@@ -18,7 +18,7 @@ The repository asks what a terminated, withdrawn or suspended clinical trial tel
 | `schemas/handoff.linkml.yaml` | LinkML schema v0.3.0; `handoff.schema.json` is generated from it with LinkML 1.11.1 |
 | `examples/` | baricitinib, pimozide, evacetrapib and plazomicin encoded as records, with checker output |
 | `pipelines/` | numbered scripts that download the inputs and rebuild every result, table and figure |
-| `paper_results/` | aggregate results and candidate-level scores used in the manuscript; v0.4.0 adds `role/` (drug roles, role-restricted policies, the 50-assignment check), `primekg/` and `partitions_primekg/` (replication), `testedness/` and `scores/role_policies_*` (written by `pipelines/04d_export_release_files.py`); v0.5.0 adds `selection/` (testing-intensity models, permutation null, registry-history scorers), `case_review/` (80 dossiers and codes), `extra_hetionet/` and `extra_primekg/` (placebo negatives and testing-intensity policies) and `tables_v5/` |
+| `paper_results/` | aggregate results and candidate-level scores used in the manuscript; v0.4.0 adds `role/` (drug roles, role-restricted policies, the 50-assignment check), `primekg/` and `partitions_primekg/` (replication), `testedness/` and `scores/role_policies_*` (written by `pipelines/04d_export_release_files.py`); v0.5.0 adds `selection/` (testing-intensity models, permutation null, registry-history scorers), `case_review/` (80 dossiers, two independent codings and the adjudicated codes), `extra_hetionet/` and `extra_primekg/` (placebo negatives and testing-intensity policies) and `tables_v5/` |
 | `scripts/audit_v02/` | scripts that reconstruct and audit the v0.2.0 evaluation (Supplementary S8) |
 | `legacy/v0.2/` | the v0.2.0 benchmark and semi-synthetic code, kept for traceability; not used by v0.3.0 |
 

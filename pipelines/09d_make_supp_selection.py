@@ -75,25 +75,36 @@ L += ["", f"**Per-disease heterogeneity (Hetionet, graph head).** Across disease
       f"Diseases in which at least half of the held-out treatments were negated lost a median of {-d['random']['median_change_share_ge_half']:.3f} and {-d['compound']['median_change_share_ge_half']:.3f}, against "
       f"{-d['random']['median_change_share_lt_half']:.3f} and {-d['compound']['median_change_share_lt_half']:.3f} for the other diseases.", ""]
 # ---------------------------------------------------------------------------------------------- S21
-T = pd.read_csv(f"{SEL}/case_taxonomy.tsv", sep="\t").fillna("")
+T = pd.read_csv(f"{SEL}/case_taxonomy_verified.tsv", sep="\t").fillna("")
+from sklearn.metrics import cohen_kappa_score as kappa
+agp = (T.first_coding_primary == T.blind_coding_primary).mean(); kp = kappa(T.first_coding_primary, T.blind_coding_primary)
+agc = (T.first_coding_contradicts == T.blind_coding_contradicts).mean(); kc = kappa(T.first_coding_contradicts, T.blind_coding_contradicts)
+n_changed = int(((T.primary != T.first_coding_primary) | (T.contradicts != T.first_coding_contradicts)).sum())
 L += ["## S21. Review of indications with the cleanest failure records", "",
       "Cases were recorded treatments or approved indications with a same-concept efficacy or safety stop of the investigational agent in a trial started before 2015: all 40 in Hetionet (H01–H40) and a random 40 of 101 in PrimeKG (P01–P40; random seed 20261007). "
       "For each trial we retrieved the official title, conditions, phase, allocation, enrolment, arm groups and interventions, primary outcome, eligibility and stop reason from the ClinicalTrials.gov API (66 distinct trials). "
-      "The dossiers were pre-coded with a large language model (Claude, Anthropic) instructed to use only the dossier text and the codebook below, and every code was checked against the registry record. "
       "Some trials map to both graphs, so cases are not independent.", "",
+      "**Coding and adjudication.** Each dossier was coded twice and independently against the codebook below; the second coding was made without access to the first. "
+      f"The two codings agreed on the primary code in {agp:.0%} of cases (Cohen's κ = {kp:.2f}) and on the contradiction judgement in {agc:.0%} (κ = {kc:.2f}). "
+      "Every case was then read again against the full dossier. Where the dossier did not settle the question, the posted results on ClinicalTrials.gov or the primary publication were consulted: "
+      "for galantamine (NCT00679627) the posted participant flow reports 41 deaths with placebo and 29 with galantamine, and the EVOLVE trial of tobramycin inhalation powder (NCT00125346) was terminated early on positive interim results (Konstan et al., Pediatr Pulmonol 2011; doi:10.1002/ppul.21356). "
+      f"The final codes differ from the first coding in {n_changed} cases; the column Verification gives the reason for each change. "
+      "Both codings and the adjudication were carried out with a large language model (Claude, Anthropic) instructed to use the dossier and the codebook; the dossiers (paper_results/case_review/dossiers.md), both codings and the final codes are released so that they can be checked by clinical reviewers.", "",
       "Codebook (one primary code, up to two secondary codes):", "",
       "- A1 Special population: subgroup defined by age, pregnancy, comorbidity or region.",
       "- A2 Stage, line or goal: different disease stage, line of therapy or treatment goal (refractory or relapsed disease, adjuvant or neoadjuvant, maintenance, prophylaxis, acute or perioperative setting).",
       "- B1 Regimen of the drug itself: different dose, schedule, duration, route or formulation.",
-      "- B2 Combination or add-on: the drug was part of a new multi-drug regimen or was added to another therapy.",
-      "- C Comparative question: comparison with another active treatment or strategy.",
+      "- B2 Combination or add-on: the drug was part of a new multi-drug regimen or was added to another therapy, including cases in which the drug was background therapy or a fixed partner of the agent that failed or caused harm.",
+      "- C Comparative question: comparison with another active treatment or strategy, including cases in which the drug belonged to the comparator regimen.",
       "- D Endpoint or subtype: a specific complication, outcome or narrow subtype instead of treatment of the disease.",
-      "- E Stop not attributable to the drug's efficacy or safety (for example planned interim analysis without futility, accrual, sponsor decision, external evidence, stop for benefit, harm from a comparator).",
-      "- F Other or unclear.",
-      "- Contradicts: yes only if the trial would plausibly show that the drug does not work for the disease in general, in the population and setting where it is used.", "",
-      "**Table S21.** Codes for the 80 reviewed cases.", "",
-      "| Case | Drug | Disease | Primary | Secondary | Contradicts | Trials | Justification |", "|---|---|---|---|---|---|---|---|"]
+      "- E Stop not attributable to the drug's efficacy or safety: the stated reason reports no efficacy or safety finding about the tested regimen (planned interim analysis without futility, accrual, ethics, sponsor decision, external evidence, stop for benefit, zero enrolment) or concerns harm from a comparator.",
+      "- F Other, including a failure of the drug in its established setting and ontology mismatches.",
+      "- Contradicts: yes if the trial tested the drug in its established population, setting and regimen class and stopped for lack of efficacy or for harm attributable to the drug; unclear if the dossier and posted information do not settle this; otherwise no.",
+      "- Drug role check: whether the drug was part of the tested regimen, background or control therapy, or a fixed partner of a new agent.", "",
+      "**Table S21.** Final codes for the 80 reviewed cases, with the first and the independent second coding (primary code / contradicts).", "",
+      "| Case | Drug | Disease | Primary | Secondary | Contradicts | Drug role | First coding | Second coding | Trials | Justification | Verification |", "|---|---|---|---|---|---|---|---|---|---|---|---|"]
 for r in T.itertuples():
-    L.append(f"| {r.case_id} | {r.drug} | {r.disease} | {r.primary} | {r.secondary} | {r.contradicts} | {str(r.nct_used).replace(',', ', ')} | {r.justification} |")
+    L.append(f"| {r.case_id} | {r.drug} | {r.disease} | {r.primary} | {r.secondary} | {r.contradicts} | {r.drug_role_check} | {r.first_coding_primary} / {r.first_coding_contradicts} | "
+             f"{r.blind_coding_primary} / {r.blind_coding_contradicts} | {str(r.nct_used).replace(',', ', ')} | {r.justification} | {r.verification} |")
 open(OUT, "w").write("\n".join(L) + "\n")
 print("written", OUT, len(L))

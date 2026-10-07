@@ -5,7 +5,8 @@ negate, fetch their trials from the ClinicalTrials.gov API v2 and write one doss
 
   python 20_case_review_dossiers.py hetionet|primekg   (DATA and HET as for the other pipelines; OUT=work/cases)
 Then: python 20_case_review_dossiers.py fetch ; python 20_case_review_dossiers.py dossier
-The codes themselves (paper_results/selection/case_taxonomy.tsv) follow the codebook in Section S21.
+Codes: paper_results/case_review/case_taxonomy_first_coding.tsv and case_taxonomy_blind_second_coding.tsv (two independent codings)
+and case_taxonomy_verified.tsv (adjudicated final codes used in the manuscript); codebook in Additional file 1, Section S21.
 """
 import glob, json, os, random, sys, time, urllib.parse, urllib.request
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "src"))

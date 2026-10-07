@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.1 (2026-10-07)
+
+- Case review: independent second coding of the 80 dossiers and adjudication against registry records, posted results and publications (`paper_results/case_review/case_taxonomy_verified.tsv`, with both codings); Section S21 generator reports agreement and changes.
+
 ## 0.5.0 (2026-10-07)
 
 - Tests of the selection explanation (pipeline 19): logistic models of being an indication among tested pairs with and without adjustment for testing intensity (disease-cluster bootstrap), share of indications by number of trials, phase and disease area, degree-preserving permutation null for the enrichment of approved indications among stopped pairs, scorers built only from registry history, per-disease heterogeneity.

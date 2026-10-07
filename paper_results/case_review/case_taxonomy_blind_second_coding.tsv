@@ -1,0 +1,81 @@
+case_id	primary	secondary	contradicts	role_ok	justification
+H01	E	A1	no	yes	NCT00389519: paediatric (6-16 y) dose-response trial stopped after protocol-permitted planned interim analysis; no futility or harm stated.
+H02	A1	B1	no	yes	NCT00046813 schizophrenia high vs regular dose patch; NCT00115687 pregnant smokers gum vs placebo; both special populations, no-difference stops.
+H03	A1		unclear	yes	NCT00453856 SP in children 6-59 months, early treatment failure; local resistance plausible, single-arm, failure possibly region-specific.
+H04	E	A1,C	no	yes	NCT00361114 SP arms stopped for high failure; chlorproguanil/dapsone arm not started (CD unavailable), so stop not about dapsone.
+H05	E	D	no	yes	NCT00491387 single-arm MIBG mechanistic study in controlled hypertensives; stop cites class adverse events as primary therapy, external evidence.
+H06	A2	A1,B2	no	yes	NCT01208740 metformin pretreatment with gonadotropins for IVF in poor-response women aged 35-45; safety concern unspecified at interim.
+H07	A1	A2,D	no	yes	NCT01996696 prostate cancer patients on ADT; preventing metabolic syndrome/weight gain; interim no difference in body weight.
+H08	B2	A2	unclear	yes	NCT01687478 olanzapine added to fluoxetine in treatment-resistant depression; interim lack of efficacy; established setting for olanzapine not discernible.
+H09	B2	A2	no	yes	NCT00462865 adjuvant gemcitabine/capecitabine/bevacizumab after neoadjuvant therapy; DSMB cited regimen toxicity plus slow accrual.
+H10	C	B2	no	no	NCT02076594 low-toxicity docetaxel triplet (experimental) versus EOX; epirubicin is the standard comparator, not the failed experimental treatment.
+H11	B2	E	no	no	NCT01119430 fluoxetine background in both arms; DU125530 add-on tested; interim no difference.
+H12	B2	B1,A2	no	yes	NCT01329627 weekly paclitaxel then weekly doxorubicin plus daily oral cyclophosphamide, locally advanced; toxicity of novel schedule regimen.
+H13	A2	D,B2	no	yes	NCT00005047 adjuvant MVAC after cystectomy stratified by p53; futility analysis in organ-confined disease, not the established advanced setting.
+H14	B2	E	no	no	NCT00485589 methotrexate background in all arms; stop due to ocrelizumab unfavourable benefit-risk.
+H15	E	B2,D	no	unclear	NCT00456313 withdrawn, enrollment 0, lack of data; mechanistic biomarker endpoint; single arm labelled active comparator.
+H16	E	A1,B2	no	yes	NCT01414166 niacin/laropiprant in South/Southeast Asians; stopped because of external HPS2-THRIVE results, lipid endpoint in low-moderate risk.
+H17	B1		yes	yes	NCT00679627 long-term 2-year placebo-controlled galantamine in AD; DSMB stopped for imbalance of deaths, safety signal in core population.
+H18	A2	B1	no	yes	NCT00176644 transdermal estradiol in hormone-refractory prostate cancer after docetaxel; ineffective in late-line refractory setting.
+H19	D	B1	no	yes	NCT01083641 high-dose estradiol in metastatic triple-negative breast cancer; narrow subtype, high dose; efficacy goals missed.
+H20	E	B2	no	yes	NCT00115063 multicomponent intensive obesity programme; stopped for ethics of untreated control group, no drug finding.
+H21	E	B2,D	no	unclear	NCT00456313 withdrawn, enrollment 0, lack of data; fluticasone/salmeterol single arm labelled active comparator; biomarker endpoint.
+H22	A2	C,B2	no	yes	NCT01303679 maintenance switch from taxane to exemestane with bevacizumab after stable disease; no difference between arms.
+H23	A2	D,B2	no	yes	NCT00005047 adjuvant MVAC after cystectomy by p53 status; futility analysis, not the established advanced-disease setting.
+H24	B2	A2,B1	no	yes	NCT01329627 weekly doxorubicin-containing regimen toxicity; NCT02131506 phase Ib lapatinib plus liposomal doxorubicin, safety stop in pretreated HER2+ disease.
+H25	B2	A2	no	no	NCT01199367 dose escalation of KW-2450 added to lapatinib plus letrozole; letrozole is background, no tolerable dose found.
+H26	A1	D	no	yes	NCT01277510 paediatric (6-17 y) dialysis secondary hyperparathyroidism; clinical hold after one fatality, attribution not stated.
+H27	E	B2	no	yes	NCT00115063 multicomponent intensive obesity programme including orlistat; stopped for ethics of untreated control group.
+H28	B2	A2	no	yes	NCT01200212 capecitabine added to taxane plus bevacizumab first-line, no benefit and more AEs; NCT00462865 adjuvant combination toxicity.
+H29	E	B2	no	yes	NCT00115063 multicomponent intensive obesity programme including sibutramine; stopped for ethics of untreated control group.
+H30	A1	C,D	no	yes	NCT00521820 T2DM with mild-moderate heart failure versus glyburide; stopped for more heart-failure hospitalisations in comorbid population.
+H31	E	A1	no	yes	NCT00387348 depression in advanced cancer patients; DSMB stopped because the placebo arm had more adverse events.
+H32	B2	B1,A2	no	yes	NCT01329627 weekly paclitaxel then doxorubicin/cyclophosphamide, locally advanced; toxicity of novel multi-drug schedule.
+H33	E	A1,A2,B1	no	yes	NCT01122927 adolescent open-label long-term safety study; ended because paediatric investigational plan objective was met.
+H34	E	B2,A2	no	unclear	NCT00494338 docetaxel plus celecoxib in androgen-independent prostate cancer; stopped due to celecoxib safety issues, six patients.
+H35	C	B2,B1	no	yes	NCT02076594 low-dose docetaxel/oxaliplatin/capecitabine versus EOX; interim failure of experimental regimen, comparative combination question.
+H36	A1	B1	no	yes	NCT00104624 biweekly docetaxel in metastatic breast cancer patients over 70; toxicity, geriatric autonomy endpoint.
+H37	B2	A2	no	yes	NCT02131506 phase Ib lapatinib plus liposomal doxorubicin, safety stop; NCT01199367 lapatinib is background for KW-2450 escalation.
+H38	B2	A2,E	no	yes	NCT00674414 everolimus added to trastuzumab preoperatively, stopped for accrual; NCT02236572 neoadjuvant AI plus everolimus missed response threshold.
+H39	A2		no	yes	NCT01545882 degarelix in non-metastatic hormone-refractory prostate cancer, five patients; PI terminated as negative, refractory setting.
+H40	D	A2	no	yes	NCT00731692 fingolimod in primary progressive MS; failed disability progression endpoint, a different MS subtype from relapsing disease.
+P01	E	C,B2	no	yes	NCT01035255 LCZ696 (valsartan/sacubitril) versus enalapril; stopped for compelling efficacy at interim, i.e. benefit.
+P02	E	A1	no	yes	NCT00389519 paediatric (6-16 y) dose-response trial stopped after protocol-permitted planned interim analysis; no futility or harm stated.
+P03	A1	B1	no	yes	NCT00046813 schizophrenia high vs regular dose patch; NCT00115687 pregnant smokers gum vs placebo; both special populations, no-difference stops.
+P04	A1		unclear	yes	NCT00453856 SP in children 6-59 months, early treatment failure; local resistance plausible, single-arm, failure possibly region-specific.
+P05	E	D	no	yes	NCT00491387 single-arm MIBG mechanistic study in controlled hypertensives; stop cites class adverse events as primary therapy, external evidence.
+P06	E	C	no	yes	NCT00904605 lidocaine patch versus celecoxib in knee OA; stopped for COX-2 class safety concerns, i.e. comparator.
+P07	E	D,A2	no	yes	NCT00386399 withdrawn, enrollment 0; no BRCA2 carriers among consented patients; BRCA2 pancreatic cancer subtype.
+P08	A2		no	yes	NCT00104728 neoadjuvant gefitinib in resectable stage I-IIIA NSCLC pilot; early stopping rule for response, not advanced disease.
+P09	B2	A2	unclear	yes	NCT01687478 olanzapine added to fluoxetine in treatment-resistant depression; interim lack of efficacy; established setting for olanzapine not discernible.
+P10	F	B2,A2	no	yes	NCT01687478 is a treatment-resistant depression trial mapped to anxiety disorder; likely disease-mapping artefact, olanzapine add-on to fluoxetine.
+P11	A1	B1	no	yes	NCT00494533 intravenous treprostinil in India; safety issues of outpatient IV infusion in that setting, delivery/regional rather than drug.
+P12	E	B2	no	no	NCT01334710 OSI-906 added to sorafenib; stopped for safety in another OSI-906 study; sorafenib is background.
+P13	B2		no	yes	NCT00971126 sorafenib plus thalidomide phase I/II stopped for DLTs; NCT01334710 OSI-906 add-on stopped for external safety.
+P14	E	A2,C	no	yes	NCT00762359 lansoprazole versus gefarnate for ulcer recurrence prevention in aspirin users; stopped because lansoprazole was superior.
+P15	B2	E	no	no	NCT01119430 fluoxetine background in both arms; DU125530 add-on tested; interim no difference.
+P16	B2	A2,B1	no	yes	Five trials: early versus deferred ART, PK combination, lopinavir/r monotherapy, nPEP; ritonavir is booster in regimens, not a broad treatment test.
+P17	B2	A2	unclear	yes	NCT00281021, NCT00554775, NCT00283634 erlotinib add-on or brain-metastasis combos; NCT00283634 includes erlotinib-alone second-line arm with insufficient efficacy.
+P18	E	B2	no	no	NCT01881789 oprozomib formulation safety/PK issues halted dose escalation; cyclophosphamide only a partner drug.
+P19	E	C,A1	no	yes	NCT00967226 propranolol versus prednisolone in infants; stopped for prednisolone growth retardation, comparator harm.
+P20	E	B2,D	no	unclear	NCT00456313 withdrawn, enrollment 0, lack of data; single arm labelled active comparator; biomarker endpoint.
+P21	B2	D,A2	yes	yes	NCT00120289 AIM-HIGH niacin added to simvastatin in established vascular disease; stopped for lack of efficacy on CV events.
+P22	B2	D	no	unclear	NCT00161239 multi-drug LAMPP regimen for peripheral and cutaneous T-cell lymphoma, toxicity; no arm detail on prednisone.
+P23	E	B1,A1	unclear	yes	NCT00125346 tobramycin inhalation powder versus placebo in CF aged 6-21; stopped per DMC recommendation, no reason stated.
+P24	D	B1	no	yes	NCT01083641 high-dose estradiol in metastatic triple-negative breast cancer; narrow subtype, high dose; efficacy goals missed.
+P25	E	B2	no	yes	NCT00115063 multicomponent intensive obesity programme including diethylpropion; stopped for ethics of untreated control group.
+P26	B2	C,A2	no	no	NCT01661322 intensive triple antiplatelet therapy versus guideline therapy within 48 h of stroke/TIA; aspirin is in control regimen too.
+P27	A2	B2	no	unclear	NCT00367497 rituximab plus ESHAP in relapsed/refractory aggressive NHL; stopping rule for low response; methylprednisolone is part of ESHAP.
+P28	A1	C,D	no	yes	NCT00521820 T2DM with mild-moderate heart failure versus glyburide; stopped for more heart-failure hospitalisations in comorbid population.
+P29	E	A1	no	yes	NCT00387348 depression in advanced cancer patients; DSMB stopped because the placebo arm had more adverse events.
+P30	B2	A2	no	no	NCT01578343 vorinostat added to FND (including dexamethasone) in relapsed/refractory mantle cell lymphoma; low interim response; dexamethasone is backbone.
+P31	B2	B1,A1	no	yes	NCT00801801 metronomic docetaxel plus sorafenib first-line in performance status 2 NSCLC; funding withdrawn, efficacy discouraging, five patients.
+P32	A1	B1	no	yes	NCT00104624 biweekly docetaxel in metastatic breast cancer patients over 70; toxicity, geriatric autonomy endpoint.
+P33	E	A1,D	no	yes	NCT01017263 lisdexamfetamine in obese children with ADHD and glucose intolerance; stopped for high screen-failure rate, feasibility.
+P34	B2	A2	no	yes	NCT02131506 phase Ib lapatinib plus liposomal doxorubicin, safety stop; NCT01199367 lapatinib is background for KW-2450 escalation.
+P35	B2	A2,E	no	yes	NCT00674414 everolimus added to trastuzumab preoperatively, stopped for accrual; NCT02236572 neoadjuvant AI plus everolimus missed response threshold.
+P36	A2	C,B2,B1	no	yes	NCT01104298 and NCT01189253 trabectedin first-line versus doxorubicin in untreated sarcoma; futility, setting differs from established post-anthracycline use.
+P37	E	C,D	no	yes	NCT00910299 prasugrel versus clopidogrel in high platelet reactivity after elective PCI; stopped for low event rate, no efficacy or safety finding.
+P38	C	A2	unclear	yes	NCT00305162 cangrelor versus clopidogrel in PCI; insufficient clinical effectiveness, active-comparator question in near-established setting.
+P39	A2		no	yes	NCT01545882 degarelix in non-metastatic hormone-refractory prostate cancer, five patients; PI terminated as negative, refractory setting.
+P40	A2	B1	no	yes	NCT01049932 long-acting rilpivirine injection as PrEP in HIV-negative volunteers; enrollment 0, closed for additional safety information.

@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: Please cite the exact software release and commit used, together with the relevant source-data publications.
 title: KG Repurposing Audit
 type: software
-version: 0.5.0
+version: 0.5.1
 date-released: '2026-10-07'
 license: MIT
 repository-code: https://github.com/anonymous-temp/kg-repurposing-audit
