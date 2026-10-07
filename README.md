@@ -1,4 +1,4 @@
-# KG Repurposing Audit: failure write-back (v0.5.1)
+# KG Repurposing Audit: failure write-back (v0.5.2)
 
 Code, schema and results for **Stopped clinical trials mark tested hypotheses: implications for negative labels in knowledge-graph drug repurposing**.
 
@@ -75,7 +75,8 @@ python pipelines/20_case_review_dossiers.py hetionet && python pipelines/20_case
 python pipelines/20_case_review_dossiers.py fetch && python pipelines/20_case_review_dossiers.py dossier   # codes: paper_results/case_review/case_taxonomy.tsv
 python pipelines/21_ranks_and_reference_scorers.py hetionet  # likewise primekg
 python pipelines/09c_make_tables_v5.py; python pipelines/09d_make_supp_selection.py; python pipelines/09e_make_supp_S22.py
-python pipelines/08_make_figures.py                         # Figures 1-7 and S1-S3
+python pipelines/22_rank_strata.py hetionet; python pipelines/22_rank_strata.py primekg   # data for Figure 9D
+python pipelines/08_make_figures.py                         # Figures 1-9 and S1-S16
 ```
 
 PrimeKG replication:

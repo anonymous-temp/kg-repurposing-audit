@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.2 (2026-10-07)
+
+- Figures for the final manuscript: Figure 5 (case review, `fig_casereview.py`), Figure 9 (where the loss from negative labels falls, `fig_lossmap.py`, with distribution data from pipeline 22) and supplementary Figures S1, S2, S4-S9 and S12-S16 (`pipelines/figures/supp/`), which plot the supplementary tables instead of listing them.
+- The generated supplementary tables used by these scripts are kept in `paper_results/supp_tables_md/`; `paper_results/selection/rank_strata_*.json` holds the percentile ranks behind Figure 9D.
+- No analysis or reported number changed.
+
 ## 0.5.1 (2026-10-07)
 
 - Case review: independent second coding of the 80 dossiers and adjudication against registry records, posted results and publications (`paper_results/case_review/case_taxonomy_verified.tsv`, with both codings); Section S21 generator reports agreement and changes.
