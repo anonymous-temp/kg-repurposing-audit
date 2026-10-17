@@ -1,0 +1,101 @@
+{
+ "search_date": "2026-10-17",
+ "queries": {
+  "Q1": {
+   "query": "\"repoDB\"",
+   "hits": 118
+  },
+  "Q2": {
+   "query": "(\"drug repurposing\" OR \"drug repositioning\" OR \"drug-disease association\" OR \"drug-disease associations\" OR \"drug indication\") AND (terminated OR withdrawn OR \"failed clinical trials\" OR \"failed trials\" OR \"clinical trial failures\" OR \"failed drug trials\") AND (\"negative samples\" OR \"negative examples\" OR \"negative pairs\" OR \"negative labels\" OR \"true negatives\" OR \"negative set\" OR \"negative data\") NOT \"repoDB\"",
+   "hits": 134
+  }
+ },
+ "records": 252,
+ "open_access_full_texts_screened": 197,
+ "by_query": {
+  "Q1": 100,
+  "Q2": 97
+ },
+ "codes": {
+  "Q1|no": 92,
+  "Q1|both": 5,
+  "Q2|no": 84,
+  "Q2|unclear": 11,
+  "Q2|evaluation": 2,
+  "Q1|evaluation": 1,
+  "Q1|resource": 1,
+  "Q1|unclear": 1
+ },
+ "strict_users": [
+  {
+   "pmcid": "PMC10441000",
+   "title": "KGML-xDTD: a knowledge graph-based machine learning framework for drug treatment prediction and mechanism description.",
+   "journal": "Gigascience",
+   "pub_year": 2022,
+   "stopped_as_negatives": "both",
+   "source": "repoDB"
+  },
+  {
+   "pmcid": "PMC6472420",
+   "title": "Drug prioritization using the semantic properties of a knowledge graph.",
+   "journal": "Sci Rep",
+   "pub_year": 2019,
+   "stopped_as_negatives": "both",
+   "source": "repoDB"
+  },
+  {
+   "pmcid": "PMC5996185",
+   "title": "DeCoST: A New Approach in Drug Repurposing From Control System Theory.",
+   "journal": "Front Pharmacol",
+   "pub_year": 2018,
+   "stopped_as_negatives": "evaluation",
+   "source": "ClinicalTrials.gov/AACT"
+  },
+  {
+   "pmcid": "PMC11232279",
+   "title": "RepurposeDrugs: an interactive web-portal and predictive platform for repurposing mono- and combination therapies.",
+   "journal": "Brief Bioinform",
+   "pub_year": 2024,
+   "stopped_as_negatives": "both",
+   "source": "ClinicalTrials.gov/AACT"
+  },
+  {
+   "pmcid": "PMC7532104",
+   "title": "RepCOOL: computational drug repositioning via integrating heterogeneous biological networks.",
+   "journal": "J Transl Med",
+   "pub_year": 2020,
+   "stopped_as_negatives": "both",
+   "source": "repoDB"
+  },
+  {
+   "pmcid": "PMC3276504",
+   "title": "Using functional signatures to identify repositioned drugs for breast, myelogenous leukemia and prostate cancer.",
+   "journal": "PLoS Comput Biol",
+   "pub_year": 2012,
+   "stopped_as_negatives": "evaluation",
+   "source": "ClinicalTrials.gov/AACT"
+  },
+  {
+   "pmcid": "PMC11796214",
+   "title": "Improving drug repositioning with negative data labeling using large language models.",
+   "journal": "J Cheminform",
+   "pub_year": 2025,
+   "stopped_as_negatives": "both",
+   "source": "ClinicalTrials.gov/AACT"
+  }
+ ],
+ "resource": [
+  {
+   "pmcid": "PMC5349249",
+   "title": "A standard database for drug repositioning."
+  }
+ ],
+ "borderline_drug_pair": [
+  {
+   "pmcid": "PMC12317455",
+   "title": "Literature data-based de novo candidates for drug repurposing.",
+   "journal": "BMC Bioinformatics",
+   "pub_year": 2025
+  }
+ ]
+}

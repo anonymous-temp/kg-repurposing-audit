@@ -3,7 +3,8 @@
 
 One square per reviewed indication, in rows by primary code; fill gives the graph, a black outline marks the cases
 whose failed trial plausibly contradicts the indication (solid) or might (dashed). An example per code is printed
-on the right. Input: case_taxonomy_verified.tsv (paper_results/case_review)."""
+on the right. Input: case_taxonomy_final_v2.tsv (paper_results/case_review): final codes after the source-verified
+coding and adjudication."""
 import os, sys
 import pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -12,7 +13,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
 from matplotlib.lines import Line2D
 
-TSV = sys.argv[1] if len(sys.argv) > 1 else "paper_results/case_review/case_taxonomy_verified.tsv"
+TSV = sys.argv[1] if len(sys.argv) > 1 else "paper_results/case_review/case_taxonomy_final_v2.tsv"
 OUT = sys.argv[2] if len(sys.argv) > 2 else "work/figures"
 S.setup()
 d = pd.read_csv(TSV, sep="\t")
@@ -20,9 +21,9 @@ LAB = {"E": "Stop not attributable to the drug", "B2": "New combination or add-o
        "A1": "Special population", "C": "Active comparator", "D": "Narrow endpoint or subtype", "F": "Other"}
 EX = {"E": "Sacubitril–valsartan vs enalapril, stopped early for benefit",
       "B2": "Lapatinib in phase 1 combinations, stopped for tolerability",
-      "A2": "Transdermal estradiol in prostate cancer after docetaxel",
+      "A2": "First-line trabectedin vs doxorubicin in soft-tissue sarcoma",
       "A1": "Biweekly docetaxel in women aged ≥70 years with breast cancer",
-      "C": "First-line trabectedin vs doxorubicin in soft-tissue sarcoma",
+      "C": "Cangrelor vs clopidogrel during coronary intervention",
       "D": "Fingolimod in primary progressive multiple sclerosis",
       "F": "Olanzapine with fluoxetine in treatment-resistant depression"}
 order = d.primary.value_counts().sort_values(ascending=False, kind="stable").index.tolist()
@@ -40,9 +41,9 @@ for i, code in enumerate(order):
                                    lw=1.1, ls="-" if r.contradicts == "yes" else (0, (1.5, 1.0))))
     ax.text(-0.6, y, f"{code}  {LAB[code]}", ha="right", va="center", fontsize=6.6)
     ax.text(len(sub) + 0.4, y, f"{len(sub)}", ha="left", va="center", fontsize=6.6, fontweight="bold")
-    ax.text(26.2, y, EX[code], ha="left", va="center", fontsize=6.2, color=S.MUTED, style="italic")
-ax.text(26.2, len(order) - 0.25, "Example", ha="left", va="bottom", fontsize=6.6, color=S.INK)
-ax.set_xlim(-0.3, 47); ax.set_ylim(-0.7, len(order) - 0.2)
+    ax.text(28.2, y, EX[code], ha="left", va="center", fontsize=6.2, color=S.MUTED, style="italic")
+ax.text(28.2, len(order) - 0.25, "Example", ha="left", va="bottom", fontsize=6.6, color=S.INK)
+ax.set_xlim(-0.3, 49); ax.set_ylim(-0.7, len(order) - 0.2)
 ax.axis("off")
 handles = [Rectangle((0, 0), 1, 1, facecolor=S.COL["Hetionet"]), Rectangle((0, 0), 1, 1, facecolor=S.COL["PrimeKG"]),
            Rectangle((0, 0), 1, 1, facecolor="white", edgecolor=S.INK, lw=1.1),

@@ -4,7 +4,7 @@
 # Usage: pipelines/00_download_data.sh /path/to/data
 set -euo pipefail
 DATA="${1:?usage: $0 DATA_DIR}"
-mkdir -p "$DATA/hetionet" "$DATA/ot" "$DATA/gold"
+mkdir -p "$DATA/hetionet" "$DATA/ot" "$DATA/gold" "$DATA/repodb" "$DATA/drugcentral"
 HET=https://github.com/hetio/hetionet/raw/main/hetnet/tsv
 [ -s "$DATA/hetionet/hetionet-v1.0-nodes.tsv" ] || curl -fsSL -o "$DATA/hetionet/hetionet-v1.0-nodes.tsv" "$HET/hetionet-v1.0-nodes.tsv"
 [ -s "$DATA/hetionet/hetionet-v1.0-edges.sif.gz" ] || curl -fsSL -o "$DATA/hetionet/hetionet-v1.0-edges.sif.gz" "$HET/hetionet-v1.0-edges.sif.gz"
@@ -14,5 +14,10 @@ for d in clinical_report clinical_indication clinical_target drug_molecule disea
 done
 HF=https://huggingface.co/datasets/opentargets/clinical_trial_reason_to_stop/resolve/main
 [ -s "$DATA/gold/data.json" ] || curl -fsSL -o "$DATA/gold/data.json" "$HF/data.json"
-( cd "$DATA" && sha256sum hetionet/* ot/* gold/* > SHA256SUMS.txt )
+# repoDB final database (figshare 3811674, CC BY 4.0) and current DrugCentral indications through its public API (v0.6.0)
+[ -s "$DATA/repodb/full.csv" ] || curl -fsSL -o "$DATA/repodb/full.csv" "https://ndownloader.figstatic.com/files/7341422"
+DC=https://uxn2ycvimg.us-east-2.awsapprunner.com
+[ -s "$DATA/drugcentral/omop_indication.json" ] || curl -fsSL -o "$DATA/drugcentral/omop_indication.json" "$DC/omop_relationship/relationship_name/indication"
+[ -s "$DATA/drugcentral/id_drugbank.json" ] || curl -fsSL -o "$DATA/drugcentral/id_drugbank.json" "$DC/identifier/id_type/DRUGBANK_ID"
+( cd "$DATA" && sha256sum hetionet/* ot/* gold/* repodb/* drugcentral/* > SHA256SUMS.txt )
 echo "inputs in $DATA; checksums in $DATA/SHA256SUMS.txt"

@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.6.0 (2026-10-17)
+
+- repoDB audit (pipeline 23): stop reasons of the failed records (matched to the Open Targets classifier labels of the same text), failed pairs that are indications at three levels (same UMLS concept in DrugCentral; same Open Targets concept; stage, line or subtype of an indication), by testing intensity, phase and stop reason; concept-level edges for the popularity null; a label check of 60 sampled matches (`paper_results/repodb/`).
+- Model-free checks for any source of negative labels (`kg_audit.label_audit`, pipeline 25): overlap with known positives, overlap by testing intensity and a degree-preserving popularity null; applied to repoDB.
+- Literature survey (pipeline 24): Europe PMC search, passage extraction and the screening of 197 open-access articles for stopped-trial negatives (`paper_results/literature/`).
+- Case review: a third, source-verified coding of the 80 cases by a language model with web access to registry records, posted results, publications and labels, with cited sources; adjudication of the 14 disagreements; final codes in `case_review/case_taxonomy_final_v2.tsv` (6 contradicting cases from 4 trials, 1 unclear).
+- New figures: study design (`fig1_design.py`), repoDB audit (`fig_repodb.py`); case-review figures updated; `fig2_stopped.py` takes panel letters and an output name.
+- No earlier analysis or number changed apart from the case-review codes.
+
 ## 0.5.2 (2026-10-07)
 
 - Figures for the final manuscript: Figure 5 (case review, `fig_casereview.py`), Figure 9 (where the loss from negative labels falls, `fig_lossmap.py`, with distribution data from pipeline 22) and supplementary Figures S1, S2, S4-S9 and S12-S16 (`pipelines/figures/supp/`), which plot the supplementary tables instead of listing them.

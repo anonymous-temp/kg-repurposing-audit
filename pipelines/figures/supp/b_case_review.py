@@ -1,9 +1,11 @@
 #!/usr/bin/env python
-"""FigS_case_review: review of the 80 indications with the cleanest failure records (Table S21 / case_taxonomy_verified.tsv).
-A  confusion matrix of the primary code, first coding (rows) vs blind second coding (columns); % agreement and Cohen's kappa computed here
-B  same for the contradiction judgement (yes / unclear / no)
-C  secondary codes by graph (number of cases carrying the code in the `secondary` column)
-D  primary (final) code in oncology vs other diseases (keyword classification of the disease name), 100% stacked bars"""
+"""FigS_case_review: review of the 80 indications with the cleanest failure records.
+A  confusion matrix of the primary code, first dossier-based coding (rows) vs blind second coding (columns)
+B  confusion matrix of the primary code, adjudicated dossier-based codes (rows) vs source-verified coding with web access (columns)
+   (% agreement and Cohen's kappa computed here, also for the contradiction judgement)
+C  secondary codes by graph (final codes)
+D  final primary code in oncology vs other diseases (keyword classification of the disease name), 100% stacked bars
+Inputs: CASES (final codes, case_taxonomy_final_v2.tsv) and CASES_DOSSIER (dossier-based codings, case_taxonomy_verified.tsv)."""
 import csv
 import numpy as np
 import matplotlib.pyplot as plt
@@ -13,8 +15,14 @@ import b_common as C
 
 S = C.S
 S.setup()
+import os
 TSV = C.CASES
+DOS = os.environ.get("CASES_DOSSIER", "paper_results/case_review/case_taxonomy_verified.tsv")
 rows = list(csv.DictReader(open(TSV, encoding="utf-8"), delimiter="\t"))
+dos = {r["case_id"]: r for r in csv.DictReader(open(DOS, encoding="utf-8"), delimiter="\t")}
+for r in rows:
+    d = dos[r["case_id"]]
+    r.update({k: d[k] for k in ("first_coding_primary", "first_coding_contradicts", "blind_coding_primary", "blind_coding_contradicts")})
 assert len(rows) == 80
 CODES = ["A1", "A2", "B1", "B2", "C", "D", "E", "F"]
 LAB = {"A1": "A1 Special population", "A2": "A2 Stage, line or goal", "B1": "B1 Regimen of the drug itself", "B2": "B2 Combination or add-on",
@@ -33,8 +41,11 @@ def confusion(a, b, labs):
 
 
 M1, po1, k1 = confusion([r["first_coding_primary"] for r in rows], [r["blind_coding_primary"] for r in rows], CODES)
-M2, po2, k2 = confusion([r["first_coding_contradicts"] for r in rows], [r["blind_coding_contradicts"] for r in rows], ["yes", "unclear", "no"])
-print(f"primary: agreement {100 * po1:.1f}% ({np.trace(M1)}/80), kappa {k1:.3f}; contradiction: agreement {100 * po2:.1f}% ({np.trace(M2)}/80), kappa {k2:.3f}")
+_, pc1, kc1 = confusion([r["first_coding_contradicts"] for r in rows], [r["blind_coding_contradicts"] for r in rows], ["yes", "unclear", "no"])
+M2, po2, k2 = confusion([r["dossier_primary"] for r in rows], [r["web_primary"] for r in rows], CODES)
+_, pc2, kc2 = confusion([r["dossier_contradicts"] for r in rows], [r["web_contradicts"] for r in rows], ["yes", "unclear", "no"])
+print(f"dossier codings: primary {100 * po1:.1f}% kappa {k1:.3f}; contradiction {100 * pc1:.1f}% kappa {kc1:.3f}")
+print(f"source-verified vs adjudicated dossier codes: primary {100 * po2:.1f}% kappa {k2:.3f}; contradiction {100 * pc2:.1f}% kappa {kc2:.3f}")
 
 for r in rows:
     r["onc"] = any(k in r["disease"].lower() for k in ONC)
@@ -61,7 +72,7 @@ def title(x, y, letter, text):
     fig.text((x + 0.2) / W, y / H, text, fontsize=7, va="bottom", ha="left")
 
 
-def heat(ax, M, xlabs, ylabs):
+def heat(ax, M, xlabs, ylabs, xlab="Blind second coding", ylab="First coding"):
     n = len(xlabs)
     ax.imshow(M, cmap="Greys", norm=PowerNorm(0.5, vmin=0, vmax=M.max() * 1.25), aspect="equal", interpolation="nearest")
     for i in range(n):
@@ -76,22 +87,20 @@ def heat(ax, M, xlabs, ylabs):
     ax.tick_params(length=0)
     for sp in ax.spines.values():
         sp.set_visible(False)
-    ax.set_xlabel("Blind second coding"); ax.set_ylabel("First coding")
+    ax.set_xlabel(xlab); ax.set_ylabel(ylab)
 
 
-top = H - 0.85
-cell = 0.31
+top = H - 0.95
+cell = 0.255
 axA = axin(1.75, top - 8 * cell, 8 * cell, 8 * cell)
 heat(axA, M1, CODES, [LAB[c] for c in CODES])
-title(0.1, top + 0.08, "A", f"Primary code: {100 * po1:.1f}% agreement,\nCohen\u2019s \u03ba = {k1:.2f} (n = 80)")
-c3 = 0.50
-axB = axin(5.05, top - 3 * c3, 3 * c3, 3 * c3)
-heat(axB, M2, ["Yes", "Unclear", "No"], ["Yes", "Unclear", "No"])
-title(4.0, top + 0.08, "B", f"Contradiction judgement:\n{100 * po2:.1f}% agreement, \u03ba = {k2:.2f}")
-axB.text(0.5, -0.62, "Cells outlined in black: agreement", transform=axB.transAxes, ha="center", fontsize=5.8, color=S.MUTED) if False else None
+title(0.1, top + 0.08, "A", f"Two dossier-based codings: primary code {100 * po1:.1f}%,\n\u03ba = {k1:.2f}; contradiction {100 * pc1:.1f}%, \u03ba = {kc1:.2f}")
+axB = axin(4.45, top - 8 * cell, 8 * cell, 8 * cell)
+heat(axB, M2, CODES, CODES, xlab="Source-verified coding", ylab="Adjudicated dossier codes")
+title(3.95, top + 0.08, "B", f"Source-verified vs dossier codes: primary\n{100 * po2:.1f}%, \u03ba = {k2:.2f}; contradiction {100 * pc2:.1f}%, \u03ba = {kc2:.2f}")
 
 # C: secondary codes by graph
-row2_top = top - 8 * cell - 0.72
+row2_top = top - 8 * cell - 0.85
 hgt = 2.35
 axC = axin(1.75, row2_top - hgt, 1.3, hgt)
 ys = list(range(len(CODES)))[::-1]
@@ -124,7 +133,8 @@ for y, (gname, lab, sub) in zip(ypos, bars):
             continue
         w = 100 * k / n
         axD.barh(y, w, left=left, height=0.86, color=CCOL[c], edgecolor="white", linewidth=0.6)
-        axD.text(left + w / 2, y, str(k), ha="center", va="center", fontsize=6, color=S.INK if c in ("C", "F") else "white")
+        if w >= 4.5:
+            axD.text(left + w / 2, y, str(k), ha="center", va="center", fontsize=6, color=S.INK if c in ("C", "F") else "white")
         left += w
 axD.set_yticks(ypos); axD.set_yticklabels([f"{b[1]} (n = {len(b[2])})" for b in bars]); axD.tick_params(axis="y", length=0)
 axD.set_xlim(0, 100); axD.set_ylim(-1.0, 6.5)

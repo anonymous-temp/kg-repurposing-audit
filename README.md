@@ -1,8 +1,8 @@
-# KG Repurposing Audit: failure write-back (v0.5.2)
+# KG Repurposing Audit: stopped clinical trials as negative labels (v0.6.0)
 
-Code, schema and results for **Stopped clinical trials mark tested hypotheses: implications for negative labels in knowledge-graph drug repurposing**.
+Code, schema and results for the manuscript **Are stopped clinical trials valid negative labels for drug repurposing? A validity study in repoDB and two biomedical knowledge graphs** (a shorter version is titled *Stopped clinical trials mostly mark tested hypotheses and make poor negative labels for drug-repurposing models*).
 
-The repository asks what a terminated, withdrawn or suspended clinical trial tells a drug-repurposing knowledge graph, and how such trials should change its training labels. It maps Open Targets 26.09 clinical reports onto Hetionet v1.0 and PrimeKG v2, types every stopped trial by stop reason, scope and the role of each drug in the trial arms (ClinicalTrials.gov API v2), tests whether the overlap between stopped pairs and indications reflects testing intensity (logistic models, a degree-preserving permutation null and a review of 80 indications with failed trials), compares write-back policies, placebo negatives and a testing-intensity rule with several scorers on full candidate grids, asks whether scorers rank later-tested pairs as high as later-approved pairs, and provides a LinkML evidence-handoff schema (Biolink 4.4.5 mappings) that records failure type, scope match and write-back implication.
+The repository asks whether terminated, withdrawn or suspended clinical trials are valid negative labels for drug-repurposing models, and how such trials should change training labels. It screens the literature for the practice (Europe PMC), audits the failed pairs of repoDB against DrugCentral and Open Targets approvals, maps Open Targets 26.09 clinical reports onto Hetionet v1.0 and PrimeKG v2, types every stopped trial by stop reason, scope and the role of each drug in the trial arms (ClinicalTrials.gov API v2), tests whether the overlap between stopped pairs and indications reflects testing intensity (logistic models, a degree-preserving permutation null and a review of 80 indications with failed trials), compares write-back policies, placebo negatives and a testing-intensity rule with several scorers on full candidate grids, asks whether scorers rank later-tested pairs as high as later-approved pairs, and provides a LinkML evidence-handoff schema (Biolink 4.4.5 mappings) that records failure type, scope match and write-back implication.
 
 ## Contents
 
@@ -11,6 +11,7 @@ The repository asks what a terminated, withdrawn or suspended clinical trial tel
 | `src/kg_audit/failures.py` | stop-reason categories → failure type; scope match; write-back rule (retain / negate / qualify / defer) |
 | `src/kg_audit/writeback.py` | policies (including role-restricted negation), per-pair training labels and weights, scorers (degree, disease degree, MF, graph head, hybrid), metrics |
 | `src/kg_audit/roles.py` | role of a drug in a trial (investigational, comparator, background therapy, ...) from ClinicalTrials.gov arm groups |
+| `src/kg_audit/label_audit.py` | model-free checks for any source of negative labels: overlap with known positives, overlap by testing intensity, degree-preserving popularity null (`pipelines/25_audit_negative_source.py`) |
 | `src/kg_audit/placebo.py` | degree-matched (double-edge swap) and uniform placebo negative sets |
 | `src/kg_audit/fastboot.py` | exact disease-cluster bootstrap of pooled and per-disease AP without stored score vectors (used for PrimeKG) |
 | `src/kg_audit/evidence.py` | record validation and dated documentation checker |
@@ -18,7 +19,7 @@ The repository asks what a terminated, withdrawn or suspended clinical trial tel
 | `schemas/handoff.linkml.yaml` | LinkML schema v0.3.0; `handoff.schema.json` is generated from it with LinkML 1.11.1 |
 | `examples/` | baricitinib, pimozide, evacetrapib and plazomicin encoded as records, with checker output |
 | `pipelines/` | numbered scripts that download the inputs and rebuild every result, table and figure |
-| `paper_results/` | aggregate results and candidate-level scores used in the manuscript; v0.4.0 adds `role/` (drug roles, role-restricted policies, the 50-assignment check), `primekg/` and `partitions_primekg/` (replication), `testedness/` and `scores/role_policies_*` (written by `pipelines/04d_export_release_files.py`); v0.5.0 adds `selection/` (testing-intensity models, permutation null, registry-history scorers), `case_review/` (80 dossiers, two independent codings and the adjudicated codes), `extra_hetionet/` and `extra_primekg/` (placebo negatives and testing-intensity policies) and `tables_v5/` |
+| `paper_results/` | aggregate results and candidate-level scores used in the manuscript; v0.4.0 adds `role/` (drug roles, role-restricted policies, the 50-assignment check), `primekg/` and `partitions_primekg/` (replication), `testedness/` and `scores/role_policies_*` (written by `pipelines/04d_export_release_files.py`); v0.5.0 adds `selection/` (testing-intensity models, permutation null, registry-history scorers), `case_review/` (80 dossiers, two independent codings and the adjudicated codes), `extra_hetionet/` and `extra_primekg/` (placebo negatives and testing-intensity policies) and `tables_v5/`; v0.6.0 adds `repodb/` (repoDB audit, concept-level edges, popularity null, label check of 60 sampled matches), `literature/` (Europe PMC records, screening codebook and the screening of 197 articles) and, in `case_review/`, the source-verified coding with cited sources and the final adjudicated codes (`case_taxonomy_final_v2.tsv`) |
 | `scripts/audit_v02/` | scripts that reconstruct and audit the v0.2.0 evaluation (Supplementary S8) |
 | `legacy/v0.2/` | the v0.2.0 benchmark and semi-synthetic code, kept for traceability; not used by v0.3.0 |
 
@@ -79,6 +80,20 @@ python pipelines/22_rank_strata.py hetionet; python pipelines/22_rank_strata.py 
 python pipelines/08_make_figures.py                         # Figures 1-9 and S1-S16
 ```
 
+repoDB audit, literature survey and source-verified case review (v0.6.0):
+
+```bash
+pipelines/00_download_data.sh $IN                          # also repoDB (figshare 3811674) and DrugCentral API exports
+python pipelines/23_repodb_audit.py $IN/repodb/full.csv $IN/ot $IN/drugcentral $W/repodb
+python pipelines/25_audit_negative_source.py $W/repodb/failed_concept_edges.tsv $W/repodb/approved_concept_edges.tsv $W/repodb/repodb_label_audit.json
+python pipelines/24_literature_survey.py $W/literature      # Europe PMC search and passage extraction; codes in paper_results/literature
+python pipelines/figures/fig_repodb.py paper_results/repodb/repodb_audit.json $W/figures
+python pipelines/figures/fig1_design.py $W/figures
+python pipelines/figures/fig_casereview.py paper_results/case_review/case_taxonomy_final_v2.tsv $W/figures
+```
+
+The literature screening, the source-verified coding of the 80 cases (codebook in `paper_results/case_review/codebook_source_verified.md`) and the label check of repoDB matches were carried out by language models with the codebooks in this repository; their outputs, cited sources and adjudication notes are released as data, not regenerated by a script.
+
 PrimeKG replication:
 
 ```bash
@@ -101,6 +116,9 @@ The end-to-end embedding ablation (Supplementary S7) uses `MODE=e2e PARTITION=$W
 | [Expert-labelled stop reasons](https://huggingface.co/datasets/opentargets/clinical_trial_reason_to_stop) | Apache-2.0 | evaluation of lexical rules |
 | [PrimeKG v2](https://doi.org/10.7910/DVN/IXA7BM) | CC0 1.0 | replication graph |
 | [ClinicalTrials.gov API v2](https://clinicaltrials.gov/data-api/api) | public domain (U.S. NLM terms) | arm groups and interventions of stopped trials |
+| [repoDB](https://doi.org/10.6084/m9.figshare.3811674) | CC BY 4.0 | approved and failed drug–indication pairs (audit) |
+| [DrugCentral](https://drugcentral.org) API | CC BY-SA 4.0 | current approved indications (repoDB audit) |
+| [Europe PMC REST API](https://europepmc.org/RestfulWebService) | metadata CC0; open-access full texts under their own licences | literature survey (only codes and short quotations are released) |
 
 Input checksums of the files used for the manuscript are listed in `paper_results/input_sha256.txt`.
 

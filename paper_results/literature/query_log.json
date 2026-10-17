@@ -1,0 +1,15 @@
+{
+ "date": "2026-10-17",
+ "queries": {
+  "Q1": {
+   "query": "\"repoDB\"",
+   "hits": 118
+  },
+  "Q2": {
+   "query": "(\"drug repurposing\" OR \"drug repositioning\" OR \"drug-disease association\" OR \"drug-disease associations\" OR \"drug indication\") AND (terminated OR withdrawn OR \"failed clinical trials\" OR \"failed trials\" OR \"clinical trial failures\" OR \"failed drug trials\") AND (\"negative samples\" OR \"negative examples\" OR \"negative pairs\" OR \"negative labels\" OR \"true negatives\" OR \"negative set\" OR \"negative data\") NOT \"repoDB\"",
+   "hits": 134
+  }
+ },
+ "records": 252,
+ "open_access_pmc": 198
+}

@@ -13,6 +13,8 @@ RES = sys.argv[1] if len(sys.argv) > 1 else "work/results"
 PKG = sys.argv[2] if len(sys.argv) > 2 else "work/results_primekg"
 ROLE = sys.argv[3] if len(sys.argv) > 3 else "work/results_role"
 OUT = sys.argv[4] if len(sys.argv) > 4 else "work/figures"
+NAME = sys.argv[5] if len(sys.argv) > 5 else "Figure2_stopped_pairs"
+LET = os.environ.get("LETTERS", "abcd")          # panel letters (e.g. "cdef" when the figure is stacked under another)
 FS.setup()
 INK, MUTED, GRID = "#0b0b0b", "#52514e", "#e6e5e1"
 C1, C2 = "#2a78d6", "#eb6834"
@@ -34,9 +36,9 @@ def style(ax, title, xmax, xlabel):
 
 fig, axes = plt.subplots(2, 2, figsize=(7.2, 4.4))
 X = "Recorded or approved indications (%)"
-for ax, (sub, title, xmax) in zip(axes.flat[:3], [(d[d.level == "Hetionet"], "a  Hetionet pairs", 62),
-                                                   (p, "b  PrimeKG pairs", 62),
-                                                   (d[d.level == "Open Targets"], "c  All Open Targets pairs (approval only)", 32)]):
+for ax, (sub, title, xmax) in zip(axes.flat[:3], [(d[d.level == "Hetionet"], f"{LET[0]}  Hetionet pairs", 62),
+                                                   (p, f"{LET[1]}  PrimeKG pairs", 62),
+                                                   (d[d.level == "Open Targets"], f"{LET[2]}  All Open Targets pairs (approval only)", 32)]):
     sub = sub.set_index("group").loc[order]; y = list(range(len(order)))[::-1]
     ax.barh(y, sub.share.values * 100, height=0.6, color=C2 if "PrimeKG" in title else (MUTED if "Open Targets" in title else C1), edgecolor="none")
     for yi, (_, r) in zip(y, sub.iterrows()):
@@ -54,9 +56,9 @@ for k, (key, lab) in enumerate(cats):
         ax.barh(yy, v["pct"], height=0.32, color=col, edgecolor="white", linewidth=0.8, label=name if k == 0 else None)
         ax.text(v["pct"] + 0.8, yy, f"{v['pct']:.0f}%  ({v['recorded_or_approved']}/{v['pairs']})", va="center", ha="left", fontsize=6.2, color=INK)
 ax.set_yticks(y); ax.set_yticklabels([c[1] for c in cats])
-style(ax, "d  Scientific stops before 2015, by drug role", 100, X); ax.set_xticks([0, 20, 40, 60])
+style(ax, f"{LET[3]}  Scientific stops before 2015, by drug role", 100, X); ax.set_xticks([0, 20, 40, 60])
 ax.legend(frameon=False, loc="upper right", bbox_to_anchor=(1.0, 1.0), fontsize=6.3, handlelength=1.2)
 fig.tight_layout(w_pad=2.0, h_pad=1.6)
 os.makedirs(OUT, exist_ok=True)
-fig.savefig(f"{OUT}/Figure2_stopped_pairs.pdf", bbox_inches="tight"); fig.savefig(f"{OUT}/Figure2_stopped_pairs.png", dpi=600, bbox_inches="tight")
+fig.savefig(f"{OUT}/{NAME}.pdf", bbox_inches="tight"); fig.savefig(f"{OUT}/{NAME}.png", dpi=600, bbox_inches="tight")
 print("saved")
