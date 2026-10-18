@@ -1,0 +1,86 @@
+{
+ "pairs": 4237,
+ "indication_share": 0.1791361812603257,
+ "crude_or": 2.971539304729103,
+ "adjusted_or_log_trials": 0.3648462390773206,
+ "mh_or": 0.47090402916810803,
+ "mh_ci": [
+  0.3411135368256424,
+  0.6500785830733667
+ ],
+ "homogeneity_p": 0.36903155150677347,
+ "strata": [
+  {
+   "stratum": "1",
+   "stop_indication": 0,
+   "stop_other": 51,
+   "nostop_indication": 148,
+   "nostop_other": 1956,
+   "or_haldane": 0.12791343859305024,
+   "ci": [
+    0.007854449011180476,
+    2.083131197288013
+   ]
+  },
+  {
+   "stratum": "2",
+   "stop_indication": 1,
+   "stop_other": 20,
+   "nostop_indication": 81,
+   "nostop_other": 549,
+   "or_haldane": 0.49334131378123597,
+   "ci": [
+    0.09249066756798287,
+    2.631461727795419
+   ]
+  },
+  {
+   "stratum": "3-4",
+   "stop_indication": 2,
+   "stop_other": 41,
+   "nostop_indication": 84,
+   "nostop_other": 386,
+   "or_haldane": 0.27554002994225424,
+   "ci": [
+    0.07524935416673827,
+    1.0089429861729968
+   ]
+  },
+  {
+   "stratum": "5-9",
+   "stop_indication": 15,
+   "stop_other": 41,
+   "nostop_indication": 107,
+   "nostop_other": 226,
+   "or_haldane": 0.7869431213224993,
+   "ci": [
+    0.4203849506003706,
+    1.4731247522357236
+   ]
+  },
+  {
+   "stratum": "10-19",
+   "stop_indication": 17,
+   "stop_other": 34,
+   "nostop_indication": 82,
+   "nostop_other": 82,
+   "or_haldane": 0.5072463768115942,
+   "ci": [
+    0.26450064458539096,
+    0.9727722485962558
+   ]
+  },
+  {
+   "stratum": ">=20",
+   "stop_indication": 106,
+   "stop_other": 61,
+   "nostop_indication": 116,
+   "nostop_other": 31,
+   "or_haldane": 0.4682298754318015,
+   "ci": [
+    0.2830162269495645,
+    0.7746524593656968
+   ]
+  }
+ ]
+}

@@ -37,7 +37,8 @@ box(0.8, 39.0, 47.5, 20.0, "1", "Use", "Are stopped-trial pairs used as negative
     "Europe PMC full texts, searched 17 October 2026\n"
     "• articles that mention repoDB (118 records)\n"
     "• repurposing articles that pair terminated, withdrawn\n   or failed trials with negative samples (134 records)\n"
-    "• 197 open-access articles screened with a codebook:\n   negatives for training, evaluation, both, resource or none", COLS[0])
+    "• 197 open-access articles screened with a codebook:\n   negatives for training, evaluation, both, resource or none\n"
+    "• blinded rescreen of 40 excluded articles", COLS[0])
 box(51.7, 39.0, 47.5, 20.0, "2", "Validity", "How often are stopped-trial pairs indications?",
     "repoDB: 4,123 failed records from terminated, withdrawn\n   or suspended trials; approvals from DrugCentral and\n   Open Targets; UMLS concepts mapped to disease concepts\n"
     "Hetionet v1.0: 755 recorded treatments; PrimeKG v2:\n   9,388 indications; Open Targets 26.09 clinical reports\n"
@@ -48,11 +49,12 @@ box(0.8, 9.0, 47.5, 22.5, "3", "Mechanism", "Why do stopped pairs overlap with i
     "Selection by testing →\n"
     "• degree-preserving permutation null (popularity)\n"
     "• overlap by number of registered trials and by phase\n"
-    "• logistic models adjusted for testing intensity\n"
-    "• review of the 80 cleanest failure records (language-model\n   coding, verified against registry, results and publications)", COLS[2])
+    "• odds ratios within strata of testing intensity\n"
+    "• timing of stopped trials relative to approval\n"
+    "• review of 80 failure records that the strictest rule would\n   negate (language-model coding against cited sources)", COLS[2])
 box(51.7, 9.0, 47.5, 22.5, "4", "Consequences", "What do stopped-trial negatives do to models?",
     "Label policies: none, flat negative, mask all, typed (+ scope,\n   + role), negate only if ≤2 trials, placebo negatives\n"
-    "Scorers: degree reference, label-only MF, graph head on\n   DistMult embeddings, hybrid; registry-history scorers\n"
+    "Scorers: degree reference, label-only MF, graph head on\n   DistMult embeddings, hybrid; registry-history baselines\n"
     "Outcomes: held-out treatments (E1; random-edge and\n   compound-disjoint), external approved indications (E2),\n   later failures (E3); per-disease AP, MRR, AUROC;\n   paired disease-cluster bootstrap", COLS[3])
 arrow(48.6, 49.0, 51.4, 49.0); arrow(56.0, 38.7, 44.0, 32.3); arrow(48.6, 20.5, 51.4, 20.5)
 ax.add_patch(FancyBboxPatch((0.8, 0.8), 98.4, 5.6, boxstyle="round,pad=0.3,rounding_size=1.2", lw=0.7, ec=GRID, fc="#f4f4f4"))

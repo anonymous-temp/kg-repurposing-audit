@@ -1,0 +1,44 @@
+{
+ "write_back_unlabelled_pairs": 1553,
+ "approval_reports_by_source": {
+  "DailyMed": 11541,
+  "EMA Human Drugs": 524,
+  "TTD": 508,
+  "PMDA": 336,
+  "ATC": 203,
+  "FDA": 74
+ },
+ "all_non_trial_sources": {
+  "external_approved": 497,
+  "among_stopped": 155,
+  "share_stopped": 0.09980682549903412,
+  "share_other": 0.0016291455084172517,
+  "rate_ratio": 61.26329722137496,
+  "ci": [
+   51.01306452792929,
+   73.57314486330623
+  ]
+ },
+ "regulatory_labels": {
+  "external_approved": 345,
+  "among_stopped": 132,
+  "share_stopped": 0.0849967804249839,
+  "share_other": 0.0010146432552423236,
+  "rate_ratio": 83.7701132746252,
+  "ci": [
+   67.81466916256679,
+   103.47955633642036
+  ]
+ },
+ "us_labels": {
+  "external_approved": 292,
+  "among_stopped": 115,
+  "share_stopped": 0.07405022537025113,
+  "share_other": 0.000843154254356297,
+  "rate_ratio": 87.82524074053863,
+  "ci": [
+   69.82307392561337,
+   110.4688246660548
+  ]
+ }
+}

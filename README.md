@@ -1,4 +1,4 @@
-# KG Repurposing Audit: stopped clinical trials as negative labels (v0.6.0)
+# KG Repurposing Audit: stopped clinical trials as negative labels (v0.7.0)
 
 Code, schema and results for the manuscript **Are stopped clinical trials valid negative labels for drug repurposing? A validity study in repoDB and two biomedical knowledge graphs** (a shorter version is titled *Stopped clinical trials mostly mark tested hypotheses and make poor negative labels for drug-repurposing models*).
 
@@ -19,7 +19,7 @@ The repository asks whether terminated, withdrawn or suspended clinical trials a
 | `schemas/handoff.linkml.yaml` | LinkML schema v0.3.0; `handoff.schema.json` is generated from it with LinkML 1.11.1 |
 | `examples/` | baricitinib, pimozide, evacetrapib and plazomicin encoded as records, with checker output |
 | `pipelines/` | numbered scripts that download the inputs and rebuild every result, table and figure |
-| `paper_results/` | aggregate results and candidate-level scores used in the manuscript; v0.4.0 adds `role/` (drug roles, role-restricted policies, the 50-assignment check), `primekg/` and `partitions_primekg/` (replication), `testedness/` and `scores/role_policies_*` (written by `pipelines/04d_export_release_files.py`); v0.5.0 adds `selection/` (testing-intensity models, permutation null, registry-history scorers), `case_review/` (80 dossiers, two independent codings and the adjudicated codes), `extra_hetionet/` and `extra_primekg/` (placebo negatives and testing-intensity policies) and `tables_v5/`; v0.6.0 adds `repodb/` (repoDB audit, concept-level edges, popularity null, label check of 60 sampled matches), `literature/` (Europe PMC records, screening codebook and the screening of 197 articles) and, in `case_review/`, the source-verified coding with cited sources and the final adjudicated codes (`case_taxonomy_final_v2.tsv`) |
+| `paper_results/` | aggregate results and candidate-level scores used in the manuscript; v0.4.0 adds `role/` (drug roles, role-restricted policies, the 50-assignment check), `primekg/` and `partitions_primekg/` (replication), `testedness/` and `scores/role_policies_*` (written by `pipelines/04d_export_release_files.py`); v0.5.0 adds `selection/` (testing-intensity models, permutation null, registry-history scorers), `case_review/` (80 dossiers, two independent codings and the adjudicated codes), `extra_hetionet/` and `extra_primekg/` (placebo negatives and testing-intensity policies) and `tables_v5/`; v0.6.0 adds `repodb/` (repoDB audit, concept-level edges, popularity null, label check of 60 sampled matches), `literature/` (Europe PMC records, screening codebook and the screening of 197 articles) and, in `case_review/`, the source-verified coding with cited sources and the final adjudicated codes (`case_taxonomy_final_v2.tsv`); v0.7.0 adds `robustness/` (timing of stopped trials relative to approval, Mantel–Haenszel odds ratios, approval-source sensitivity, case-review and literature sensitivity checks, ChEMBL first-approval years) and, in `literature/`, the blinded second screening of 40 excluded articles |
 | `scripts/audit_v02/` | scripts that reconstruct and audit the v0.2.0 evaluation (Supplementary S8) |
 | `legacy/v0.2/` | the v0.2.0 benchmark and semi-synthetic code, kept for traceability; not used by v0.3.0 |
 
@@ -88,6 +88,11 @@ python pipelines/23_repodb_audit.py $IN/repodb/full.csv $IN/ot $IN/drugcentral $
 python pipelines/25_audit_negative_source.py $W/repodb/failed_concept_edges.tsv $W/repodb/approved_concept_edges.tsv $W/repodb/repodb_label_audit.json
 python pipelines/24_literature_survey.py $W/literature      # Europe PMC search and passage extraction; codes in paper_results/literature
 python pipelines/figures/fig_repodb.py paper_results/repodb/repodb_audit.json $W/figures
+
+# robustness checks (v0.7.0): timing relative to approval, Mantel-Haenszel odds ratio, approval sources, case-review and
+# literature sensitivity (Hetionet; trial_pairs.tsv from pipeline 01; ChEMBL first-approval years cached in paper_results/robustness)
+python pipelines/26_robustness_checks.py $W/mapped/trial_pairs.tsv paper_results paper_results/robustness paper_results/robustness/chembl_first_approval_hetionet.tsv
+SELECTION=paper_results/selection FIG_OUT=$W/figures python pipelines/figures/supp/b_temporal_order.py
 python pipelines/figures/fig1_design.py $W/figures
 python pipelines/figures/fig_casereview.py paper_results/case_review/case_taxonomy_final_v2.tsv $W/figures
 ```

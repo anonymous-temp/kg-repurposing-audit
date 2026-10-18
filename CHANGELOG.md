@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.7.0 (2026-10-18)
+
+- Robustness checks (pipeline 26, Hetionet; `paper_results/robustness/`): start years of stopped phase 1-3 trials of indications relative to the drug's first approval (ChEMBL) and to the earliest dated European (EMA) or Japanese (PMDA) approval for the same disease; Mantel-Haenszel odds ratio of a scientific stop over six strata of trial counts; enrichment of external approved indications by source of approval evidence; contradiction counts of the case review under the union of all codings; summary of the second literature screening.
+- Literature survey: blinded second screening of a random 40 of the 176 excluded articles (`literature/second_screen_sample.jsonl`, codebook `literature/second_screen_codebook.md`).
+- New supplementary figure `FigS_temporal_order` (`pipelines/figures/supp/b_temporal_order.py`); study-design figure text updated.
+- Tests for the consistency of the robustness outputs (`tests/test_robustness_outputs.py`).
+- No earlier analysis or number changed.
+
 ## 0.6.0 (2026-10-17)
 
 - repoDB audit (pipeline 23): stop reasons of the failed records (matched to the Open Targets classifier labels of the same text), failed pairs that are indications at three levels (same UMLS concept in DrugCentral; same Open Targets concept; stage, line or subtype of an indication), by testing intensity, phase and stop reason; concept-level edges for the popularity null; a label check of 60 sampled matches (`paper_results/repodb/`).

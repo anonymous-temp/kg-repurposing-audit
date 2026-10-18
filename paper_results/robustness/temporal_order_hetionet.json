@@ -1,0 +1,459 @@
+{
+ "definition": "phase 1-3 terminated, withdrawn or suspended trials started before 2015; one row per trial and pair",
+ "first_approval": "ChEMBL molecule.first_approval, minimum over the ChEMBL ids mapped to the compound",
+ "dated_approval": "earliest approval-stage report from EMA Human Drugs or PMDA (Open Targets 26.09) for the same pair",
+ "compounds_with_first_approval": 1170,
+ "compounds_mapped": 1460,
+ "indications": {
+  "all_stops": {
+   "pairs": 428,
+   "trial_pair_rows": 3402,
+   "trials": 2152,
+   "after_first_approval": {
+    "k": 3280,
+    "n": 3343,
+    "share": 0.9812,
+    "ci": [
+     0.976,
+     0.9852
+    ]
+   },
+   "median_years_after_first_approval": 14.0,
+   "dated": {
+    "pairs": 167,
+    "trials": 1296,
+    "in_or_after": {
+     "k": 1109,
+     "n": 1653,
+     "share": 0.6709,
+     "ci": [
+      0.6479,
+      0.6931
+     ]
+    },
+    "strictly_after": {
+     "k": 1003,
+     "n": 1653,
+     "share": 0.6068,
+     "ci": [
+      0.583,
+      0.63
+     ]
+    },
+    "pairs_all_stops_in_or_after": 64,
+    "pairs_any_stop_before": 103,
+    "median_years_relative_to_approval": 2.0
+   }
+  },
+  "scientific": {
+   "pairs": 141,
+   "trial_pair_rows": 413,
+   "trials": 288,
+   "after_first_approval": {
+    "k": 397,
+    "n": 409,
+    "share": 0.9707,
+    "ci": [
+     0.9494,
+     0.9831
+    ]
+   },
+   "median_years_after_first_approval": 13.0,
+   "dated": {
+    "pairs": 58,
+    "trials": 172,
+    "in_or_after": {
+     "k": 147,
+     "n": 210,
+     "share": 0.7,
+     "ci": [
+      0.6349,
+      0.7579
+     ]
+    },
+    "strictly_after": {
+     "k": 137,
+     "n": 210,
+     "share": 0.6524,
+     "ci": [
+      0.5858,
+      0.7135
+     ]
+    },
+    "pairs_all_stops_in_or_after": 30,
+    "pairs_any_stop_before": 28,
+    "median_years_relative_to_approval": 2.0
+   }
+  },
+  "strict": {
+   "pairs": 27,
+   "trial_pair_rows": 31,
+   "trials": 24,
+   "after_first_approval": {
+    "k": 29,
+    "n": 31,
+    "share": 0.9355,
+    "ci": [
+     0.7928,
+     0.9821
+    ]
+   },
+   "median_years_after_first_approval": 14.0,
+   "dated": {
+    "pairs": 8,
+    "trials": 8,
+    "in_or_after": {
+     "k": 6,
+     "n": 10,
+     "share": 0.6,
+     "ci": [
+      0.3127,
+      0.8318
+     ]
+    },
+    "strictly_after": {
+     "k": 3,
+     "n": 10,
+     "share": 0.3,
+     "ci": [
+      0.1078,
+      0.6032
+     ]
+    },
+    "pairs_all_stops_in_or_after": 4,
+    "pairs_any_stop_before": 4,
+    "median_years_relative_to_approval": 0.0
+   }
+  }
+ },
+ "recorded": {
+  "all_stops": {
+   "pairs": 300,
+   "trial_pair_rows": 2701,
+   "trials": 1814,
+   "after_first_approval": {
+    "k": 2615,
+    "n": 2643,
+    "share": 0.9894,
+    "ci": [
+     0.9847,
+     0.9927
+    ]
+   },
+   "median_years_after_first_approval": 14.0,
+   "dated": {
+    "pairs": 102,
+    "trials": 1062,
+    "in_or_after": {
+     "k": 912,
+     "n": 1302,
+     "share": 0.7005,
+     "ci": [
+      0.675,
+      0.7247
+     ]
+    },
+    "strictly_after": {
+     "k": 836,
+     "n": 1302,
+     "share": 0.6421,
+     "ci": [
+      0.6157,
+      0.6677
+     ]
+    },
+    "pairs_all_stops_in_or_after": 39,
+    "pairs_any_stop_before": 63,
+    "median_years_relative_to_approval": 2.0
+   }
+  },
+  "scientific": {
+   "pairs": 106,
+   "trial_pair_rows": 334,
+   "trials": 247,
+   "after_first_approval": {
+    "k": 326,
+    "n": 330,
+    "share": 0.9879,
+    "ci": [
+     0.9693,
+     0.9953
+    ]
+   },
+   "median_years_after_first_approval": 14.0,
+   "dated": {
+    "pairs": 38,
+    "trials": 146,
+    "in_or_after": {
+     "k": 126,
+     "n": 171,
+     "share": 0.7368,
+     "ci": [
+      0.6662,
+      0.7971
+     ]
+    },
+    "strictly_after": {
+     "k": 118,
+     "n": 171,
+     "share": 0.6901,
+     "ci": [
+      0.6172,
+      0.7546
+     ]
+    },
+    "pairs_all_stops_in_or_after": 22,
+    "pairs_any_stop_before": 16,
+    "median_years_relative_to_approval": 3.0
+   }
+  },
+  "strict": {
+   "pairs": 23,
+   "trial_pair_rows": 26,
+   "trials": 20,
+   "after_first_approval": {
+    "k": 25,
+    "n": 26,
+    "share": 0.9615,
+    "ci": [
+     0.8111,
+     0.9932
+    ]
+   },
+   "median_years_after_first_approval": 13.5,
+   "dated": {
+    "pairs": 8,
+    "trials": 8,
+    "in_or_after": {
+     "k": 6,
+     "n": 10,
+     "share": 0.6,
+     "ci": [
+      0.3127,
+      0.8318
+     ]
+    },
+    "strictly_after": {
+     "k": 3,
+     "n": 10,
+     "share": 0.3,
+     "ci": [
+      0.1078,
+      0.6032
+     ]
+    },
+    "pairs_all_stops_in_or_after": 4,
+    "pairs_any_stop_before": 4,
+    "median_years_relative_to_approval": 0.0
+   }
+  }
+ },
+ "external": {
+  "all_stops": {
+   "pairs": 128,
+   "trial_pair_rows": 701,
+   "trials": 593,
+   "after_first_approval": {
+    "k": 665,
+    "n": 700,
+    "share": 0.95,
+    "ci": [
+     0.9313,
+     0.9638
+    ]
+   },
+   "median_years_after_first_approval": 12.0,
+   "dated": {
+    "pairs": 65,
+    "trials": 288,
+    "in_or_after": {
+     "k": 197,
+     "n": 351,
+     "share": 0.5613,
+     "ci": [
+      0.509,
+      0.6122
+     ]
+    },
+    "strictly_after": {
+     "k": 167,
+     "n": 351,
+     "share": 0.4758,
+     "ci": [
+      0.4241,
+      0.528
+     ]
+    },
+    "pairs_all_stops_in_or_after": 25,
+    "pairs_any_stop_before": 40,
+    "median_years_relative_to_approval": 0.0
+   }
+  },
+  "scientific": {
+   "pairs": 35,
+   "trial_pair_rows": 79,
+   "trials": 67,
+   "after_first_approval": {
+    "k": 71,
+    "n": 79,
+    "share": 0.8987,
+    "ci": [
+     0.8127,
+     0.9478
+    ]
+   },
+   "median_years_after_first_approval": 9.0,
+   "dated": {
+    "pairs": 20,
+    "trials": 32,
+    "in_or_after": {
+     "k": 21,
+     "n": 39,
+     "share": 0.5385,
+     "ci": [
+      0.3857,
+      0.6843
+     ]
+    },
+    "strictly_after": {
+     "k": 19,
+     "n": 39,
+     "share": 0.4872,
+     "ci": [
+      0.3386,
+      0.638
+     ]
+    },
+    "pairs_all_stops_in_or_after": 8,
+    "pairs_any_stop_before": 12,
+    "median_years_relative_to_approval": 0.0
+   }
+  },
+  "strict": {
+   "pairs": 4,
+   "trial_pair_rows": 5,
+   "trials": 5,
+   "after_first_approval": {
+    "k": 4,
+    "n": 5,
+    "share": 0.8,
+    "ci": [
+     0.3755,
+     0.9638
+    ]
+   },
+   "median_years_after_first_approval": 16.0,
+   "dated": {
+    "pairs": 0,
+    "trials": 0,
+    "in_or_after": {
+     "k": 0,
+     "n": 0,
+     "share": null,
+     "ci": null
+    },
+    "strictly_after": {
+     "k": 0,
+     "n": 0,
+     "share": null,
+     "ci": null
+    }
+   }
+  }
+ },
+ "other_unlabelled": {
+  "all_stops": {
+   "pairs": 1144,
+   "trial_pair_rows": 2204,
+   "trials": 1519,
+   "after_first_approval": {
+    "k": 2026,
+    "n": 2113,
+    "share": 0.9588,
+    "ci": [
+     0.9495,
+     0.9665
+    ]
+   },
+   "median_years_after_first_approval": 14.0,
+   "dated": {
+    "pairs": 0,
+    "trials": 0,
+    "in_or_after": {
+     "k": 0,
+     "n": 0,
+     "share": null,
+     "ci": null
+    },
+    "strictly_after": {
+     "k": 0,
+     "n": 0,
+     "share": null,
+     "ci": null
+    }
+   }
+  },
+  "scientific": {
+   "pairs": 248,
+   "trial_pair_rows": 318,
+   "trials": 217,
+   "after_first_approval": {
+    "k": 289,
+    "n": 308,
+    "share": 0.9383,
+    "ci": [
+     0.9057,
+     0.9602
+    ]
+   },
+   "median_years_after_first_approval": 11.0,
+   "dated": {
+    "pairs": 0,
+    "trials": 0,
+    "in_or_after": {
+     "k": 0,
+     "n": 0,
+     "share": null,
+     "ci": null
+    },
+    "strictly_after": {
+     "k": 0,
+     "n": 0,
+     "share": null,
+     "ci": null
+    }
+   }
+  },
+  "strict": {
+   "pairs": 63,
+   "trial_pair_rows": 64,
+   "trials": 53,
+   "after_first_approval": {
+    "k": 55,
+    "n": 61,
+    "share": 0.9016,
+    "ci": [
+     0.8016,
+     0.9541
+    ]
+   },
+   "median_years_after_first_approval": 10.0,
+   "dated": {
+    "pairs": 0,
+    "trials": 0,
+    "in_or_after": {
+     "k": 0,
+     "n": 0,
+     "share": null,
+     "ci": null
+    },
+    "strictly_after": {
+     "k": 0,
+     "n": 0,
+     "share": null,
+     "ci": null
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "counts_by_coding": {
+  "dossier_first": {
+   "no": 72,
+   "unclear": 7,
+   "yes": 1
+  },
+  "dossier_second": {
+   "no": 71,
+   "unclear": 7,
+   "yes": 2
+  },
+  "source_verified": {
+   "no": 72,
+   "yes": 5,
+   "unclear": 3
+  },
+  "final": {
+   "no": 73,
+   "yes": 6,
+   "unclear": 1
+  }
+ },
+ "final": {
+  "yes": 6,
+  "trials": 4
+ },
+ "any_coding_yes": {
+  "cases": 7,
+  "trials": 5
+ },
+ "any_coding_yes_or_unclear": {
+  "cases": 12,
+  "trials": 9,
+  "case_ids": [
+   "H03",
+   "H08",
+   "H17",
+   "P04",
+   "P09",
+   "P10",
+   "P17",
+   "P21",
+   "P22",
+   "P23",
+   "P27",
+   "P38"
+  ]
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "sampled_from_excluded": 176,
+ "sample": 40,
+ "first_decision_no": 40,
+ "changed_by_second_screen": {
+  "k": 0,
+  "n": 40,
+  "share": 0.0,
+  "ci": [
+   0.0,
+   0.0876
+  ]
+ }
+}
