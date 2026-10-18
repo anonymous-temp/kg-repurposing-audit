@@ -21,6 +21,7 @@
    "unclear": 1
   }
  },
+ "all_cases_trials": 66,
  "final": {
   "yes": 6,
   "trials": 4
@@ -31,7 +32,7 @@
  },
  "any_coding_yes_or_unclear": {
   "cases": 12,
-  "trials": 9,
+  "trials": 12,
   "case_ids": [
    "H03",
    "H08",

@@ -40,6 +40,24 @@
       0.63
      ]
     },
+    "per_trial_all_rows_in_or_after": {
+     "k": 826,
+     "n": 1296,
+     "share": 0.6373,
+     "ci": [
+      0.6108,
+      0.6631
+     ]
+    },
+    "per_trial_any_row_in_or_after": {
+     "k": 924,
+     "n": 1296,
+     "share": 0.713,
+     "ci": [
+      0.6877,
+      0.7369
+     ]
+    },
     "pairs_all_stops_in_or_after": 64,
     "pairs_any_stop_before": 103,
     "median_years_relative_to_approval": 2.0
@@ -80,6 +98,24 @@
       0.7135
      ]
     },
+    "per_trial_all_rows_in_or_after": {
+     "k": 115,
+     "n": 172,
+     "share": 0.6686,
+     "ci": [
+      0.5952,
+      0.7346
+     ]
+    },
+    "per_trial_any_row_in_or_after": {
+     "k": 127,
+     "n": 172,
+     "share": 0.7384,
+     "ci": [
+      0.668,
+      0.7983
+     ]
+    },
     "pairs_all_stops_in_or_after": 30,
     "pairs_any_stop_before": 28,
     "median_years_relative_to_approval": 2.0
@@ -118,6 +154,24 @@
      "ci": [
       0.1078,
       0.6032
+     ]
+    },
+    "per_trial_all_rows_in_or_after": {
+     "k": 4,
+     "n": 8,
+     "share": 0.5,
+     "ci": [
+      0.2152,
+      0.7848
+     ]
+    },
+    "per_trial_any_row_in_or_after": {
+     "k": 4,
+     "n": 8,
+     "share": 0.5,
+     "ci": [
+      0.2152,
+      0.7848
      ]
     },
     "pairs_all_stops_in_or_after": 4,
@@ -162,6 +216,24 @@
       0.6677
      ]
     },
+    "per_trial_all_rows_in_or_after": {
+     "k": 721,
+     "n": 1062,
+     "share": 0.6789,
+     "ci": [
+      0.6502,
+      0.7063
+     ]
+    },
+    "per_trial_any_row_in_or_after": {
+     "k": 785,
+     "n": 1062,
+     "share": 0.7392,
+     "ci": [
+      0.7119,
+      0.7647
+     ]
+    },
     "pairs_all_stops_in_or_after": 39,
     "pairs_any_stop_before": 63,
     "median_years_relative_to_approval": 2.0
@@ -202,6 +274,24 @@
       0.7546
      ]
     },
+    "per_trial_all_rows_in_or_after": {
+     "k": 103,
+     "n": 146,
+     "share": 0.7055,
+     "ci": [
+      0.627,
+      0.7734
+     ]
+    },
+    "per_trial_any_row_in_or_after": {
+     "k": 110,
+     "n": 146,
+     "share": 0.7534,
+     "ci": [
+      0.6776,
+      0.8162
+     ]
+    },
     "pairs_all_stops_in_or_after": 22,
     "pairs_any_stop_before": 16,
     "median_years_relative_to_approval": 3.0
@@ -240,6 +330,24 @@
      "ci": [
       0.1078,
       0.6032
+     ]
+    },
+    "per_trial_all_rows_in_or_after": {
+     "k": 4,
+     "n": 8,
+     "share": 0.5,
+     "ci": [
+      0.2152,
+      0.7848
+     ]
+    },
+    "per_trial_any_row_in_or_after": {
+     "k": 4,
+     "n": 8,
+     "share": 0.5,
+     "ci": [
+      0.2152,
+      0.7848
      ]
     },
     "pairs_all_stops_in_or_after": 4,
@@ -284,6 +392,24 @@
       0.528
      ]
     },
+    "per_trial_all_rows_in_or_after": {
+     "k": 146,
+     "n": 288,
+     "share": 0.5069,
+     "ci": [
+      0.4495,
+      0.5642
+     ]
+    },
+    "per_trial_any_row_in_or_after": {
+     "k": 168,
+     "n": 288,
+     "share": 0.5833,
+     "ci": [
+      0.5257,
+      0.6388
+     ]
+    },
     "pairs_all_stops_in_or_after": 25,
     "pairs_any_stop_before": 40,
     "median_years_relative_to_approval": 0.0
@@ -322,6 +448,24 @@
      "ci": [
       0.3386,
       0.638
+     ]
+    },
+    "per_trial_all_rows_in_or_after": {
+     "k": 17,
+     "n": 32,
+     "share": 0.5312,
+     "ci": [
+      0.3645,
+      0.6913
+     ]
+    },
+    "per_trial_any_row_in_or_after": {
+     "k": 19,
+     "n": 32,
+     "share": 0.5938,
+     "ci": [
+      0.4226,
+      0.7448
      ]
     },
     "pairs_all_stops_in_or_after": 8,

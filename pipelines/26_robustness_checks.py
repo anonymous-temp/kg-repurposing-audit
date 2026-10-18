@@ -17,7 +17,7 @@ Outputs:
   case_review_sensitivity.json   contradiction counts of the 80 reviewed cases under the union of all codings
   literature_second_screen.json  independent second screening of a random sample of excluded articles
 """
-import json, os, sys, time, urllib.request
+import json, os, re, sys, time, urllib.request
 import numpy as np
 import pandas as pd
 import statsmodels.api as sm
@@ -107,6 +107,9 @@ def timing(d):
                     "in_or_after": share(int((z.sy >= z.dated_approval).sum()), len(z)),
                     "strictly_after": share(int((z.sy > z.dated_approval).sum()), len(z))}
     if len(z):
+        tt = z.assign(after=z.sy >= z.dated_approval).groupby("report_id").after.agg(["all", "any"])
+        out["dated"]["per_trial_all_rows_in_or_after"] = share(int(tt["all"].sum()), len(tt))
+        out["dated"]["per_trial_any_row_in_or_after"] = share(int(tt["any"].sum()), len(tt))
         pp = z.assign(after=z.sy >= z.dated_approval).groupby("pair").after.agg(["all", "any"])
         out["dated"]["pairs_all_stops_in_or_after"] = int(pp["all"].sum())
         out["dated"]["pairs_any_stop_before"] = int((~pp["all"]).sum())
@@ -179,11 +182,20 @@ cod = pd.DataFrame({"dossier_first": pd.read_csv(f"{C}/case_taxonomy_first_codin
                                                     ).set_index("case_id").contradicts,
                     "final": fin.contradicts})
 yes, yes_unc = cod.eq("yes").any(axis=1), cod.isin(["yes", "unclear"]).any(axis=1)
+
+
+def n_trials(mask):
+    """Distinct registered trials (NCT identifiers) behind the selected cases; a case may list several trials."""
+    return len({t for v in fin.nct_used[mask] for t in re.findall(r"NCT\d{8}", str(v))})
+
+
+
 dump("case_review_sensitivity.json", {
     "counts_by_coding": {k: cod[k].value_counts().to_dict() for k in cod},
-    "final": {"yes": int((fin.contradicts == "yes").sum()), "trials": int(fin[fin.contradicts == "yes"].nct_used.nunique())},
-    "any_coding_yes": {"cases": int(yes.sum()), "trials": int(fin.nct_used[yes].nunique())},
-    "any_coding_yes_or_unclear": {"cases": int(yes_unc.sum()), "trials": int(fin.nct_used[yes_unc].nunique()),
+    "all_cases_trials": n_trials(fin.index == fin.index),
+    "final": {"yes": int((fin.contradicts == "yes").sum()), "trials": n_trials(fin.contradicts == "yes")},
+    "any_coding_yes": {"cases": int(yes.sum()), "trials": n_trials(yes)},
+    "any_coding_yes_or_unclear": {"cases": int(yes_unc.sum()), "trials": n_trials(yes_unc),
                                   "case_ids": list(cod.index[yes_unc])}})
 
 # ---------------------------------------------------------------- 5. literature: second screening of excluded articles

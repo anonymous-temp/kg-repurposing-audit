@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.7.1 (2026-10-18)
+
+- Case-review sensitivity (pipeline 26) counts registered trials by NCT identifier; some cases list several trials, so the union of contradictory or unclear codes covers 12 trials, not 9 distinct strings. Counts of the final and the union-of-yes codes (4 and 5 trials) are unchanged.
+- Timing output adds per-trial shares (all or any of a trial's indication pairs started in or after the dated approval).
+- `requirements-reproduction.txt` and `configs/numerical-environment.json` now list the versions of the environment that produced the reported numbers (statsmodels and scipy added).
+
 ## 0.7.0 (2026-10-18)
 
 - Robustness checks (pipeline 26, Hetionet; `paper_results/robustness/`): start years of stopped phase 1-3 trials of indications relative to the drug's first approval (ChEMBL) and to the earliest dated European (EMA) or Japanese (PMDA) approval for the same disease; Mantel-Haenszel odds ratio of a scientific stop over six strata of trial counts; enrichment of external approved indications by source of approval evidence; contradiction counts of the case review under the union of all codings; summary of the second literature screening.
