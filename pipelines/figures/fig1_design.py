@@ -38,7 +38,7 @@ box(0.8, 39.0, 47.5, 20.0, "1", "Use", "Are stopped-trial pairs used as negative
     "• articles that mention repoDB (118 records)\n"
     "• repurposing articles that pair terminated, withdrawn\n   or failed trials with negative samples (134 records)\n"
     "• 197 open-access articles screened with a codebook:\n   negatives for training, evaluation, both, resource or none\n"
-    "• blinded rescreen of 40 excluded articles", COLS[0])
+    "• second screening of 40 excluded articles", COLS[0])
 box(51.7, 39.0, 47.5, 20.0, "2", "Validity", "How often are stopped-trial pairs indications?",
     "repoDB: 4,123 failed records from terminated, withdrawn\n   or suspended trials; approvals from DrugCentral and\n   Open Targets; UMLS concepts mapped to disease concepts\n"
     "Hetionet v1.0: 755 recorded treatments; PrimeKG v2:\n   9,388 indications; Open Targets 26.09 clinical reports\n"

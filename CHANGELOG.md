@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.3 (2026-10-19)
+
+- Design figure: the literature box describes the check of excluded articles as a second screening.
+
 ## 0.7.2 (2026-10-19)
 
 - repoDB audit (pipeline 23): the DrugCentral endpoint `omop_relationship/relationship_name/indication` also returns contraindication rows (27,755 of 39,986). Only rows with relationship `indication` (12,231) are now used as approval evidence. Corrected repoDB results: same-UMLS-concept matches 18 of 3,260 failed pairs (0.6%); 1,497 mapped pairs, of which 148 (9.9%) are indications of the same concept and 237 (15.8%) of the same concept or a stage, line or subtype; popularity null (pipeline 25) 153 observed against 20.5 expected, ratio 7.4 (5.3 to 11.8). Two sampled stage-or-subtype matches of the label check (R39, R56) rested only on contraindication rows and were removed from `precision_check.tsv` (28 remain at that level).

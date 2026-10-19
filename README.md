@@ -1,4 +1,4 @@
-# KG Repurposing Audit: stopped clinical trials as negative labels (v0.7.2)
+# KG Repurposing Audit: stopped clinical trials as negative labels (v0.7.3)
 
 Code, schema and results for the manuscript **Are stopped clinical trials valid negative labels for drug repurposing? A validity study in repoDB and two biomedical knowledge graphs** (a shorter version is titled *Stopped clinical trials mostly mark tested hypotheses and make poor negative labels for drug-repurposing models*).
 
