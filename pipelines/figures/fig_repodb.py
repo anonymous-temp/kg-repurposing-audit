@@ -53,7 +53,7 @@ lev = [("Same UMLS\nconcept\n(all pairs)", R["exact_cui_all_pairs"]), ("Same dis
        ("Same concept or\nstage, line or\nsubtype (mapped)", M["same_or_broader"])]
 for i, (lab, s) in enumerate(lev):
     k = dot(axB, i, s)
-    axB.text(i, 100 * s["ci95"][1] + 1.0, f"{k:.1f}%\n{s['k']}/{s['n']:,}", va="bottom", ha="center", fontsize=6.0, color=S.INK)
+    axB.text(i, 100 * s["ci95"][1] + 1.0, f"{100 * s['k'] / s['n']:.1f}%\n{s['k']}/{s['n']:,}", va="bottom", ha="center", fontsize=6.0, color=S.INK)
 axB.set_xticks(range(3)); axB.set_xticklabels([l for l, _ in lev], fontsize=6.0)
 axB.set_xlim(-0.5, 2.5); axB.set_ylim(0, 30); axB.set_ylabel("Failed pairs that are indications (%)")
 S.panel(axB, "B", title="Level of disease matching")

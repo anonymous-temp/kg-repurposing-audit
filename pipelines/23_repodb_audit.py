@@ -8,7 +8,7 @@ script asks how many of its failed pairs are indications and how this depends on
 level at which a failure is attached to a disease, on the stop reason and on testing.
 
 Approval evidence: DrugCentral indications (current release, retrieved through the
-DrugCentral API) and Open Targets Platform 26.09 approval-stage reports from non-trial
+DrugCentral API; rows with relationship 'indication' only, contraindications are dropped) and Open Targets Platform 26.09 approval-stage reports from non-trial
 sources. Levels at which a failed pair (drug, condition) can coincide with an indication:
   exact     the same UMLS concept (DrugCentral only; no ontology mapping needed)
   same      the same Open Targets disease concept
@@ -125,6 +125,8 @@ for r in cr[(cr.clinicalStage == "APPROVAL") & (cr.origin != "CLINICAL_TRIAL")].
             for b in (r.diseases if r.diseases is not None else []):
                 appr_ot[db].add(b["diseaseId"])
 ind = pd.DataFrame(json.load(open(f"{DC}/omop_indication.json")))
+# the DrugCentral endpoint omop_relationship/relationship_name/indication also returns contraindication rows
+ind = ind[ind.relationship_name == "indication"]
 ids = pd.DataFrame(json.load(open(f"{DC}/id_drugbank.json")))
 s2db = ids.groupby("struct_id").identifier.apply(set).to_dict()
 dc_cui, appr_dc = collections.defaultdict(set), collections.defaultdict(set)

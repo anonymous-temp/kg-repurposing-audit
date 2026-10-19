@@ -42,7 +42,7 @@ DB00004	C0238122	Denileukin diftitox	Fallopian Tube Carcinoma	False	1	Terminated
 DB00004	C0278882	Denileukin diftitox	malignant melanoma of skin stage III	False	1	Terminated	Phase 1/Phase 2	unmatched	False	False	unmapped	False	True	False	False	False	False	False	False	0			False	False
 DB00004	C0278884	Denileukin diftitox	Melanoma recurrent	False	1	Terminated	Phase 1/Phase 2	unmatched	False	False	unmapped	False	True	False	False	False	False	False	False	0			False	False
 DB00004	C0677886	Denileukin diftitox	Epithelial ovarian cancer	False	1	Terminated	Phase 2	operational	False	True	name	False	True	False	False	False	False	False	False	0	ovarian carcinoma		False	False
-DB00007	C0020538	Leuprolide	Hypertensive disease	False	1	Withdrawn	Phase 0	not_reported	False	False	umls_xref	False	True	True	True	False	False	False	False	0	hypertensive disorder	hypertensive disorder	True	True
+DB00007	C0020538	Leuprolide	Hypertensive disease	False	1	Withdrawn	Phase 0	not_reported	False	False	umls_xref	False	True	False	False	False	False	False	False	0	hypertensive disorder		False	False
 DB00007	C0026764	Leuprolide	Multiple Myeloma	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	False	True	False	False	False	False	False	False	0	plasma cell myeloma		False	False
 DB00007	C0334634	Leuprolide	Malignant lymphoma, lymphocytic, intermediate differentiation, diffuse	False	1	Terminated	Phase 2	not_reported	False	False	unmapped	False	True	False	False	False	False	False	False	0			False	False
 DB00008	C0019196	Peginterferon alfa-2a	Hepatitis C	False	1	Suspended	Phase 2	operational	False	True	umls_xref	False	True	False	False	False	True	False	False	0	hepatitis C virus infection		False	True
@@ -365,7 +365,7 @@ DB00112	C3897517	Bevacizumab	Stage IVB Colon Cancer	False	1	Terminated	Phase 2	u
 DB00112	C3897520	Bevacizumab	Stage IVA Rectal Cancer	False	1	Terminated	Phase 2	unmatched	False	False	unmapped	False	True	False	False	False	False	False	False	0			False	False
 DB00122	C0023418	Choline	leukemia	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	leukemia		False	False
 DB00126	C0001418	Vitamin C	Adenocarcinoma	False	1	Suspended	Phase 2	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	3	adenocarcinoma		False	False
-DB00126	C0005779	Vitamin C	Blood Coagulation Disorders	False	1	Terminated	Phase 2	unmatched	False	False	umls_xref	True	True	True	True	False	False	False	False	0	Abnormality of coagulation|blood coagulation disease	Abnormality of coagulation|blood coagulation disease	True	True
+DB00126	C0005779	Vitamin C	Blood Coagulation Disorders	False	1	Terminated	Phase 2	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	0	Abnormality of coagulation|blood coagulation disease		False	False
 DB00126	C0007097	Vitamin C	Carcinoma	False	1	Suspended	Phase 2	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	9	carcinoma		False	False
 DB00126	C0026764	Vitamin C	Multiple Myeloma	False	1	Suspended	Phase 2	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	7	plasma cell myeloma		False	False
 DB00126	C0278620	Vitamin C	refractory plasma cell neoplasm	False	1	Withdrawn	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	0	refractory plasma cell neoplasm		False	False
@@ -397,11 +397,11 @@ DB00163	C0018799	Vitamin E	Heart Diseases	False	1	Terminated	Phase 2	not_reporte
 DB00163	C0949083	Vitamin E	Nosocomial pneumonia	False	1	Terminated	Phase 2	unmatched	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00163	C3241937	Vitamin E	Nonalcoholic Steatohepatitis	False	1	Withdrawn	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	metabolic dysfunction-associated steatohepatitis		False	False
 DB00166	C0015674	Lipoic Acid	Chronic Fatigue Syndrome	False	1	Withdrawn	Phase 1	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	0	myalgic encephalomeyelitis/chronic fatigue syndrome		False	False
-DB00169	C0020437	Cholecalciferol	Hypercalcemia	False	1	Withdrawn	Phase 2/Phase 3	operational	False	True	umls_xref	True	True	True	True	False	False	False	False	0	hypercalcemia disease	hypercalcemia disease	True	True
-DB00169	C0020473	Cholecalciferol	Hyperlipidemia	False	1	Withdrawn	Phase 1	operational	False	True	umls_xref	True	True	True	True	False	False	False	False	0	hyperlipidemia	hyperlipidemia	True	True
+DB00169	C0020437	Cholecalciferol	Hypercalcemia	False	1	Withdrawn	Phase 2/Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	hypercalcemia disease		False	False
+DB00169	C0020473	Cholecalciferol	Hyperlipidemia	False	1	Withdrawn	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	hyperlipidemia		False	False
 DB00169	C0036337	Cholecalciferol	Schizoaffective Disorder	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	schizoaffective disorder		False	False
 DB00169	C0036341	Cholecalciferol	Schizophrenia	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	2	schizophrenia		False	False
-DB00169	C0221002	Cholecalciferol	Hyperparathyroidism, Primary	False	1	Withdrawn	Phase 2/Phase 3	operational	False	True	umls_xref	True	True	False	False	True	False	False	False	3	primary hyperparathyroidism	hyperparathyroidism	True	True
+DB00169	C0221002	Cholecalciferol	Hyperparathyroidism, Primary	False	1	Withdrawn	Phase 2/Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	3	primary hyperparathyroidism		False	False
 DB00169	C0279089	Cholecalciferol	untreated adult acute myeloid leukemia	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00169	C0279623	Cholecalciferol	Adult Acute Myeloid Leukemia without Maturation	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00169	C0279624	Cholecalciferol	adult acute myeloblastic leukemia with maturation (M2)	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
@@ -431,14 +431,14 @@ DB00175	C1541339	Pravastatin	adult erythroleukemia (M6a)	False	1	Terminated	Phas
 DB00175	C1541340	Pravastatin	adult pure erythroid leukemia (M6b)	False	1	Terminated	Phase 1/Phase 2	not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00175	C2363741	Pravastatin	HIV-1 infection	False	1	Withdrawn	Phase 2	design	False	False	name	True	True	False	False	False	False	False	False	0	HIV-1 infection		False	False
 DB00176	C0280100	Fluvoxamine	Solid tumour	False	1	Terminated	Phase 1	not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB00177	C0022658	Valsartan	Kidney Diseases	False	1	Withdrawn	Phase 3	not_reported	False	False	umls_xref	True	True	False	False	False	True	False	False	24	Abnormality of the kidney|Nephropathy|kidney disorder		False	True
+DB00177	C0022658	Valsartan	Kidney Diseases	False	1	Withdrawn	Phase 3	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	24	Abnormality of the kidney|Nephropathy|kidney disorder		False	False
 DB00177	C0242606	Valsartan	Oxidative Stress	False	1	Terminated	Phase 3	operational	False	True	name	True	True	False	False	False	False	False	False	0	oxidative stress		False	False
 DB00177	C0856169	Valsartan	Endothelial dysfunction	False	1	Terminated	Phase 3	operational	False	True	name	True	True	False	False	False	False	False	False	0	endothelial dysfunction		False	False
 DB00178	C0242606	Ramipril	Oxidative Stress	False	1	Terminated	Phase 3	operational	False	True	name	True	True	False	False	False	False	False	False	0	oxidative stress		False	False
 DB00178	C0279004	Ramipril	unspecified adult solid tumor, protocol specific	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00178	C0549399	Ramipril	Low density lipoprotein increased	False	2	Terminated	Phase 2	not_reported|operational	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00178	C0856169	Ramipril	Endothelial dysfunction	False	1	Terminated	Phase 3	operational	False	True	name	True	True	False	False	False	False	False	False	0	endothelial dysfunction		False	False
-DB00182	C0011581	Amphetamine	Depressive disorder	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	True	True	False	False	False	False	3	depressive disorder	depressive disorder	True	True
+DB00182	C0011581	Amphetamine	Depressive disorder	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	3	depressive disorder		False	False
 DB00182	C0235032	Amphetamine	Neurotoxicity Syndromes	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00182	C0279002	Amphetamine	unspecified childhood solid tumor, protocol specific	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00184	C0040332	Nicotine	Tobacco Dependence	False	1	Terminated	Phase 3	operational	False	True	name	True	True	False	True	False	False	True	False	184	nicotine dependence	nicotine dependence	True	True
@@ -598,7 +598,7 @@ DB00215	C0242379	Citalopram	Malignant neoplasm of lung	False	1	Terminated	Phase 
 DB00215	C0917801	Citalopram	Sleeplessness	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	insomnia		False	False
 DB00215	C0948089	Citalopram	Acute Coronary Syndrome	False	1	Withdrawn	Phase 1/Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	acute coronary syndrome		False	False
 DB00218	C0041296	Moxifloxacin	Tuberculosis	False	1	Withdrawn	Phase 1	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	31	tuberculosis		False	False
-DB00220	C0011991	Nelfinavir	Diarrhea	False	1	Terminated	Phase 3	unmatched	False	False	name	True	True	True	True	False	False	False	False	0	diarrheal disease	diarrheal disease	True	True
+DB00220	C0011991	Nelfinavir	Diarrhea	False	1	Terminated	Phase 3	unmatched	False	False	name	True	True	False	False	False	False	False	False	0	diarrheal disease		False	False
 DB00227	C0025202	Lovastatin	melanoma	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	melanoma		False	False
 DB00227	C0175694	Lovastatin	Smith-Lemli-Opitz Syndrome	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	Smith-Lemli-Opitz syndrome		False	False
 DB00227	C0282102	Lovastatin	Chondrodysplasia punctata, X-linked dominant type	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	X-linked chondrodysplasia punctata 2|X-linked dominant chondrodysplasia punctata		False	False
@@ -617,7 +617,7 @@ DB00233	C0010346	Aminosalicylic Acid	Crohn Disease	False	1	Terminated	Phase 2	op
 DB00234	C0011882	Reboxetine	Diabetic Neuropathies	False	1	Terminated	Phase 2	efficacy	True	False	umls_xref	True	True	False	False	False	False	False	False	0	diabetic neuropathy		False	False
 DB00234	C0030193	Reboxetine	Pain	False	1	Terminated	Phase 2	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	0	Pain		False	False
 DB00235	C0018798	Milrinone	Congenital Heart Defects	False	1	Terminated	Phase 2	efficacy	True	False	name	True	True	False	False	False	False	False	False	1	congenital heart disease		False	False
-DB00235	C0878544	Milrinone	Cardiomyopathies	False	1	Suspended	Phase 3	unmatched	False	False	umls_xref	True	True	False	False	False	True	False	False	0	cardiomyopathy		False	True
+DB00235	C0878544	Milrinone	Cardiomyopathies	False	1	Suspended	Phase 3	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	0	cardiomyopathy		False	False
 DB00243	C0348898	Ranolazine	Irritable bowel syndrome with diarrhea	False	1	Terminated	Phase 2/Phase 3	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00243	C0948089	Ranolazine	Acute Coronary Syndrome	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	acute coronary syndrome		False	False
 DB00243	C1262211	Ranolazine	Diarrhoea predominant irritable bowel syndrome	False	1	Terminated	Phase 2/Phase 3	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
@@ -628,12 +628,12 @@ DB00246	C0036337	Ziprasidone	Schizoaffective Disorder	False	1	Terminated	Phase 3
 DB00250	C0030809	Dapsone	Pemphigus Vulgaris	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	1	pemphigus vulgaris		False	False
 DB00254	C0009402	Doxycycline	Colorectal Carcinoma	False	1	Terminated	Phase 2	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	0	colorectal carcinoma		False	False
 DB00254	C0877438	Doxycycline	Non-ischemic cardiomyopathy	False	1	Terminated	Phase 2	operational	False	True	name	True	True	False	False	False	False	False	False	1	nonischemic cardiomyopathy		False	False
-DB00260	C0036341	Cycloserine	Schizophrenia	False	1	Withdrawn	Phase 3	unmatched	False	False	umls_xref	True	True	False	False	True	False	False	False	10	schizophrenia	psychotic disorder	True	True
+DB00260	C0036341	Cycloserine	Schizophrenia	False	1	Withdrawn	Phase 3	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	10	schizophrenia		False	False
 DB00260	C0337664	Cycloserine	Smoker	False	1	Withdrawn	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00264	C0018790	Metoprolol	Cardiac Arrest	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	3	cardiac arrest		False	False
 DB00264	C0028754	Metoprolol	Obesity	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	obesity disorder		False	False
 DB00264	C0042510	Metoprolol	Ventricular Fibrillation	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	ventricular fibrillation		False	False
-DB00264	C0085298	Metoprolol	Sudden Cardiac Death	False	1	Terminated	Phase 2	operational	False	True	name	True	True	False	False	False	True	False	False	0	cardiac conduction defect|sudden cardiac arrest		False	True
+DB00264	C0085298	Metoprolol	Sudden Cardiac Death	False	1	Terminated	Phase 2	operational	False	True	name	True	True	False	False	False	False	False	False	0	cardiac conduction defect|sudden cardiac arrest		False	False
 DB00273	C0001973	Topiramate	Alcoholic Intoxication, Chronic	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	True	False	False	True	False	21	alcohol dependence	alcohol dependence	True	True
 DB00273	C0014544	Topiramate	Epilepsy	False	1	Terminated	Phase 3	unmatched	False	False	umls_xref	True	True	False	True	False	True	True	False	32	Seizure|epilepsy	Seizure|epilepsy	True	True
 DB00273	C0020473	Topiramate	Hyperlipidemia	False	1	Terminated	Phase 3	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	0	hyperlipidemia		False	False
@@ -686,7 +686,7 @@ DB00305	C0005684	Mitomycin	Malignant neoplasm of urinary bladder	False	1	Termina
 DB00305	C0005686	Mitomycin	Urinary Bladder Diseases	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	12	urinary bladder disorder		False	False
 DB00305	C0005695	Mitomycin	Bladder Neoplasm	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	12	urinary bladder neoplasm		False	False
 DB00305	C0007102	Mitomycin	Malignant tumor of colon	False	1	Terminated	Phase 2	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	2	malignant colon neoplasm		False	False
-DB00305	C0042075	Mitomycin	Urologic Diseases	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	True	False	False	14	urinary system disorder		False	True
+DB00305	C0042075	Mitomycin	Urologic Diseases	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	14	urinary system disorder		False	False
 DB00305	C0042076	Mitomycin	Urologic Neoplasms	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	13	urinary system neoplasm		False	False
 DB00307	C0026764	Bexarotene	Multiple Myeloma	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	plasma cell myeloma		False	False
 DB00307	C0036337	Bexarotene	Schizoaffective Disorder	False	1	Withdrawn	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	schizoaffective disorder		False	False
@@ -773,11 +773,11 @@ DB00362	C0006840	Anidulafungin	Candidiasis	False	1	Terminated	Phase 3	unmatched	
 DB00362	C0085082	Anidulafungin	Fungemia	False	1	Terminated	Phase 3	unmatched	False	False	unmapped	False	True	False	False	False	False	False	False	0			False	False
 DB00362	C0276653	Anidulafungin	Invasive Pulmonary Aspergillosis	False	1	Withdrawn	Phase 3	not_reported	False	False	unmapped	False	True	False	False	False	False	False	False	0			False	False
 DB00362	C0752342	Anidulafungin	Neuroaspergillosis	False	1	Withdrawn	Phase 3	not_reported	False	False	umls_xref	False	True	False	False	False	False	False	False	0	neuroaspergillosis		False	False
-DB00363	C0036341	Clozapine	Schizophrenia	False	1	Withdrawn	Phase 3	unmatched	False	False	umls_xref	True	True	False	True	True	False	True	True	38	schizophrenia	psychotic disorder|schizophrenia	True	True
+DB00363	C0036341	Clozapine	Schizophrenia	False	1	Withdrawn	Phase 3	unmatched	False	False	umls_xref	True	False	False	True	True	False	True	True	38	schizophrenia	psychotic disorder|schizophrenia	True	True
 DB00367	C0278799	Levonorgestrel	Endometrial cancer stage II	False	1	Withdrawn	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00367	C0278802	Levonorgestrel	Recurrent Endometrial Cancer	False	1	Withdrawn	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00367	C0349579	Levonorgestrel	Atypical Endometrial Hyperplasia	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	2	atypical endometrial hyperplasia		False	False
-DB00367	C1153706	Levonorgestrel	Endometrial adenocarcinoma	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	True	False	False	False	1	endometrium adenocarcinoma	endometrial carcinoma	True	True
+DB00367	C1153706	Levonorgestrel	Endometrial adenocarcinoma	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	endometrium adenocarcinoma		False	False
 DB00367	C1333990	Levonorgestrel	Hereditary Nonpolyposis Colorectal Cancer	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	hereditary nonpolyposis colon cancer		False	False
 DB00368	C0002170	Norepinephrine	Alopecia	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	Alopecia of scalp|alopecia		False	False
 DB00368	C0011581	Norepinephrine	Depressive disorder	False	1	Terminated	Phase 3	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	2	depressive disorder		False	False
@@ -790,9 +790,9 @@ DB00368	C0342687	Norepinephrine	dopamine beta hydroxylase deficiency	False	1	Ter
 DB00368	C0393911	Norepinephrine	Pure Autonomic Failure	False	1	Terminated	Phase 3	design	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00368	C0751830	Norepinephrine	Gait Disorders, Neurologic	False	1	Withdrawn	Phase 1/Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00368	C1400301	Norepinephrine	orthostatic; hypotension, neurogenic	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB00369	C0010823	Cidofovir	Cytomegalovirus Infections	False	1	Withdrawn	Phase 1	not_reported	False	False	umls_xref	True	True	False	True	False	True	True	False	4	cytomegalovirus infection	cytomegalovirus infection	True	True
-DB00369	C0206178	Cidofovir	Cytomegalovirus Retinitis	False	1	Withdrawn	Phase 1	not_reported	False	False	umls_xref	True	True	False	True	True	False	True	True	3	cytomegalovirus retinitis	cytomegalovirus infection|cytomegalovirus retinitis	True	True
-DB00369	C1697878	Cidofovir	BK virus nephropathy	False	1	Terminated	Phase 1/Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	1	BK-virus nephropathy		False	False
+DB00369	C0010823	Cidofovir	Cytomegalovirus Infections	False	1	Withdrawn	Phase 1	not_reported	False	False	umls_xref	True	False	False	True	False	True	True	False	4	cytomegalovirus infection	cytomegalovirus infection	True	True
+DB00369	C0206178	Cidofovir	Cytomegalovirus Retinitis	False	1	Withdrawn	Phase 1	not_reported	False	False	umls_xref	True	False	False	True	True	False	True	True	3	cytomegalovirus retinitis	cytomegalovirus infection|cytomegalovirus retinitis	True	True
+DB00369	C1697878	Cidofovir	BK virus nephropathy	False	1	Terminated	Phase 1/Phase 2	not_reported	False	False	umls_xref	True	False	False	False	False	False	False	False	1	BK-virus nephropathy		False	False
 DB00373	C0155305	Timolol	Optic Neuropathy, Ischemic	False	1	Withdrawn	Phase 1	operational	False	True	name	True	True	False	False	False	False	False	False	0	anterior ischemic optic neuropathy		False	False
 DB00373	C0206733	Timolol	Strawberry nevus of skin	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	4	capillary hemangioma		False	False
 DB00373	C0751711	Timolol	Anterior Ischemic Optic Neuropathy	False	1	Withdrawn	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	anterior ischemic optic neuropathy		False	False
@@ -804,12 +804,12 @@ DB00374	C0085786	Treprostinil	Hamman-Rich syndrome	False	1	Terminated	Phase 2	op
 DB00374	C1142264	Treprostinil	Critical limb ischemia	False	1	Terminated	Phase 3	not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00377	C0027497	Palonosetron	Nausea	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	True	True	False	True	True	39	Nausea	Nausea|Nausea and vomiting	True	True
 DB00377	C0042963	Palonosetron	Vomiting	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	True	True	False	True	True	42	Vomiting	Nausea and vomiting|Vomiting	True	True
-DB00380	C0278601	Dexrazoxane	Inflammatory Breast Carcinoma	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	inflammatory breast carcinoma		False	False
-DB00380	C0553580	Dexrazoxane	Ewings sarcoma	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	3	Ewing sarcoma		False	False
-DB00380	C0876994	Dexrazoxane	Cardiotoxicity	False	2	Terminated	Phase 2|Phase 3	operational|not_reported	False	False	name	True	True	False	False	False	False	False	False	0	cardiotoxicity		False	False
+DB00380	C0278601	Dexrazoxane	Inflammatory Breast Carcinoma	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	False	False	False	False	False	False	False	0	inflammatory breast carcinoma		False	False
+DB00380	C0553580	Dexrazoxane	Ewings sarcoma	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	False	False	False	False	False	False	False	3	Ewing sarcoma		False	False
+DB00380	C0876994	Dexrazoxane	Cardiotoxicity	False	2	Terminated	Phase 2|Phase 3	operational|not_reported	False	False	name	True	False	False	False	False	False	False	False	0	cardiotoxicity		False	False
 DB00381	C0264716	Amlodipine	Chronic heart failure	False	1	Suspended	Phase 2	not_reported	False	False	name	True	True	False	True	True	False	True	True	0	congestive heart failure	congestive heart failure|heart failure	True	True
 DB00381	C1320716	Amlodipine	Cardiovascular event	False	1	Terminated	Phase 3	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB00388	C0003811	Phenylephrine	Cardiac Arrhythmia	False	1	Withdrawn	Phase 1/Phase 2	operational	False	True	name	True	True	False	False	False	True	False	False	0	cardiac arrhythmia		False	True
+DB00388	C0003811	Phenylephrine	Cardiac Arrhythmia	False	1	Withdrawn	Phase 1/Phase 2	operational	False	True	name	True	True	False	False	False	False	False	False	0	cardiac arrhythmia		False	False
 DB00388	C0015732	Phenylephrine	Fecal Incontinence	False	1	Withdrawn	Phase 3	design	False	False	name	True	True	False	True	False	False	True	False	1	fecal incontinence	fecal incontinence	True	True
 DB00393	C0751956	Nimodipine	Acute Cerebrovascular Accidents	False	1	Withdrawn	Phase 2	operational	False	True	name	True	True	False	False	False	True	False	False	5	stroke disorder		False	True
 DB00396	C0151526	Progesterone	Premature Birth	False	1	Terminated	Phase 3	not_reported	False	False	name	True	True	False	False	False	False	False	False	32	premature birth		False	False
@@ -841,7 +841,7 @@ DB00399	C0001418	Zoledronic acid	Adenocarcinoma	False	1	Terminated	Phase 1	uninf
 DB00399	C0026769	Zoledronic acid	Multiple Sclerosis	False	1	Terminated	Phase 3	not_reported	False	False	name	True	True	False	False	False	False	False	False	0	multiple sclerosis symptom measurement		False	False
 DB00399	C0206638	Zoledronic acid	Giant Cell Tumor of Bone	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	bone giant cell tumor		False	False
 DB00410	C0206733	Mupirocin	Strawberry nevus of skin	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	capillary hemangioma		False	False
-DB00412	C1561643	Rosiglitazone	Chronic Kidney Diseases	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	True	False	False	False	4	chronic kidney disease	kidney disorder	True	True
+DB00412	C1561643	Rosiglitazone	Chronic Kidney Diseases	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	False	False	False	False	False	False	False	4	chronic kidney disease		False	False
 DB00413	C0016053	Pramipexole	Fibromyalgia	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	1	fibromyalgia		False	False
 DB00415	C0008495	Ampicillin	Chorioamnionitis	False	1	Suspended	Phase 2/Phase 3	unmatched	False	False	name	True	True	False	False	False	False	False	False	4	chorioamnionitis		False	False
 DB00421	C0837031	Spironolactone	Type 2 diabetes mellitus with established diabetic nephropathy	False	1	Terminated	Phase 1	uninformative	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
@@ -1026,8 +1026,8 @@ DB00482	C0242379	Celecoxib	Malignant neoplasm of lung	False	2	Suspended|Terminat
 DB00482	C0333875	Celecoxib	High-Grade Squamous Intraepithelial Lesions	False	1	Withdrawn	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00482	C1140680	Celecoxib	Malignant neoplasm of ovary	False	1	Terminated	Phase 2	design	False	False	umls_xref	True	True	False	False	False	False	False	False	6	ovarian cancer		False	False
 DB00495	C0011991	Zidovudine	Diarrhea	False	1	Terminated	Phase 3	unmatched	False	False	name	True	True	False	False	False	False	False	False	0	diarrheal disease		False	False
-DB00495	C0022658	Zidovudine	Kidney Diseases	False	1	Withdrawn	Phase 1	not_reported	False	False	umls_xref	True	True	True	True	False	False	False	False	0	Abnormality of the kidney|Nephropathy|kidney disorder	Abnormality of the kidney|Nephropathy|kidney disorder	True	True
-DB00497	C0009806	Oxycodone	Constipation	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	True	True	False	False	False	False	4	constipation disorder	constipation disorder	True	True
+DB00495	C0022658	Zidovudine	Kidney Diseases	False	1	Withdrawn	Phase 1	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	0	Abnormality of the kidney|Nephropathy|kidney disorder		False	False
+DB00497	C0009806	Oxycodone	Constipation	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	4	constipation disorder		False	False
 DB00497	C0029408	Oxycodone	Degenerative polyarthritis	False	1	Terminated	Phase 3	uninformative	False	False	umls_xref	True	True	False	False	False	False	False	False	16	osteoarthritis		False	False
 DB00497	C0030193	Oxycodone	Pain	False	2	Terminated|Withdrawn	Phase 3	operational|operational	False	True	umls_xref	True	True	False	True	False	True	True	False	94	Pain	Pain	True	True
 DB00502	C0011206	Haloperidol	Delirium	False	2	Terminated	Phase 3	operational|operational	False	True	umls_xref	True	True	False	False	False	False	False	False	23	delirium		False	False
@@ -1149,7 +1149,7 @@ DB00515	C3897522	Cisplatin	Stage IVA Nasal Cavity and Paranasal Sinus Squamous C
 DB00515	C3897523	Cisplatin	Stage IVA Lip and Oral Cavity Squamous Cell Carcinoma	False	1	Withdrawn	Phase 1	operational	False	True	unmapped	False	True	False	False	False	False	False	False	0			False	False
 DB00520	C0006840	Caspofungin	Candidiasis	False	1	Terminated	Phase 3	unmatched	False	False	umls_xref	True	True	False	True	False	False	True	False	5	candidiasis	candidiasis	True	True
 DB00520	C0085082	Caspofungin	Fungemia	False	1	Terminated	Phase 3	unmatched	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB00523	C0024137	Alitretinoin	Lupus Erythematosus, Cutaneous	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	1	cutaneous lupus erythematosus		False	False
+DB00523	C0024137	Alitretinoin	Lupus Erythematosus, Cutaneous	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	False	False	False	False	False	False	False	1	cutaneous lupus erythematosus		False	False
 DB00526	C0001418	Oxaliplatin	Adenocarcinoma	False	1	Terminated	Phase 2	design	False	False	umls_xref	False	True	False	False	False	False	False	False	0	adenocarcinoma		False	False
 DB00526	C0003614	Oxaliplatin	Appendiceal Neoplasms	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	False	True	False	False	False	False	False	False	0	appendiceal neoplasm		False	False
 DB00526	C0007102	Oxaliplatin	Malignant tumor of colon	False	8	Terminated|Withdrawn	Phase 1/Phase 2|Phase 2|Phase 3	operational|operational|operational|operational|operational|operational|not_reported|uninformative	False	False	umls_xref	False	True	False	False	False	True	False	False	0	malignant colon neoplasm		False	True
@@ -1319,7 +1319,7 @@ DB00531	C1955861	Cyclophosphamide	T-Cell Large Granular Lymphocyte Leukemia	Fals
 DB00537	C0004623	Ciprofloxacin	Bacterial Infections	False	1	Terminated	Phase 1/Phase 2	uninformative	False	False	umls_xref	True	True	False	True	False	True	True	False	16	bacterial infectious disease	bacterial infectious disease	True	True
 DB00537	C0015967	Ciprofloxacin	Fever	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	2	Fever		False	False
 DB00537	C0021368	Ciprofloxacin	Inflammation	False	1	Terminated	Phase 1/Phase 2	uninformative	False	False	name	True	True	False	False	False	False	False	False	1	inflammation|inflammatory response		False	False
-DB00539	C0027661	Toremifene	Neoplasms, Hormone-Dependent	False	1	Terminated	Phase 3	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
+DB00539	C0027661	Toremifene	Neoplasms, Hormone-Dependent	False	1	Terminated	Phase 3	operational	False	True	unmapped	True	False	False	False	False	False	False	False	0			False	False
 DB00541	C0004903	Vincristine	Beckwith-Wiedemann Syndrome	False	1	Suspended	Phase 3	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	0	Beckwith-Wiedemann syndrome		False	False
 DB00541	C0022665	Vincristine	Kidney Neoplasm	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	kidney neoplasm		False	False
 DB00541	C0023418	Vincristine	leukemia	False	2	Terminated|Withdrawn	Phase 2|Phase 3	not_reported|safety	True	False	umls_xref	True	True	False	False	False	True	False	False	0	leukemia		False	True
@@ -1401,7 +1401,7 @@ DB00555	C0005586	Lamotrigine	Bipolar Disorder	False	2	Terminated	Phase 1|Phase 3
 DB00559	C0031190	Bosentan	Persistent Fetal Circulation Syndrome	False	1	Terminated	Phase 3	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	1	persistent fetal circulation syndrome		False	False
 DB00560	C1400574	Tigecycline	Dialysis Catheter Infection	False	1	Terminated	Phase 3	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00563	C0018784	Methotrexate	Sensorineural Hearing Loss (disorder)	False	1	Terminated	Phase 3	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	1	sensorineural hearing loss disorder		False	False
-DB00563	C0021368	Methotrexate	Inflammation	False	1	Withdrawn	Phase 2	design	False	False	name	True	True	False	False	False	True	False	False	1	inflammation|inflammatory response		False	True
+DB00563	C0021368	Methotrexate	Inflammation	False	1	Withdrawn	Phase 2	design	False	False	name	True	True	False	False	False	False	False	False	1	inflammation|inflammatory response		False	False
 DB00563	C0023418	Methotrexate	leukemia	False	3	Terminated	Phase 2|Phase 3	uninformative|safety|efficacy	True	False	umls_xref	True	True	False	False	False	True	False	False	213	leukemia		False	True
 DB00563	C0023452	Methotrexate	Leukemia, Lymphocytic, Acute, L1	False	1	Terminated	Phase 1	unmatched	False	False	umls_xref	True	True	False	False	True	False	False	True	1	childhood acute lymphoblastic leukemia	acute lymphoblastic leukemia|childhood leukemia	True	True
 DB00563	C0042109	Methotrexate	Urticaria	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	2	urticaria		False	False
@@ -1456,9 +1456,9 @@ DB00605	C0007102	Sulindac	Malignant tumor of colon	False	2	Terminated	Phase 2	op
 DB00605	C0023467	Sulindac	Leukemia, Myelocytic, Acute	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	acute myeloid leukemia		False	False
 DB00605	C1319315	Sulindac	Adenocarcinoma of large intestine	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	colorectal adenocarcinoma		False	False
 DB00608	C0024530	Chloroquine	Malaria	False	2	Suspended|Withdrawn	Phase 3	unmatched|operational	False	False	umls_xref	True	True	False	True	False	True	True	False	75	malaria	malaria	True	True
-DB00612	C0024117	Bisoprolol	Chronic Obstructive Airway Disease	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	True	False	False	6	chronic obstructive pulmonary disease		False	True
+DB00612	C0024117	Bisoprolol	Chronic Obstructive Airway Disease	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	6	chronic obstructive pulmonary disease		False	False
 DB00619	C0011644	Imatinib	Scleroderma	False	1	Terminated	Phase 2	safety	True	False	umls_xref	True	True	False	False	False	False	False	False	7	scleroderma		False	False
-DB00619	C0020542	Imatinib	Pulmonary Hypertension	False	2	Terminated|Withdrawn	Phase 1|Phase 2	operational|not_reported	False	False	umls_xref	True	True	False	False	True	False	False	False	9	pulmonary hypertension	hypertensive disorder	True	True
+DB00619	C0020542	Imatinib	Pulmonary Hypertension	False	2	Terminated|Withdrawn	Phase 1|Phase 2	operational|not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	9	pulmonary hypertension		False	False
 DB00619	C0023418	Imatinib	leukemia	False	5	Terminated	Phase 2|Phase 3	not_reported|not_reported|operational|operational|safety	True	False	umls_xref	True	True	False	False	False	True	False	False	177	leukemia		False	True
 DB00619	C0271066	Imatinib	Choroidal retinal neovascularization	False	1	Withdrawn	Phase 1	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00619	C0278785	Imatinib	recurrent adult acute lymphoblastic leukemia	False	1	Terminated	Phase 1/Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
@@ -1468,11 +1468,11 @@ DB00619	C0280100	Imatinib	Solid tumour	False	1	Terminated	Phase 2	operational	Fa
 DB00619	C0600518	Imatinib	Choroidal Neovascularization	False	1	Withdrawn	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	choroidal neovascularization		False	False
 DB00619	C0751690	Imatinib	Malignant Peripheral Nerve Sheath Tumor	False	1	Terminated	Phase 2/Phase 3	efficacy	True	False	umls_xref	True	True	False	False	False	False	False	False	2	malignant peripheral nerve sheath tumor		False	False
 DB00619	C1292778	Imatinib	Chronic myeloproliferative disorder	False	1	Terminated	Phase 2	unmatched	False	False	umls_xref	True	True	False	False	False	True	False	False	147	myeloproliferative disorder		False	True
-DB00620	C0004623	Triamcinolone	Bacterial Infections	False	3	Terminated	Phase 1/Phase 2	uninformative|uninformative|uninformative	False	False	umls_xref	True	True	True	True	False	True	False	False	0	bacterial infectious disease	bacterial infectious disease	True	True
+DB00620	C0004623	Triamcinolone	Bacterial Infections	False	3	Terminated	Phase 1/Phase 2	uninformative|uninformative|uninformative	False	False	umls_xref	True	True	False	False	False	True	False	False	0	bacterial infectious disease		False	True
 DB00620	C0021368	Triamcinolone	Inflammation	False	3	Terminated	Phase 1/Phase 2	uninformative|uninformative|uninformative	False	False	name	True	True	False	False	False	True	False	False	5	inflammation|inflammatory response		False	True
 DB00622	C0265110	Nicardipine	Cerebral Vasospasm	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB00622	C2937358	Nicardipine	Cerebral Hemorrhage	False	1	Suspended	Phase 3	unmatched	False	False	umls_xref	True	True	True	True	False	False	False	False	4	intracerebral hemorrhage	intracerebral hemorrhage	True	True
-DB00624	C0020538	Testosterone	Hypertensive disease	False	3	Withdrawn	Phase 0	not_reported|not_reported|not_reported	False	False	umls_xref	True	True	True	True	False	False	False	False	1	hypertensive disorder	hypertensive disorder	True	True
+DB00622	C2937358	Nicardipine	Cerebral Hemorrhage	False	1	Suspended	Phase 3	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	4	intracerebral hemorrhage		False	False
+DB00624	C0020538	Testosterone	Hypertensive disease	False	3	Withdrawn	Phase 0	not_reported|not_reported|not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	1	hypertensive disorder		False	False
 DB00624	C0020619	Testosterone	Hypogonadism	False	3	Withdrawn	Phase 1	operational|operational|operational	False	True	umls_xref	True	True	False	True	False	True	True	False	66	hypogonadism	hypogonadism	True	True
 DB00624	C0026769	Testosterone	Multiple Sclerosis	False	3	Terminated	Phase 2	operational|operational|operational	False	True	name	True	True	False	False	False	False	False	False	1	multiple sclerosis symptom measurement		False	False
 DB00624	C0271623	Clomifene	Hypogonadotropic hypogonadism	True	2	Terminated	Phase 2	operational|operational	False	True	umls_xref	True	True	True	True	True	False	True	True	11	Gonadotropin deficiency|hypogonadotropic hypogonadism	Gonadotropin deficiency|hypogonadism|hypogonadotropic hypogonadism	True	True
@@ -1505,7 +1505,7 @@ DB00633	C0876926	Dexmedetomidine	Traumatic Brain Injury	False	1	Withdrawn	Phase 
 DB00633	C1145670	Dexmedetomidine	Respiratory Failure	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	5	respiratory failure		False	False
 DB00635	C0007112	Prednisone	Adenocarcinoma of prostate	False	2	Terminated|Withdrawn	Phase 1/Phase 2|Phase 2	operational|operational	False	True	umls_xref	True	True	False	False	False	False	False	False	3	prostate adenocarcinoma		False	False
 DB00635	C0023452	Prednisone	Leukemia, Lymphocytic, Acute, L1	False	1	Terminated	Phase 1	unmatched	False	False	umls_xref	True	True	False	False	True	False	False	False	0	childhood acute lymphoblastic leukemia	acute lymphoblastic leukemia	True	True
-DB00635	C0024530	Prednisone	Malaria	False	1	Withdrawn	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	True	False	False	0	malaria		False	True
+DB00635	C0024530	Prednisone	Malaria	False	1	Withdrawn	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	malaria		False	False
 DB00635	C0026764	Prednisone	Multiple Myeloma	False	2	Terminated	Phase 1/Phase 2	operational|design	False	False	umls_xref	True	True	False	False	False	False	False	False	60	plasma cell myeloma		False	False
 DB00635	C0032533	Prednisone	Polymyalgia Rheumatica	False	2	Terminated	Phase 2|Phase 3	unmatched|not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	6	polymyalgia rheumatica		False	False
 DB00635	C0278838	Prednisone	Prostate cancer recurrent	False	1	Terminated	Phase 1/Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
@@ -1519,7 +1519,7 @@ DB00635	C4049338	Prednisone	Castration-resistant prostate cancer	False	1	Termina
 DB00641	C0004153	Simvastatin	Atherosclerosis	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	True	False	False	False	8	atherosclerosis	arteriosclerosis	True	True
 DB00641	C0010674	Simvastatin	Cystic Fibrosis	False	1	Withdrawn	Phase 1/Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	2	cystic fibrosis		False	False
 DB00641	C0011581	Simvastatin	Depressive disorder	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	depressive disorder		False	False
-DB00641	C0011849	Simvastatin	Diabetes Mellitus	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	True	True	False	True	False	False	36	diabetes mellitus	diabetes mellitus	True	True
+DB00641	C0011849	Simvastatin	Diabetes Mellitus	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	True	False	False	36	diabetes mellitus		False	True
 DB00641	C0020473	Simvastatin	Hyperlipidemia	False	2	Terminated	Phase 3	not_reported|not_reported	False	False	umls_xref	True	True	False	True	True	True	True	True	10	hyperlipidemia	Abnormal circulating lipid concentration|hyperlipidemia	True	True
 DB00641	C0020538	Simvastatin	Hypertensive disease	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	16	hypertensive disorder		False	False
 DB00641	C0032285	Simvastatin	Pneumonia	False	1	Terminated	Phase 3	efficacy	True	False	umls_xref	True	True	False	False	False	False	False	False	3	pneumonia		False	False
@@ -1528,7 +1528,7 @@ DB00641	C0342879	Simvastatin	Primary hypercholesterolemia	False	2	Terminated	Pha
 DB00641	C0549399	Simvastatin	Low density lipoprotein increased	False	2	Terminated	Phase 2	not_reported|operational	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00641	C0600139	Simvastatin	Prostate carcinoma	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	prostate carcinoma		False	False
 DB00641	C0948780	Simvastatin	Rhinosinusitis	False	1	Terminated	Phase 2	efficacy	True	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB00641	C1956346	Simvastatin	Coronary Artery Disease	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	True	True	False	False	True	False	19	coronary artery disorder	coronary artery disorder	True	True
+DB00641	C1956346	Simvastatin	Coronary Artery Disease	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	True	False	False	True	False	19	coronary artery disorder	coronary artery disorder	True	True
 DB00642	C0014859	Pemetrexed	Esophageal Neoplasms	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	3	neoplasm of esophagus		False	False
 DB00642	C0024121	Pemetrexed	Lung Neoplasms	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	True	False	False	336	lung neoplasm		False	True
 DB00642	C0149925	Pemetrexed	Small cell carcinoma of lung	False	1	Terminated	Phase 1	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	10	small cell lung carcinoma		False	False
@@ -1590,7 +1590,7 @@ DB00678	C0362046	Losartan	Prediabetes syndrome	False	1	Terminated	Phase 2	operat
 DB00678	C1696708	Losartan	Prehypertension	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00681	C0085436	Amphotericin B	Meningitis, Cryptococcal	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	True	True	False	True	True	6	Cryptococcal meningitis	Cryptococcal meningitis|cryptococcosis|fungal meningitis	True	True
 DB00681	C2063401	Amphotericin B	Lung transplant recipient	False	1	Suspended	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB00682	C0020542	Warfarin	Pulmonary Hypertension	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	True	False	False	False	2	pulmonary hypertension	hypertensive disorder	True	True
+DB00682	C0020542	Warfarin	Pulmonary Hypertension	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	2	pulmonary hypertension		False	False
 DB00682	C0085786	Warfarin	Hamman-Rich syndrome	False	1	Terminated	Phase 3	safety	True	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00682	C0277554	Warfarin	primary disorders	False	1	Terminated	Phase 2/Phase 3	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00683	C0030193	Midazolam	Pain	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	19	Pain		False	False
@@ -1598,7 +1598,7 @@ DB00683	C0280100	Midazolam	Solid tumour	False	1	Withdrawn	Phase 1	uninformative	
 DB00683	C0876926	Midazolam	Traumatic Brain Injury	False	1	Withdrawn	Phase 2	unmatched	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00684	C0004626	Tobramycin	Pneumonia, Bacterial	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	True	True	False	True	0	bacterial pneumonia	bacterial infectious disease	True	True
 DB00688	C0019829	Mycophenolate mofetil	Hodgkin Disease	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	classic Hodgkin lymphoma		False	False
-DB00688	C0020981	Mycophenolate mofetil	Angioimmunoblastic Lymphadenopathy	False	1	Suspended	Phase 2	operational	False	True	name	True	True	False	False	True	False	False	False	0	Immunoblastic Lymphadenopathy	lymphoma	True	True
+DB00688	C0020981	Mycophenolate mofetil	Angioimmunoblastic Lymphadenopathy	False	1	Suspended	Phase 2	operational	False	True	name	True	True	False	False	False	False	False	False	0	Immunoblastic Lymphadenopathy		False	False
 DB00688	C0023418	Mycophenolate mofetil	leukemia	False	5	Terminated	Phase 1|Phase 2|Phase 3	operational|operational|operational|efficacy|operational	True	False	umls_xref	True	True	False	False	False	False	False	False	42	leukemia		False	False
 DB00688	C0023470	Mycophenolate mofetil	Myeloid Leukemia	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	23	myeloid leukemia		False	False
 DB00688	C0024141	Mycophenolate mofetil	Lupus Erythematosus, Systemic	False	1	Terminated	Phase 2/Phase 3	efficacy	True	False	umls_xref	True	True	False	False	False	False	False	False	8	systemic lupus erythematosus		False	False
@@ -1692,7 +1692,7 @@ DB00745	C0876926	Modafinil	Traumatic Brain Injury	False	1	Terminated	Phase 3	ope
 DB00745	C1377665	Modafinil	central nervous system tumor, pediatric	False	1	Terminated	Phase 2	efficacy	True	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00745	C1533217	Modafinil	Methamphetamine dependence	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	9	methamphetamine dependence		False	False
 DB00746	C0038525	Deferoxamine	Subarachnoid Hemorrhage	False	1	Terminated	Phase 0	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	0	subarachnoid hemorrhage		False	False
-DB00747	C0041696	Scopolamine	Unipolar Depression	False	1	Terminated	Phase 2	not_reported	False	False	name	True	True	False	False	True	False	False	False	4	major depressive disorder	depressive disorder	True	True
+DB00747	C0041696	Scopolamine	Unipolar Depression	False	1	Terminated	Phase 2	not_reported	False	False	name	True	True	False	False	False	False	False	False	4	major depressive disorder		False	False
 DB00749	C0026764	Etodolac	Multiple Myeloma	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	1	plasma cell myeloma		False	False
 DB00755	C0023467	Tretinoin	Leukemia, Myelocytic, Acute	False	1	Withdrawn	Phase 3	uninformative	False	False	umls_xref	True	True	False	False	False	True	False	False	55	acute myeloid leukemia		False	True
 DB00755	C0024137	Tretinoin	Lupus Erythematosus, Cutaneous	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	0	cutaneous lupus erythematosus		False	False
@@ -1706,10 +1706,10 @@ DB00762	C0004114	Irinotecan	Astrocytoma	False	1	Terminated	Phase 2	operational	F
 DB00762	C0007102	Irinotecan	Malignant tumor of colon	False	9	Terminated|Withdrawn	Phase 1|Phase 1/Phase 2|Phase 2	not_reported|operational|unmatched|operational|not_reported|operational|efficacy|operational|uninformative	True	False	umls_xref	True	True	False	False	True	True	False	True	12	malignant colon neoplasm	colorectal cancer	True	True
 DB00762	C0009375	Irinotecan	Colonic Neoplasms	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	True	False	False	12	colonic neoplasm		False	True
 DB00762	C0009404	Irinotecan	Colorectal Neoplasms	False	5	Terminated	Phase 1|Phase 2	not_reported|unmatched|operational|not_reported|not_reported	False	False	umls_xref	True	True	False	False	False	True	False	False	417	colorectal neoplasm		False	True
-DB00762	C0011991	Irinotecan	Diarrhea	False	1	Terminated	Phase 2	not_reported	False	False	name	True	True	True	True	False	False	False	False	1	diarrheal disease	diarrheal disease	True	True
+DB00762	C0011991	Irinotecan	Diarrhea	False	1	Terminated	Phase 2	not_reported	False	False	name	True	True	False	False	False	False	False	False	1	diarrheal disease		False	False
 DB00762	C0014132	Irinotecan	Endocrine Gland Neoplasms	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	69	Neoplasm of the endocrine system|endocrine gland neoplasm		False	False
-DB00762	C0022665	Irinotecan	Kidney Neoplasm	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	True	False	False	False	3	kidney neoplasm	Abnormality of the kidney|kidney disorder	True	True
-DB00762	C0023903	Irinotecan	Liver neoplasms	False	1	Terminated	Phase 2	unmatched	False	False	umls_xref	True	True	False	False	True	False	False	False	0	Neoplasm of the liver	Abnormality of the liver	True	True
+DB00762	C0022665	Irinotecan	Kidney Neoplasm	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	3	kidney neoplasm		False	False
+DB00762	C0023903	Irinotecan	Liver neoplasms	False	1	Terminated	Phase 2	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	0	Neoplasm of the liver		False	False
 DB00762	C0024623	Capecitabine	Malignant neoplasm of stomach	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	74	gastric cancer		False	False
 DB00762	C0027819	Irinotecan	Neuroblastoma	False	2	Terminated	Phase 1|Phase 1/Phase 2	operational|operational	False	True	umls_xref	True	True	False	False	False	False	False	False	17	neuroblastoma		False	False
 DB00762	C0031149	Irinotecan	Peritoneal Neoplasms	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	3	peritoneal neoplasm		False	False
@@ -1801,11 +1801,11 @@ DB00773	C2347540	Etoposide	Adult Acute Myeloid Leukemia with t(8;21)(q22;q22); R
 DB00773	C2347748	Etoposide	Adult Erythroleukemia	False	2	Terminated	Phase 1	operational|operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00773	C2347753	Etoposide	Adult Pure Erythroid Leukemia	False	2	Terminated	Phase 1	operational|operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00773	C2825114	Etoposide	Adult Acute Myeloid Leukemia with inv(16)(p13.1q22); CBFB-MYH11	False	2	Terminated	Phase 1	operational|operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB00783	C0020538	Methyltestosterone	Hypertensive disease	False	3	Withdrawn	Phase 0	not_reported|not_reported|not_reported	False	False	umls_xref	True	True	True	True	False	False	False	False	4	hypertensive disorder	hypertensive disorder	True	True
+DB00783	C0020538	Methyltestosterone	Hypertensive disease	False	3	Withdrawn	Phase 0	not_reported|not_reported|not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	4	hypertensive disorder		False	False
 DB00783	C0021359	Estradiol	Infertility	False	3	Terminated	Phase 2/Phase 3	unmatched|unmatched|unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	22	Infertility|infertility disorder		False	False
 DB00783	C0241616	Estradiol	Atrophy of vagina	False	2	Terminated	Phase 3	operational|operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00783	C0566951	Estradiol	Vaginal ulcer	False	1	Withdrawn	Phase 2	design	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB00783	C3163805	Estradiol	Malignant epithelial neoplasm of female breast	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	True	False	False	False	False	False	0			False	True
+DB00783	C3163805	Estradiol	Malignant epithelial neoplasm of female breast	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00788	C0018681	Naproxen	Headache	False	1	Withdrawn	Phase 3	operational	False	True	umls_xref	True	True	False	True	False	False	True	False	1	Headache	Headache	True	True
 DB00806	C0011854	Pentoxifylline	Diabetes Mellitus, Insulin-Dependent	False	1	Terminated	Phase 1/Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	type 1 diabetes mellitus		False	False
 DB00806	C0019187	Pentoxifylline	Hepatitis, Alcoholic	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	8	alcoholic hepatitis		False	False
@@ -1821,8 +1821,8 @@ DB00818	C0020538	Propofol	Hypertensive disease	False	1	Withdrawn	Phase 3	uninfor
 DB00818	C0023418	Propofol	leukemia	False	1	Withdrawn	Phase 2/Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	leukemia		False	False
 DB00818	C0876926	Propofol	Traumatic Brain Injury	False	1	Withdrawn	Phase 2	design	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00819	C0751956	Acetazolamide	Acute Cerebrovascular Accidents	False	1	Withdrawn	Phase 2	operational	False	True	name	True	True	False	False	False	False	False	False	0	stroke disorder		False	False
-DB00820	C0026764	Tadalafil	Multiple Myeloma	False	1	Terminated	Phase 2	efficacy	True	False	umls_xref	True	True	True	True	False	False	False	False	2	plasma cell myeloma	plasma cell myeloma	True	True
-DB00820	C0033117	Tadalafil	Priapism	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	True	True	False	False	False	False	1	Priapism	Priapism	True	True
+DB00820	C0026764	Tadalafil	Multiple Myeloma	False	1	Terminated	Phase 2	efficacy	True	False	umls_xref	True	True	False	False	False	False	False	False	2	plasma cell myeloma		False	False
+DB00820	C0033117	Tadalafil	Priapism	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	1	Priapism		False	False
 DB00834	C0001723	Mifepristone	Affective Disorders, Psychotic	False	1	Terminated	Phase 3	not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00834	C0221406	Mifepristone	Pituitary-dependent Cushing's disease	False	1	Withdrawn	Phase 3	operational	False	True	name	True	True	False	False	False	False	False	False	1	ACTH-dependent Cushing syndrome		False	False
 DB00836	C0235952	Loperamide	Clostridium difficile diarrhea	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
@@ -1889,7 +1889,7 @@ DB00860	C2921627	Prednisolone	Clinically isolated syndrome	False	3	Suspended	Pha
 DB00862	C0010674	Vardenafil	Cystic Fibrosis	False	1	Suspended	Phase 2	uninformative	False	False	umls_xref	True	True	False	False	False	False	False	False	1	cystic fibrosis		False	False
 DB00864	C0018133	Tacrolimus	Graft-vs-Host Disease	False	1	Terminated	Phase 2/Phase 3	safety	True	False	umls_xref	True	True	False	True	False	False	True	False	54	graft versus host disease	graft versus host disease	True	True
 DB00864	C0019829	Tacrolimus	Hodgkin Disease	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	classic Hodgkin lymphoma		False	False
-DB00864	C0020981	Tacrolimus	Angioimmunoblastic Lymphadenopathy	False	1	Suspended	Phase 2	operational	False	True	name	True	True	False	False	True	False	False	False	0	Immunoblastic Lymphadenopathy	lymphoma	True	True
+DB00864	C0020981	Tacrolimus	Angioimmunoblastic Lymphadenopathy	False	1	Suspended	Phase 2	operational	False	True	name	True	True	False	False	False	False	False	False	0	Immunoblastic Lymphadenopathy		False	False
 DB00864	C0023418	Tacrolimus	leukemia	False	3	Terminated	Phase 2	efficacy|efficacy|operational	True	False	umls_xref	True	True	False	False	False	False	False	False	30	leukemia		False	False
 DB00864	C0024143	Tacrolimus	Lupus Nephritis	False	2	Terminated|Withdrawn	Phase 3	operational|safety	True	False	umls_xref	True	True	False	False	False	False	False	False	18	lupus nephritis		False	False
 DB00864	C0027022	Tacrolimus	Myeloproliferative disease	False	1	Terminated	Phase 2	efficacy	True	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
@@ -1923,7 +1923,7 @@ DB00864	C0280744	Tacrolimus	previously treated myelodysplastic syndromes	False	1
 DB00864	C0280745	Tacrolimus	secondary myelodysplastic syndromes	False	1	Suspended	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00864	C0349632	Tacrolimus	Splenic Marginal Zone B-Cell Lymphoma	False	1	Suspended	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	splenic marginal zone lymphoma		False	False
 DB00864	C0349644	Tacrolimus	Malignant lymphoma of testis	False	1	Suspended	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB00864	C0432487	Tacrolimus	Post-transplant lymphoproliferative disorder	False	1	Suspended	Phase 2	operational	False	True	umls_xref	True	True	True	True	False	False	False	False	0	post-transplant lymphoproliferative disease	post-transplant lymphoproliferative disease	True	True
+DB00864	C0432487	Tacrolimus	Post-transplant lymphoproliferative disorder	False	1	Suspended	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	post-transplant lymphoproliferative disease		False	False
 DB00864	C0677725	Tacrolimus	Mantle cell lymphoma recurrent	False	1	Suspended	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00864	C0686586	Tacrolimus	Acute leukemia in remission	False	1	Terminated	Phase 2	unmatched	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00864	C0855096	Tacrolimus	B-cell small lymphocytic lymphoma recurrent	False	1	Suspended	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
@@ -1951,7 +1951,7 @@ DB00877	C0007137	Sirolimus	Squamous cell carcinoma	False	1	Terminated	Phase 2	op
 DB00877	C0018133	Sirolimus	Graft-vs-Host Disease	False	1	Terminated	Phase 2/Phase 3	safety	True	False	umls_xref	True	True	False	False	False	False	False	False	41	graft versus host disease		False	False
 DB00877	C0022680	Sirolimus	Polycystic Kidney Diseases	False	1	Terminated	Phase 2/Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	8	Polycystic kidney dysplasia|polycystic kidney disease		False	False
 DB00877	C0023418	Sirolimus	leukemia	False	1	Terminated	Phase 1	uninformative	False	False	umls_xref	True	True	False	False	False	False	False	False	26	leukemia		False	False
-DB00877	C0023903	Sirolimus	Liver neoplasms	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	True	False	False	False	0	Neoplasm of the liver	Abnormality of the liver	True	True
+DB00877	C0023903	Sirolimus	Liver neoplasms	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	Neoplasm of the liver		False	False
 DB00877	C0026764	Sirolimus	Multiple Myeloma	False	1	Withdrawn	Phase 2	uninformative	False	False	umls_xref	True	True	False	True	False	False	True	False	8	plasma cell myeloma	plasma cell myeloma	True	True
 DB00877	C0026769	Sirolimus	Multiple Sclerosis	False	1	Terminated	Phase 1/Phase 2	not_reported	False	False	name	True	True	False	False	False	False	False	False	1	multiple sclerosis symptom measurement		False	False
 DB00877	C0027627	Sirolimus	Neoplasm Metastasis	False	2	Terminated	Phase 2|Phase 3	not_reported|operational	False	False	name	True	True	False	False	False	False	False	False	0	metastasis		False	False
@@ -1998,7 +1998,7 @@ DB00877	C3898222	Sirolimus	Mucosal Melanoma	False	1	Terminated	Phase 2	not_repor
 DB00878	C0011334	Chlorhexidine	Dental caries	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	4	dental caries		False	False
 DB00878	C2937358	Chlorhexidine	Cerebral Hemorrhage	False	1	Terminated	Phase 1	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	0	intracerebral hemorrhage		False	False
 DB00879	C2363741		HIV-1 infection	False	1	Withdrawn	Phase 2	design	False	False	name	True	True	False	True	True	False	True	True	8	HIV-1 infection	HIV infectious disease|HIV-1 infection	True	True
-DB00882	C0032460	Clomifene	Polycystic Ovary Syndrome	False	1	Withdrawn	Phase 3	operational	False	True	umls_xref	True	True	True	True	False	False	True	False	48	polycystic ovary syndrome	polycystic ovary syndrome	True	True
+DB00882	C0032460	Clomifene	Polycystic Ovary Syndrome	False	1	Withdrawn	Phase 3	operational	False	True	umls_xref	True	True	False	True	False	False	True	False	48	polycystic ovary syndrome	polycystic ovary syndrome	True	True
 DB00882	C0271623		Hypogonadotropic hypogonadism	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	2	Gonadotropin deficiency|hypogonadotropic hypogonadism		False	False
 DB00888	C0278722	Mechlorethamine	DS Stage I Plasma Cell Myeloma	False	1	Suspended	Phase 1/Phase 2	unmatched	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00888	C0278723	Mechlorethamine	DS Stage II Plasma Cell Myeloma	False	1	Suspended	Phase 1/Phase 2	unmatched	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
@@ -2035,7 +2035,7 @@ DB00916	C0279680	Metronidazole	Transitional cell carcinoma of bladder	False	1	Te
 DB00916	C0279681	Metronidazole	Bladder Squamous Cell Carcinoma	False	1	Terminated	Phase 1	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	0	bladder squamous cell carcinoma		False	False
 DB00916	C0279682	Metronidazole	Bladder Adenocarcinoma	False	1	Terminated	Phase 1	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	0	bladder adenocarcinoma		False	False
 DB00921	C0019337	Buprenorphine	Heroin Dependence	False	2	Terminated	Phase 2	not_reported|not_reported	False	False	umls_xref	False	True	False	False	True	False	False	False	0	heroin dependence	opiate dependence	True	True
-DB00921	C0027412	Buprenorphine	Opioid-Related Disorders	False	2	Terminated	Phase 2	not_reported|not_reported	False	False	name	False	True	False	True	True	False	False	False	0	opiate dependence	drug dependence|opiate dependence	True	True
+DB00921	C0027412	Buprenorphine	Opioid-Related Disorders	False	2	Terminated	Phase 2	not_reported|not_reported	False	False	name	False	True	False	True	False	False	False	False	0	opiate dependence	opiate dependence	True	True
 DB00921	C0745398	Buprenorphine	INTUBATION ENDOTRACHEAL PROLONGED	False	1	Withdrawn	Phase 3	operational	False	True	unmapped	False	True	False	False	False	False	False	False	0			False	False
 DB00921	C1719392	Buprenorphine	Other acute postoperative pain	False	1	Withdrawn	Phase 3	operational	False	True	unmapped	False	True	False	False	False	False	False	False	0			False	False
 DB00924	C0021603	Cyclobenzaprine	Sleep Initiation and Maintenance Disorders	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
@@ -2075,7 +2075,7 @@ DB00945	C0020538	Acetylsalicylic acid	Hypertensive disease	False	1	Terminated	Ph
 DB00945	C0549399	Acetylsalicylic acid	Low density lipoprotein increased	False	2	Terminated	Phase 2	not_reported|operational	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB00945	C0850572	Acetylsalicylic acid	Adenomatous polyp of colon	False	1	Terminated	Phase 3	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	0	adenomatous colon polyp		False	False
 DB00945	C0948089	Acetylsalicylic acid	Acute Coronary Syndrome	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	True	True	False	True	True	18	acute coronary syndrome	acute coronary syndrome|myocardial ischemia	True	True
-DB00947	C3163805	Fulvestrant	Malignant epithelial neoplasm of female breast	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
+DB00947	C3163805	Fulvestrant	Malignant epithelial neoplasm of female breast	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	False	False	False	False	False	False	False	0			False	False
 DB00951	C0019693	Isoniazid	HIV Infections	False	1	Terminated	Phase 2/Phase 3	efficacy	True	False	umls_xref	True	True	False	True	False	False	True	False	12	HIV infectious disease	HIV infectious disease	True	True
 DB00951	C0041296	Isoniazid	Tuberculosis	False	1	Terminated	Phase 2/Phase 3	efficacy	True	False	umls_xref	True	True	False	True	False	True	True	False	85	tuberculosis	tuberculosis	True	True
 DB00951	C0857825	Isoniazid	Infection in solid organ transplant recipients	False	1	Terminated	Phase 3	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
@@ -2210,7 +2210,7 @@ DB00997	C0007097	Doxorubicin	Carcinoma	False	1	Terminated	Phase 1	operational	Fa
 DB00997	C0015558	Doxorubicin	Fallopian Tube Neoplasms	False	1	Terminated	Phase 1	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	44	fallopian tube neoplasm		False	False
 DB00997	C0022665	Doxorubicin	Kidney Neoplasm	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	14	kidney neoplasm		False	False
 DB00997	C0023418		leukemia	False	1	Terminated	Phase 2	safety	True	False	umls_xref	True	True	False	False	False	True	False	False	101	leukemia		False	True
-DB00997	C0023903	Doxorubicin	Liver neoplasms	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	True	False	False	False	2	Neoplasm of the liver	Abnormality of the liver	True	True
+DB00997	C0023903	Doxorubicin	Liver neoplasms	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	2	Neoplasm of the liver		False	False
 DB00997	C0026764	Thalidomide	Multiple Myeloma	True	1	Terminated	Phase 2	design	False	False	umls_xref	True	True	True	True	False	False	True	False	82	plasma cell myeloma	plasma cell myeloma	True	True
 DB00997	C0027627	Doxorubicin	Neoplasm Metastasis	False	1	Terminated	Phase 2	operational	False	True	name	True	True	False	False	False	False	False	False	1	metastasis		False	False
 DB00997	C0029928	Doxorubicin	Ovarian Diseases	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	Abnormality of the ovary		False	False
@@ -2304,7 +2304,7 @@ DB01015	C0041296	Sulfamethoxazole	Tuberculosis	False	1	Terminated	Phase 2/Phase 
 DB01015	C1535939		Pneumocystis jiroveci pneumonia	False	1	Terminated	Phase 3	not_reported	False	False	umls_xref	True	True	False	True	False	False	True	False	2	pneumocystosis	pneumocystosis	True	True
 DB01017	C0007282	Minocycline	Carotid Stenosis	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01024	C0019829	Mycophenolic acid	Hodgkin Disease	False	2	Terminated	Phase 2	operational|operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	classic Hodgkin lymphoma		False	False
-DB01024	C0020981	Mycophenolic acid	Angioimmunoblastic Lymphadenopathy	False	2	Suspended	Phase 2	operational|operational	False	True	name	True	True	False	False	True	False	False	False	0	Immunoblastic Lymphadenopathy	lymphoma	True	True
+DB01024	C0020981	Mycophenolic acid	Angioimmunoblastic Lymphadenopathy	False	2	Suspended	Phase 2	operational|operational	False	True	name	True	True	False	False	False	False	False	False	0	Immunoblastic Lymphadenopathy		False	False
 DB01024	C0023418	Mycophenolic acid	leukemia	False	9	Terminated	Phase 1|Phase 2|Phase 3	operational|operational|operational|operational|operational|efficacy|efficacy|operational|operational	True	False	umls_xref	True	True	False	False	False	False	False	False	1	leukemia		False	False
 DB01024	C0023470	Mycophenolic acid	Myeloid Leukemia	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	myeloid leukemia		False	False
 DB01024	C0024141	Mycophenolic acid	Lupus Erythematosus, Systemic	False	2	Terminated	Phase 2/Phase 3	efficacy|efficacy	True	False	umls_xref	True	True	False	False	False	False	False	False	2	systemic lupus erythematosus		False	False
@@ -2440,11 +2440,11 @@ DB01042	C0278620	Melphalan	refractory plasma cell neoplasm	False	1	Withdrawn	Pha
 DB01042	C0278722	Melphalan	DS Stage I Plasma Cell Myeloma	False	1	Suspended	Phase 1/Phase 2	unmatched	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01042	C0278723	Melphalan	DS Stage II Plasma Cell Myeloma	False	1	Suspended	Phase 1/Phase 2	unmatched	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01042	C0278724	Melphalan	DS Stage III Plasma Cell Myeloma	False	1	Suspended	Phase 1/Phase 2	unmatched	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01043	C0017636	Memantine	Glioblastoma	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	2	glioblastoma		False	False
-DB01043	C0036341	Memantine	Schizophrenia	False	1	Terminated	Phase 3	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	8	schizophrenia		False	False
-DB01043	C0221765	Memantine	Chronic schizophrenia	False	1	Terminated	Phase 3	not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01043	C0236792	Memantine	Asperger Syndrome	False	1	Terminated	Phase 2	unmatched	False	False	name	True	True	False	False	False	False	False	False	3	autism spectrum disorder 1		False	False
-DB01045	C0011860	Rifampicin	Diabetes Mellitus, Non-Insulin-Dependent	False	1	Terminated	Phase 1	not_reported	False	False	umls_xref	True	True	False	False	True	False	False	False	1	type 2 diabetes mellitus	diabetes mellitus	True	True
+DB01043	C0017636	Memantine	Glioblastoma	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	False	False	False	False	False	False	False	2	glioblastoma		False	False
+DB01043	C0036341	Memantine	Schizophrenia	False	1	Terminated	Phase 3	not_reported	False	False	umls_xref	True	False	False	False	False	False	False	False	8	schizophrenia		False	False
+DB01043	C0221765	Memantine	Chronic schizophrenia	False	1	Terminated	Phase 3	not_reported	False	False	unmapped	True	False	False	False	False	False	False	False	0			False	False
+DB01043	C0236792	Memantine	Asperger Syndrome	False	1	Terminated	Phase 2	unmatched	False	False	name	True	False	False	False	False	False	False	False	3	autism spectrum disorder 1		False	False
+DB01045	C0011860	Rifampicin	Diabetes Mellitus, Non-Insulin-Dependent	False	1	Terminated	Phase 1	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	1	type 2 diabetes mellitus		False	False
 DB01050	C0013274	Ibuprofen	Patent ductus arteriosus	False	1	Withdrawn	Phase 2	design	False	False	umls_xref	True	True	True	True	False	False	True	False	28	Patent ductus arteriosus	Patent ductus arteriosus	True	True
 DB01050	C1260331	Ibuprofen	Other sickle-cell disease with vaso-occlusive pain	False	1	Withdrawn	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01050	C2585715	Ibuprofen	Hemoglobin SS disease with vasoocclusive crisis	False	1	Withdrawn	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
@@ -2452,7 +2452,7 @@ DB01050	C2873760	Ibuprofen	Hb-SS disease with vasoocclusive pain	False	1	Withdra
 DB01053	C0033860	Benzylpenicillin	Psoriasis	False	3	Terminated	Phase 2	operational|operational|operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	psoriasis		False	False
 DB01054	C0745133	Nitrendipine	Isolated systolic hypertension	False	1	Terminated	Phase 2	not_reported	False	False	name	True	False	False	False	False	False	False	False	0	Isolated systolic hypertension		False	False
 DB01060	C0037199	Amoxicillin	Sinusitis	False	1	Terminated	Phase 3	unmatched	False	False	umls_xref	True	True	False	True	False	False	True	False	7	sinusitis	sinusitis	True	True
-DB01065	C0011581	Melatonin	Depressive disorder	False	1	Terminated	Phase 2/Phase 3	operational	False	True	umls_xref	True	True	True	True	False	False	False	False	5	depressive disorder	depressive disorder	True	True
+DB01065	C0011581	Melatonin	Depressive disorder	False	1	Terminated	Phase 2/Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	5	depressive disorder		False	False
 DB01065	C0149878	Melatonin	ENCEPHALOPATHY, HYPOXIC-ISCHEMIC, NEWBORN	False	1	Withdrawn	Phase 1	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01069	C0020450	Promethazine	Hyperemesis Gravidarum	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	hyperemesis gravidarum		False	False
 DB01069	C0027497	Promethazine	Nausea	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	True	True	False	True	True	5	Nausea	Nausea|Nausea and vomiting	True	True
@@ -2548,8 +2548,8 @@ DB01097	C0024143	Leflunomide	Lupus Nephritis	False	1	Terminated	Phase 3	safety	T
 DB01098	C0007102	Rosuvastatin	Malignant tumor of colon	False	1	Terminated	Phase 3	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	0	malignant colon neoplasm		False	False
 DB01098	C0032927	Rosuvastatin	Precancerous Conditions	False	1	Terminated	Phase 3	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	0	precancerous condition		False	False
 DB01098	C2076600	Rosuvastatin	Influenza due to Influenza A virus subtype H1N1	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01099	C0085436	Flucytosine	Meningitis, Cryptococcal	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	2	Cryptococcal meningitis		False	False
-DB01099	C0742909	Flucytosine	CRYPTOCOCCAL INFECTION DISSEMINATED	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
+DB01099	C0085436	Flucytosine	Meningitis, Cryptococcal	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	False	False	False	False	False	False	False	2	Cryptococcal meningitis		False	False
+DB01099	C0742909	Flucytosine	CRYPTOCOCCAL INFECTION DISSEMINATED	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	False	False	False	False	False	False	False	0			False	False
 DB01101	C0001418		Adenocarcinoma	False	2	Terminated	Phase 1|Phase 2	design|operational	False	False	umls_xref	True	True	False	False	False	False	False	False	212	adenocarcinoma		False	False
 DB01101	C0007102	Capecitabine	Malignant tumor of colon	False	8	Terminated	Phase 1/Phase 2|Phase 2|Phase 3	operational|operational|operational|operational|efficacy|operational|not_reported|operational	True	False	umls_xref	True	True	False	False	True	True	False	True	27	malignant colon neoplasm	colonic neoplasm|colorectal cancer	True	True
 DB01101	C0009404		Colorectal Neoplasms	False	1	Terminated	Phase 2	design	False	False	umls_xref	True	True	False	True	False	True	True	False	363	colorectal neoplasm	colorectal neoplasm	True	True
@@ -2563,19 +2563,19 @@ DB01101	C0338106	Levoleucovorin	Adenocarcinoma of colon	False	1	Terminated	Phase
 DB01101	C0494165		Secondary malignant neoplasm of liver	False	2	Terminated	Phase 2|Phase 3	operational|operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01101	C0863191	Capecitabine	Gastric carcinoma stage IV	False	1	Terminated	Phase 3	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01101	C0948380	Capecitabine	Colorectal cancer metastatic	False	2	Withdrawn	Phase 2	unmatched|not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01104	C0014544	Sertraline	Epilepsy	False	1	Terminated	Phase 3	unmatched	False	False	umls_xref	True	True	True	True	False	False	False	False	1	Seizure|epilepsy	Seizure|epilepsy	True	True
+DB01104	C0014544	Sertraline	Epilepsy	False	1	Terminated	Phase 3	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	1	Seizure|epilepsy		False	False
 DB01104	C1956346	Sertraline	Coronary Artery Disease	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	3	coronary artery disorder		False	False
 DB01108	C0495144	Trilostane	Medical abortion, complete or unspecified, without complication	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01109	C0002874	Heparin	Aplastic Anemia	False	1	Terminated	Phase 3	operational	False	True	umls_xref	False	True	False	False	False	False	False	False	0	aplastic anemia		False	False
 DB01109	C0004610	Heparin	Bacteremia	False	1	Terminated	Phase 3	unmatched	False	False	umls_xref	False	True	False	False	False	False	False	False	0	bacterial infectious disease with sepsis		False	False
 DB01109	C0006434	Heparin	Burn injury	False	1	Withdrawn	Phase 2/Phase 3	not_reported	False	False	unmapped	False	True	False	False	False	False	False	False	0			False	False
 DB01109	C0011875	Heparin	Diabetic Angiopathies	False	1	Terminated	Phase 2/Phase 3	not_reported	False	False	name	False	True	False	False	False	False	False	False	0	diabetic peripheral angiopathy		False	False
-DB01109	C0025517	Heparin	Metabolic Diseases	False	1	Terminated	Phase 3	operational	False	True	umls_xref	False	True	False	False	False	True	False	False	0	metabolic disease		False	True
+DB01109	C0025517	Heparin	Metabolic Diseases	False	1	Terminated	Phase 3	operational	False	True	umls_xref	False	True	False	False	False	False	False	False	0	metabolic disease		False	False
 DB01109	C0032285	Heparin	Pneumonia	False	1	Suspended	Phase 2	not_reported	False	False	umls_xref	False	True	False	False	False	False	False	False	0	pneumonia		False	False
 DB01109	C0278704	Heparin	Malignant Childhood Neoplasm	False	1	Terminated	Phase 3	operational	False	True	umls_xref	False	True	False	False	False	False	False	False	0	childhood malignant neoplasm		False	False
 DB01109	C0745334	Heparin	Inhalation injury	False	1	Terminated	Phase 3	unmatched	False	False	unmapped	False	True	False	False	False	False	False	False	0			False	False
 DB01109	C1400574	Heparin	Dialysis Catheter Infection	False	1	Terminated	Phase 3	operational	False	True	unmapped	False	True	False	False	False	False	False	False	0			False	False
-DB01109	C1956346	Heparin	Coronary Artery Disease	False	1	Terminated	Phase 2	unmatched	False	False	umls_xref	False	True	False	False	False	True	False	False	0	coronary artery disorder		False	True
+DB01109	C1956346	Heparin	Coronary Artery Disease	False	1	Terminated	Phase 2	unmatched	False	False	umls_xref	False	True	False	False	False	False	False	False	0	coronary artery disorder		False	False
 DB01112	C0037199	Cefuroxime	Sinusitis	False	2	Withdrawn	Phase 2	not_reported|not_reported	False	False	umls_xref	True	True	False	False	False	True	False	False	0	sinusitis		False	True
 DB01113	C0017160	Papaverine	Gastroenteritis	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	gastroenteritis		False	False
 DB01113	C0036341	Papaverine	Schizophrenia	False	1	Terminated	Phase 0	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	schizophrenia		False	False
@@ -2583,7 +2583,7 @@ DB01115	C0473390	Nifedipine	Threatened premature labor	False	1	Withdrawn	Phase 3
 DB01124	C0877373	Tolbutamide	Advanced cancer	False	1	Terminated	Phase 1	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01126	C0007112	Dutasteride	Adenocarcinoma of prostate	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	True	False	False	True	0	prostate adenocarcinoma	prostate carcinoma	True	True
 DB01126	C1704272	Dutasteride	Benign Prostatic Hyperplasia	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	True	False	False	True	False	23	benign prostatic hyperplasia	benign prostatic hyperplasia	True	True
-DB01128	C1328504	Bicalutamide	Hormone refractory prostate cancer	False	1	Terminated	Phase 1/Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
+DB01128	C1328504	Bicalutamide	Hormone refractory prostate cancer	False	1	Terminated	Phase 1/Phase 2	operational	False	True	unmapped	True	False	False	False	False	False	False	False	0			False	False
 DB01132	C0002736	Pioglitazone	Amyotrophic Lateral Sclerosis	False	1	Terminated	Phase 2	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	2	amyotrophic lateral sclerosis		False	False
 DB01132	C0014175	Pioglitazone	Endometriosis	False	1	Withdrawn	Phase 2/Phase 3	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	1	endometriosis		False	False
 DB01132	C0027412	Pioglitazone	Opioid-Related Disorders	False	1	Terminated	Phase 1	not_reported	False	False	name	True	True	False	False	False	False	False	False	3	opiate dependence		False	False
@@ -2595,8 +2595,8 @@ DB01137	C1609538	Levofloxacin	Latent Tuberculosis	False	1	Terminated	Phase 3	ope
 DB01141	C0004030	Micafungin	Aspergillosis	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	3	aspergillosis		False	False
 DB01141	C0238013	Micafungin	invasive aspergillosis	False	1	Terminated	Phase 2	unmatched	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01141	C1262313	Micafungin	Invasive Fungal Infections	False	1	Terminated	Phase 3	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01143	C1510432	Amifostine	Radiation Sickness	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01143	C3898092	Amifostine	Oral Complication	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
+DB01143	C1510432	Amifostine	Radiation Sickness	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	False	False	False	False	False	False	False	0			False	False
+DB01143	C3898092	Amifostine	Oral Complication	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	False	False	False	False	False	False	False	0			False	False
 DB01156	C0040332	Bupropion	Tobacco Dependence	False	1	Terminated	Phase 2/Phase 3	operational	False	True	name	True	True	False	True	False	False	False	False	70	nicotine dependence	nicotine dependence	True	True
 DB01156	C0242379	Bupropion	Malignant neoplasm of lung	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	2	lung cancer		False	False
 DB01157	C1535939		Pneumocystis jiroveci pneumonia	False	1	Terminated	Phase 3	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	0	pneumocystosis		False	False
@@ -2632,34 +2632,34 @@ DB01177	C0281641	Idarubicin	adult acute minimally differentiated myeloid leukemi
 DB01177	C1541334	Idarubicin	adult acute myeloid leukemia with 11q23 (MLL) abnormalities	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01177	C1541339	Idarubicin	adult erythroleukemia (M6a)	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01177	C1541340	Idarubicin	adult pure erythroid leukemia (M6b)	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01181	C0022665	Ifosfamide	Kidney Neoplasm	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	True	False	False	False	1	kidney neoplasm	Abnormality of the kidney|kidney disorder	True	True
-DB01181	C0024305		Lymphoma, Non-Hodgkin	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	90	non-Hodgkin lymphoma		False	False
-DB01181	C0027819	Ifosfamide	Neuroblastoma	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	10	neuroblastoma		False	False
-DB01181	C0035335	Ifosfamide	Retinoblastoma	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	retinoblastoma		False	False
-DB01181	C0153676		Secondary malignant neoplasm of lung	False	1	Terminated	Phase 1	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01181	C0205824	Ifosfamide	Liposarcoma, Dedifferentiated	False	1	Suspended	Phase 2	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	0	dedifferentiated liposarcoma		False	False
-DB01181	C0262963	Ifosfamide	extragonadal germ cell tumor	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	True	False	False	True	3	extragonadal germ cell tumor	germ cell tumor	True	True
-DB01181	C0278661	Ifosfamide	stage I adult soft tissue sarcoma	False	1	Terminated	Phase 2	not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01181	C0278662	Ifosfamide	stage II adult soft tissue sarcoma	False	1	Terminated	Phase 2	not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01181	C0278663	Ifosfamide	stage III adult soft tissue sarcoma	False	2	Terminated|Withdrawn	Phase 2	not_reported|not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01181	C0278665	Ifosfamide	recurrent adult soft tissue sarcoma	False	2	Terminated|Withdrawn	Phase 2	not_reported|not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01181	C0278841	Ifosfamide	Testis cancer recurrent	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01181	C0279004	Ifosfamide	unspecified adult solid tumor, protocol specific	False	1	Terminated	Phase 1	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01181	C0279771	Ifosfamide	soft tissue sarcoma, adult, stage IVA	False	1	Withdrawn	Phase 2	not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01181	C0279974	Ifosfamide	Ovarian germ cell cancer stage IV	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01181	C0279975	Ifosfamide	recurrent ovarian germ cell tumor	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01181	C0280100	Ifosfamide	Solid tumour	False	1	Terminated	Phase 1	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01181	C0280796	Ifosfamide	adult central nervous system germ cell tumor	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	adult central nervous system germ cell tumor		False	False
-DB01181	C0796438	Ifosfamide	soft tissue sarcoma, adult, stage IIB	False	1	Withdrawn	Phase 2	not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01181	C0796439	Ifosfamide	soft tissue sarcoma, adult, stage IIC	False	1	Withdrawn	Phase 2	not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01181	C1333502	Ifosfamide	Extragonadal Seminoma	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	extragonadal seminoma		False	False
-DB01181	C1334581	Ifosfamide	Malignant Extragonadal Germ Cell Tumor	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	extragonadal germ cell cancer		False	False
-DB01181	C1334582	Ifosfamide	Malignant Extragonadal Non-Seminomatous Germ Cell Tumor	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	extragonadal nonseminomatous germ cell tumor		False	False
-DB01181	C1336415	Ifosfamide	Stage IV Extragonadal Non-Seminomatous Germ Cell Tumor	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01181	C1336416	Ifosfamide	Stage IV Extragonadal Seminoma	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01181	C1368898	Ifosfamide	Adult teratoma	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	adult teratoma		False	False
-DB01181	C1629504	Ifosfamide	Atypical Burkitt's lymphoma	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01183	C0009806	Naloxone	Constipation	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	True	True	False	False	True	False	8	constipation disorder	constipation disorder	True	True
+DB01181	C0022665	Ifosfamide	Kidney Neoplasm	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	False	False	False	False	False	False	False	1	kidney neoplasm		False	False
+DB01181	C0024305		Lymphoma, Non-Hodgkin	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	False	False	False	False	False	False	False	90	non-Hodgkin lymphoma		False	False
+DB01181	C0027819	Ifosfamide	Neuroblastoma	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	False	False	False	False	False	False	False	10	neuroblastoma		False	False
+DB01181	C0035335	Ifosfamide	Retinoblastoma	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	False	False	False	False	False	False	False	0	retinoblastoma		False	False
+DB01181	C0153676		Secondary malignant neoplasm of lung	False	1	Terminated	Phase 1	operational	False	True	unmapped	True	False	False	False	False	False	False	False	0			False	False
+DB01181	C0205824	Ifosfamide	Liposarcoma, Dedifferentiated	False	1	Suspended	Phase 2	unmatched	False	False	umls_xref	True	False	False	False	False	False	False	False	0	dedifferentiated liposarcoma		False	False
+DB01181	C0262963	Ifosfamide	extragonadal germ cell tumor	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	False	False	False	True	False	False	True	3	extragonadal germ cell tumor	germ cell tumor	True	True
+DB01181	C0278661	Ifosfamide	stage I adult soft tissue sarcoma	False	1	Terminated	Phase 2	not_reported	False	False	unmapped	True	False	False	False	False	False	False	False	0			False	False
+DB01181	C0278662	Ifosfamide	stage II adult soft tissue sarcoma	False	1	Terminated	Phase 2	not_reported	False	False	unmapped	True	False	False	False	False	False	False	False	0			False	False
+DB01181	C0278663	Ifosfamide	stage III adult soft tissue sarcoma	False	2	Terminated|Withdrawn	Phase 2	not_reported|not_reported	False	False	unmapped	True	False	False	False	False	False	False	False	0			False	False
+DB01181	C0278665	Ifosfamide	recurrent adult soft tissue sarcoma	False	2	Terminated|Withdrawn	Phase 2	not_reported|not_reported	False	False	unmapped	True	False	False	False	False	False	False	False	0			False	False
+DB01181	C0278841	Ifosfamide	Testis cancer recurrent	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	False	False	False	False	False	False	False	0			False	False
+DB01181	C0279004	Ifosfamide	unspecified adult solid tumor, protocol specific	False	1	Terminated	Phase 1	operational	False	True	unmapped	True	False	False	False	False	False	False	False	0			False	False
+DB01181	C0279771	Ifosfamide	soft tissue sarcoma, adult, stage IVA	False	1	Withdrawn	Phase 2	not_reported	False	False	unmapped	True	False	False	False	False	False	False	False	0			False	False
+DB01181	C0279974	Ifosfamide	Ovarian germ cell cancer stage IV	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	False	False	False	False	False	False	False	0			False	False
+DB01181	C0279975	Ifosfamide	recurrent ovarian germ cell tumor	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	False	False	False	False	False	False	False	0			False	False
+DB01181	C0280100	Ifosfamide	Solid tumour	False	1	Terminated	Phase 1	operational	False	True	unmapped	True	False	False	False	False	False	False	False	0			False	False
+DB01181	C0280796	Ifosfamide	adult central nervous system germ cell tumor	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	False	False	False	False	False	False	False	0	adult central nervous system germ cell tumor		False	False
+DB01181	C0796438	Ifosfamide	soft tissue sarcoma, adult, stage IIB	False	1	Withdrawn	Phase 2	not_reported	False	False	unmapped	True	False	False	False	False	False	False	False	0			False	False
+DB01181	C0796439	Ifosfamide	soft tissue sarcoma, adult, stage IIC	False	1	Withdrawn	Phase 2	not_reported	False	False	unmapped	True	False	False	False	False	False	False	False	0			False	False
+DB01181	C1333502	Ifosfamide	Extragonadal Seminoma	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	False	False	False	False	False	False	False	0	extragonadal seminoma		False	False
+DB01181	C1334581	Ifosfamide	Malignant Extragonadal Germ Cell Tumor	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	False	False	False	False	False	False	False	1	extragonadal germ cell cancer		False	False
+DB01181	C1334582	Ifosfamide	Malignant Extragonadal Non-Seminomatous Germ Cell Tumor	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	False	False	False	False	False	False	False	1	extragonadal nonseminomatous germ cell tumor		False	False
+DB01181	C1336415	Ifosfamide	Stage IV Extragonadal Non-Seminomatous Germ Cell Tumor	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	False	False	False	False	False	False	False	0			False	False
+DB01181	C1336416	Ifosfamide	Stage IV Extragonadal Seminoma	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	False	False	False	False	False	False	False	0			False	False
+DB01181	C1368898	Ifosfamide	Adult teratoma	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	False	False	False	False	False	False	False	0	adult teratoma		False	False
+DB01181	C1629504	Ifosfamide	Atypical Burkitt's lymphoma	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	False	False	False	False	False	False	False	0			False	False
+DB01183	C0009806	Naloxone	Constipation	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	True	False	False	True	False	8	constipation disorder	constipation disorder	True	True
 DB01184	C0152020	Domperidone	Gastroparesis	False	1	Withdrawn	Phase 3	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	9	gastroparesis		False	False
 DB01190	C0024530	Clindamycin	Malaria	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	3	malaria		False	False
 DB01204	C0023418	Mitoxantrone	leukemia	False	1	Terminated	Phase 2	unmatched	False	False	umls_xref	True	True	False	False	False	True	False	False	130	leukemia		False	True
@@ -2762,7 +2762,7 @@ DB01229	C1514428	Paclitaxel	Primary peritoneal carcinoma	False	1	Terminated	Phas
 DB01229	C1514429	Paclitaxel	Primary Peritoneal Serous Adenocarcinoma	False	1	Suspended	Phase 2/Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	primary peritoneal serous adenocarcinoma		False	False
 DB01229	C3897731	Paclitaxel	Recurrent Primary Peritoneal Carcinoma	False	1	Suspended	Phase 2/Phase 3	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01234	C0023418		leukemia	False	3	Terminated	Phase 2	safety|operational|operational	True	False	umls_xref	True	True	False	True	False	True	True	False	172	leukemia	leukemia	True	True
-DB01234	C0023890	Dexamethasone	Liver Cirrhosis	False	2	Terminated	Phase 3	operational|operational	False	True	umls_xref	True	True	True	True	False	False	False	False	0	cirrhosis of liver	cirrhosis of liver	True	True
+DB01234	C0023890	Dexamethasone	Liver Cirrhosis	False	2	Terminated	Phase 3	operational|operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	cirrhosis of liver		False	False
 DB01234	C0024305		Lymphoma, Non-Hodgkin	True	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	True	True	True	True	False	True	267	non-Hodgkin lymphoma	lymphoma|non-Hodgkin lymphoma	True	True
 DB01234	C0026764		Multiple Myeloma	True	16	Suspended|Terminated|Withdrawn	Phase 1|Phase 1/Phase 2|Phase 2|Phase 3	unmatched|operational|unmatched|operational|operational|operational|not_reported|not_reported|operational|not_reported|efficacy|not_reported|design|design|not_reported|unmatched	True	False	umls_xref	True	True	True	True	False	False	True	False	482	plasma cell myeloma	plasma cell myeloma	True	True
 DB01234	C0027497	Dexamethasone	Nausea	False	2	Terminated	Phase 2	operational|operational	False	True	umls_xref	True	True	False	False	False	False	False	False	52	Nausea		False	False
@@ -2808,9 +2808,9 @@ DB01248	C0699888	Docetaxel	male reproductive cancer	False	1	Withdrawn	Phase 3	un
 DB01248	C0744619	Docetaxel	Head and neck cancer metastatic	False	1	Terminated	Phase 3	unmatched	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01248	C1335703	Docetaxel	Recurrent Head and Neck Carcinoma	False	1	Terminated	Phase 3	unmatched	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01248	C1707372	Docetaxel	Chemotherapeutic Agent Toxicity	False	1	Withdrawn	Phase 1	not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01254	C0006111	Dasatinib	Brain Diseases	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	True	False	False	6	brain disorder		False	True
+DB01254	C0006111	Dasatinib	Brain Diseases	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	6	brain disorder		False	False
 DB01254	C0007131	Dasatinib	Non-Small Cell Lung Carcinoma	False	1	Terminated	Phase 1/Phase 2	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	12	non-small cell lung carcinoma		False	False
-DB01254	C0007682	Dasatinib	CNS disorder	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	True	False	False	0	Morphological central nervous system abnormality		False	True
+DB01254	C0007682	Dasatinib	CNS disorder	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	Morphological central nervous system abnormality		False	False
 DB01254	C0017636	Dasatinib	Glioblastoma	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	5	glioblastoma		False	False
 DB01254	C0023418	Dasatinib	leukemia	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	True	False	False	112	leukemia		False	True
 DB01254	C0026764		Multiple Myeloma	False	1	Terminated	Phase 1	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	6	plasma cell myeloma		False	False
@@ -2824,7 +2824,7 @@ DB01259	C1332166	Lapatinib	Adenocarcinoma of the gastroesophageal junction	False
 DB01259	C1449718	Lapatinib	Endocrine Breast Diseases	False	1	Terminated	Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01259	C1699634	Lapatinib	HER-2 positive breast cancer	False	1	Withdrawn	Phase 1/Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01261	C0010674	Sitagliptin	Cystic Fibrosis	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	cystic fibrosis		False	False
-DB01261	C1565489	Sitagliptin	Renal Insufficiency	False	1	Terminated	Phase 3	operational	False	True	name	True	True	False	False	True	False	False	False	0	kidney failure	kidney disorder	True	True
+DB01261	C1565489	Sitagliptin	Renal Insufficiency	False	1	Terminated	Phase 3	operational	False	True	name	True	True	False	False	False	False	False	False	0	kidney failure		False	False
 DB01262	C0278780	Decitabine	recurrent adult acute myeloid leukemia	False	1	Terminated	Phase 1	not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01262	C0279004	Decitabine	unspecified adult solid tumor, protocol specific	False	1	Terminated	Phase 1	not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01262	C0279089	Decitabine	untreated adult acute myeloid leukemia	False	2	Terminated	Phase 1|Phase 2	not_reported|design	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
@@ -2923,19 +2923,19 @@ DB01268	C1541334	Sunitinib	adult acute myeloid leukemia with 11q23 (MLL) abnorma
 DB01268	C1541335	Sunitinib	adult acute myeloid leukemia with t(15;17)(q22;q12)	False	1	Terminated	Phase 2	not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01268	C1955861	Sunitinib	T-Cell Large Granular Lymphocyte Leukemia	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	0	T-cell large granular lymphocyte leukemia		False	False
 DB01273	C0028043	Varenicline	Nicotine Dependence	False	1	Terminated	Phase 2/Phase 3	operational	False	True	umls_xref	False	True	False	False	False	False	False	False	0	nicotine dependence		False	False
-DB01273	C1510472	Varenicline	Drug Dependence	False	1	Withdrawn	Phase 1	not_reported	False	False	umls_xref	False	True	False	False	False	True	False	False	0	drug dependence		False	True
+DB01273	C1510472	Varenicline	Drug Dependence	False	1	Withdrawn	Phase 1	not_reported	False	False	umls_xref	False	True	False	False	False	False	False	False	0	drug dependence		False	False
 DB01275	C3495949	Hydralazine	Locally advanced breast cancer	False	1	Terminated	Phase 2	not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01276	C0011849	Exenatide	Diabetes Mellitus	False	1	Terminated	Phase 2	unmatched	False	False	umls_xref	False	True	False	False	False	False	False	False	0	diabetes mellitus		False	False
-DB01276	C0011860	Exenatide	Diabetes Mellitus, Non-Insulin-Dependent	False	1	Terminated	Phase 1/Phase 2	efficacy	True	False	umls_xref	False	True	False	False	False	False	False	False	0	type 2 diabetes mellitus		False	False
-DB01276	C0021368	Exenatide	Inflammation	False	1	Withdrawn	Phase 1/Phase 2	operational	False	True	name	False	True	False	False	False	False	False	False	0	inflammation|inflammatory response		False	False
-DB01276	C0036983	Exenatide	Septic Shock	False	1	Withdrawn	Phase 1/Phase 2	operational	False	True	name	False	True	False	False	False	False	False	False	0	septic shock		False	False
-DB01278	C0011849	Pramlintide	Diabetes Mellitus	False	1	Withdrawn	Phase 1/Phase 2	not_reported	False	False	umls_xref	True	True	False	True	False	False	True	False	24	diabetes mellitus	diabetes mellitus	True	True
+DB01276	C0011849	Exenatide	Diabetes Mellitus	False	1	Terminated	Phase 2	unmatched	False	False	umls_xref	False	False	False	False	False	False	False	False	0	diabetes mellitus		False	False
+DB01276	C0011860	Exenatide	Diabetes Mellitus, Non-Insulin-Dependent	False	1	Terminated	Phase 1/Phase 2	efficacy	True	False	umls_xref	False	False	False	False	False	False	False	False	0	type 2 diabetes mellitus		False	False
+DB01276	C0021368	Exenatide	Inflammation	False	1	Withdrawn	Phase 1/Phase 2	operational	False	True	name	False	False	False	False	False	False	False	False	0	inflammation|inflammatory response		False	False
+DB01276	C0036983	Exenatide	Septic Shock	False	1	Withdrawn	Phase 1/Phase 2	operational	False	True	name	False	False	False	False	False	False	False	False	0	septic shock		False	False
+DB01278	C0011849	Pramlintide	Diabetes Mellitus	False	1	Withdrawn	Phase 1/Phase 2	not_reported	False	False	umls_xref	True	False	False	True	False	False	True	False	24	diabetes mellitus	diabetes mellitus	True	True
 DB01281	C0002171	Abatacept	Alopecia Areata	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	False	True	False	False	False	False	False	False	0	alopecia areata		False	False
 DB01281	C0010346	Abatacept	Crohn Disease	False	1	Terminated	Phase 3	operational	False	True	umls_xref	False	True	False	False	False	False	False	False	0	Crohn disease		False	False
 DB01281	C0024141		Lupus Erythematosus, Systemic	False	1	Terminated	Phase 2/Phase 3	efficacy	True	False	umls_xref	False	True	False	False	False	False	False	False	0	systemic lupus erythematosus		False	False
 DB01281	C0026769	Abatacept	Multiple Sclerosis	False	1	Terminated	Phase 2	not_reported	False	False	name	False	True	False	False	False	False	False	False	0	multiple sclerosis symptom measurement		False	False
 DB01283	C0022661	Lumiracoxib	Kidney Failure, Chronic	False	1	Terminated	Phase 2	uninformative	False	False	umls_xref	True	True	False	False	False	False	False	False	1	chronic renal failure syndrome		False	False
-DB01299	C0747820	Sulfadoxine	Malaria, antepartum	False	1	Terminated	Phase 3	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
+DB01299	C0747820	Sulfadoxine	Malaria, antepartum	False	1	Terminated	Phase 3	operational	False	True	unmapped	True	False	False	False	False	False	False	False	0			False	False
 DB01327	C0004610	Cefazolin	Bacteremia	False	1	Terminated	Phase 3	uninformative	False	False	umls_xref	True	True	False	False	True	False	False	True	1	bacterial infectious disease with sepsis	bacterial infectious disease	True	True
 DB01327	C0085426	Cefazolin	Gram-Positive Bacterial Infections	False	1	Terminated	Phase 3	uninformative	False	False	umls_xref	True	True	False	False	True	True	False	True	0	gram-positive bacterial infections	bacterial infectious disease	True	True
 DB01356	C0206307	Lithium	Canavan Disease	False	1	Withdrawn	Phase 2	not_reported	False	False	umls_xref	True	False	False	False	False	False	False	False	0	Canavan disease		False	False
@@ -2948,14 +2948,14 @@ DB01409	C0024117	Tiotropium	Chronic Obstructive Airway Disease	False	1	Withdrawn
 DB01421	C0023283	Paromomycin	Leishmaniasis, Cutaneous	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	12	cutaneous leishmaniasis		False	False
 DB01563	C0876926	Chloral hydrate	Traumatic Brain Injury	False	1	Withdrawn	Phase 2	unmatched	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01576	C0011581	Dextroamphetamine	Depressive disorder	False	1	Terminated	Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	2	depressive disorder		False	False
-DB01576	C0036341	Dextroamphetamine	Schizophrenia	False	2	Terminated	Phase 3	unmatched|unmatched	False	False	umls_xref	True	True	False	False	True	False	False	False	1	schizophrenia	psychotic disorder	True	True
+DB01576	C0036341	Dextroamphetamine	Schizophrenia	False	2	Terminated	Phase 3	unmatched|unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	1	schizophrenia		False	False
 DB01576	C0236736	Dextroamphetamine	Cocaine-Related Disorders	False	1	Terminated	Phase 1	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB01577	C0003467	Methamphetamine	Anxiety	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	anxiety		False	False
-DB01577	C0011581	Methamphetamine	Depressive disorder	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	True	True	False	False	False	False	0	depressive disorder	depressive disorder	True	True
+DB01577	C0011581	Methamphetamine	Depressive disorder	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	depressive disorder		False	False
 DB01577	C0036916	Methamphetamine	Sexually Transmitted Diseases	False	1	Terminated	Phase 1	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	sexually transmitted disease		False	False
-DB01577	C0038580	Methamphetamine	Substance Dependence	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	True	False	False	1	substance dependence		False	True
+DB01577	C0038580	Methamphetamine	Substance Dependence	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	1	substance dependence		False	False
 DB01577	C1456624	Methamphetamine	Methamphetamine abuse	False	2	Terminated|Withdrawn	Phase 1	operational|not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB01577	C1533217	Methamphetamine	Methamphetamine dependence	False	4	Terminated|Withdrawn	Phase 0|Phase 1|Phase 2	operational|operational|operational|not_reported	False	False	umls_xref	True	True	False	False	True	False	False	False	1	methamphetamine dependence	drug dependence	True	True
+DB01577	C1533217	Methamphetamine	Methamphetamine dependence	False	4	Terminated|Withdrawn	Phase 0|Phase 1|Phase 2	operational|operational|operational|not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	1	methamphetamine dependence		False	False
 DB01586	C0007102	Ursodeoxycholic acid	Malignant tumor of colon	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	malignant colon neoplasm		False	False
 DB01590	C0003873	Everolimus	Rheumatoid Arthritis	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	0	rheumatoid arthritis		False	False
 DB01590	C0007102	Everolimus	Malignant tumor of colon	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	2	malignant colon neoplasm		False	False
@@ -2963,7 +2963,7 @@ DB01590	C0007137	Everolimus	Squamous cell carcinoma	False	1	Terminated	Phase 2	o
 DB01590	C0018133	Everolimus	Graft-vs-Host Disease	False	1	Terminated	Phase 2/Phase 3	safety	True	False	umls_xref	True	True	False	False	False	False	False	False	6	graft versus host disease		False	False
 DB01590	C0022680	Everolimus	Polycystic Kidney Diseases	False	1	Terminated	Phase 2/Phase 3	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	2	Polycystic kidney dysplasia|polycystic kidney disease		False	False
 DB01590	C0023418	Everolimus	leukemia	False	1	Terminated	Phase 1	uninformative	False	False	umls_xref	True	True	False	False	False	False	False	False	16	leukemia		False	False
-DB01590	C0023903	Everolimus	Liver neoplasms	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	True	False	False	False	0	Neoplasm of the liver	Abnormality of the liver	True	True
+DB01590	C0023903	Everolimus	Liver neoplasms	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	True	True	False	False	False	False	False	False	0	Neoplasm of the liver		False	False
 DB01590	C0026764	Everolimus	Multiple Myeloma	False	1	Withdrawn	Phase 2	uninformative	False	False	umls_xref	True	True	False	False	False	False	False	False	8	plasma cell myeloma		False	False
 DB01590	C0026769	Everolimus	Multiple Sclerosis	False	1	Terminated	Phase 1/Phase 2	not_reported	False	False	name	True	True	False	False	False	False	False	False	0	multiple sclerosis symptom measurement		False	False
 DB01590	C0027627	Everolimus	Neoplasm Metastasis	False	2	Terminated	Phase 2|Phase 3	not_reported|operational	False	False	name	True	True	False	False	False	False	False	False	0	metastasis		False	False
@@ -3126,7 +3126,7 @@ DB06262	C1400301	Droxidopa	orthostatic; hypotension, neurogenic	False	1	Terminat
 DB06267	C1135191	Udenafil	Heart Failure, Systolic	False	1	Terminated	Phase 3	efficacy	True	False	umls_xref	True	True	False	False	False	False	False	False	1	systolic heart failure		False	False
 DB06285	C0020598	Teriparatide	Hypocalcemia	False	1	Terminated	Phase 2	operational	False	True	umls_xref	False	True	False	False	False	False	False	False	0	Hypocalcemia		False	False
 DB06285	C0026987	Teriparatide	Myelofibrosis	False	1	Terminated	Phase 2	safety	True	False	umls_xref	False	True	False	False	False	False	False	False	0	myelofibrosis		False	False
-DB06285	C0029456	Teriparatide	Osteoporosis	False	1	Withdrawn	Phase 2	not_reported	False	False	umls_xref	False	True	False	False	True	True	False	False	0	osteoporosis	metabolic bone disorder	True	True
+DB06285	C0029456	Teriparatide	Osteoporosis	False	1	Withdrawn	Phase 2	not_reported	False	False	umls_xref	False	True	False	False	False	True	False	False	0	osteoporosis		False	True
 DB06285	C0342341	Teriparatide	Post-surgical hypoparathyroidism	False	1	Terminated	Phase 2	operational	False	True	unmapped	False	True	False	False	False	False	False	False	0			False	False
 DB06366	C0001624	Pertuzumab	Adrenal Gland Neoplasms	False	1	Terminated	Phase 2	safety	True	False	umls_xref	False	True	False	False	False	False	False	False	0	adrenal gland neoplasm		False	False
 DB06366	C0027662	Pertuzumab	Multiple Endocrine Neoplasia	False	1	Terminated	Phase 2	safety	True	False	umls_xref	False	True	False	False	False	False	False	False	0	multiple endocrine neoplasia		False	False
@@ -3146,7 +3146,7 @@ DB06603	C0242379		Malignant neoplasm of lung	False	1	Withdrawn	Phase 1	not_repor
 DB06603	C0278498	Panobinostat	Malignant neoplasm of stomach stage IV	False	1	Terminated	Phase 2	uninformative	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB06603	C0867389		Chronic graft-versus-host disease	False	1	Withdrawn	Phase 2	unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	0	chronic graft versus host disease		False	False
 DB06690	C0474368	Nitrous oxide	Labor Pain	False	1	Suspended	Phase 2	not_reported	False	False	unmapped	True	False	False	False	False	False	False	False	0			False	False
-DB06710	C0020538		Hypertensive disease	False	1	Withdrawn	Phase 0	not_reported	False	False	umls_xref	True	True	True	True	False	False	False	False	0	hypertensive disorder	hypertensive disorder	True	True
+DB06710	C0020538		Hypertensive disease	False	1	Withdrawn	Phase 0	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	0	hypertensive disorder		False	False
 DB06710	C0020619		Hypogonadism	False	1	Withdrawn	Phase 1	operational	False	True	umls_xref	True	True	False	True	False	False	True	False	0	hypogonadism	hypogonadism	True	True
 DB06710	C0026769		Multiple Sclerosis	False	1	Terminated	Phase 2	operational	False	True	name	True	True	False	False	False	False	False	False	0	multiple sclerosis symptom measurement		False	False
 DB06710	C0271623		Hypogonadotropic hypogonadism	False	1	Terminated	Phase 2	operational	False	True	umls_xref	True	True	False	False	True	False	False	True	0	Gonadotropin deficiency|hypogonadotropic hypogonadism	hypogonadism	True	True
@@ -3163,7 +3163,7 @@ DB06769	C0854804	Bendamustine	Chronic lymphocytic leukaemia stage 4	False	1	Term
 DB06769	C0855096	Bendamustine	B-cell small lymphocytic lymphoma recurrent	False	1	Terminated	Phase 1	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB06769	C0855100	Bendamustine	B-cell small lymphocytic lymphoma stage III	False	1	Terminated	Phase 1	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB06769	C0855101	Bendamustine	B-cell small lymphocytic lymphoma stage IV	False	1	Terminated	Phase 1	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
-DB06774	C0011849	Capsaicin	Diabetes Mellitus	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	True	True	False	False	False	False	0	diabetes mellitus	diabetes mellitus	True	True
+DB06774	C0011849	Capsaicin	Diabetes Mellitus	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	0	diabetes mellitus		False	False
 DB06774	C0011882	Capsaicin	Diabetic Neuropathies	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	3	diabetic neuropathy		False	False
 DB06774	C0019360	Capsaicin	Herpes zoster disease	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	0	herpes zoster		False	False
 DB06774	C0020429	Capsaicin	Hyperalgesia	False	1	Terminated	Phase 1	not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
@@ -3172,14 +3172,14 @@ DB06774	C0031117	Capsaicin	Peripheral Neuropathy	False	2	Terminated	Phase 2|Phas
 DB06774	C0152025	Capsaicin	Polyneuropathy	False	1	Terminated	Phase 2	not_reported	False	False	umls_xref	True	True	False	False	False	False	False	False	1	polyneuropathy		False	False
 DB06774	C0458247	Capsaicin	Allodynia	False	1	Terminated	Phase 1	not_reported	False	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB06785	C0021359	Ganirelix	Infertility	False	1	Withdrawn	Phase 3	not_reported	False	False	umls_xref	True	True	False	False	False	True	False	False	13	Infertility|infertility disorder		False	True
-DB06789	C0151526	Hydroxyprogesterone caproate	Premature Birth	False	1	Terminated	Phase 3	efficacy	True	False	name	True	True	False	True	False	False	True	False	12	premature birth	premature birth	True	True
-DB06789	C2145605	Hydroxyprogesterone caproate	transvaginal ultrasound: length of cervix	False	1	Terminated	Phase 3	efficacy	True	False	unmapped	True	True	False	False	False	False	False	False	0			False	False
+DB06789	C0151526	Hydroxyprogesterone caproate	Premature Birth	False	1	Terminated	Phase 3	efficacy	True	False	name	True	False	False	True	False	False	True	False	12	premature birth	premature birth	True	True
+DB06789	C2145605	Hydroxyprogesterone caproate	transvaginal ultrasound: length of cervix	False	1	Terminated	Phase 3	efficacy	True	False	unmapped	True	False	False	False	False	False	False	False	0			False	False
 DB06800	C0152020		Gastroparesis	False	1	Terminated	Phase 2	unmatched	False	False	umls_xref	False	True	False	False	False	False	False	False	0	gastroparesis		False	False
 DB06819	C0043116	Sodium phenylbutyrate	HMN (Hereditary Motor Neuropathy) Proximal Type I	False	1	Terminated	Phase 1/Phase 2	operational	False	True	unmapped	True	True	False	False	False	False	False	False	0			False	False
 DB06819	C0152109	Sodium phenylbutyrate	Juvenile Spinal Muscular Atrophy	False	1	Terminated	Phase 1/Phase 2	design	False	False	umls_xref	True	True	False	False	True	False	False	True	0	spinal muscular atrophy, type III	spinal muscular atrophy	True	True
 DB06819	C0393538	Sodium phenylbutyrate	Muscular Atrophy, Spinal, Type II	False	1	Terminated	Phase 1/Phase 2	design	False	False	umls_xref	True	True	False	False	True	False	False	True	0	spinal muscular atrophy, type II	spinal muscular atrophy	True	True
-DB06825	C0013221	Triptorelin	Drug toxicity	False	1	Terminated	Phase 2	operational	False	True	name	True	True	False	False	False	False	False	False	0	drug toxicity		False	False
-DB06825	C0021359	Triptorelin	Infertility	False	2	Terminated	Phase 2/Phase 3|Phase 3	operational|unmatched	False	False	umls_xref	True	True	False	False	False	False	False	False	17	Infertility|infertility disorder		False	False
+DB06825	C0013221	Triptorelin	Drug toxicity	False	1	Terminated	Phase 2	operational	False	True	name	True	False	False	False	False	False	False	False	0	drug toxicity		False	False
+DB06825	C0021359	Triptorelin	Infertility	False	2	Terminated	Phase 2/Phase 3|Phase 3	operational|unmatched	False	False	umls_xref	True	False	False	False	False	False	False	False	17	Infertility|infertility disorder		False	False
 DB06826	C0035334	Unoprostone	Retinitis Pigmentosa	False	1	Terminated	Phase 3	not_reported	False	False	umls_xref	True	False	False	False	False	False	False	False	0	Pigmentary retinopathy|retinitis pigmentosa		False	False
 DB08439	C0030193	Parecoxib	Pain	False	1	Terminated	Phase 3	uninformative	False	False	umls_xref	True	True	False	False	False	False	False	False	11	Pain		False	False
 DB08801	C0003811	Dimetindene	Cardiac Arrhythmia	False	1	Withdrawn	Phase 1/Phase 2	operational	False	True	name	True	False	False	False	False	False	False	False	0	cardiac arrhythmia		False	False
@@ -3246,7 +3246,7 @@ DB09324	C0008495	Sulbactam	Chorioamnionitis	False	1	Suspended	Phase 2/Phase 3	un
 DB09389	C0278799	Norgestrel	Endometrial cancer stage II	False	1	Withdrawn	Phase 2	operational	False	True	unmapped	False	True	False	False	False	False	False	False	0			False	False
 DB09389	C0278802	Norgestrel	Recurrent Endometrial Cancer	False	1	Withdrawn	Phase 2	operational	False	True	unmapped	False	True	False	False	False	False	False	False	0			False	False
 DB09389	C0349579	Norgestrel	Atypical Endometrial Hyperplasia	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	False	True	False	False	False	False	False	False	0	atypical endometrial hyperplasia		False	False
-DB09389	C1153706	Norgestrel	Endometrial adenocarcinoma	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	False	True	False	False	True	False	False	False	0	endometrium adenocarcinoma	endometrial carcinoma	True	True
+DB09389	C1153706	Norgestrel	Endometrial adenocarcinoma	False	1	Withdrawn	Phase 2	operational	False	True	umls_xref	False	True	False	False	False	False	False	False	0	endometrium adenocarcinoma		False	False
 DB09389	C1333990	Norgestrel	Hereditary Nonpolyposis Colorectal Cancer	False	1	Terminated	Phase 3	operational	False	True	umls_xref	False	True	False	False	False	False	False	False	0	hereditary nonpolyposis colon cancer		False	False
 DB09499	C0006664	Sodium thiosulfate	Calcinosis cutis	False	1	Withdrawn	Phase 2	not_reported	False	False	unmapped	True	False	False	False	False	False	False	False	0			False	False
 DB09499	C0280954		long-term effects secondary to cancer therapy in children	False	1	Suspended	Phase 1	operational	False	True	unmapped	True	False	False	False	False	False	False	False	0			False	False

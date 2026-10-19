@@ -1,4 +1,4 @@
-# KG Repurposing Audit: stopped clinical trials as negative labels (v0.7.1)
+# KG Repurposing Audit: stopped clinical trials as negative labels (v0.7.2)
 
 Code, schema and results for the manuscript **Are stopped clinical trials valid negative labels for drug repurposing? A validity study in repoDB and two biomedical knowledge graphs** (a shorter version is titled *Stopped clinical trials mostly mark tested hypotheses and make poor negative labels for drug-repurposing models*).
 
@@ -110,7 +110,7 @@ for s in select "e1 random" "e1 compound" e2 contrasts; do python pipelines/14_w
 python pipelines/15_descriptive_primekg.py; python pipelines/16_tested_vs_approved.py primekg
 ```
 
-The end-to-end embedding ablation (Supplementary S7) uses `MODE=e2e PARTITION=$W/partitions/random_p42.json NEG=typed|uniform` with `03_train_kge.py`, summarised by `06_e2e_summary.py`. Every step skips work whose output already exists. On a shared 4-core CPU the Hetionet embedding pretraining took about 30 minutes, the Hetionet write-back experiment about 3 hours, the PrimeKG embeddings about 30 minutes for 10 epochs and the PrimeKG write-back experiment about 1 hour. The PrimeKG run used for the manuscript was configured for 15 epochs and stopped by the operating system after epoch 13; the analysis uses the 5- and 10-epoch checkpoints (`paper_results/primekg/kge_run_note.json`), which `13_train_kge_primekg.py` reproduces with its default of 10 epochs.
+The end-to-end embedding ablation (Supplementary Section S11) uses `MODE=e2e PARTITION=$W/partitions/random_p42.json NEG=typed|uniform` with `03_train_kge.py`, summarised by `06_e2e_summary.py`. Every step skips work whose output already exists. On a shared 4-core CPU the Hetionet embedding pretraining took about 30 minutes, the Hetionet write-back experiment about 3 hours, the PrimeKG embeddings about 30 minutes for 10 epochs and the PrimeKG write-back experiment about 1 hour. The PrimeKG run used for the manuscript was configured for 15 epochs and stopped by the operating system after epoch 13; the analysis uses the 5- and 10-epoch checkpoints (`paper_results/primekg/kge_run_note.json`), which `13_train_kge_primekg.py` reproduces with its default of 10 epochs.
 
 ## Data and licences
 
