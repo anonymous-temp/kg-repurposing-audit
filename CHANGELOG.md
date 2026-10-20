@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.4 (2026-10-20)
+
+- Documentation and design figure describe the literature screening, case coding and label check as automated procedures.
+
 ## 0.7.3 (2026-10-19)
 
 - Design figure: the literature box describes the check of excluded articles as a second screening.
@@ -29,7 +33,7 @@
 - repoDB audit (pipeline 23): stop reasons of the failed records (matched to the Open Targets classifier labels of the same text), failed pairs that are indications at three levels (same UMLS concept in DrugCentral; same Open Targets concept; stage, line or subtype of an indication), by testing intensity, phase and stop reason; concept-level edges for the popularity null; a label check of 60 sampled matches (`paper_results/repodb/`).
 - Model-free checks for any source of negative labels (`kg_audit.label_audit`, pipeline 25): overlap with known positives, overlap by testing intensity and a degree-preserving popularity null; applied to repoDB.
 - Literature survey (pipeline 24): Europe PMC search, passage extraction and the screening of 197 open-access articles for stopped-trial negatives (`paper_results/literature/`).
-- Case review: a third, source-verified coding of the 80 cases by a language model with web access to registry records, posted results, publications and labels, with cited sources; adjudication of the 14 disagreements; final codes in `case_review/case_taxonomy_final_v2.tsv` (6 contradicting cases from 4 trials, 1 unclear).
+- Case review: a third, automated source-verified coding of the 80 cases with retrieval of registry records, posted results, publications and labels, with cited sources; adjudication of the 14 disagreements; final codes in `case_review/case_taxonomy_final_v2.tsv` (6 contradicting cases from 4 trials, 1 unclear).
 - New figures: study design (`fig1_design.py`), repoDB audit (`fig_repodb.py`); case-review figures updated; `fig2_stopped.py` takes panel letters and an output name.
 - No earlier analysis or number changed apart from the case-review codes.
 
