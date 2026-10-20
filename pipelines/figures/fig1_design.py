@@ -51,7 +51,7 @@ box(0.8, 9.0, 47.5, 22.5, "3", "Mechanism", "Why do stopped pairs overlap with i
     "• overlap by number of registered trials and by phase\n"
     "• odds ratios within strata of testing intensity\n"
     "• timing of stopped trials relative to approval\n"
-    "• review of 80 failure records that the strictest rule would\n   negate (automated coding against cited sources)", COLS[2])
+    "• review of 80 failure records that the strictest rule would\n   negate (coded against cited sources)", COLS[2])
 box(51.7, 9.0, 47.5, 22.5, "4", "Consequences", "What do stopped-trial negatives do to models?",
     "Label policies: none, flat negative, mask all, typed (+ scope,\n   + role), negate only if ≤2 trials, placebo negatives\n"
     "Scorers: degree reference, label-only MF, graph head on\n   DistMult embeddings, hybrid; registry-history baselines\n"

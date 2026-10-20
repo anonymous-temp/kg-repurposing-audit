@@ -89,7 +89,7 @@ L += ["## S21. Review of indications with the cleanest failure records", "",
       "Every case was then read again against the full dossier. Where the dossier did not settle the question, the posted results on ClinicalTrials.gov or the primary publication were consulted: "
       "for galantamine (NCT00679627) the posted participant flow reports 41 deaths with placebo and 29 with galantamine, and the EVOLVE trial of tobramycin inhalation powder (NCT00125346) was terminated early on positive interim results (Konstan et al., Pediatr Pulmonol 2011; doi:10.1002/ppul.21356). "
       f"The final codes differ from the first coding in {n_changed} cases; the column Verification gives the reason for each change. "
-      "Both codings and the adjudication were automated and used the dossier and the codebook; the dossiers (paper_results/case_review/dossiers.md), both codings and the final codes are released so that they can be checked by clinical reviewers.", "",
+      "Both codings and the adjudication used the dossier and the codebook; the dossiers (paper_results/case_review/dossiers.md), both codings and the final codes are released so that they can be checked by clinical reviewers.", "",
       "Codebook (one primary code, up to two secondary codes):", "",
       "- A1 Special population: subgroup defined by age, pregnancy, comorbidity or region.",
       "- A2 Stage, line or goal: different disease stage, line of therapy or treatment goal (refractory or relapsed disease, adjuvant or neoadjuvant, maintenance, prophylaxis, acute or perioperative setting).",
