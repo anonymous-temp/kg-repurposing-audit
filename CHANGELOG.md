@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.6 (2026-10-20)
+
+- Design figure: search date removed from the literature box.
+
 ## 0.7.5 (2026-10-20)
 
 - Design figure and documentation describe the coding and screening steps without naming how they were carried out.

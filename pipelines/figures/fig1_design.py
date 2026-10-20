@@ -34,7 +34,7 @@ def arrow(x0, y0, x1, y1):
 
 
 box(0.8, 39.0, 47.5, 20.0, "1", "Use", "Are stopped-trial pairs used as negative labels?",
-    "Europe PMC full texts, searched 17 October 2026\n"
+    "Europe PMC full texts\n"
     "• articles that mention repoDB (118 records)\n"
     "• repurposing articles that pair terminated, withdrawn\n   or failed trials with negative samples (134 records)\n"
     "• 197 open-access articles screened with a codebook:\n   negatives for training, evaluation, both, resource or none\n"
